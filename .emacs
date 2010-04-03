@@ -1,13 +1,16 @@
 ;; .emacs
+
 ;; Emanuel Heitlinger  
 ;; init file for the only true editor
 ;; works only with 256 colors in terminal!!!
 
+;; This file loads customisation common to all my machines
+;; at the end I am testion wich machine this is on and 
+;; load the machine-dependent init-files
+
+
 (setq user-mail-address "emanuelheitlinger@gmail.com")
-
 (setq inhibit-startup-message t)
-
-
 (setq load-path
       (append (list nil 
 		    "~/.emacs.d"
@@ -17,7 +20,6 @@
               load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; color stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;lets play with color
 (require 'color-theme)
 (color-theme-initialize)
@@ -375,12 +377,6 @@ w) "d ")) line) 'face 'linum)))
                                                       ess-my-extra-R-function-keywords 'enc-paren) "\\>")
 				       'font-lock-function-name-face))))))
 
-
-
-
-
-
-
 ;; LaTeX stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; AucTeX with rubber
 ;;http://www.nabble.com/sweave-and-auctex-td23492805.html
@@ -405,27 +401,6 @@ w) "d ")) line) 'face 'linum)))
             (define-key c-mode-map (kbd "C-c C-v") 'man)
             )
 	  )
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; the web ;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(defun browse-url-or-follow-link
-  "browse whatever a link or an url"
-  (interactive)
-  if(url-get-url-at-point 
-     (browse-url-at-point) 
-     (w3m-view-url-with-external-browser))
-)
-
-; set my browser to conkeror
-(setq browse-url-generic-program "conkeror")
-(setq browse-url-browser-function 'browse-url-generic)
-(global-set-key "\C-xck" 'browse-url-at-point)
-; it would be nice to use w3m-view-url... in case we are
-; on a link instead of a url but for the meantime CK is enough
-(global-set-key "\C-xCK" 'w3m-view-url-with-external-browser)
-
-;;make a key for w3m browsing inside emacs
-(global-set-key "\C-xwm" 'w3m-browse-url)
 
 ;;;;;;;;; Internet Relay Chat with erc ;;;;;;;;;;;;;;;;;;
 (require 'erc)
@@ -484,8 +459,6 @@ w) "d ")) line) 'face 'linum)))
       'wl-draft-kill
       'mail-send-hook))
 
-
-
 ;read html formatted mail
 (require 'mime-w3m)
 
@@ -535,21 +508,6 @@ w) "d ")) line) 'face 'linum)))
  '(org-agenda-files (quote ("~/org/TODO.org" "~/org/main.org")))
 )
 
-
-;;;;;;;;;;;;;;;;;;;;;;;; EMMS for multimedia ;;;;;;;;;;;;;;;;
-(require 'emms-setup)
-(emms-standard)
-(emms-default-players)
-(setq emms-source-file-default-directory "~/musik/")
-(require 'emms-streams)
-
-(require 'emms-volume)
-
-(global-set-key "\C-cm" nil)
-(global-set-key [f11] 'emms-volume-lower)
-(global-set-key [f12] 'emms-volume-raise)
-(global-set-key [f10] 'emms-pause)
-
-(global-set-key  "\C-cmn" 'emms-next)
-(global-set-key  "\C-cmp" 'emms-previous)
-
+load the appropriate file for each machine
+(if (string-match "ele-laptop" (getenv "HOSTNAME")) ;; laptop
+    (load-file "/home/ele/.emacs.d/dotfiles/.emacs_laptop.el"))
