@@ -1,12 +1,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; the web ;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;;; Problem here... should really get this to work
 (defun browse-url-or-follow-link
   "browse whatever a link or an url"
   (interactive)
   if(url-get-url-at-point 
      (browse-url-at-point) 
-     (w3m-view-url-with-external-browser))
+     (w3m-view-url-with-external-browser)) 
 )
 
 ; set my browser to conkeror
