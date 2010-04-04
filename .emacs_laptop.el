@@ -38,8 +38,10 @@
 (global-set-key "\C-cm-" 'emms-volume-lower)
 (global-set-key  "\C-cm+" 'emms-volume-raise)
 (global-set-key  "\C-cmh" 'emms-pause)
-
 (global-set-key  "\C-cmn" 'emms-next)
 (global-set-key  "\C-cmp" 'emms-previous)
+(global-set-key  "\C-cmr" 'emms-random)
+
+
 (global-set-key  "\C-cmm" 'emms)
 

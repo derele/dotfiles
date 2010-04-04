@@ -82,3 +82,6 @@ define_key(content_buffer_normal_keymap, "C-c m n", "emms-next");
 shell_own("emms-volume-lower", "lower emms music volume", "emacsclient-eval.sh", "emms-volume-lower");
 define_key(content_buffer_normal_keymap, "C-c m -", "emms-volume-lower");
 
+shell_own("emms-random", "play random track", "emacsclient-eval.sh", "emms-random");
+define_key(content_buffer_normal_keymap, "C-c m r", "emms-random");
+

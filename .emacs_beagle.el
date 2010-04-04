@@ -26,6 +26,7 @@ to avoid quoting)."
 (global-set-key  "\C-cm+" (lambda () (interactive) (remote-emacs "emms-volume-raise")))
 (global-set-key  "\C-cmn" (lambda () (interactive) (remote-emacs "emms-next")))
 (global-set-key  "\C-cmp" (lambda () (interactive) (remote-emacs "emms-previous")))
+(global-set-key  "\C-cmr" (lambda () (interactive) (remote-emacs "emms-random")))
 
 ;; have to decide wether to control the remote conkeror web-browser directly or 
 ;; through the remote emacs. I go for the more complicated way, as I want to open
