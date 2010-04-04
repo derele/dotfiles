@@ -60,6 +60,9 @@
 (setq-default indent-tabs-mode nil)
 (setq tab-width 4)
 
+;; faster response in the minibuffer
+(setq echo-keystrokes 0.01)
+
 ;; Ido mode to end my troubles opening files and switching
 ;; buffersm
 (require 'ido)
