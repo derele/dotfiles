@@ -3,6 +3,6 @@ My emacs setup. This equals more or less my whole computing setup.
 I use only three programms:
 - An emacs on my laptop (or whatever machine I am sitting at; for now only my laptop) 
 - A web-browser called conkeror, which also runs on the local machine.
-- A remote emacs on my ssh-server 
+- A remote emacs on my ssh-server.
 
 The goal of this setup is mainly to control the two local programms also from within the remote machine's emacs.
