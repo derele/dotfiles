@@ -1,23 +1,26 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; the web ;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Problem here... should really get this to work
-(defun browse-url-or-follow-link
-  "browse whatever a link or an url"
+
+;; a function to test if it is a url at point
+;; then open this url or assume it is a link
+(defun browse-url-or-follow-link ()
   (interactive)
-  if(url-get-url-at-point 
-     (browse-url-at-point) 
-     (w3m-view-url-with-external-browser)) 
-)
+  (if(string-match thing-at-point-url-regexp (thing-at-point 'symbol)) 
+      (browse-url-at-point) ;; yes view it
+    (w3m-view-url-with-external-browser) ;; no assume it is a link view tiis
+    ))
 
 ; set my browser to conkeror
 (setq browse-url-generic-program "conkeror")
 (setq browse-url-browser-function 'browse-url-generic)
-(global-set-key "\C-xck" 'browse-url-at-point)
+
+;(global-set-key "\C-xck" 'browse-url-at-point)
+
 ; it would be nice to use w3m-view-url... in case we are
 ; on a link instead of a url but for the meantime CK is enough
-(global-set-key "\C-xCK" 'w3m-view-url-with-external-browser)
+(global-set-key "\C-cC" 'browse-url-or-follow-link)
 
 ;;make a key for w3m browsing inside emacs
-(global-set-key "\C-xwm" 'w3m-browse-url)
+(global-set-key "\C-cW" 'w3m-browse-url)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;; EMMS for multimedia ;;;;;;;;;;;;;;;;
@@ -25,7 +28,7 @@
 (emms-standard)
 (emms-default-players)
 (setq emms-source-file-default-directory "~/musik/")
-(emms-add-playlist-directory-tree 
+(emms-add-playlist-directory-tree "~/musik/")
 
 (require 'emms-streams)
 

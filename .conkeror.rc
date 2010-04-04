@@ -21,7 +21,6 @@ require("search-engine.js");
 
 //define_webjump("shortMemo", "url-with-%s-for-substitutes");
 
-
 user_pref("extensions.checkCompatibility", false);
 
 interactive("bibsonomy-post-publication",  
@@ -59,8 +58,6 @@ shell_on_url("w3m-on-url", "Open a url in emacs w3m mode","emacs-web.sh");
 shell_on_url("w3m-beagle-on-url", "Open a url in emacs w3m mode on my server beagle","emacs-beagle-web.sh");
 define_key(content_buffer_normal_keymap, "C-c w", "w3m-on-url");
 define_key(content_buffer_normal_keymap, "C-c r", "w3m-beagle-on-url");
-
-
 
 function shell_own(funcname, funcdesc, cmd, what) {
     interactive(funcname, funcdesc,

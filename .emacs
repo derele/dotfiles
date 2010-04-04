@@ -379,7 +379,7 @@ w) "d ")) line) 'face 'linum)))
 
 ;; LaTeX stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; AucTeX with rubber
-;;http://www.nabble.com/sweave-and-auctex-td23492805.html
+;; http://www.nabble.com/sweave-and-auctex-td23492805.html
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
                 '("Rubber" "rubber -d %t && xpdf '%s.pdf'" TeX-run-command nil t) t)
