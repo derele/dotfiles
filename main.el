@@ -9,7 +9,6 @@
 ;; at the end I am testion wich machine this is on and 
 ;; load the machine-dependent init-files
 
-
 (setq user-mail-address "emanuelheitlinger@gmail.com")
 (setq inhibit-startup-message t)
 (setq load-path
@@ -17,6 +16,7 @@
 		    "~/.emacs.d"
 		    "~/.emacs.d/color-theme-6.6.0"
 		    "~/.emacs.d/emms/lisp"
+                    "~/.emacs.d/magit-0.7"
                     )
               load-path))
 
@@ -37,22 +37,14 @@
  '(font-lock-comment-face ((t (:foreground "color-244"))))
  '(linum ((t (:inherit shadow :background "color-232" :foreground "color-191")))))
 
-;;;;;;;; no boldness in fonts ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;(set-face-bold-p 'bold nil)
-; this works also on a running session and removes also underlines
+; no boldness in fonts removes also underlines
 (mapc
  (lambda (face)
    (set-face-attribute face nil :weight 'normal :underline nil))
  (face-list))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; VCS stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;svn version control
-(require 'vc-svn)
-(require 'psvn) 
-;git version control
-(require 'git)
-
+(require 'magit)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; general functionality ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;start the emacs server
