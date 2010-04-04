@@ -1,3 +1,4 @@
+;; -*- coding: latin-1; -*-
 ;; .emacs
 
 ;; Emanuel Heitlinger  
@@ -65,6 +66,13 @@
 ;; I hate tabs!
 (setq-default indent-tabs-mode nil)
 (setq tab-width 4)
+
+;; Ido mode to end my troubles opening files and switching
+;; buffersm
+(require 'ido)
+(ido-mode t)
+(setq ido-enable-flex-matching t) ;; enable fuzzy matching
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;write y instead of yes
 (fset 'yes-or-no-p 'y-or-n-p) 
@@ -172,17 +180,16 @@ w) "d ")) line) 'face 'linum)))
   (interactive)
   (select-window (previous-window)))
 
-(global-set-key [C-left] 'select-next-window)
-(global-set-key [C-right] 'select-previous-window)
+(global-set-key "\C-xo" 'select-next-window)
+(global-set-key "\C-xO" 'select-previous-window)
 
 ;; tabbar buffer tab switching mode
-
 (require 'tabbar)
 (tabbar-mode)
-(global-set-key [M-left] 'tabbar-backward-tab)
-(global-set-key [M-right] 'tabbar-forward-tab)
-(global-set-key [M-up] 'tabbar-forward-group)
-(global-set-key [M-down] 'tabbar-backward-group)
+(global-set-key [27 252] 'tabbar-backward-tab)
+(global-set-key [27 246] 'tabbar-forward-tab)
+(global-set-key [27 43] 'tabbar-forward-group)
+(global-set-key [27 196] 'tabbar-backward-group)
 (setq tabbar-buffer-groups-function 'tabbar-buffer-ignore-groups)
 (defun tabbar-buffer-ignore-groups (buffer)
 ;;Return only one group for each buffer."

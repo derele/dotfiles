@@ -8,8 +8,8 @@ user_pref(edit_field_in_external_editor_extension='html');
 
 // some keys
 define_key(content_buffer_normal_keymap, "d", "follow-new-buffer");
-define_key(content_buffer_normal_keymap, "M-left", "buffer-previous");
-define_key(content_buffer_normal_keymap, "M-right", "buffer-next");
+define_key(content_buffer_normal_keymap, "M-\u00FC", "buffer-previous");
+define_key(content_buffer_normal_keymap, "M-\u00F6", "buffer-next");
 
 //have tabs, a session and google in the minibuffer
 require("new-tabs.js");
