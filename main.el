@@ -510,7 +510,7 @@ w) "d ")) line) 'face 'linum)))
 
 ;; load the appropriate file for each machine
 (if (string-match "ele-laptop" (getenv "HOSTNAME")) ;; laptop
-    (load-file "/home/ele/.emacs.d/dotemacs/.emacs_laptop.el"))
+    (load-file "/home/ele/.emacs.d/dotemacs/emacs_laptop.el"))
 
 (if (string-match "beagle" (getenv "HOSTNAME")) ;; beagle
-    (load-file "/home/ele/.emacs.d/dotemacs/.emacs_beagle.el"))
+    (load-file "/home/ele/.emacs.d/dotemacs/emacs_beagle.el"))
