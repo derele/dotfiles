@@ -27,3 +27,21 @@ to avoid quoting)."
 (global-set-key  "\C-cmn" (lambda () (interactive) (remote-emacs "emms-next")))
 (global-set-key  "\C-cmp" (lambda () (interactive) (remote-emacs "emms-previous")))
 
+;; have to decide wether to control the remote conkeror web-browser directly or 
+;; through the remote emacs. I go for the more complicated way, as I want to open
+;; links and do such complicated sutuff
+;; (global-set-key  "\C-cC" (lambda () (interactive) (remote-emacs "browse-url-or-follow-link")))
+;; this doesn't work as the remote emacs will try to follow its own point's position
+;; following links is a harder problem...
+;; for now just open url
+
+(defun remote-conkeror ()
+  "Run a remote conkeror on the thing under point."
+  (interactive)
+  (setq cmd (concat "ssh $LAPTOPIP -t conkeror " 
+                    (thing-at-point 'url)))
+  (shell-command cmd)
+  (message cmd)
+  )
+(global-set-key  "\C-cC" 'remote-conkeror)
+

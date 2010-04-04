@@ -508,7 +508,7 @@ w) "d ")) line) 'face 'linum)))
  '(org-agenda-files (quote ("~/org/TODO.org" "~/org/main.org")))
 )
 
-load the appropriate file for each machine
+;; load the appropriate file for each machine
 (if (string-match "ele-laptop" (getenv "HOSTNAME")) ;; laptop
     (load-file "/home/ele/.emacs.d/dotfiles/.emacs_laptop.el"))
 
