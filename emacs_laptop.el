@@ -33,6 +33,8 @@
 (require 'emms-streams)
 
 (require 'emms-volume)
+;; change volume in bigger intervals
+(setq emms-volume-change-amount 6)
 
 (global-set-key "\C-cm" nil)
 (global-set-key "\C-cm-" 'emms-volume-lower)
