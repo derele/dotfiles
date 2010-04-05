@@ -46,9 +46,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; VCS stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'magit)
 (setq magit-commit-all-when-nothing-staged 1)
-(global-set-key "\C-i" 'magit-status)
-;; find it quite crazy that magit wants to have tab for its status
 (global-set-key "\t" nil)
+;; find it quite crazy that magit wants to have tab for its status
+(global-set-key "\C-i" 'magit-status)
 (global-set-key "\t" 'indent-for-tab-command)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; general functionality ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
