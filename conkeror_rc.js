@@ -19,6 +19,10 @@ session_auto_save_auto_load = true;
 
 require("search-engine.js");
 
+//open from command line in same window new tab
+//form: http://lifealgorithms.wordpress.com/tag/emacs/
+url_remoting_fn = load_url_in_new_buffer;
+
 //define_webjump("shortMemo", "url-with-%s-for-substitutes");
 
 user_pref("extensions.checkCompatibility", false);
