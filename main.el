@@ -47,6 +47,9 @@
 (require 'magit)
 (setq magit-commit-all-when-nothing-staged 1)
 (global-set-key "\C-i" 'magit-status)
+;; find it quite crazy that magit wants to have tab for its status
+(global-set-key "\t" nil)
+(global-set-key "\t" 'indent-for-tab-command)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; general functionality ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;start the emacs server
