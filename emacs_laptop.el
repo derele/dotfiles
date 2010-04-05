@@ -4,16 +4,16 @@
 ;; then open this url or assume it is a link
 (defun browse-url-or-follow-link ()
   (interactive)
-  (if(string-match thing-at-point-url-regexp (thing-at-point 'symbol)) 
-      (browse-url-at-point) ;; yes view it
+;; guess this would be better but must undersand regex better to make it work
+;  (if(string-match thing-at-point-url-regexp (thing-at-point 'symbol)) 
+  (if(string-match "http" (thing-at-point 'symbol)) 
+    (browse-url-at-point) ;; yes view it
     (w3m-view-url-with-external-browser) ;; no assume it is a link view tiis
     ))
 
 ; set my browser to conkeror
 (setq browse-url-generic-program "conkeror")
 (setq browse-url-browser-function 'browse-url-generic)
-
-;(global-set-key "\C-xck" 'browse-url-at-point)
 
 ; it would be nice to use w3m-view-url... in case we are
 ; on a link instead of a url but for the meantime CK is enough
