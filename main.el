@@ -46,10 +46,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; VCS stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'magit)
 (setq magit-commit-all-when-nothing-staged 1)
-(global-set-key "\t" nil)
-;; find it quite crazy that magit wants to have tab for its status
-(global-set-key "\C-i" 'magit-status)
-(global-set-key "\t" 'indent-for-tab-command)
+;; "\C-i" is somehow recognized as tab... crazy
+(global-set-key "\C-ci" 'magit-status)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; general functionality ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;start the emacs server
