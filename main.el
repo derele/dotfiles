@@ -53,6 +53,12 @@
 ;start the emacs server
 (server-start)
 
+;map undo to something easy: the newline keys, as I still use enter
+;get redo and bind it to somethin easy as well
+(require 'redo)
+(global-set-key (kbd "C-j")  'undo)
+(global-set-key (kbd "M-j")  'redo)
+
 ;I hate rodents
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
