@@ -53,12 +53,14 @@
   "Show a popup. Optionally, you can provide an ICON and
 a sound to be played"
   (interactive)
-  (shell-command (concat "notify-send "
+  (shell-command (concat "notify-send -t 100000000" ; make it stay forever
                          (if icon (concat "-i " icon) "")
                          " '" title "' '" msg "'"))
 )
 
 (add-hook 'wl-biff-notify-hook
           (lambda ()
-            (notify-popup "Wanderlust" "You have new mail!")))
+            (notify-popup "Emacs Wanderlust says:" "You have new mail!")))
+
+
 
