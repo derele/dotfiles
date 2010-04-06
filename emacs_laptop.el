@@ -48,7 +48,7 @@
 (global-set-key  "\C-cmm" 'emms)
 
 ;; norify send to warn me about e-mail etc...
-
+;; from http://emacs-fu.blogspot.com/2009/11/showing-pop-ups.html
 (defun djcb-popup (title msg &optional icon sound)
   "Show a popup if we're on X, or echo it otherwise; TITLE is the title
 of the message, MSG is the context. Optionally, you can provide an ICON and
@@ -69,5 +69,4 @@ a sound to be played"
 (add-hook 'wl-biff-notify-hook
           (lambda()
             (djcb-popup "Wanderlust" "You have new mail!")))
-
 
