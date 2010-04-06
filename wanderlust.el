@@ -27,13 +27,8 @@
   wl-folder-desktop-name "All-Ele"
 
   wl-biff-check-interval 30 ;; check every 30 seconds
-  wl-biff-check-folder-list '(".INBOX")) ;;
+  wl-biff-check-folder-list '(".INBOX") ;;
   wl-biff-use-idle-timer nil ;; in the background
-
-
-;; format the summary line
-;(setq wl-summary-line-format "%n%T%P%M/%D(%W)%h:%m %t%[%17(%c %f%) %] %l%~%@%~%80(%s%)")
-
 
   ;; hide many fields from message buffers
   wl-message-ignored-field-list '("^.*:")
