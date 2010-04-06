@@ -26,9 +26,9 @@
 
   wl-folder-desktop-name "All-Ele"
 
-  ;; check this folder periodically, and update modeline
-  wl-biff-check-folder-list '(".todo") ;; check every 180 seconds
-                                       ;; (default: wl-biff-check-interval)
+  wl-biff-check-interval 30 ;; check every 30 seconds
+  wl-biff-check-folder-list '(".INBOX")) ;;
+  wl-biff-use-idle-timer nil ;; in the background
 
 
 ;; format the summary line
@@ -54,7 +54,8 @@
      "^Subject"
      "^Date"
      "^To"
-     "^Cc"))
+     "^Cc")
+  )
 
 (add-hook 'wl-draft-send-hook
           ;; SMTP
@@ -132,31 +133,3 @@
           (error "Abort."))))))
 (add-hook 'wl-mail-send-pre-hook 'djcb-wl-draft-subject-check)
 (add-hook 'wl-mail-send-pre-hook 'djcb-wl-draft-attachment-check)
-
-
-; check for new mail frequently
-(setq
-wl-biff-check-interval 5 ;; check every 30 seconds
-wl-biff-use-idle-timer t) ;; in the background
-(setq wl-biff-check-folder-list '(".INBOX"))
-
-
-;; It does not seem like WL provides a function to list all the
-;; folders it knows by name, so here's one.
-;; From http://www.huoc.org/hacks/dotemacs/wlrc.el
-(defun wl-folder-name-list ()
-  "Return a list of all folder names."
-  ;; XXX: It seems the first folder always has ID 1.
-  ;; `wl-folder-get-next-folder' is broken in my version of WL: it
-  ;; wouldn't accept folder names, so we have to rely on IDs.
-  (let (folder-list
-        (id 1)
-        (entity (wl-folder-get-folder-name-by-id 1)))
-    (setq folder-list (list entity))
-    (setq entity (wl-folder-get-next-folder id))
-    (while entity
-      (setq id (wl-folder-get-entity-id entity))
-      (setq folder-list (cons entity folder-list))
-      (setq entity (wl-folder-get-next-folder id)))
-    folder-list))
-
