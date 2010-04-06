@@ -49,24 +49,16 @@
 
 ;; norify send to warn me about e-mail etc...
 ;; from http://emacs-fu.blogspot.com/2009/11/showing-pop-ups.html
-(defun djcb-popup (title msg &optional icon sound)
-  "Show a popup if we're on X, or echo it otherwise; TITLE is the title
-of the message, MSG is the context. Optionally, you can provide an ICON and
+(defun notify-popup (title msg &optional icon)
+  "Show a popup. Optionally, you can provide an ICON and
 a sound to be played"
   (interactive)
-  (when sound (shell-command
-               (concat "mplayer -really-quiet " sound " 2> /dev/null")))
-  (if (eq window-system 'x)
-      (shell-command (concat "notify-send "
-                             (if icon (concat "-i " icon) "")
-                             " '" title "' '" msg "'"))
-    ;; text only version
-    (message (concat title ": " msg))))
-
-(add-hook 'wl-mail-send-pre-hook 'djcb-wl-draft-subject-check)
-(add-hook 'wl-mail-send-pre-hook 'djcb-wl-draft-attachment-check)
+  (shell-command (concat "notify-send "
+                         (if icon (concat "-i " icon) "")
+                         " '" title "' '" msg "'"))
+)
 
 (add-hook 'wl-biff-notify-hook
-          (lambda()
-            (djcb-popup "Wanderlust" "You have new mail!")))
+          (lambda ()
+            (notify-popup "Wanderlust" "You have new mail!")))
 
