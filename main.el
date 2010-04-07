@@ -154,26 +154,25 @@ w) "d ")) line) 'face 'linum)))
 
 (define-key org-mode-map "\C-ct" 'org-todo)
 
-
 (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . org-mode))
-(defun csv-to-org-table ()
-  "Insert a file into the current buffer at point, and convert it to an org table."
-  (interactive)
-  (mark-whole-buffer)
-  (org-table-convert-region)
-  )
-(global-set-key [f2] 'csv-to-org-table)
 
+;; MAKE ME WORK
+;; (defun csv-to-org-table ()
+;;   "Insert a file into the current buffer at point, and convert it to an org table."
+;;   (interactive)
+;;   (mark-whole-buffer)
+;;   (org-table-convert-region)
+;;   )
+;; (global-set-key [f2] 'csv-to-org-table)
 
 ; multi-terminal-mode
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
 
-
 ; top looking nice
 (require 'top-mode)
-(top-mode 1)
-
+; MAKE ME WORK
+;(top-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; window and buffer general;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;;Easy between windows
