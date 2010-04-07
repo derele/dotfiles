@@ -1,12 +1,13 @@
 ;; -*- coding: latin-1; -*-
-;; .emacs
-
 ;; Emanuel Heitlinger  
-;; init file for the only true editor
+
+;; main cusomisation file: my .emacs
+;; links to this!
+
 ;; works only with 256 colors in terminal!!!
 
 ;; This file loads customisation common to all my machines
-;; at the end I am testion wich machine this is on and 
+;; at the end I am testign wich machine this is on and 
 ;; load the machine-dependent init-files
 
 (setq user-mail-address "emanuelheitlinger@gmail.com")
