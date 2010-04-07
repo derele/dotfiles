@@ -475,19 +475,13 @@ w) "d ")) line) 'face 'linum)))
 ;read html formatted mail
 (require 'mime-w3m)
 
-(require 'w3m-search)
-; add TeXMed http://www.bioinformatics.org/texmed/   
-; to searchable sites
-;; a webservice to query ncbi-pubmed and translate it's xml to bibtex
-(add-to-list 'w3m-search-engine-alist '("TeXmed" "http://www.bioinformatics.org/texmed/cgi-bin/query.cgi?query=%s"))
-
 ; Texmed search 
 (defun TeXmed-search ()
   "Search for a querry you are prompted for on TeXmed,
 an online-service, which allows retieval of bibtex from
 pubmed"
   (interactive)
-  (let ((query 
+   (let ((query 
          (read-from-minibuffer "TeXmed search: ")))
     (w3m-search-do-search 'w3m-goto-url "TeXmed" query)
     (setq TeXmed-last-searched query))
