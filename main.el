@@ -156,9 +156,6 @@ w) "d ")) line) 'face 'linum)))
 (define-key org-mode-map "\C-ct" 'org-todo)
 
 
-
-
-
 (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . org-mode))
 (defun csv-to-org-table ()
   "Insert a file into the current buffer at point, and convert it to an org table."
@@ -480,15 +477,13 @@ w) "d ")) line) 'face 'linum)))
 ;read html formatted mail
 (require 'mime-w3m)
 
+(require 'w3m-search)
 ; add TeXMed http://www.bioinformatics.org/texmed/   
 ; to searchable sites
-; TODO write a function that automatically 
-(require 'w3m-search)
 ;; a webservice to query ncbi-pubmed and translate it's xml to bibtex
 (add-to-list 'w3m-search-engine-alist '("TeXmed" "http://www.bioinformatics.org/texmed/cgi-bin/query.cgi?query=%s"))
 
-
-;;; 
+; Texmed search 
 (defun TeXmed-search ()
   "Search for a querry you are prompted for on TeXmed,
 an online-service, which allows retieval of bibtex from
@@ -497,22 +492,27 @@ pubmed"
   (let ((query 
          (read-from-minibuffer "TeXmed search: ")))
     (w3m-search-do-search 'w3m-goto-url "TeXmed" query)
-  (beginning-of-buffer)
-  (while (w3m-form-goto-next-field)
-    (if (looking-at " ]PMID")
-        (w3m-view-this-url)
-      ))
-  ; export giving a w3m buffer containing only the bibtex-entries
-  ; to be selected
-  (beginning-of-buffer)
-  (while (w3m-form-goto-next-field)
-    (if (looking-at "\\[export]")
-        (w3m-view-this-url)))
-  ; putt the buffer in bibtex-mode
-  (bibtex-mode)
-  ;give it a nice name
-  (rename-buffer (concat "TeXmed-search: " query)))
+    (setq TeXmed-last-searched query))
   )
+                                        ;
+(defun TeXmed-export ()
+  "Export the entries found on TexMed to a BibTeX file"
+  (interactive)
+  (beginning-of-buffer)
+  (while (w3m-form-goto-next-field)
+    (when (looking-at " ]PMID")
+      (w3m-view-this-url)
+      ))
+  (beginning-of-buffer)
+  (while (w3m-form-goto-next-field)
+    (when (looking-at "\\[export]")
+      (w3m-view-this-url))
+    )
+  
+  (rename-buffer (concat "TeXMed_search_" TeXmed-last-searched ".bib"))
+  (bibtex-mode)  
+)              
+
 (global-set-key "\C-ct" 'TeXmed-search)
 
 ;have funky signatures
