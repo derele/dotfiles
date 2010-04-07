@@ -135,8 +135,6 @@ w) "d ")) line) 'face 'linum)))
 ; highlight region between point and mark
 (transient-mark-mode t)
 
-
-
 ;;;;;;;;;;;;;;;;;;;;; Org-mode settings;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (global-set-key "\C-cl" 'org-store-link)
