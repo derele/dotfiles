@@ -512,8 +512,8 @@ pubmed"
   (rename-buffer (concat "TeXMed_search_" TeXmed-last-searched ".bib"))
   (bibtex-mode)  
 )              
-
 (global-set-key "\C-ct" 'TeXmed-search)
+(define-key w3m-mode-map (kbd "\C-ce") 'TeXmed-export)  
 
 ;have funky signatures
 (autoload 'add-signature "c-sig" "c-sig" t)
