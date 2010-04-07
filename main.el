@@ -552,6 +552,9 @@ pubmed"
  '(org-agenda-files (quote ("~/org/TODO.org" "~/org/main.org")))
 )
 
+;; load additional files
+(load-file "/home/ele/.emacs.d/dotemacs/w3m-init.el")
+
 ;; load the appropriate file for each machine
 (if (string-match "ele-laptop" (getenv "HOSTNAME")) ;; laptop
     (load-file "/home/ele/.emacs.d/dotemacs/emacs_laptop.el"))
