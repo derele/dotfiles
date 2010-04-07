@@ -171,6 +171,13 @@ w) "d ")) line) 'face 'linum)))
 
 ; multi-terminal-mode
 (require 'multi-term)
+(setq multi-term-program "/bin/bash")
+
+
+; top looking nice
+(require 'top-mode)
+(top-mode 1)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; window and buffer general;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;;Easy between windows
@@ -472,6 +479,41 @@ w) "d ")) line) 'face 'linum)))
 
 ;read html formatted mail
 (require 'mime-w3m)
+
+; add TeXMed http://www.bioinformatics.org/texmed/   
+; to searchable sites
+; TODO write a function that automatically 
+(require 'w3m-search)
+;; a webservice to query ncbi-pubmed and translate it's xml to bibtex
+(add-to-list 'w3m-search-engine-alist '("TeXmed" "http://www.bioinformatics.org/texmed/cgi-bin/query.cgi?query=%s"))
+
+
+;;; 
+(defun TeXmed-search ()
+  "Search for a querry you are prompted for on TeXmed,
+an online-service, which allows retieval of bibtex from
+pubmed"
+  (interactive)
+  (let ((query 
+         (read-from-minibuffer "TeXmed search: ")))
+    (w3m-search-do-search 'w3m-goto-url "TeXmed" query)
+  (beginning-of-buffer)
+  (while (w3m-form-goto-next-field)
+    (if (looking-at " ]PMID")
+        (w3m-view-this-url)
+      ))
+  ; export giving a w3m buffer containing only the bibtex-entries
+  ; to be selected
+  (beginning-of-buffer)
+  (while (w3m-form-goto-next-field)
+    (if (looking-at "\\[export]")
+        (w3m-view-this-url)))
+  ; putt the buffer in bibtex-mode
+  (bibtex-mode)
+  ;give it a nice name
+  (rename-buffer (concat "TeXmed-search: " query)))
+  )
+(global-set-key "\C-ct" 'TeXmed-search)
 
 ;have funky signatures
 (autoload 'add-signature "c-sig" "c-sig" t)
