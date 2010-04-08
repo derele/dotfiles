@@ -57,7 +57,7 @@ pubmed"
   (bibtex-mode)  
   )              
 
-(easy-mmode-define-minor-mode TeXMed-mode
+(define-minor-mode TeXMed-mode
   "Toggle TeXMed mode.
      With no argument, this command toggles the mode.
      Non-null prefix argument turns on the mode.
