@@ -1,4 +1,4 @@
-;;;;; TeXMed - Query and retrieve BibTeX from NCBI pubmed via TeXMed
+;;;;; TeXMed.el - Query and retrieve BibTeX from NCBI pubmed via TeXMed in Emacs
 ;;
 ;; Based on: TeXMed - http://www.bioinformatics.org/texmed/
 ;; an interface to NCBI PubMed http://www.ncbi.nlm.nih.gov, 
@@ -20,7 +20,7 @@
 ;; 1). Type C-t to start a query
 ;; 2). Presented with the results of the query you have these options:
 ;;     a) Type C-ea to export all results to a bibtex-file
-;;     b) Type C-al to go through results ond choose one by one
+;;     b) Type C-el to go through results ond choose one by one
 
 ;; Only tested with Gnu-Emacs 23.1.1.
 
