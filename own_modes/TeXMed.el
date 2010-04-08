@@ -20,12 +20,12 @@
 (defgroup TeXMed nil "TeXMed: retrieve bibtex from pubmed" :group 'Tex)
 
 
-(defvar TeXMed-mode-map
-  (let ((map (make-keymap)))
-    (suppress-keymap map)
-    (define-key "\C-e" 'TeXMed-export-all)
-    map)
-  "Keymap for TeXMed Buffers.")
+(defvar TeXMed-mode-map)
+  ;; (let ((map (make-keymap)))
+  ;;   (suppress-keymap map)
+  ;;   (define-key "\C-e" 'TeXMed-export-all)
+  ;;   map)
+  ;; "Keymap for TeXMed Buffers.")
 
 
 ;; Mode definition
