@@ -472,8 +472,11 @@ w) "d ")) line) 'face 'linum)))
       'wl-draft-kill
       'mail-send-hook))
 
-;read html formatted mail
+;; read html formatted mail
 (require 'mime-w3m)
+
+;; TeXMed mode
+(require 'TeXMed)
 
 ; Texmed search 
 (defun TeXmed-search ()
@@ -481,32 +484,16 @@ w) "d ")) line) 'face 'linum)))
 an online-service, which allows retieval of bibtex from
 pubmed"
   (interactive)
-   (let ((query 
+  (let ((query 
          (read-from-minibuffer "TeXmed search: ")))
     (w3m-search-do-search 'w3m-goto-url "TeXmed" query)
+    (TeXMed-mode)
     (setq TeXmed-last-searched query))
   )
-                                        ;
-(defun TeXmed-export ()
-  "Export the entries found on TexMed to a BibTeX file"
-  (interactive)
-  (beginning-of-buffer)
-  (while (w3m-form-goto-next-field)
-    (when (looking-at " ]PMID")
-      (w3m-view-this-url)
-      ))
-  (beginning-of-buffer)
-  (while (w3m-form-goto-next-field)
-    (when (looking-at "\\[export]")
-      (w3m-view-this-url))
-    )
-  
-  (rename-buffer (concat "TeXMed_search_" TeXmed-last-searched ".bib"))
-  (bibtex-mode)  
-)              
 (global-set-key "\C-ct" 'TeXmed-search)
 
-;have funky signatures
+
+;; have funky signatures
 (autoload 'add-signature "c-sig" "c-sig" t)
 (autoload 'delete-signature "c-sig" "c-sig" t)
 (autoload 'insert-signature-eref "c-sig" "c-sig" t)
