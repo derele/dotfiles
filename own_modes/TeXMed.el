@@ -19,13 +19,11 @@
 
 (defgroup TeXMed nil "TeXMed: retrieve bibtex from pubmed" :group 'Tex)
 
-
 (defvar TeXMed-mode-map
   (let ((map (make-sparse-keymap)))
-    (define-key map "\C-ce" 'TeXMed-export-all)
+    (define-key map "\C-ce" 'TeXMed-mark-all)
     (define-key map "\C-cl" 'TeXMed-ask-loop)
     map))
-
 
 ;; Mode definition
 (defun TeXMed-mode
@@ -44,45 +42,37 @@ an online-service, which allows retieval of bibtex from
 pubmed"
   (interactive)
   (let ((query 
-         (defun TeXMed-export-all ()
-  "Export the entries found on TexMed to a BibTeX file"
+         (read-from-minibuffer "TeXmed search: ")))
+    (w3m-search-do-search 'w3m-goto-url "TeXmed" query)
+    (TeXMed-mode)
+    (setq TeXmed-last-searched query))
+  )
+
+(defun TeXMed-mark-all ()
+  "Mark all entries found in TexMed's w3m buffer"
   (interactive)
   (beginning-of-buffer)
   (while (w3m-form-goto-next-field)
     (when (looking-at " ]PMID")
       (w3m-view-this-url)
       ))
-  (beginning-of-buffer)
-  (while (w3m-form-goto-next-field)
-    (when (looking-at "\\[export]")
-      (w3m-view-this-url))
-    )
-  
-  (rename-buffer (concat "TeXMed_search_" TeXmed-last-searched ".bib"))
-  (bibtex-mode)  
   )      
-         
-(defun TeXMed-export-all ()
-  "Export all the entries found on TexMed to a BibTeX file"
-  (interactive)
-  (beginning-of-buffer)
-  (while (w3m-form-goto-next-field)
-    (when (looking-at " ]PMID")
-      (w3m-view-this-url)
-      ))
+
+(defun TeXMed-export ()
+  "Export the entries marked in TeXMed's w3m buffer."
   (beginning-of-buffer)
   (while (w3m-form-goto-next-field)
     (when (looking-at "\\[export]")
       (w3m-view-this-url))
     )
-  
   (rename-buffer (concat "TeXMed_search_" TeXmed-last-searched ".bib"))
   (bibtex-mode)  
   )
 
 (defun TeXMed-ask-loop ()
   "Go through entries found on TexMed 
-and ask wether to export to a BibTeX file"
+and ask wether to export to a BibTeX file, 
+export the chosen"
   (interactive)
   (beginning-of-buffer)
   (while (w3m-form-goto-next-field)
@@ -91,18 +81,8 @@ and ask wether to export to a BibTeX file"
           (w3m-view-this-url)
         (w3m-goto-next-field)
         )))
-  (beginning-of-buffer)
-  (while (w3m-form-goto-next-field)
-    (when (looking-at "\\[export]")
-      (w3m-view-this-url))
-    )
-  
-  (rename-buffer (concat "TeXMed_search_" TeXmed-last-searched ".bib"))
-  (bibtex-mode)  
+  (TeXMed-export)
   )              
-
-
-
 
 (define-minor-mode TeXMed-mode
   "Toggle TeXMed mode.
