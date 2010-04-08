@@ -27,7 +27,7 @@
   )
 
 ;; global functions Texmed search 
-(defun TeXmed-search ()
+(defun TeXMed-search ()
   "Search for a querry you are prompted for on TeXMed,
 an online-service, which allows retieval of bibtex from
 pubmed"
@@ -39,7 +39,7 @@ pubmed"
     (setq TeXmed-last-searched query))
   )
                                         ;
-(defun TeXmed-export-all ()
+(defun TeXMed-export-all ()
   "Export the entries found on TexMed to a BibTeX file"
   (interactive)
   (beginning-of-buffer)

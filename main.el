@@ -478,7 +478,7 @@ w) "d ")) line) 'face 'linum)))
 
 ;; TeXMed mode
 (require 'TeXMed)
-(global-set-key "\C-ct" 'TeXmed-search)
+(global-set-key "\C-ct" 'TeXMed-search)
 
 ;; have funky signatures
 (autoload 'add-signature "c-sig" "c-sig" t)
