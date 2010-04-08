@@ -15,10 +15,8 @@
 ;; 4). 
 
 ;; Only tested with Gnu-Emacs 23.1.1.
-;; Variables-start
 
-
-;; Variables end
+;; Mode definition
 (defun TeXMed-mode
 (setq TeXMed-mode 
 	(if (null arg) (not word-count-mode) (> (prefix-numeric-value arg) 0)))
@@ -27,8 +25,22 @@
     (TeXMed-mode-off))
   (run-hooks 'TeXMed-mode-hook)
   )
+
+;; global functions Texmed search 
+;;;###autoload
+(defun TeXmed-search ()
+  "Search for a querry you are prompted for on TeXmed,
+an online-service, which allows retieval of bibtex from
+pubmed"
+  (interactive)
+  (let ((query 
+         (read-from-minibuffer "TeXmed search: ")))
+    (w3m-search-do-search 'w3m-goto-url "TeXmed" query)
+    (TeXMed-mode)
+    (setq TeXmed-last-searched query))
+  )
                                         ;
-(defun TeXmed-export ()
+(defun TeXmed-export-all ()
   "Export the entries found on TexMed to a BibTeX file"
   (interactive)
   (beginning-of-buffer)
@@ -57,10 +69,10 @@
   ;; The initial value.
   :init-value nil
   ;; The indicator for the mode line.
-  :lighter " TeXMed-mode"
+  :lighter " TeXMed"
   ;; The minor mode bindings.
   :keymap
-  '(("\C-e" . TeXMed-export))
+  '(("\C-a" . TeXMed-export-all))
   :group 'TeXMed)
 
 (provide 'TeXMed)
