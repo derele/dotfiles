@@ -13,6 +13,9 @@
 ;;     (require 'TeXMed)
 ;;     (global-set-key "\C-ct" 'TeXMed-search)
 ;;     
+;; DEPENDENCIES: 
+;; 1). emacs-w3m http://emacs-w3m.namazu.org/ 
+;;
 ;; How to use:
 ;; 1). Type C-t to start a query
 ;; 2). Presented with the results of the query you have these options:
@@ -20,12 +23,18 @@
 ;;     b) Type C-al to go through results ond choose one by one
 
 ;; Only tested with Gnu-Emacs 23.1.1.
-;; This is my very first minor mode for Emacs:
-;; It probabely has many bugs and uses maybe bad elisp...
 
+;; This is my very first minor mode for Emacs:
+;; It probabely has many bugs, uses maybe bad elisp
+;; and fails following some of the conventions
+
+;; load dependencies
 (require 'w3m-search)
+
+;; Add the serch TeXMed search engine
 (add-to-list 'w3m-search-engine-alist '("TeXmed" "http://www.bioinformatics.org/texmed/cgi-bin/query.cgi?query=%s"))
 
+;; Local keybindings
 (defgroup TeXMed nil "TeXMed: retrieve bibtex from pubmed" :group 'Tex)
 (defvar TeXMed-mode-map
   (let ((map (make-sparse-keymap)))
