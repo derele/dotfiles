@@ -32,7 +32,7 @@
 (require 'w3m-search)
 
 ;; Add the serch TeXMed search engine
-(add-to-list 'w3m-search-engine-alist '("TeXmed" "http://www.bioinformatics.org/texmed/cgi-bin/query.cgi?query=%s"))
+(add-to-list 'w3m-search-engine-alist '("TeXMed" "http://www.bioinformatics.org/texmed/cgi-bin/query.cgi?query=%s"))
 
 ;; Local keybindings
 (defgroup TeXMed nil "TeXMed: retrieve bibtex from pubmed" :group 'Tex)
@@ -59,10 +59,10 @@ an online-service, which allows retieval of bibtex from
 pubmed"
   (interactive)
   (let ((query 
-         (read-from-minibuffer "TeXmed search: ")))
-    (w3m-search-do-search 'w3m-goto-url "TeXmed" query)
+         (read-from-minibuffer "TeXMed search: ")))
+    (w3m-search-do-search 'w3m-goto-url "TeXMed" query)
     (TeXMed-mode)
-    (setq TeXmed-last-searched query))
+    (setq TeXMed-last-searched query))
   )
 
 (defun TeXMed-mark-all ()
@@ -81,7 +81,7 @@ pubmed"
     (when (looking-at "\\[export]")
       (w3m-view-this-url))
     )
-  (rename-buffer (concat "TeXMed_search_" TeXmed-last-searched ".bib"))
+  (rename-buffer (concat "TeXMed_search_" TeXMed-last-searched ".bib"))
   (bibtex-mode)  
   )
 
