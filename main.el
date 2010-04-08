@@ -478,21 +478,7 @@ w) "d ")) line) 'face 'linum)))
 
 ;; TeXMed mode
 (require 'TeXMed)
-
-; Texmed search 
-(defun TeXmed-search ()
-  "Search for a querry you are prompted for on TeXmed,
-an online-service, which allows retieval of bibtex from
-pubmed"
-  (interactive)
-  (let ((query 
-         (read-from-minibuffer "TeXmed search: ")))
-    (w3m-search-do-search 'w3m-goto-url "TeXmed" query)
-    (TeXMed-mode)
-    (setq TeXmed-last-searched query))
-  )
 (global-set-key "\C-ct" 'TeXmed-search)
-
 
 ;; have funky signatures
 (autoload 'add-signature "c-sig" "c-sig" t)
