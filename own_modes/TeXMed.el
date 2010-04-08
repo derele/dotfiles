@@ -38,7 +38,7 @@
 (defgroup TeXMed nil "TeXMed: retrieve bibtex from pubmed" :group 'Tex)
 (defvar TeXMed-mode-map
   (let ((map (make-sparse-keymap)))
-    (define-key map "\C-cea" 'TeXMed-mark-all)
+    (define-key map "\C-cea" 'TeXMed-export-all)
     (define-key map "\C-cel" 'TeXMed-ask-loop)
     map))
 
@@ -67,7 +67,6 @@ pubmed"
 
 (defun TeXMed-mark-all ()
   "Mark all entries found in TexMed's w3m buffer"
-  (interactive)
   (beginning-of-buffer)
   (while (w3m-form-goto-next-field)
     (when (looking-at " ]PMID")
@@ -101,7 +100,14 @@ export the chosen"
           (w3m-view-this-url)
         )))
   (TeXMed-export)
-  )              
+  )
+
+(defun TeXMed-export-all ()
+  "Export all the entries found on TexMed to a BibTeX file"
+  (interactive)
+  (TeXMed-mark-all)
+  (TeXMed-export)
+  )
 
 (define-minor-mode TeXMed-mode
   "Toggle TeXMed mode.
