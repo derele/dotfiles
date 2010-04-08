@@ -479,6 +479,12 @@ w) "d ")) line) 'face 'linum)))
 ;; TeXMed mode
 (require 'TeXMed)
 (global-set-key "\C-ct" 'TeXMed-search)
+(add-hook 'TeXMed-mode-hook
+	  (lambda()
+	    (define-key TeXMed-mode-map (kbd "C-ce") 'cperl-perldoc)  
+	    )
+	  )
+
 
 ;; have funky signatures
 (autoload 'add-signature "c-sig" "c-sig" t)

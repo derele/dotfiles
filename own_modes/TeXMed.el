@@ -16,6 +16,18 @@
 
 ;; Only tested with Gnu-Emacs 23.1.1.
 
+
+(defgroup TeXMed nil "TeXMed: retrieve bibtex from pubmed" :group 'Tex)
+
+
+(defvar TeXMed-mode-map
+  (let ((map (make-keymap)))
+    (suppress-keymap map)
+    (define-key "\C-e" 'TeXMed-export-all)
+    map)
+  "Keymap for TeXMed Buffers.")
+
+
 ;; Mode definition
 (defun TeXMed-mode
 (setq TeXMed-mode 
@@ -66,10 +78,7 @@ pubmed"
   :init-value nil
   ;; The indicator for the mode line.
   :lighter " TeXMed"
-  ;; The minor mode bindings.
-  :keymap
-  '(("\C-e" . TeXMed-export-all))
-  :group 'TeXMed)
+  )
 
 (provide 'TeXMed)
 ;; ----------------------------------------------------------------------
