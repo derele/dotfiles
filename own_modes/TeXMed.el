@@ -57,14 +57,11 @@ pubmed"
   (bibtex-mode)  
   )              
 
-(define-minor-mode TeXMed-mode
+(easy-mmode-define-minor-mode TeXMed-mode
   "Toggle TeXMed mode.
      With no argument, this command toggles the mode.
      Non-null prefix argument turns on the mode.
-     Null prefix argument turns off the mode.
-     
-     When TeXMed mode is enabled, the control delete key
-     gobbles all preceding whitespace except the last."
+     Null prefix argument turns off the mode."     
   ;; The initial value.
   :init-value nil
   ;; The indicator for the mode line.
