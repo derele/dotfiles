@@ -82,7 +82,6 @@ export the chosen"
                   (substring (thing-at-point 'line) 0 2)
                   " ?"))
           (w3m-view-this-url)
-        (w3m-form-goto-next-field)
         )))
   (TeXMed-export)
   )              
