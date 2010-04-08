@@ -1,24 +1,32 @@
 ;;;;; TeXMed - Query and retrieve BibTeX from NCBI pubmed via TeXMed
 ;;
+;; Based on: TeXMed - http://www.bioinformatics.org/texmed/
+;; an interface to NCBI PubMed http://www.ncbi.nlm.nih.gov, 
+;; that allows you to query PubMed and to store references in BibTeX format. 
+;; by Arne Muller
+;;
 ;; AUTHOR:  Emanuel Heitlinger <emanuelheitlinger@gmail.com>
 ;; LICENCE: GPL2
 ;; How to install:
-;; 1). Download this file from the following URL and put in your emacs's
-;;     load-path
+;; 1). Download this file and put in your emacs's load-path
 ;; 2). Put the following in your .emacs:
 ;;     (require 'TeXMed)
-;;
+;;     (global-set-key "\C-ct" 'TeXMed-search)
+;;     
 ;; How to use:
-;; 1). 
-;; 2). 
-;; 3). 
-;; 4). 
+;; 1). Type C-t to start a query
+;; 2). Presented with the results of the query you have these options:
+;;     a) Type C-ea to export all results to a bibtex-file
+;;     b) Type C-al to go through results ond choose one by one
 
 ;; Only tested with Gnu-Emacs 23.1.1.
+;; This is my very first minor mode for Emacs:
+;; It probabely has many bugs and uses maybe bad elisp...
 
+(require 'w3m-search)
+(add-to-list 'w3m-search-engine-alist '("TeXmed" "http://www.bioinformatics.org/texmed/cgi-bin/query.cgi?query=%s"))
 
 (defgroup TeXMed nil "TeXMed: retrieve bibtex from pubmed" :group 'Tex)
-
 (defvar TeXMed-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map "\C-cea" 'TeXMed-mark-all)

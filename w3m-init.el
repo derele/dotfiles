@@ -1,11 +1,3 @@
-(require 'w3m-search)
-; add TeXMed http://www.bioinformatics.org/texmed/   
-; to searchable sites
-;; a webservice to query ncbi-pubmed and translate it's xml to bibtex
-(add-to-list 'w3m-search-engine-alist '("TeXmed" "http://www.bioinformatics.org/texmed/cgi-bin/query.cgi?query=%s"))
-
-(define-key w3m-mode-map (kbd "\C-ce") 'TeXmed-export)  
-
 ;; link numbering
 (require 'w3m-lnum)
   (defun my-w3m-go-to-linknum ()
