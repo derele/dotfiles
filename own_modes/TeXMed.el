@@ -27,9 +27,8 @@
   )
 
 ;; global functions Texmed search 
-;;;###autoload
 (defun TeXmed-search ()
-  "Search for a querry you are prompted for on TeXmed,
+  "Search for a querry you are prompted for on TeXMed,
 an online-service, which allows retieval of bibtex from
 pubmed"
   (interactive)
@@ -72,7 +71,7 @@ pubmed"
   :lighter " TeXMed"
   ;; The minor mode bindings.
   :keymap
-  '(("\C-a" . TeXMed-export-all))
+  '(("\C-e" . TeXMed-export-all))
   :group 'TeXMed)
 
 (provide 'TeXMed)
