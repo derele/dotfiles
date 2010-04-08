@@ -21,13 +21,13 @@
 
 (defvar TeXMed-mode-map
   (let ((map (make-sparse-keymap)))
-    (define-key map "\C-ce" 'TeXMed-mark-all)
-    (define-key map "\C-cl" 'TeXMed-ask-loop)
+    (define-key map "\C-cea" 'TeXMed-mark-all)
+    (define-key map "\C-cel" 'TeXMed-ask-loop)
     map))
 
 ;; Mode definition
 (defun TeXMed-mode
-(setq TeXMed-mode 
+  (setq TeXMed-mode 
 	(if (null arg) (not word-count-mode) (> (prefix-numeric-value arg) 0)))
   (if TeXMed-mode
       (TeXMed-mode-on)
@@ -77,9 +77,12 @@ export the chosen"
   (beginning-of-buffer)
   (while (w3m-form-goto-next-field)
     (when (looking-at " ]PMID")
-      (if(y-or-n-p "export entry? ")
+      (if(y-or-n-p 
+          (concat "export entry " 
+                  (substring (thing-at-point 'line) 0 2)
+                  " ?"))
           (w3m-view-this-url)
-        (w3m-goto-next-field)
+        (w3m-form-goto-next-field)
         )))
   (TeXMed-export)
   )              
