@@ -23,6 +23,7 @@
 (defvar TeXMed-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map "\C-ce" 'TeXMed-export-all)
+    (define-key map "\C-cl" 'TeXMed-ask-loop)
     map))
 
 
@@ -43,13 +44,7 @@ an online-service, which allows retieval of bibtex from
 pubmed"
   (interactive)
   (let ((query 
-         (read-from-minibuffer "TeXmed search: ")))
-    (w3m-search-do-search 'w3m-goto-url "TeXmed" query)
-    (TeXMed-mode)
-    (setq TeXmed-last-searched query))
-  )
-                                        ;
-(defun TeXMed-export-all ()
+         (defun TeXMed-export-all ()
   "Export the entries found on TexMed to a BibTeX file"
   (interactive)
   (beginning-of-buffer)
@@ -65,7 +60,49 @@ pubmed"
   
   (rename-buffer (concat "TeXMed_search_" TeXmed-last-searched ".bib"))
   (bibtex-mode)  
+  )      
+         
+(defun TeXMed-export-all ()
+  "Export all the entries found on TexMed to a BibTeX file"
+  (interactive)
+  (beginning-of-buffer)
+  (while (w3m-form-goto-next-field)
+    (when (looking-at " ]PMID")
+      (w3m-view-this-url)
+      ))
+  (beginning-of-buffer)
+  (while (w3m-form-goto-next-field)
+    (when (looking-at "\\[export]")
+      (w3m-view-this-url))
+    )
+  
+  (rename-buffer (concat "TeXMed_search_" TeXmed-last-searched ".bib"))
+  (bibtex-mode)  
+  )
+
+(defun TeXMed-ask-loop ()
+  "Go through entries found on TexMed 
+and ask wether to export to a BibTeX file"
+  (interactive)
+  (beginning-of-buffer)
+  (while (w3m-form-goto-next-field)
+    (when (looking-at " ]PMID")
+      (if(y-or-n-p "export entry? ")
+          (w3m-view-this-url)
+        (w3m-goto-next-field)
+        )))
+  (beginning-of-buffer)
+  (while (w3m-form-goto-next-field)
+    (when (looking-at "\\[export]")
+      (w3m-view-this-url))
+    )
+  
+  (rename-buffer (concat "TeXMed_search_" TeXmed-last-searched ".bib"))
+  (bibtex-mode)  
   )              
+
+
+
 
 (define-minor-mode TeXMed-mode
   "Toggle TeXMed mode.
