@@ -21,7 +21,12 @@
 ;; 2). Presented with the results of the query you have these options:
 ;;     a) Type C-ea to export all results to a bibtex-file
 ;;     b) Type C-el to go through results ond choose one by one
-
+;;         + If you do this till the last entry your selection will be 
+;;           exported automatically
+;;         + If you are satisfied befor the end abort with C-g an goto 3.)
+;; 3). Type C-ee to export a selection
+;;
+;;
 ;; Only tested with Gnu-Emacs 23.1.1.
 
 ;; This is my very first minor mode for Emacs:
@@ -40,6 +45,7 @@
   (let ((map (make-sparse-keymap)))
     (define-key map "\C-cea" 'TeXMed-export-all)
     (define-key map "\C-cel" 'TeXMed-ask-loop)
+    (define-key map "\C-cee" 'TeXMed-export)
     map))
 
 ;; Mode definition
@@ -76,6 +82,7 @@ pubmed"
 
 (defun TeXMed-export ()
   "Export the entries marked in TeXMed's w3m buffer."
+  (interactive)
   (beginning-of-buffer)
   (while (w3m-form-goto-next-field)
     (when (looking-at "\\[export]")
