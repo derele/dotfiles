@@ -157,16 +157,19 @@ w) "d ")) line) 'face 'linum)))
 
 (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . org-mode))
 
-;; MAKE ME WORK
-;; (defun csv-to-org-table ()
-;;   "Insert a file into the current buffer at point, and convert it to an org table."
-;;   (interactive)
-;;   (mark-whole-buffer)
-;;   (org-table-convert-region)
-;;   )
-;; (global-set-key [f2] 'csv-to-org-table)
+;; open-csv files as org-table files
+(defun ele-open-csv-as-org-table ()
+  "When a .csv file is opened convert it to an org table."
+  (if (string-match "csv" (file-name-extension (buffer-name)))
+      (progn
+        (org-table-convert-region (point-min) (point-max))
+        (rename-buffer(concat(file-name-sans-extension (buffer-name)) ".org"))
+        (write-file (buffer-name))
+        )))
+(add-hook 'find-file-hook 'ele-open-csv-as-org-table)
 
-; multi-terminal-mode
+
+;; multi-terminal-mode
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
 
