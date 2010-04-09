@@ -17,7 +17,8 @@
 ;; 1). emacs-w3m http://emacs-w3m.namazu.org/ 
 ;;
 ;; How to use:
-;; 1). Type C-t to start a query
+;; 1). Type C-ct to start a query (that's press Strg and c together then
+;;     t alone)
 ;; 2). Presented with the results of the query you have these options:
 ;;     a) Type C-ea to export all results to a bibtex-file
 ;;     b) Type C-el to go through results ond choose one by one
@@ -78,7 +79,7 @@ pubmed"
     (when (looking-at " ]PMID")
       (w3m-view-this-url)
       ))
-  )      
+  )
 
 (defun TeXMed-export ()
   "Export the entries marked in TeXMed's w3m buffer."
@@ -88,7 +89,7 @@ pubmed"
     (when (looking-at "\\[export]")
       (w3m-view-this-url))
     )
-  (rename-buffer (concat "TeXMed_search_" TeXMed-last-searched ".bib"))
+  (write-file (concat "TeXMed_search_" TeXMed-last-searched ".bib"))
   (bibtex-mode)  
   )
 
@@ -102,9 +103,12 @@ export the chosen"
     (when (looking-at " ]PMID")
       (if(y-or-n-p 
           (concat "export entry " 
-                  (substring (thing-at-point 'line) 0 2)
+                  (buffer-substring-no-properties (search-backward ".") (+ 1 (search-backward "\n")))
                   " ?"))
-          (w3m-view-this-url)
+          (progn     ; additional next field because regex search above moves point
+            (w3m-form-goto-next-field)
+            (w3m-view-this-url))
+        (w3m-form-goto-next-field)
         )))
   (TeXMed-export)
   )

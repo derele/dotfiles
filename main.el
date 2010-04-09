@@ -172,7 +172,7 @@ w) "d ")) line) 'face 'linum)))
         )))
 (add-hook 'find-file-hook 'ele-open-csv-as-org-table)
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;terminal  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; multi-terminal-mode
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
