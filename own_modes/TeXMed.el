@@ -59,6 +59,15 @@
   (run-hooks 'TeXMed-mode-hook)
   )
 
+;; The variables of the mode
+(defvar TeXMed-last-searched nil "Stores the last query used in TeXMed")
+
+(defcustom TeXMed-export-hook nil
+  "Hook run when exporting TeXMed searches."
+  :type 'hook
+  :options '(TeXMed-include-article-id TeXMed-include-abstracts)
+  :group 'TeX)
+
 ;; global functions Texmed search 
 (defun TeXMed-search ()
   "Search for a querry you are prompted for on TeXMed,
@@ -72,23 +81,37 @@ pubmed"
     (setq TeXMed-last-searched query))
   )
 
-(defun TeXMed-mark-all ()
-  "Mark all entries found in TexMed's w3m buffer"
+(defun TeXMed-tick-field (proceeding)
+  "Tick the field proceeding the argument"
   (beginning-of-buffer)
   (while (w3m-form-goto-next-field)
-    (when (looking-at " ]PMID")
+    (when (looking-at proceeding)
       (w3m-view-this-url)
-      ))
+      )
+    )
+  )
+
+(defun TeXMed-include-aticle-id ()
+  "Tick the include article id link"
+  (TeXMed-tick-field  " ] link article ids")
+  )
+
+(defun TeXMed-include-abstract ()
+  "Tick the include article id link"
+  (TeXMed-tick-field  " ] incl. abstract")
+  )
+
+(defun TeXMed-mark-all ()
+  "Mark all entries found in TexMed's w3m buffer"
+  (TeXMed-tick-field  " ]PMID")
   )
 
 (defun TeXMed-export ()
   "Export the entries marked in TeXMed's w3m buffer."
   (interactive)
   (beginning-of-buffer)
-  (while (w3m-form-goto-next-field)
-    (when (looking-at "\\[export]")
-      (w3m-view-this-url))
-    )
+  TeXMed-export-hook
+  (TeXMed-tick-field "\\[export]")
   (write-file (concat "TeXMed_search_" TeXMed-last-searched ".bib"))
   (bibtex-mode)  
   )
