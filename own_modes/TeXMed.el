@@ -56,8 +56,7 @@
   (if TeXMed-mode
       (TeXMed-mode-on)
     (TeXMed-mode-off))
-  (run-hooks 'TeXMed-mode-hook)
-  )
+  (run-hooks 'TeXMed-mode-hook))
 
 ;; The variables of the mode
 (defvar TeXMed-search-history nil "Stores the queries used in TeXMed")
@@ -75,35 +74,34 @@ an online-service, which allows retieval of bibtex from
 pubmed"
   (interactive)
   (let ((query 
-         (read-from-minibuffer "TeXMed search: " nil nil nil 'TeXMed-search-history (thing-at-point 'word))))
+         (read-from-minibuffer "TeXMed search: " nil nil nil 'TeXMed-search-history )))
     (w3m-search-do-search 'w3m-goto-url "TeXMed" query)
-    (TeXMed-mode)
-    (add-to-list 'TeXMed-search-history query)))
+    (if (string-match "^$" query) ; user entered empty string
+        (progn
+          (message "Please give a query!")
+          (TeXMed-search)) ; search again 
+      (progn ; else go agead
+        (TeXMed-mode) 
+        (add-to-list 'TeXMed-search-history query)))))
 
 (defun TeXMed-tick-field (proceeding)
   "Tick the field proceeding the argument"
   (beginning-of-buffer)
   (while (w3m-form-goto-next-field)
     (when (looking-at proceeding)
-      (w3m-view-this-url)
-      )
-    )
-  )
+      (w3m-view-this-url))))
 
 (defun TeXMed-include-aticle-id ()
   "Tick the include article id link"
-  (TeXMed-tick-field  " ] link article ids")
-  )
+  (TeXMed-tick-field  " ] link article ids"))
 
 (defun TeXMed-include-abstract ()
   "Tick the include article id link"
-  (TeXMed-tick-field  " ] incl. abstract")
-  )
+  (TeXMed-tick-field  " ] incl. abstract"))
 
 (defun TeXMed-mark-all ()
   "Mark all entries found in TexMed's w3m buffer"
-  (TeXMed-tick-field  " ]PMID")
-  )
+  (TeXMed-tick-field  " ]PMID"))
 
 (defun TeXMed-export ()
   "Export the entries marked in TeXMed's w3m buffer."
@@ -112,8 +110,7 @@ pubmed"
   TeXMed-export-hook
   (TeXMed-tick-field "\\[export]")
   (write-file (concat "TeXMed_search_" (car TeXMed-search-history) ".bib"))
-  (bibtex-mode)  
-  )
+  (bibtex-mode))
 
 (defun TeXMed-ask-loop ()
   "Go through entries found on TexMed 
@@ -130,17 +127,14 @@ export the chosen"
           (progn     ; additional next field because regex search above moves point
             (w3m-form-goto-next-field)
             (w3m-view-this-url))
-        (w3m-form-goto-next-field)
-        )))
-  (TeXMed-export)
-  )
+        (w3m-form-goto-next-field))))
+  (TeXMed-export))
 
 (defun TeXMed-export-all ()
   "Export all the entries found on TexMed to a BibTeX file"
   (interactive)
   (TeXMed-mark-all)
-  (TeXMed-export)
-  )
+  (TeXMed-export))
 
 (define-minor-mode TeXMed-mode
   "Toggle TeXMed mode.
@@ -150,8 +144,7 @@ export the chosen"
   ;; The initial value.
   :init-value nil
   ;; The indicator for the mode line.
-  :lighter " TeXMed"
-  )
+  :lighter " TeXMed")
 
 (provide 'TeXMed)
 ;; ----------------------------------------------------------------------
