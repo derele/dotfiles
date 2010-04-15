@@ -12,12 +12,12 @@
 ;; 2). Put the following in your .emacs:
 ;;     (require 'TeXMed)
 ;;     (global-set-key "\C-ct" 'TeXMed-search)
-;;     
+;;
 ;; DEPENDENCIES: 
 ;; 1). emacs-w3m http://emacs-w3m.namazu.org/ 
 ;;
 ;; How to use:
-;; 1). Type C-ct to start a query (that's press Strg and c together then
+;; 1). Type C-ct to start a query (that's press Control and c together then
 ;;     t alone)
 ;; 2). Presented with the results of the query you have these options:
 ;;     a) Type C-ea to export all results to a bibtex-file
@@ -26,7 +26,11 @@
 ;;           exported automatically
 ;;         + If you are satisfied befor the end abort with C-g an goto 3.)
 ;; 3). Type C-ee to export a selection
-;;
+;; 4). To generally include abstracts or article links you can put the
+;;     following into your .emacs:
+;;     (setq  TeXMed-include-abstract t)
+;;     (setq  TeXMed-include-article-id t)
+
 ;;
 ;; Only tested with Gnu-Emacs 23.1.1.
 
@@ -49,23 +53,10 @@
     (define-key map "\C-cee" 'TeXMed-export)
     map))
 
-;; Mode definition
-(defun TeXMed-mode
-  (setq TeXMed-mode 
-	(if (null arg) (not word-count-mode) (> (prefix-numeric-value arg) 0)))
-  (if TeXMed-mode
-      (TeXMed-mode-on)
-    (TeXMed-mode-off))
-  (run-hooks 'TeXMed-mode-hook))
-
-;; The variables of the mode
+;; The variables 
 (defvar TeXMed-search-history nil "Stores the queries used in TeXMed")
-
-(defcustom TeXMed-export-hook nil
-  "Hook run when exporting TeXMed searches."
-  :type 'hook
-  :options '(TeXMed-include-article-id TeXMed-include-abstracts)
-  :group 'TeX)
+(defvar TeXMed-include-article-id nil "Non nil means store article id field is ticked before export")
+(defvar TeXMed-include-abstract nil "Non nil means include abstract field is ticked before export")
 
 ;; global functions Texmed search 
 (defun TeXMed-search ()
@@ -77,9 +68,7 @@ pubmed"
          (read-from-minibuffer "TeXMed search: " nil nil nil 'TeXMed-search-history (thing-at-point 'word))))
     (w3m-search-do-search 'w3m-goto-url "TeXMed" query)
     (if (string-match "^$" query) ; user entered empty string
-        (progn
-          (message "Please give a query!")
-          (TeXMed-search)) ; search again 
+        (TeXMed-search) ; search again 
       (progn ; else go agead
         (TeXMed-mode) 
         (add-to-list 'TeXMed-search-history query)))))
@@ -91,23 +80,12 @@ pubmed"
     (when (looking-at proceeding)
       (w3m-view-this-url))))
 
-(defun TeXMed-include-aticle-id ()
-  "Tick the include article id link"
-  (TeXMed-tick-field  " ] link article ids"))
-
-(defun TeXMed-include-abstract ()
-  "Tick the include article id link"
-  (TeXMed-tick-field  " ] incl. abstract"))
-
-(defun TeXMed-mark-all ()
-  "Mark all entries found in TexMed's w3m buffer"
-  (TeXMed-tick-field  " ]PMID"))
-
 (defun TeXMed-export ()
   "Export the entries marked in TeXMed's w3m buffer."
   (interactive)
   (beginning-of-buffer)
-  TeXMed-export-hook
+  (if TeXMed-include-article-id (TeXMed-tick-field  " ] link article ids"))
+  (if TeXMed-include-abstract   (TeXMed-tick-field  " ] incl. abstract"))
   (TeXMed-tick-field "\\[export]")
   (write-file (concat "TeXMed_search_" (car TeXMed-search-history) ".bib"))
   (bibtex-mode))
@@ -133,7 +111,7 @@ export the chosen"
 (defun TeXMed-export-all ()
   "Export all the entries found on TexMed to a BibTeX file"
   (interactive)
-  (TeXMed-mark-all)
+  (TeXMed-tick-field  " ]PMID")
   (TeXMed-export))
 
 (define-minor-mode TeXMed-mode
