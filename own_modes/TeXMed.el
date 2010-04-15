@@ -1,12 +1,16 @@
 ;;;;; TeXMed.el - Query and retrieve BibTeX from NCBI pubmed via TeXMed in Emacs
 ;;
+;; AUTHOR:  Emanuel Heitlinger <emanuelheitlinger@gmail.com>
+;; LICENCE: GPL2
+;;
 ;; Based on: TeXMed - http://www.bioinformatics.org/texmed/
 ;; an interface to NCBI PubMed http://www.ncbi.nlm.nih.gov, 
 ;; that allows you to query PubMed and to store references in BibTeX format. 
 ;; by Arne Muller
 ;;
-;; AUTHOR:  Emanuel Heitlinger <emanuelheitlinger@gmail.com>
-;; LICENCE: GPL2
+;; This mode adds some convenience functions to the w3m-buffers opened
+;; searching on TexMed
+;;
 ;; How to install:
 ;; 1). Download this file and put in your emacs's load-path
 ;; 2). Put the following in your .emacs:
@@ -21,10 +25,10 @@
 ;;     t alone)
 ;; 2). Presented with the results of the query you have these options:
 ;;     a) Type C-ea to export all results to a bibtex-file
-;;     b) Type C-el to go through results ond choose one by one
+;;     b) Type C-el to go through results and choose one by one
 ;;         + If you do this till the last entry your selection will be 
 ;;           exported automatically
-;;         + If you are satisfied befor the end abort with C-g an goto 3.)
+;;         + If you are satisfied before the end abort with C-g an goto 3.)
 ;; 3). Type C-ee to export a selection
 ;; 4). To generally include abstracts or article links you can put the
 ;;     following into your .emacs:
@@ -32,7 +36,7 @@
 ;;     (setq  TeXMed-include-article-id t)
 
 ;;
-;; Only tested with Gnu-Emacs 23.1.1.
+;; Only tested with Gnu-Emacs 23.1.1 on Linux.
 
 ;; This is my very first minor mode for Emacs:
 ;; It probabely has many bugs, uses maybe bad elisp
