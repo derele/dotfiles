@@ -60,7 +60,7 @@
   )
 
 ;; The variables of the mode
-(defvar TeXMed-last-searched nil "Stores the last query used in TeXMed")
+(defvar TeXMed-search-history nil "Stores the queries used in TeXMed")
 
 (defcustom TeXMed-export-hook nil
   "Hook run when exporting TeXMed searches."
@@ -75,11 +75,10 @@ an online-service, which allows retieval of bibtex from
 pubmed"
   (interactive)
   (let ((query 
-         (read-from-minibuffer "TeXMed search: ")))
+         (read-from-minibuffer "TeXMed search: " nil nil nil 'TeXMed-search-history (thing-at-point 'word))))
     (w3m-search-do-search 'w3m-goto-url "TeXMed" query)
     (TeXMed-mode)
-    (setq TeXMed-last-searched query))
-  )
+    (add-to-list 'TeXMed-search-history query)))
 
 (defun TeXMed-tick-field (proceeding)
   "Tick the field proceeding the argument"
@@ -112,7 +111,7 @@ pubmed"
   (beginning-of-buffer)
   TeXMed-export-hook
   (TeXMed-tick-field "\\[export]")
-  (write-file (concat "TeXMed_search_" TeXMed-last-searched ".bib"))
+  (write-file (concat "TeXMed_search_" (car TeXMed-search-history) ".bib"))
   (bibtex-mode)  
   )
 
