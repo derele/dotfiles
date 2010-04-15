@@ -73,8 +73,8 @@
 an online-service, which allows retieval of bibtex from
 pubmed"
   (interactive)
-  (let ((query 
-         (read-from-minibuffer "TeXMed search: " nil nil nil 'TeXMed-search-history )))
+  (let ((query          
+         (read-from-minibuffer "TeXMed search: " nil nil nil 'TeXMed-search-history (thing-at-point 'word))))
     (w3m-search-do-search 'w3m-goto-url "TeXMed" query)
     (if (string-match "^$" query) ; user entered empty string
         (progn
