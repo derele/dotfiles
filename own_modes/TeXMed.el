@@ -34,7 +34,9 @@
 ;;     following into your .emacs:
 ;;     (setq  TeXMed-include-abstract t)
 ;;     (setq  TeXMed-include-article-id t)
-
+;; 5). To set the folder in which TeXMed results are stored you can put
+;;     (setq TeXMed-bibtex-folder "~/bibtex/")
+;      in your .emacs (the default is your homedir)
 ;;
 ;; Only tested with Gnu-Emacs 23.1.1 on Linux.
 
@@ -61,6 +63,8 @@
 (defvar TeXMed-search-history nil "Stores the queries used in TeXMed")
 (defvar TeXMed-include-article-id nil "Non nil means store article id field is ticked before export")
 (defvar TeXMed-include-abstract nil "Non nil means include abstract field is ticked before export")
+(defvar TeXMed-bibtex-folder "~/" "The folder in which TeXMed exports will be stored, default: homedir")
+
 
 ;; global functions Texmed search 
 (defun TeXMed-search ()
@@ -88,11 +92,15 @@ pubmed"
   "Export the entries marked in TeXMed's w3m buffer."
   (interactive)
   (beginning-of-buffer)
-  (if TeXMed-include-article-id (TeXMed-tick-field  " ] link article ids"))
-  (if TeXMed-include-abstract   (TeXMed-tick-field  " ] incl. abstract"))
-  (TeXMed-tick-field "\\[export]")
-  (write-file (concat "TeXMed_search_" (car TeXMed-search-history) ".bib"))
-  (bibtex-mode))
+  (while (w3m-form-goto-next-field)
+    (if (looking-at "*]PMID")
+        (progn                 ; at least one field is ticked go on!
+          (if TeXMed-include-article-id (TeXMed-tick-field  " ] link article ids"))
+          (if TeXMed-include-abstract   (TeXMed-tick-field  " ] incl. abstract"))
+          (TeXMed-tick-field "\\[export]")
+          (write-file (concat TeXMed-bibtex-folder "TeXMed_search_" (car TeXMed-search-history) ".bib"))
+          (bibtex-mode))
+      (message "mark at least one entry to export")))) 
 
 (defun TeXMed-ask-loop ()
   "Go through entries found on TexMed 
