@@ -101,8 +101,7 @@ pubmed"
           (when TeXMed-include-article-id (TeXMed-tick-field  " ] link article ids"))
           (when TeXMed-include-abstract   (TeXMed-tick-field  " ] incl. abstract"))
           (TeXMed-tick-field "\\[export]")
-          (run-at-time "0.1 sec" 0.1 'TeXMed-to-file))  ; after 0.1s check every 0.1s whether the export already succeded
-  
+          (run-at-time "0.1 sec" 0.1 'TeXMed-to-file))  ; after 0.1s check every 0.1s whether the export already succeded  
       (message "mark at least one entry to export"))))
 
 (defun TeXMed-to-file ()
@@ -115,7 +114,7 @@ pubmed"
     (insert (format-time-string TeXMed-current-date-time-format (current-time)))
     (insert ": TeXMed exported")
     (bibtex-mode)
-    (save-)
+    (write-file (buffer-file-name))
     ))
 
 (defun TeXMed-ask-loop ()
