@@ -64,6 +64,10 @@
 (defvar TeXMed-include-article-id nil "Non nil means store article id field is ticked before export")
 (defvar TeXMed-include-abstract nil "Non nil means include abstract field is ticked before export")
 (defvar TeXMed-bibtex-folder "~/" "The folder in which TeXMed exports are stored")
+(defvar TeXMed-current-date-time-format "%a %b %d %Y %H:%M:%S %Z"
+  "Format of date to insert with `insert-current-date-time' func
+for possible replacements in TeXMed export files. See also help
+of `format-time-string'")
 
 ;; global functions Texmed search 
 (defun TeXMed-search ()
@@ -103,10 +107,15 @@ pubmed"
 
 (defun TeXMed-to-file ()
   (when (and (string-match "@Article" (buffer-string))  ; wait for w3m 
-             (string-equal "w3m-mode" major-mode))       ; to finish exporting
+             (string-equal "w3m-mode" major-mode))      ; to finish exporting
     (write-file (concat TeXMed-bibtex-folder "TeXMed_search_" 
                         (car TeXMed-search-history) ".bib"))
+    (delete-region (point-min) (search-forward "trying to export"))
+    (insert "%")
+    (insert (format-time-string TeXMed-current-date-time-format (current-time)))
+    (insert ": TeXMed exported")
     (bibtex-mode)
+    (save-)
     ))
 
 (defun TeXMed-ask-loop ()
