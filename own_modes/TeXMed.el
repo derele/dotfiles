@@ -63,8 +63,7 @@
 (defvar TeXMed-search-history nil "Stores the queries used in TeXMed")
 (defvar TeXMed-include-article-id nil "Non nil means store article id field is ticked before export")
 (defvar TeXMed-include-abstract nil "Non nil means include abstract field is ticked before export")
-(defvar TeXMed-bibtex-folder "~/" "The folder in which TeXMed exports will be stored, default: homedir")
-
+(defvar TeXMed-bibtex-folder "~/" "The folder in which TeXMed exports are stored")
 
 ;; global functions Texmed search 
 (defun TeXMed-search ()
@@ -95,12 +94,20 @@ pubmed"
   (while (w3m-form-goto-next-field)
     (if (looking-at "*]PMID")
         (progn                 ; at least one field is ticked go on!
-          (if TeXMed-include-article-id (TeXMed-tick-field  " ] link article ids"))
-          (if TeXMed-include-abstract   (TeXMed-tick-field  " ] incl. abstract"))
+          (when TeXMed-include-article-id (TeXMed-tick-field  " ] link article ids"))
+          (when TeXMed-include-abstract   (TeXMed-tick-field  " ] incl. abstract"))
           (TeXMed-tick-field "\\[export]")
-          (write-file (concat TeXMed-bibtex-folder "TeXMed_search_" (car TeXMed-search-history) ".bib"))
-          (bibtex-mode))
-      (message "mark at least one entry to export")))) 
+          (run-at-time "0.1 sec" 0.1 'TeXMed-to-file))  ; after 0.1s check every 0.1s whether the export already succeded
+  
+      (message "mark at least one entry to export"))))
+
+(defun TeXMed-to-file ()
+  (when (and (string-match "@Article" (buffer-string))  ; wait for w3m 
+             (string-equal "w3m-mode" major-mode))       ; to finish exporting
+    (write-file (concat TeXMed-bibtex-folder "TeXMed_search_" 
+                        (car TeXMed-search-history) ".bib"))
+    (bibtex-mode)
+    ))
 
 (defun TeXMed-ask-loop ()
   "Go through entries found on TexMed 
