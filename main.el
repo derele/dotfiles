@@ -27,18 +27,16 @@
 (require 'color-theme)
 (color-theme-initialize)
 ;(color-theme-tty-dark)
-;(color-theme-jsc-dark)
+(color-theme-jsc-dark)
 ;(color-theme-charcoal-black)
-(load-file "~/.emacs.d/zenburn.el")
-(color-theme-zenburn)
 
-;(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-; '(font-lock-comment-face ((t (:foreground "color-244"))))
-; '(linum ((t (:inherit shadow :background "color-232" :foreground "color-191")))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(font-lock-comment-face ((t (:foreground "color-244"))))
+ '(linum ((t (:inherit shadow :background "color-232" :foreground "color-191")))))
 
 ; no boldness in fonts removes also underlines
 (mapc
@@ -116,10 +114,10 @@
 (require 'tramp)
 (setq tramp-default-method "scp"
       tramp-default-user "dc134")
-  
+
 ;; parentheses highlighting
 (require 'highlight-parentheses)
-;(setq hl-paren-colors '("red" "cyan" "green" "color-88" "color-130"))
+(setq hl-paren-colors '("red"  "green" "color-93" "cyan" "color-153" "color-200" "color-154" "color-118"))
 (define-globalized-minor-mode
   global-highlight-parentheses-mode
   highlight-parentheses-mode 
@@ -129,7 +127,7 @@
 ;;highlight current line
 (require 'highlight-current-line)
 (highlight-current-line-on t)
-;(set-face-background 'highlight-current-line-face "color-232")
+(set-face-background 'highlight-current-line-face "color-235")
 
 ;; line-numbers, very sophisticated function to make the numbering right-justified and the column the right size
 (require 'linum)
