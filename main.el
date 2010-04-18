@@ -27,8 +27,8 @@
 (require 'color-theme)
 (color-theme-initialize)
 ;(color-theme-tty-dark)
-(color-theme-jsc-dark)
-;(color-theme-charcoal-black)
+;(color-theme-jsc-dark)
+(color-theme-charcoal-black)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -127,7 +127,7 @@
 ;;highlight current line
 (require 'highlight-current-line)
 (highlight-current-line-on t)
-(set-face-background 'highlight-current-line-face "color-235")
+(set-face-background 'highlight-current-line-face "color-232")
 
 ;; line-numbers, very sophisticated function to make the numbering right-justified and the column the right size
 (require 'linum)
