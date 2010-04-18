@@ -143,6 +143,7 @@ w) "d ")) line) 'face 'linum)))
 ; Emacswiki editing
 (require 'yaoddmuse)
 (yaoddmuse-update-pagename t)
+(setq yaoddmuse-username "EmanuelHeitlinger")
 
 ;;;;;;;;;;;;;;;;;;;;; Org-mode settings;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
