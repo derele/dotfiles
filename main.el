@@ -148,6 +148,9 @@ w) "d ")) line) 'face 'linum)))
 ;; delete backwards with C-h
 (keyboard-translate ?\C-h ?\C-?)
 
+;; delete word backwards
+(global-set-key "\M-h" 'backward-kill-word)
+
 ;;;;;;;;;;;;;;;;;;;;; Org-mode settings;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (global-set-key "\C-cl" 'org-store-link)
