@@ -92,12 +92,16 @@
 ;burry quickly
 (global-set-key "\C-cbb" 'bury-buffer)
 
-;save the current settings in the current folder
+;; save the current settings in the current folder
 ;;(desktop-save-mode 1)
 ;; better restore command history and file-list but not the files itself
 (require 'session)
 (add-hook 'after-init-hook 'session-initialize)
 
+;; auto-complete 
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
 
 ;; word-count 
 (require 'word-count)
