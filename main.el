@@ -145,6 +145,9 @@ w) "d ")) line) 'face 'linum)))
 (yaoddmuse-update-pagename t)
 (setq yaoddmuse-username "EmanuelHeitlinger")
 
+;; delete backwards with C-h
+(keyboard-translate ?\C-h ?\C-?)
+
 ;;;;;;;;;;;;;;;;;;;;; Org-mode settings;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (global-set-key "\C-cl" 'org-store-link)
