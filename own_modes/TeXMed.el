@@ -26,12 +26,12 @@
 ;; 1). Type C-ct to start a query (that's press Control and c together then
 ;;     t alone)
 ;; 2). Presented with the results of the query you have these options:
-;;     a) Type C-ea to export all results to a bibtex-file
-;;     b) Type C-el to go through results and choose one by one
+;;     a) Type C-cea to export all results to a bibtex-file
+;;     b) Type C-cel to go through results and choose one by one
 ;;         + If you do this till the last entry your selection will be 
 ;;           exported automatically
 ;;         + If you are satisfied before the end abort with C-g an goto 3.)
-;; 3). Type C-ee to export a selection
+;; 3). Type C-cee to export a selection
 ;; 4). To generally include abstracts or article links you can put the
 ;;     following into your .emacs:
 ;;     (setq  TeXMed-include-abstract t)
