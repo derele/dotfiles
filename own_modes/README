@@ -1,0 +1,66 @@
+;;; TeXMed.el --- query and retrieve BibTeX from NCBI pubmed via TeXMed
+
+;;; Author:  Emanuel Heitlinger <emanuelheitlinger@gmail.com>
+;;
+;; Created: 18 Apr 2010
+;; Version: 1.0
+
+;; This file is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License as
+;; published by the Free Software Foundation; either version 2 of
+;; the License, or (at your option) any later version.
+
+;; This file is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty
+;; of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+;; See the GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public
+;; License along with GNU Emacs; if not, write to the Free
+;; Software Foundation, 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+;;; Commentary:
+;;
+;; Based on: TeXMed - http://www.bioinformatics.org/texmed/
+;; an interface to NCBI PubMed http://www.ncbi.nlm.nih.gov, 
+;; that allows you to query PubMed and to store references in BibTeX format. 
+;; by Arne Muller
+;;
+;; This mode adds some convenience functions to the w3m-buffers opened
+;; searching on TexMed
+;;
+;; Installation:
+;; 1). Download this file and put in your emacs's load-path
+;; 2). Put the following in your .emacs:
+;;     (require 'TeXMed)
+;;     (global-set-key "\C-ct" 'TeXMed-search)
+;;
+;; Dependencies: 
+;; 1). emacs-w3m http://emacs-w3m.namazu.org/ 
+;;
+;; Usage:
+;; 1). Type C-ct (or whatever you bind it to) to start a query
+;; 2). Presented with the results of the query you have these options:
+;;     a) Type C-ea to export all results to a bibtex-file
+;;     b) Type C-el to go through results and choose one by one
+;;         + If you do this till the last entry your selection will be 
+;;           exported automatically
+;;         + If you are satisfied before the end abort with C-g an goto 3.)
+;; 3). Type C-ee to export a selection
+;; 4). To generally include abstracts or article links you can put the
+;;     following into your .emacs:
+;;     (setq  TeXMed-include-abstract t)
+;;     (setq  TeXMed-include-article-id t)
+;; 5). To set the folder in which TeXMed results are stored you can put
+;;     (setq TeXMed-bibtex-folder "~/bibtex/")
+;      in your .emacs (the default is your homedir)
+;;
+;; Only tested with Gnu-Emacs 23.1.1 on Linux.
+
+;; This is my very first minor mode for Emacs: It probabely has bugs,
+;; uses maybe bad elisp and fails following some of the conventions
+
+
+
+

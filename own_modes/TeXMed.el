@@ -1,7 +1,9 @@
-;;;;; TeXMed.el - Query and retrieve BibTeX from NCBI pubmed via TeXMed in Emacs
+;;; TeXMed.el - Query and retrieve BibTeX from NCBI pubmed via TeXMed in Emacs
 ;;
-;; AUTHOR:  Emanuel Heitlinger <emanuelheitlinger@gmail.com>
+;;; AUTHOR:  Emanuel Heitlinger <emanuelheitlinger@gmail.com>
 ;; LICENCE: GPL2
+;;
+;;; Commentary:
 ;;
 ;; Based on: TeXMed - http://www.bioinformatics.org/texmed/
 ;; an interface to NCBI PubMed http://www.ncbi.nlm.nih.gov, 
@@ -152,4 +154,5 @@ export the chosen"
   :lighter " TeXMed")
 
 (provide 'TeXMed)
-;; ----------------------------------------------------------------------
+
+;;; TeXMed.el ends here.
