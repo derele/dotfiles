@@ -37,10 +37,7 @@
 (color-theme-charcoal-black)
 
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by custom, one such instance!
  '(font-lock-comment-face ((t (:foreground "color-244"))))
  '(linum ((t (:inherit shadow :background "color-232" :foreground "color-191"))))
  '(mode-line-buffer-id ((t (:bold t :foreground "color-199" :background "color-58"))))
