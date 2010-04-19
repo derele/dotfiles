@@ -23,11 +23,17 @@
               load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; color stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;lets play with color
+;; no boldness in fonts removes also underlines
+(mapc
+ (lambda (face)
+   (set-face-attribute face nil :weight 'normal :underline nil))
+ (face-list))
+
+;; lets play with color
 (require 'color-theme)
 (color-theme-initialize)
-;(color-theme-tty-dark)
-;(color-theme-jsc-dark)
+;; (color-theme-tty-dark)
+;; (color-theme-jsc-dark)
 (color-theme-charcoal-black)
 
 (custom-set-faces
@@ -40,30 +46,22 @@
  '(mode-line-buffer-id ((t (:bold t :foreground "color-199" :background "black"))))
  '(mode-line ((t (:bold t :foreground "color-58" :background "color-107" )))))
 
-
-; no boldness in fonts removes also underlines
-(mapc
- (lambda (face)
-   (set-face-attribute face nil :weight 'normal :underline nil))
- (face-list))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; VCS stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'magit)
 (setq magit-commit-all-when-nothing-staged 1)
-;; "\C-i" is somehow recognized as tab... crazy
 (global-set-key "\C-ci" 'magit-status)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; general functionality ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;start the emacs server
+;; start the emacs server
 (server-start)
 
-;map undo to something easy: the newline keys, as I still use enter
-;get redo and bind it to somethin easy as well
+;; map undo to something easy: the newline keys, as I still use enter
+;; get redo and bind it to somethin easy as well
 (require 'redo)
 (global-set-key (kbd "C-j")  'undo)
 (global-set-key (kbd "M-j")  'redo)
 
-;I hate rodents
+;; I hate rodents
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -82,16 +80,16 @@
 (setq ido-enable-flex-matching t) ;; enable fuzzy matching
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-;write y instead of yes
+;; write y instead of yes
 (fset 'yes-or-no-p 'y-or-n-p) 
 
-;kill whole lines with C-k
+;; kill whole lines with C-k
 (setq kill-whole-line 1)
 
-;get the column plus line number
+;; get the column plus line number
 (column-number-mode 1)
 
-;burry quickly
+;; burry quickly
 (global-set-key "\C-cbb" 'bury-buffer)
 
 ;; save the current settings in the current folder
@@ -127,7 +125,7 @@
   highlight-parentheses-mode)
 (global-highlight-parentheses-mode)
 
-;;highlight current line
+;; highlight current line
 (require 'highlight-current-line)
 (highlight-current-line-on t)
 (set-face-background 'highlight-current-line-face "color-232")
@@ -139,10 +137,10 @@ linum-format (lambda (line) (propertize (format (let ((w (length (number-to-stri
 w) "d ")) line) 'face 'linum)))
 (global-set-key [f1] 'linum-mode)
 
-; highlight region between point and mark
+;; highlight region between point and mark
 (transient-mark-mode t)
 
-; Emacswiki editing
+;; Emacswiki editing
 (require 'yaoddmuse)
 (yaoddmuse-update-pagename t)
 (setq yaoddmuse-username "EmanuelHeitlinger")
@@ -159,7 +157,7 @@ w) "d ")) line) 'face 'linum)))
 (global-set-key "\C-ca" 'org-agenda)
 (global-font-lock-mode 1)
 
-; org remember
+;; org remember
 (org-remember-insinuate)
 (setq org-directory "~/org/")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
@@ -189,13 +187,13 @@ w) "d ")) line) 'face 'linum)))
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
 
-; top looking nice
+;; top looking nice
 (require 'top-mode)
-; MAKE ME WORK
-;(top-mode 1)
+;; MAKE ME WORK
+;; (top-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; window and buffer general;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ;;Easy between windows
+;; Easy between windows
 (defun select-next-window ()
   "Switch to the next window" 
   (interactive)
@@ -214,8 +212,8 @@ w) "d ")) line) 'face 'linum)))
 (template-initialize)
 (require 'perlnow)
 
-;;; cperl-mode is preferred to perl-mode                                        
-;;; "Brevity is the soul of wit" <foo at acm.org>                               
+;; cperl-mode is preferred to perl-mode                                        
+;; "Brevity is the soul of wit" <foo at acm.org>                               
 (defalias 'perl-mode 'cperl-mode)
 
 
@@ -288,7 +286,7 @@ w) "d ")) line) 'face 'linum)))
 ;;	    (define-key ess-mode-map (kbd "C-c C-h") 'ess-help)  
 	    )
 	  )
-;;Sweave .Rnw mode stuff.
+;; Sweave .Rnw mode stuff.
 (require 'ess-noweb)
 (setq TeX-file-extensions
       '("Snw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
@@ -376,7 +374,7 @@ w) "d ")) line) 'face 'linum)))
 ;; don't show any of this
 (setq erc-hide-list '("JOIN" "PART" "QUIT" "NICK"))
 
-; load my password file to allow sharing my password-clean .emacs
+;; load my password file to allow sharing my password-clean .emacs
 (load "~/.ercpass")
 (require 'erc-services)
 (erc-services-mode 1)
@@ -455,7 +453,7 @@ w) "d ")) line) 'face 'linum)))
     bbdb-elided-display t                    ;; single-line addresses
 )
 
-;;; org-mode ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,
+;;;;;;;;;;;;;;;;;; org-mode ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
