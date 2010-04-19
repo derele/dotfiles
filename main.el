@@ -36,7 +36,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(font-lock-comment-face ((t (:foreground "color-244"))))
- '(linum ((t (:inherit shadow :background "color-232" :foreground "color-191")))))
+ '(linum ((t (:inherit shadow :background "color-232" :foreground "color-191"))))
+ '(mode-line-buffer-id ((t (:bold t :foreground "color-199" :background "black"))))
+ '(mode-line ((t (:bold t :foreground "color-58" :background "color-107" )))))
+
 
 ; no boldness in fonts removes also underlines
 (mapc
