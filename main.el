@@ -221,13 +221,6 @@ w) "d ")) line) 'face 'linum)))
 
 (setq perlnow-script-location
       (substitute-in-file-name "$HOME/own_perl_scripts"))
-(setq perlnow-pm-location
-      (substitute-in-file-name "$HOME/own_perl_module"))
-
-;; This is the default location to do h2xs development of CPAN bound modules.
-
-(setq perlnow-h2xs-location
-     (substitute-in-file-name "$HOME/own_cpan"))
 
 ;;The user-group-all permissions used to make a script executable.
 (setq perlnow-executable-setting    72)
@@ -236,36 +229,12 @@ w) "d ")) line) 'face 'linum)))
 (setq perlnow-perl-script-template
       (substitute-in-file-name "$HOME/.templates/own-pl.tpl"))
 
-;;The template that new perl modules will be created with.
-(setq perlnow-perl-module-template   
-      (substitute-in-file-name "$HOME/.templates/TEMPLATE.perlnow-pm.tpl"))
-
-;;The template that new perl object modules will be created with.
-(setq perlnow-perl-object-module-template 
-      (substitute-in-file-name "$HOME/.templates/TEMPLATE.perlnow-object-pm.tpl"))
-
-;;The template that tests for perl scripts will be created with.
-(setq perlnow-perl-test-script-template   
-      (substitute-in-file-name "$HOME/.templates/TEMPLATE.perlnow-pl-t.tpl"))
-
-(setq perlnow-perl-test-module-template 
-      (substitute-in-file-name "$HOME/.templates/TEMPLATE.perlnow-pm-t.tpl"))
-
-(global-set-key "\C-c s" 'perlnow-script)
-(global-set-key "\C-c m" 'perlnow-module)
-(global-set-key "\C-c o" 'perlnow-object-module)
-(global-set-key "\C-c h" 'perlnow-h2xs)
-(global-set-key "\C-c C-p" 'perlnow-perlify-this-buffer-simple)
-(global-set-key "\C-c C-b" 'perlnow-back-to-code)
-
-;; two things that I don't understand fully and leave in global mode first' 
-(global-set-key "\C-c d" 'perlnow-perldb)
-(global-set-key "\C-c t" 'perlnow-edit-test-file)
+(global-set-key "\C-cps" 'perlnow-script)
 
 ;;local keys in cperl mode for the perlnow stuff
 (add-hook 'cperl-mode-hook
 	  (lambda()
-	    (define-key cperl-mode-map (kbd "C-c C-h") 'cperl-perldoc)  
+	    (define-key cperl-mode-map (kbd "C-c C-v") 'cperl-perldoc)  
 	    (define-key cperl-mode-map (kbd "C-c C-c") 'perlnow-run-check)
 	    (define-key cperl-mode-map (kbd "C-c C-r") 'perlnow-run)
 	    (define-key cperl-mode-map (kbd "C-c C-a") 'perlnow-alt-run)
