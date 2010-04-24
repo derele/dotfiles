@@ -229,6 +229,7 @@ w) "d ")) line) 'face 'linum)))
 (setq perlnow-perl-script-template
       (substitute-in-file-name "$HOME/.templates/own-pl.tpl"))
 
+;;The script simple scrpt
 (global-set-key "\C-cps" 'perlnow-script)
 
 ;;local keys in cperl mode for the perlnow stuff
