@@ -393,6 +393,8 @@ w) "d ")) line) 'face 'linum)))
 (require 'TeXMed)
 (global-set-key "\C-ct" 'TeXMed-search)
 (setq TeXMed-bibtex-folder "~/bibtex/")
+(setq  TeXMed-include-abstract t)
+
 
 ;; have funky signatures
 (autoload 'add-signature "c-sig" "c-sig" t)
