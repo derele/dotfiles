@@ -83,7 +83,7 @@ pubmed"
     (if (string-match "^$" query) ; user entered empty string
         (TeXMed-search) ; search again 
       (progn ; else go agead
-        (TeXMed-mode) 
+        (TeXMed-mode t) 
         (add-to-list 'TeXMed-search-history query)))))
 
 (defun TeXMed-tick-field (proceeding)
