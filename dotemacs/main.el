@@ -137,16 +137,14 @@ w) "d ")) line) 'face 'linum)))
 ;; highlight region between point and mark
 (transient-mark-mode t)
 
-;; Emacswiki editing
-(require 'yaoddmuse)
-(yaoddmuse-update-pagename t)
-(setq yaoddmuse-username "EmanuelHeitlinger")
-
 ;; delete backwards with C-h
 (keyboard-translate ?\C-h ?\C-?)
 
 ;; delete word backwards
 (global-set-key "\M-h" 'backward-kill-word)
+
+;; this is perl-inspired Make me work!
+;; (global-set-key (kbd "C-c C-#") 'comment-or-uncomment-region)
 
 ;;;;;;;;;;;;;;;;;;;;; Org-mode settings;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
@@ -445,3 +443,10 @@ w) "d ")) line) 'face 'linum)))
 
 (if (string-match "beagle" (getenv "HOSTNAME")) ;; beagle
     (load-file "/home/ele/.emacs.d/dotemacs/emacs_beagle.el"))
+
+;; Emacswiki editing only when we have are connected to the web
+(when (get-ip-address)
+  (require 'yaoddmuse)
+  (yaoddmuse-update-pagename t)
+  (setq yaoddmuse-username "EmanuelHeitlinger")
+  )

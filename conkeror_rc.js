@@ -39,6 +39,15 @@ interactive("bibsonomy-post-publication",
 define_key(content_buffer_normal_keymap, "C-c b", "bibsonomy-post-publication");
 
 
+// TODO: Make me work 
+interactive ("citeulike-post", "post the current location to citeulike",
+             function (I) {
+                 check_buffer(I.buffer, content_buffer);
+                 let title = I.buffer.title;
+                 
+                 I.buffer.load("http://www.citeulike.org/posturl?username=USER&bml=nopopup&url="+encodeURIComponent(url)+'&title='+encodeURIComponent(title));
+             });
+
 // Thanks to Mark Roddy giving me this function on the conkeror mailing list
 function shell_on_url(funcname, funcdesc, cmd) {
     //Create an interactive function for running a predetermined
