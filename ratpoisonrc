@@ -1,0 +1,53 @@
+##################################################################
+###                                     ##########################
+### configuration file for my lovely wm ##########################
+##                                      ##########################
+##################################################################
+
+# What's the terminal
+alias term exec xterm
+
+# define borders (it's the defaults anyways)
+defborder 0
+defpadding 0 0 0 0
+defbarpadding 0 0 
+
+#short more meanigfull windownames 
+set winname class      
+
+## What programs do we run on startup?  ############################
+### Do some key re-mapping
+#exec xmodmap -quiet ~/.xmodmap
+   
+### Apparently modifies some low-level GUI bits of X.
+exec xrdb -load ~/.Xresources
+
+# start networking
+exec nm-applet
+#exec wicd-client 
+
+# start Thunar to allow automount
+# annoying that a window opens when I
+# plug in a USB -- should solve this
+# rather using a simple automount script 
+exec Thunar --daemon
+
+# start emacs daemon after makint sure, that there is no old
+# emacsdaemon running
+exec emacsclient --eval "(progn (save-some-buffers t t) (kill-emacs))"
+exec emacs --daemon
+
+#statrt syncing maildirs
+exec offlineimap
+
+# start screen ## doesnt work with 256colors
+exec xterm -e 'screen_after_256.sh'
+
+## Mapping some keys ##################################################
+bind F1 exec conkeror 
+bind F2 exec beagle-ssh-start.sh
+bind F3 exec firefox
+bind F4 exec xterm -e 'screen_after_256.sh'
+bind F5 exec firefox
+bind y ratclick 2       # great for pasting
+
