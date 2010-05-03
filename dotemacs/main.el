@@ -246,8 +246,8 @@ w) "d ")) line) 'face 'linum)))
 (setq cperl-electric-keywords t) ;; expands for keywords such as
                                  ;; foreach,  while,  etc...)
 
-(require 'bioperl-mode)
-(setq bioperl-module-path "/usr/lib/perl5/vendor_perl/5.10.0")
+;; (require 'bioperl-mode)
+;; (setq bioperl-module-path "/usr/lib/perl5/vendor_perl/5.10.0")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ESS stuff;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'ess-site)
