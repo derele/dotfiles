@@ -15,6 +15,7 @@ ignore = Path {dotfiles}
 ignore = Path {Homepages}
 ignore = Path {bibtex}
 ignore = Path {Documents/talks/Chiemsee_VW}
+ignore = Path {genepool}
 
 # the dropbox
 ignore = Path {Dropbox}
