@@ -17,7 +17,7 @@ alias unison='unison streamlined -ui text -auto'
 
 alias usrout='skill -KILL -u ele'
 
-#alias htmluni='dc134@rzlx1.rz.uni-karlsruhe.de :/home/ws/dc134/.public_html'
+alias skype='LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype'
 
 alias aus='sudo shutdown -h now'
 
