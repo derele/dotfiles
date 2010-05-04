@@ -21,12 +21,6 @@ alias usrout='skill -KILL -u ele'
 
 alias aus='sudo shutdown -h now'
 
-#change caps lock to alt-gr
-xmodmap -e "keycode 66=ISO_Level3_Shift"
-
-#change alt-gr to be alt
-xmodmap -e "keycode 108=Meta_L Alt_L"
-
 # enable keychain ssh passphrase memory
 eval `keychain --eval --nogui -Q -q id_rsa`
 

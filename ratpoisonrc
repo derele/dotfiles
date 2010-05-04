@@ -17,7 +17,7 @@ set winname class
 
 ## What programs do we run on startup?  ############################
 ### Do some key re-mapping
-#exec xmodmap -quiet ~/.xmodmap
+exec xmodmap -quiet ~/dotfiles/.xmodmap
    
 ### Apparently modifies some low-level GUI bits of X.
 exec xrdb -load ~/.Xresources
