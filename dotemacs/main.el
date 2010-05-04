@@ -385,6 +385,8 @@ w) "d ")) line) 'face 'linum)))
       'mail-send-hook))
 
 ;; read html formatted mail
+(require 'w3m-e21)
+(provide 'w3m-e23)
 (require 'mime-w3m)
 
 ;; TeXMed mode
@@ -435,14 +437,14 @@ w) "d ")) line) 'face 'linum)))
 )
 
 ;; load additional files
-(load-file "/home/ele/.emacs.d/dotemacs/w3m-init.el")
+(load-file "/home/ele/dotfiles/dotemacs/w3m-init.el")
 
 ;; load the appropriate file for each machine
 (if (string-match "ele-laptop" (getenv "HOSTNAME")) ;; laptop
-    (load-file "/home/ele/.emacs.d/dotemacs/emacs_laptop.el"))
+    (load-file "/home/ele/dotfiles/dotemacs/emacs_laptop.el"))
 
 (if (string-match "beagle" (getenv "HOSTNAME")) ;; beagle
-    (load-file "/home/ele/.emacs.d/dotemacs/emacs_beagle.el"))
+    (load-file "/home/ele/dotfiles/dotemacs/emacs_beagle.el"))
 
 ;; Emacswiki editing only when we have are connected to the web
 (when (get-ip-address)
