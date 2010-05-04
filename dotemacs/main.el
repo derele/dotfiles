@@ -385,8 +385,6 @@ w) "d ")) line) 'face 'linum)))
       'mail-send-hook))
 
 ;; read html formatted mail
-(require 'w3m-e21)
-(provide 'w3m-e23)
 (require 'mime-w3m)
 
 ;; TeXMed mode
