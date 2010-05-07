@@ -7,6 +7,7 @@ keycode 66 = Control_L
 keycode 108 = Meta_L Alt_L
 
 keycode 135 = ISO_Level3_Shift
+keycode 134 = ISO_Level3_Shift
 keycode 133 = ISO_Level3_Shift
 
 keycode 44 = j J j J braceleft
