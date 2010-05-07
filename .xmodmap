@@ -3,9 +3,14 @@ keysym Caps_Lock = Control_L
 add Lock = Caps_Lock
 add Control = Control_L
 
-keycode 66=Control_L
-keycode 108=Meta_L Alt_L
+keycode 66 = Control_L
+keycode 108 = Meta_L Alt_L
 
-keycode 135=ISO_Level3_Shift
-keycode 133=ISO_Level3_Shift
+keycode 135 = ISO_Level3_Shift
+keycode 133 = ISO_Level3_Shift
 
+keycode 44 = j J j J braceleft
+keycode 45 = k K k K bracketleft
+keycode 46 = l L l L bracketright
+keycode 47 = odiaeresis Odiaeresis odiaeresis Odiaeresis braceright
+keycode 48 = adiaeresis Adiaeresis adiaeresis Adiaeresis backslash
