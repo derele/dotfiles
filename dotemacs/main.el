@@ -175,7 +175,7 @@ w) "d ")) line) 'face 'linum)))
         (rename-buffer(concat(file-name-sans-extension (buffer-name)) ".org"))
         (write-file (buffer-name))
         )))
-(add-hook 'find-file-hook 'ele-open-csv-as-org-table)
+(add-hook 'org-mode-hook 'ele-open-csv-as-org-table)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;terminal  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; multi-terminal-mode
