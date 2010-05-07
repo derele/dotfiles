@@ -17,4 +17,4 @@ keycode 48 = adiaeresis Adiaeresis adiaeresis Adiaeresis backslash
 
 keycode 41 = f F f F bar
 keycode 40 = d D d D at
-
+keycode 39 = s S s S asciitilde
