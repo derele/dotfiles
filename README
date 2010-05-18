@@ -1,4 +1,7 @@
-My emacs setup. This equals more or less my whole computing setup. 
+My emacs setup. As this equals more or less my whole computing setup, 
+I also include all the other dotfiles for bash, browser, and window-
+manger
+
 
 I use only three programms:
 - An emacs on my laptop (or whatever machine I am sitting at) 
