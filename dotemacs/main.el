@@ -318,10 +318,15 @@ w) "d ")) line) 'face 'linum)))
 (setq reftex-plug-into-AUCTeX t
       reftex-enable-partial-scans t)
 
+;; enable it on Rnw files
 (setq reftex-file-extensions
       '((".Rnw" "Rnw" "nw" "tex" ".tex" ".ltx") ("bib" ".bib")))
 (setq TeX-file-extensions
       '(".Rnw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
+
+;; set my bibtex-path
+(setq reftex-bibpath-environment-variables
+      '("/home/ele/bibtex/"))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; cc-mode stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;
