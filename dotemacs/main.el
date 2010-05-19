@@ -404,7 +404,7 @@ w) "d ")) line) 'face 'linum)))
 (global-set-key "\C-ct" 'TeXMed-search)
 (setq TeXMed-bibtex-folder "~/bibtex/")
 (setq  TeXMed-include-abstract t)
-
+(setq  TeXMed-include-article-id t)
 
 ;; have funky signatures
 (autoload 'add-signature "c-sig" "c-sig" t)
