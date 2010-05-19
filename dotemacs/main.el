@@ -317,6 +317,13 @@ w) "d ")) line) 'face 'linum)))
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)   ; with AUCTeX LaTeX mode
 (setq reftex-plug-into-AUCTeX t
       reftex-enable-partial-scans t)
+
+(setq reftex-file-extensions
+      '((".Rnw" "Rnw" "nw" "tex" ".tex" ".ltx") ("bib" ".bib")))
+(setq TeX-file-extensions
+      '(".Rnw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; cc-mode stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'cc-mode)
 (add-hook 'c-mode-hook
