@@ -1,0 +1,6 @@
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+MAILTO=ele
+HOME=/home/ele/
+
+0-59/1 * * * * offlineimap
