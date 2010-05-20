@@ -17,7 +17,9 @@ ignore = Path {bibtex}
 ignore = Path {Documents/talks/Chiemsee_VW}
 ignore = Path {genepool}
 ignore = Path {conkeror}
+ignore = Path {.dropbox}
 ignore = Path {Dropbox}
+ignore = Path {Documents/Interim_report2}
 
 # the dropbox
 ignore = Path {Dropbox}
@@ -76,6 +78,7 @@ ignore = Path {.gnupg}
 ignore = Path {.gnus}
 ignore = Path {.gnus~}
 ignore = Path {.google}
+ignore = Path {.gpg-agent-info}
 ignore = Path {.gphoto}
 ignore = Path {.gstreamer-0.10}
 ignore = Path {.gtk-bookmarks}
@@ -110,6 +113,7 @@ ignore = Path {.Rhistory}
 ignore = Path {.Rprofile}
 ignore = Path {.screenrc}
 ignore = Path {.screenrc~}
+ignore = Path {.Skype}
 ignore = Path {.ssh}
 ignore = Path {.subversion}
 ignore = Path {.texlive2007}
