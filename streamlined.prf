@@ -159,6 +159,7 @@ ignore = Name {linux_signing_key.pub}
 ignore = Name {init.el}
 ignore = Name {unison.log}
 ignore = Name {unison.log}
+ignore = Path {tools/phrap2}
 
 # byte compiled elisp files
 ignore =  Name *.elc
