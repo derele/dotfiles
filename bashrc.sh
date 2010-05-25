@@ -34,3 +34,5 @@ export TERM=xterm-256color
 export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -t'
 
+#pager most
+export PAGER=most
