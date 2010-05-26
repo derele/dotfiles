@@ -15,6 +15,7 @@ ignore = Path {dotfiles}
 ignore = Path {Homepages}
 ignore = Path {bibtex}
 ignore = Path {Documents/talks/Chiemsee_VW}
+ignore = Path {Documents/talks/DESeq-journal-club}
 ignore = Path {genepool}
 ignore = Path {conkeror}
 ignore = Path {stumpwm}
