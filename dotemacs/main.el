@@ -282,6 +282,8 @@ w) "d ")) line) 'face 'linum)))
             (setq TeX-command-default "Sweave")
             )
           )
+;; try something like '("allIn1" "weaver.sh %s && rubber -d %s && xpdf -remote ess_xpdf -raise -reload '%s.pdf'")
+
 ;; more functions syntax higlighted based on syntax_highlighting.R and the file it writes from S. McKay Curtis on ess-help
 (defun read-lines (file)
   "Return a list of lines in FILE."
