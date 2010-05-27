@@ -51,3 +51,4 @@ bind F4 exec xterm -e 'screen_after_256.sh'
 bind F5 exec firefox
 bind y ratclick 2       # great for pasting
 
+definekey top M-Tab next
