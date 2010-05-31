@@ -18,8 +18,8 @@
 		    "~/.emacs.d/color-theme-6.6.0"
 		    "~/.emacs.d/emms/lisp"
                     "~/.emacs.d/magit-0.7"
-                    "~/dotfiles/dotemacs/own_modes"
-                    )
+                    "~/.emacs.d/slime-2010-05-31"                    
+                    "~/dotfiles/dotemacs/own_modes")
               load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; color stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -330,6 +330,12 @@ w) "d ")) line) 'face 'linum)))
 (setq reftex-bibpath-environment-variables
       '("/home/ele/bibtex/"))
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; LISP;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq inferior-lisp-program "/usr/bin/sbcl") ;Lisp system
+(require 'slime)
+(slime-setup)
+(slime-setup '(slime-fancy))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; cc-mode stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'cc-mode)
