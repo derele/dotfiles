@@ -253,7 +253,7 @@ w) "d ")) line) 'face 'linum)))
 (require 'ess-site)
 (add-hook 'ess-mode-hook
 	  (lambda()
-	    (define-key ess-mode-map (kbd "C-c C-h") 'ess-r-args-show)  
+	    (define-key ess-mode-map "(" 'ess-r-args-auto-show)
 	    )
 	  )
 ;; Sweave .Rnw mode stuff.
