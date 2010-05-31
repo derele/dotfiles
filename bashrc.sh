@@ -36,3 +36,7 @@ export VISUAL='emacsclient -t'
 
 #pager most
 export PAGER=most
+
+#ignore some history
+export HISTIGNORE="ll:ls:exit:cd:e"
+export HISTCONTROL=erasedups

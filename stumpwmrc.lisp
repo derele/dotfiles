@@ -1,5 +1,5 @@
 ;; -*-lisp-*-
-;;.stumpwmrc --- my own Stumpwm customizations
+;;stumpwmrc.lisp --- my own Stumpwm customizations
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;Startup programs;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -21,6 +21,7 @@
 (run-shell-command "nm-applet")
 (run-shell-command "gnome-power-manager")
 (run-shell-command "dropbox start")
+(run-shell-command "gnome-volume-control-applet")
 ;;(run-shell-command "skype")
 
 ;;Have a screen in a xterm
