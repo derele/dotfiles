@@ -25,7 +25,7 @@ alias aus='sudo shutdown -h now'
 eval `keychain --eval --nogui -Q -q id_rsa`
 
 ### do some readline remapping
-bind -f ~/dotfiles/.inputrc
+bind -f /home/ele/dotfiles/.inputrc
 
 #enable 256 color terminal
 export TERM=xterm-256color
