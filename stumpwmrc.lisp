@@ -37,7 +37,7 @@
 (define-key *top-map* (kbd "M-TAB") "next")
 
 (define-key *top-map* (kbd "C-F1") "exec conkeror")
-(define-key *top-map* (kbd "C-F2") "exec xterm -e beagle-ssh-start.sh")
+(define-key *top-map* (kbd "C-F2") "exec xterm -e beagle-ssh.sh")
 (define-key *top-map* (kbd "C-F3") "exec firefox")
 (define-key *top-map* (kbd "C-F4") "exec xterm -e screen_after_256.sh")
 (define-key *top-map* (kbd "C-F5") "exec skype")
