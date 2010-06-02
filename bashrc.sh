@@ -39,4 +39,8 @@ export PAGER=most
 
 #ignore some history
 export HISTIGNORE="ll:ls:exit:cd:e"
-export HISTCONTROL=erasedups
+export HISTCONTROL=erasedupsexport 
+
+PHRED_PARAMETER_FILE=/home/ele/tools/phred-dist-020425.c-acd/phredpar.dat
+export ESTSCANDIR=/home/ele/tools/estscan-3.0.2
+export ESTSCANLIB=/usr/local/lib64/perl5/site_perl/5.10.0/x86_64-linux-thread-multi
