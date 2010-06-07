@@ -21,6 +21,7 @@ ignore = Path {conkeror}
 ignore = Path {stumpwm}
 ignore = Path {Dropbox}
 ignore = Path {Documents/Interim_report2}
+ignore = Path {own_lisp}
 
 # the dropbox
 ignore = Path {Dropbox}
@@ -31,6 +32,7 @@ ignore = Path {Mail}
 ignore = Path {.offlineimap}
 ignore = Path {.elmo}
 
+
 # and stuff thats special to the different Emacsens
 ignore = Path {.emacs.d/ac-comphist.dat}
 ignore = Path {.emacs.d/bbdb}
@@ -39,6 +41,7 @@ ignore = Path {.ido.last}
 ignore = Path {.ido.last~}
 ignore = Path {.session}
 ignore = Path {.session~}
+ignore = Path {.emacs.d/tramp}
 
 # all the dotfiles and dotdirs I want to exclude
 ignore = Path {.bashrc}

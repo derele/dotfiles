@@ -37,9 +37,6 @@ exec Thunar --daemon
 exec emacsclient --eval "(progn (save-some-buffers t t) (kill-emacs))"
 exec emacs --daemon
 
-#statrt syncing maildirs
-exec offlineimap
-
 # start screen ## doesnt work with 256colors
 exec xterm -e 'screen_after_256.sh'
 
