@@ -256,6 +256,8 @@ w) "d ")) line) 'face 'linum)))
 	    (define-key ess-mode-map "(" 'ess-r-args-auto-show)
 	    )
 	  )
+(setq inferior-ess-r-help-command "help(\"%s\", help_type=\"text\")\n")
+
 ;; Sweave .Rnw mode stuff.
 (require 'ess-noweb)
 (setq TeX-file-extensions
