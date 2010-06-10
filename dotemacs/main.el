@@ -182,11 +182,6 @@ w) "d ")) line) 'face 'linum)))
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
 
-;; top looking nice
-(require 'top-mode)
-;; MAKE ME WORK
-;; (top-mode 1)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; window and buffer general;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Easy between windows
 (defun select-next-window ()
@@ -251,6 +246,7 @@ w) "d ")) line) 'face 'linum)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ESS stuff;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'ess-site)
+
 (add-hook 'ess-mode-hook
 	  (lambda()
 	    (define-key ess-mode-map "(" 'ess-r-args-auto-show)
