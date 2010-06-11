@@ -13,7 +13,7 @@
 "\C-h": backward-delete-char
 "\C-?": backward-delete-char
 "\C-x\C-?": backward-kill-line
-"\e\C-h": backward-kill-word
+"\eh": backward-kill-word
 "\e\C-?": backward-kill-word
 "\eb": backward-word
 "\e<": beginning-of-history
