@@ -4,7 +4,7 @@
 
 # If no R_HISTFILE environment variable, set default
 if (Sys.getenv("R_HISTFILE") == "") {
-    Sys.setenv(R_HISTFILE=file.path("~", ".Rhistory"))
+    Sys.setenv(R_HISTFILE=file.path("/home/ele/.Rhistory"))
   }
 
 # aliases
