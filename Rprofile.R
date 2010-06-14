@@ -1,5 +1,7 @@
 .First <- function(){
   cat("\n R says: Let's go !\n\n")
+  #use main repo
+  options("repos" = c(CRAN = "http://cran.r-project.org/"))
 }
 
 # If no R_HISTFILE environment variable, set default
