@@ -14,8 +14,7 @@ tryCatch(
          {options(
                   width = as.integer(Sys.getenv("COLUMNS")))},
          error = function(err) {
-           write("Can't get your terminal width. Put ``export COLUMNS'' in your \
-           .bashrc. Or something. Setting width to 120 chars",
+           write("Can't get your terminal width",
                  stderr());
            options(width=120)}
          )
