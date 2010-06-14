@@ -9,6 +9,18 @@ if (Sys.getenv("R_HISTFILE") == "") {
     Sys.setenv(R_HISTFILE=file.path("/home/ele/.Rhistory"))
   }
 
+# Always have optimal width
+tryCatch(
+         {options(
+                  width = as.integer(Sys.getenv("COLUMNS")))},
+         error = function(err) {
+           write("Can't get your terminal width. Put ``export COLUMNS'' in your \
+           .bashrc. Or something. Setting width to 120 chars",
+                 stderr());
+           options(width=120)}
+         )
+
+
 # aliases
 s <- base::summary;
 h <- utils::head;
