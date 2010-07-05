@@ -56,3 +56,4 @@ export ESTSCANLIB=/usr/local/lib64/perl5/site_perl/5.10.0/x86_64-linux-thread-mu
 
 source /home/ele/dotfiles/shell_functions.sh
 
+echo -e "\nThis is the setup, now do some work\n"
