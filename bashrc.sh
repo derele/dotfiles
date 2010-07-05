@@ -27,7 +27,7 @@ alias yum='sudo yum -y'
 eval `keychain --eval --nogui -Q -q id_rsa`
 
 ### do some readline remapping
-bind -f /home/ele/dotfiles/.inputrc &
+bind -f /home/ele/dotfiles/.inputrc
 
 ## make sure we are up to date
 sudo yum -y -q upgrade &
