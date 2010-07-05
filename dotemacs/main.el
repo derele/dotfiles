@@ -459,8 +459,12 @@ w) "d ")) line) 'face 'linum)))
 (if (string-match "ele-laptop" (getenv "HOSTNAME")) ;; laptop
     (load-file "/home/ele/dotfiles/dotemacs/emacs_laptop.el"))
 
+(if (string-match "thinkpad" (getenv "HOSTNAME")) ;; beagle
+    (load-file "/home/ele/dotfiles/dotemacs/emacs_thinkpad.el"))
+
 (if (string-match "beagle" (getenv "HOSTNAME")) ;; beagle
     (load-file "/home/ele/dotfiles/dotemacs/emacs_beagle.el"))
+
 
 ;; Emacswiki editing only when we have are connected to the web
 (when (get-ip-address)
