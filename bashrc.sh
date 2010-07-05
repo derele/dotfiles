@@ -15,17 +15,22 @@ alias uni='ssh -Y -c arcfour,blowfish-cbc -C dc134@www1.rz.uni-karlsruhe.de'
 
 alias unison='unison streamlined -ui text -auto'
 
-alias usrout='skill -KILL -u ele'
+alias usrout='sudo skill -KILL -u ele'
 
 alias skype='LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype'
 
 alias aus='sudo shutdown -h now'
 
+alias yum='sudo yum -y'
+
 # enable keychain ssh passphrase memory
 eval `keychain --eval --nogui -Q -q id_rsa`
 
 ### do some readline remapping
-bind -f /home/ele/dotfiles/.inputrc
+bind -f /home/ele/dotfiles/.inputrc &
+
+## make sure we are up to date
+sudo yum -y -q upgrade &
 
 # enable 256 color terminal
 export TERM=xterm-256color
