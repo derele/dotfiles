@@ -29,8 +29,16 @@ eval `keychain --eval --nogui -Q -q id_rsa`
 ### do some readline remapping
 bind -f /home/ele/dotfiles/.inputrc
 
-## make sure we are up to date
-sudo yum -y -q upgrade &
+# make sure we are up to date
+# but first check, that yum is not running already
+if [ -z "$(ps -A | grep "yum")" ]
+then  
+    sudo yum -y -q upgrade &
+    echo "yum started an update in the background"
+else 
+    echo "yum is already keeping you up to date in the background"
+fi
+
 
 # enable 256 color terminal
 export TERM=xterm-256color
