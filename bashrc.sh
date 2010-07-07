@@ -33,7 +33,7 @@ bind -f /home/ele/dotfiles/.inputrc
 # but first check, that yum is not running already
 if [ -z "$(ps -A | grep "yum")" ]
 then  
-    sudo yum -y -q upgrade &
+    sudo yum -y -q upgrade &>/dev/null &
     echo "yum started an update in the background"
 else 
     echo "yum is already keeping you up to date in the background"
