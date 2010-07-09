@@ -34,11 +34,10 @@ bind -f /home/ele/dotfiles/.inputrc
 if [ -z "$(ps -A | grep "yum")" ]
 then  
     sudo yum -y -q upgrade &>/dev/null &
-    echo "yum started an update in the background"
+    echo -e "yum started an update in the background\n"
 else 
-    echo "yum is already keeping you up to date in the background"
+    echo -e "yum is already keeping you up to date in the background\n"
 fi
-
 
 # enable 256 color terminal
 export TERM=xterm-256color
@@ -64,4 +63,9 @@ export ESTSCANLIB=/usr/local/lib64/perl5/site_perl/5.10.0/x86_64-linux-thread-mu
 
 source /home/ele/dotfiles/shell_functions.sh
 
-echo -e "\nThis is the setup, now do some work\n"
+echo -e "
+           ###########################################
+           #  This a stable setup, now do some work  #
+           ###########################################
+        
+        "
