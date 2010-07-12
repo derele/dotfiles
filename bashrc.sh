@@ -35,8 +35,8 @@ if [ -z "$(ps -A | grep "yum")" ]
 then  
     sudo yum -y -q upgrade &>/dev/null &
 #    echo -e "yum started an update in the background\n"
-else 
-    echo -e "yum is already keeping you up to date in the background\n"
+#else 
+#    echo -e "yum is already keeping you up to date in the background\n"
 fi
 
 # enable 256 color terminal
