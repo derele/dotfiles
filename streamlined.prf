@@ -6,7 +6,6 @@ root = ssh://ele@129.13.174.229//home/ele
 ignore = Path {.unison}
 
 # directories  under version control
-ignore = Path {thesis/Talk--Emacs-environment-for-PhD-thesis}
 ignore = Path {thesis/pilot_sanger}
 ignore = Path {thesis/scripts}
 ignore = Path {thesis/454}
@@ -22,6 +21,12 @@ ignore = Path {stumpwm}
 ignore = Path {Dropbox}
 ignore = Path {Documents/Interim_report2}
 ignore = Path {own_lisp}
+ignore = Path {own_lisp}
+ignore = Path {thesis/experimental_inf}
+ignore = Path {Documents/talks/limma-journal-club}
+
+
+
 
 # the dropbox
 ignore = Path {Dropbox}

@@ -68,4 +68,4 @@ source /home/ele/dotfiles/shell_functions.sh
            #  This a stable setup, now do some work  #
            ###########################################
         
-        "
+#        "
