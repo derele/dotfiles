@@ -252,7 +252,12 @@ w) "d ")) line) 'face 'linum)))
 	    (define-key ess-mode-map "(" 'ess-r-args-auto-show)
 	    )
 	  )
+;; set the help right to open text
 (setq inferior-ess-r-help-command "help(\"%s\", help_type=\"text\")\n")
+
+;; always scroll to output and input 
+(setq comint-scroll-to-bottom-on-input t)
+(setq comint-scroll-to-bottom-on-output t)
 
 ;; Sweave .Rnw mode stuff.
 (require 'ess-noweb)
