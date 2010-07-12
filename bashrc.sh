@@ -34,7 +34,7 @@ bind -f /home/ele/dotfiles/.inputrc
 if [ -z "$(ps -A | grep "yum")" ]
 then  
     sudo yum -y -q upgrade &>/dev/null &
-    echo -e "yum started an update in the background\n"
+#    echo -e "yum started an update in the background\n"
 else 
     echo -e "yum is already keeping you up to date in the background\n"
 fi
@@ -63,7 +63,7 @@ export ESTSCANLIB=/usr/local/lib64/perl5/site_perl/5.10.0/x86_64-linux-thread-mu
 
 source /home/ele/dotfiles/shell_functions.sh
 
-echo -e "
+#echo -e "
            ###########################################
            #  This a stable setup, now do some work  #
            ###########################################
