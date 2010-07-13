@@ -2,6 +2,7 @@
   cat("\n R says: Let's go !\n\n")
   #use main repo
   options("repos" = c(CRAN = "http://cran.r-project.org/"))
+  options(show.signif.stars=FALSE)
 }
 
 # If no R_HISTFILE environment variable, set default
