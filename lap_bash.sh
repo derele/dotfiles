@@ -18,8 +18,9 @@ else
 fi
 
 echo -e "
-           ###########################################
-           #  This a stable setup, now do some work  #
-           ###########################################
+           ###############################################
+            I am "$HOSTNAME" just a stupid client machine 
+              This a stable setup, now do some work  
+           ###############################################
         
         "
