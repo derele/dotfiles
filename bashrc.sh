@@ -9,19 +9,20 @@ fi
 
 alias e='emacsclient -t'
 alias ll='ls -lh'
-alias desk='ssh -Y -c arcfour,blowfish-cbc -C 129.13.174.240'
-alias beagle='ssh -Y -c arcfour,blowfish-cbc -C 129.13.174.229'
-alias uni='ssh -Y -c arcfour,blowfish-cbc -C dc134@www1.rz.uni-karlsruhe.de'
-
 alias unison='unison streamlined -ui text -auto'
+alias yum='sudo yum -y'
+
+
+if [ $HOSTNAME != beagle ]
+then
+    echo -e "client"
+else
+    echo -e "beagle"
+fi
 
 alias usrout='sudo skill -KILL -u ele'
-
 alias skype='LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype'
-
 alias aus='sudo shutdown -h now'
-
-alias yum='sudo yum -y'
 
 # enable keychain ssh passphrase memory
 eval `keychain --eval --nogui -Q -q id_rsa`
