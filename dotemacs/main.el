@@ -464,7 +464,7 @@ w) "d ")) line) 'face 'linum)))
 (if (string-match "ele-laptop" (getenv "HOSTNAME")) ;; laptop
     (load-file "/home/ele/dotfiles/dotemacs/emacs_laptop.el"))
 
-(if (string-match "thinkpad" (getenv "HOSTNAME")) ;; beagle
+(if (string-match "thinkpad" (getenv "HOSTNAME"))
     (load-file "/home/ele/dotfiles/dotemacs/emacs_thinkpad.el"))
 
 (if (string-match "beagle" (getenv "HOSTNAME")) ;; beagle

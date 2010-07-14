@@ -7,13 +7,13 @@
 ;; ToDo:
 ;; when emacs starts on laptop it should check it's ip
 ;; and then update this line on beagle
-(setenv  "LAPTOPIP" "129.215.170.79")
+(setq  laptopip "129.215.170.79")
 
 (defun remote-emacs (command)
   "Run a remote emacsclient eval (machine has to have a shell script
 to avoid quoting)."
   (interactive)
-  (setq cmd (concat "ssh $LAPTOPIP -t emacsclient-eval.sh " 
+  (setq cmd (concat "ssh "laptopip" -t emacsclient-eval.sh " 
                     command))
   (shell-command cmd)
   (message cmd)
@@ -29,17 +29,11 @@ to avoid quoting)."
 (global-set-key  "\C-cmr" (lambda () (interactive) (remote-emacs "emms-random")))
 
 ;; have to decide wether to control the remote conkeror web-browser directly or 
-;; through the remote emacs. I go for the more complicated way, as I want to open
-;; links and do such complicated sutuff
-;; (global-set-key  "\C-cC" (lambda () (interactive) (remote-emacs "browse-url-or-follow-link")))
-;; this doesn't work as the remote emacs will try to follow its own point's position
-;; following links is a harder problem...
-;; for now just open url
 
 (defun remote-conkeror ()
   "Run a remote conkeror on the thing under point."
   (interactive)
-  (setq cmd (concat "ssh $LAPTOPIP -t conkeror " 
+  (setq cmd (concat "ssh "laptopip" -t conkeror " 
                     (thing-at-point 'url)))
   (shell-command cmd)
   (message cmd)
