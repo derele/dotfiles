@@ -24,8 +24,7 @@ ignore = Path {own_lisp}
 ignore = Path {own_lisp}
 ignore = Path {thesis/experimental_inf}
 ignore = Path {Documents/talks/limma-journal-club}
-
-
+ignore = Path {Documents/phylo-paper}
 
 
 # the dropbox
