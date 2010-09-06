@@ -21,3 +21,7 @@ grep_file_contents_plus1(){
 ace_to_stem(){
     grep "^CO " $1 | awk '{print $4}'| r -e 'X <- as.integer(readLines()); stem(X)' | grep "^ "
 }
+
+dist_from_ssaha2(){
+    awk -F " "  '{if ($1 ~ "Matches"){ a=$7; print c; c=0} ; if ($1 ~ "ALIGNMENT") { ++c}  }' $1
+}
