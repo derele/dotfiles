@@ -25,6 +25,7 @@ tryCatch(
 s <- base::summary;
 h <- utils::head;
 n <- base::names;
+ll <- function() cat(ls(envir=globalenv()), sep="\n")
 
 # Override q() to not save by default.
 # Same as saying q("no")
