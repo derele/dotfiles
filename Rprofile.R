@@ -3,6 +3,7 @@
   #use main repo
   options("repos" = c(CRAN = "http://cran.r-project.org/"))
   options(show.signif.stars=FALSE)
+  options(prompt=paste("R", basename(getwd()), ">"))
 }
 
 # If no R_HISTFILE environment variable, set default
@@ -20,12 +21,19 @@ tryCatch(
            options(width=120)}
          )
 
-
 # aliases
 s <- base::summary;
 h <- utils::head;
 n <- base::names;
-ll <- function() cat(ls(envir=globalenv()), sep="\n")
+
+
+ll <- function(envir=globalenv()) {
+  obs <- ls(envir=envir)
+  sizes <- sapply(obs, function (x) object.size(get(x)))
+  modes <- sapply(obs, function (x) mode(get(x)))  
+  classes <- sapply(obs, function (x) class(get(x)))
+  as.data.frame(cbind(sizes, modes, classes))
+}
 
 # Override q() to not save by default.
 # Same as saying q("no")
@@ -40,3 +48,4 @@ q <- function (save="no", ...) {
   }
   cat("\n\nMay these stats lead to conclusions...\n\n")
 }
+
