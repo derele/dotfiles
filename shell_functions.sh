@@ -30,6 +30,17 @@ contig_table_from_ace(){
     perl -ne '$c =  $1 if /^CO (\S+)/; print "$c\t$1\n" if /^AF (\S+)/' $1
 }
 
+pull_all_git_repos(){
+    cd $HOME
+    for i in $(find -name ".git" | awk '{print substr($0, 1, index($0, "/.git"))}')
+    do 
+        cd $i
+        echo -e "\nupdating $i\n"
+        git pull
+        cd $HOME
+    done
+}
+
 shell_functions(){
     cat /home/ele/dotfiles/shell_functions.sh
 }
