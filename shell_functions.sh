@@ -27,7 +27,7 @@ dist_from_ssaha2(){
 }
 
 contig_table_from_ace(){
-    perl -ne '$c =  $1 if /^CO (\S+)/; print "$c\t$1\n" if /^AF (\S+)/' $1
+    perl -ne '$c =  $1 if /^CO (\S+)/; print "$c\t$1\n" if /^AF (\w+)(\|*|\.*)/' $1
 }
 
 pull_all_git_repos(){
