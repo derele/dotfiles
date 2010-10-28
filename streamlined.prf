@@ -25,7 +25,7 @@ ignore = Path {own_lisp}
 ignore = Path {thesis/experimental_inf}
 ignore = Path {Documents/talks/limma-journal-club}
 ignore = Path {Documents/phylo-paper}
-
+ignore = Path {.emacs.d/emms}
 
 # the dropbox
 ignore = Path {Dropbox}
