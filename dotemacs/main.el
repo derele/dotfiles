@@ -267,24 +267,25 @@ w) "d ")) line) 'face 'linum)))
 (add-to-list 'auto-mode-alist '("\\.Snw\\'" . Snw-mode))
 (add-hook 'Rnw-mode-hook
           (lambda ()
-            (add-to-list 'TeX-command-list
-                         '("Sweave" "R CMD Sweave %s"
-                           TeX-run-command nil (latex-mode) :help "Run weaver") t)
-            (add-to-list 'TeX-command-list
-                         '("weaver" "weaver.sh %s"
-                           TeX-run-command nil (latex-mode) :help "Run Sweave") t)
-            (add-to-list 'TeX-command-list
-                         '("LatexSweave" "%l %(mode) %s"
-                           TeX-run-TeX nil (latex-mode) :help "Run Latex after Sweave") t)
-            (add-to-list 'TeX-command-list
-                         '("allIn1" "weaver.sh %s && rubber -d %s && xpdf '%s.pdf'"
-                           TeX-run-TeX nil (latex-mode) :help "xpdf from source") t)
-            (add-to-list 'TeX-command-list
-                         '("RubberSweave" "rubber -d %s && xpdf '%s.pdf'"
-                           TeX-run-command nil t) t)
-            (setq TeX-command-default "Sweave")
-            )
-          )
+            (add-to-list 'TeX-command-list '("Sweave" "R CMD
+                         Sweave %s" TeX-run-command
+                         nil (latex-mode) :help "Run Sweave") t)
+            (add-to-list 'TeX-command-list '("weaver" "weaver.sh
+                         %s" TeX-run-command
+                         nil (latex-mode) :help "Run Weaver") t)
+            (add-to-list 'TeX-command-list '("LatexSweave" "%l
+                         %(mode) %s" TeX-run-TeX
+                         nil (latex-mode) :help "Run Latex
+                         on (s)weave file") t)
+            (add-to-list 'TeX-command-list '("dvi" "weaver.sh %s
+                         && %l %(mode) %s" TeX-run-command
+                         nil (latex-mode) :help "Run weaver then
+                         LatexSweave to see the dvi") t)
+            (add-to-list 'TeX-command-list '("pdf" "weaver.sh %s
+                         && rubber -d %s" TeX-run-TeX
+                         nil (latex-mode) :help "xpdf from source
+                         use old xpdf") t)
+            (setq TeX-command-default "pdf") ) )
 ;; try something like '("allIn1" "weaver.sh %s && rubber -d %s && xpdf -remote ess_xpdf -raise -reload '%s.pdf'")
 
 ;; more functions syntax higlighted based on syntax_highlighting.R and the file it writes from S. McKay Curtis on ess-help
@@ -297,15 +298,15 @@ w) "d ")) line) 'face 'linum)))
     )
   )
 
-(add-hook 'ess-mode-hook
-	  '(lambda()
+(add-hook 'ess-mode-hook '(lambda()
 	     (setq ess-my-extra-R-function-keywords
 		   (read-lines "~/.emacs.d/R-function-names.txt"))
  	     (setq ess-R-mode-font-lock-keywords
 		   (append ess-R-mode-font-lock-keywords
 			   (list (cons (concat "\\<" (regexp-opt
-                                                      ess-my-extra-R-function-keywords 'enc-paren) "\\>")
-				       'font-lock-function-name-face))))))
+                                                      ess-my-extra-R-function-keywords
+                                                      'enc-paren) "\\>")
+                                                      'font-lock-function-name-face))))))
 
 ;; LaTeX stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; AucTeX with rubber
