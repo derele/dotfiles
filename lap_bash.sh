@@ -9,12 +9,10 @@ alias skype='LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype'
 
 # make sure we are up to date
 # but first check, that yum is not running already
-if [ -z "$(ps -A | grep "yum")" ]
+if [ -z "$(ps -A | grep "yum")" -a $HOSTNAME != hoernchen-desk ]
 then  
     sudo yum -y -q upgrade &>/dev/null &
     echo -e "yum started an update in the background\n"
-else 
-    echo -e "yum is already keeping you up to date in the background\n"
 fi
 
 echo -e "
