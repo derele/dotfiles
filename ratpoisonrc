@@ -37,7 +37,7 @@ exec Thunar --daemon
 exec emacsclient --eval "(progn (save-some-buffers t t) (kill-emacs))"
 exec emacs --daemon
 
-# start screen ## doesnt work with 256colors
+# start screen with 256colors
 exec xterm -e 'screen_after_256.sh'
 
 ## Mapping some keys ##################################################
