@@ -41,11 +41,12 @@ exec emacs --daemon
 exec xterm -e 'screen_after_256.sh'
 
 ## Mapping some keys ##################################################
-bind F1 exec conkeror 
+bind F1 exec xterm -e 'screen_after_256.sh'
 bind F2 exec xterm -e 'beagle-ssh.sh'
-bind F3 exec firefox
-bind F4 exec xterm -e 'screen_after_256.sh'
-bind F5 exec firefox
+bind F3 exec firefox conkeror 
+bind F4 exec firefox
+bind F5 exec google-chrome
+
 bind y ratclick 2       # great for pasting
 
 definekey top M-Tab next
