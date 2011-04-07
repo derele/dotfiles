@@ -36,18 +36,11 @@
    
 (define-key *top-map* (kbd "M-TAB") "next")
 
-;; (define-key *top-map* (kbd "C-F1") "exec xterm -e screen_after_256.sh")
-;; (define-key *top-map* (kbd "C-F2") "exec xterm -e beagle-ssh.sh")
-;; (define-key *top-map* (kbd "C-F3") "exec conkeror")
-;; (define-key *top-map* (kbd "C-F4") "exec firefox")
-;; (define-key *top-map* (kbd "C-F5") "exec google-chrome")
-
-
-(define-key *root-map* (kbd "C-F1") "exec xterm -e screen_after_256.sh")
-(define-key *root-map* (kbd "C-F2") "exec xterm -e beagle-ssh.sh")
-(define-key *root-map* (kbd "C-F3") "exec conkeror")
-(define-key *root-map* (kbd "C-F4") "exec firefox")
-(define-key *root-map* (kbd "C-F5") "exec google-chrome")
+(define-key *root-map* (kbd "F1") "exec xterm -e screen_after_256.sh")
+(define-key *root-map* (kbd "F2") "exec xterm -e beagle-ssh.sh")
+(define-key *root-map* (kbd "F3") "exec conkeror")
+(define-key *root-map* (kbd "F4") "exec firefox")
+(define-key *root-map* (kbd "F5") "exec google-chrome")
 
 
 
