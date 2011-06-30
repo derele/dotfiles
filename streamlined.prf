@@ -152,6 +152,7 @@ ignore = Path {.java}
 ignore = Path {.qt}
 
 # some others by purpose
+ignore = Path {tools}
 ignore = Path {musik}
 ignore = Path {Images}
 ignore = Path {Silvia}
