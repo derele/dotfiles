@@ -282,8 +282,7 @@ w) "d ")) line) 'face 'linum)))
                          && %l %(mode) %s" TeX-run-command
                          nil (latex-mode) :help "Run weaver then
                          LatexSweave to see the dvi") t)
-            (add-to-list 'TeX-command-list '("pdf" "weaver.sh %s
-                         && rubber -d %s" TeX-run-TeX
+            (add-to-list 'TeX-command-list '("pdf" "weaver.sh %s && rubber -d %s" TeX-run-TeX
                          nil (latex-mode) :help "xpdf from source
                          use old xpdf") t)
             (setq TeX-command-default "pdf") ) )

@@ -11,6 +11,7 @@ alias e='emacsclient -t'
 alias ll='ls -lh'
 alias yum='sudo yum -y'
 alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
+alias feh='feh -F'
 
 # enable keychain ssh passphrase memory
 eval `keychain --eval --nogui -Q -q id_rsa`
