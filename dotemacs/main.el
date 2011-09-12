@@ -311,6 +311,10 @@ w) "d ")) line) 'face 'linum)))
 ;; LaTeX stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; AucTeX with rubber
 ;; http://www.nabble.com/sweave-and-auctex-td23492805.html
+
+;; make reftex lookup master document
+(setq-default TeX-master "../thesis.tex")
+
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
                 '("Rubber" "rubber -d %t && xpdf '%s.pdf'" TeX-run-command nil t) t)
@@ -333,6 +337,9 @@ w) "d ")) line) 'face 'linum)))
 ;; set my bibtex-path
 (setq reftex-bibpath-environment-variables
       '("/home/ele/bibtex/"))
+
+(setq reftex-default-bibliography
+      '("/home/ele/bibtex/master.bib"))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; LISP;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
