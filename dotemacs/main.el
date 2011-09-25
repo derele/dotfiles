@@ -317,7 +317,7 @@ w) "d ")) line) 'face 'linum)))
 
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
-                '("Rubber" "rubber -d %t && xpdf '%s.pdf'" TeX-run-command nil t) t)
+                '("Rubber" "rubber -d %t" TeX-run-command nil t) t)
   )
 
 ;; ebib 
