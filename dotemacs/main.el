@@ -313,7 +313,7 @@ w) "d ")) line) 'face 'linum)))
 ;; http://www.nabble.com/sweave-and-auctex-td23492805.html
 
 ;; make reftex lookup master document
-(setq-default TeX-master "../thesis.tex")
+(setq-default TeX-master nil)
 
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
