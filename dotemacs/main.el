@@ -183,6 +183,9 @@ w) "d ")) line) 'face 'linum)))
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
 
+;; web browser binding  
+(global-set-key "\C-cc" 'browse-url-or-follow-link)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; window and buffer general;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Easy between windows
 (defun select-next-window ()

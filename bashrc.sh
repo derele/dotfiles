@@ -29,8 +29,11 @@ export VISUAL='emacsclient -t'
 # pager most
 export PAGER=most
 
+# browser conkeror
+export BROWSER=/usr/local/bin/conkeror
+
 # ignore some history
-export HISTIGNORE="ll:ls:exit:cd:e"
+export HISTIGNORE="ll:ls:exit:cd:e:rm"
 export HISTCONTROL=erasedupsexport 
 
 # give R a global history file in combi with some code in Rprofile
