@@ -8,8 +8,16 @@ ln -s dotfiles/Xresources .Xresources
 ln -s dotfiles/Rprofile.R .Rprofile
 
 
+ln -s  dotfiles/aspell.en.pws .aspell.en.pws
+ln -s  dotfiles/aspell.de.pws .aspell.de.pws
+ln -s  dotfiles/aspell.en.prepl .aspell.en.prepl
+ln -s  dotfiles/aspell.de.prepl .aspell.de.prepl
+
 rm .bashrc
 ln -s dotfiles/bashrc.sh .bashrc
 
 
+
+
 ln -s /home/ele/dotfiles/shellscripts/* /usr/local/bin/
+
