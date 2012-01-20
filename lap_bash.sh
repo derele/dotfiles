@@ -3,7 +3,7 @@
 
 # some alias' that make only sense on the laptops
 alias usrout='sudo skill -KILL -u ele'
-alias aus='sudo shutdown -h now'
+alias aus='shutdown -h now'
 alias unison='unison streamlined -ui text -auto'
 alias skype='LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype'
 
