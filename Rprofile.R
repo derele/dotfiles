@@ -1,5 +1,8 @@
 .First <- function(){
-  cat("\n R says: Let's go !\n\n")
+  cat("\n\n   RAM is cheap and thinking hurts.
+   -- Uwe Ligges (about memory requirements in R)
+      R-help (June 2007)\n\n")
+  
   #use main repo
   options("repos" = c(CRAN = "http://cran.r-project.org/"))
   options(show.signif.stars=FALSE)
