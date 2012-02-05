@@ -362,38 +362,38 @@ w) "d ")) line) 'face 'linum)))
 	  )
 
 ;;;;;;;;; Internet Relay Chat with erc ;;;;;;;;;;;;;;;;;;
-(require 'erc)
-;; joining && autojoing
-;; wildcards for freenode as the actual server as
-;; name can be be a bit different
-(erc-autojoin-mode t)
-(setq erc-autojoin-channels-alist
-      '((".*\\.freenode.net" "#emacs" "#R" "#ratpoison" "#conkeror" "#bioinformatics"))
-      )
+;; (require 'erc)
+;; ;; joining && autojoing
+;; ;; wildcards for freenode as the actual server as
+;; ;; name can be be a bit different
+;; (erc-autojoin-mode t)
+;; (setq erc-autojoin-channels-alist
+;;       '((".*\\.freenode.net" "#emacs" "#R" "#ratpoison" "#conkeror" "#bioinformatics"))
+;;       )
 
-;; check channels
-(erc-track-mode t)
-(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
-                                 "324" "329" "332" "333" "353" "477"))
-;; don't show any of this
-(setq erc-hide-list '("JOIN" "PART" "QUIT" "NICK"))
+;; ;; check channels
+;; (erc-track-mode t)
+;; (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
+;;                                  "324" "329" "332" "333" "353" "477"))
+;; ;; don't show any of this
+;; (setq erc-hide-list '("JOIN" "PART" "QUIT" "NICK"))
 
-;; load my password file to allow sharing my password-clean .emacs
-(load "~/.ercpass")
-(require 'erc-services)
-(erc-services-mode 1)
-(setq erc-prompt-for-nickserv-password nil)
-(setq erc-nickserv-passwords
-      '((freenode     (("nick-one" . ,freenode-nickone-pass)))))
+;; ;; load my password file to allow sharing my password-clean .emacs
+;; (load "~/.ercpass")
+;; (require 'erc-services)
+;; (erc-services-mode 1)
+;; (setq erc-prompt-for-nickserv-password nil)
+;; (setq erc-nickserv-passwords
+;;       '((freenode     (("nick-one" . ,freenode-nickone-pass)))))
 
-(defun djcb-erc-start-or-switch ()
-  "Connect to ERC, or switch to last active buffer"
-  (interactive)
-  (if (get-buffer "irc.freenode.net:6667") ;; ERC already active?
-    (erc-track-switch-buffer 1) ;; yes: switch to last active
-    (when (y-or-n-p "Start ERC? ") ;; no: maybe start ERC
-      (erc :server "irc.freenode.net" :port 6667 :nick "derele" :full-name "Emanuel Heitlinger")
-      )))
+;; (defun djcb-erc-start-or-switch ()
+;;   "Connect to ERC, or switch to last active buffer"
+;;   (interactive)
+;;   (if (get-buffer "irc.freenode.net:6667") ;; ERC already active?
+;;     (erc-track-switch-buffer 1) ;; yes: switch to last active
+;;     (when (y-or-n-p "Start ERC? ") ;; no: maybe start ERC
+;;       (erc :server "irc.freenode.net" :port 6667 :nick "derele" :full-name "Emanuel Heitlinger")
+;;       )))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;,,,;; get the actual ip;;;;;;;;;;;;;;;;;;;;;;
 (defun get-ip-address (&optional dev)
@@ -482,76 +482,76 @@ w) "d ")) line) 'face 'linum)))
     (load-file "/home/ele/dotfiles/dotemacs/emacs_beagle.el"))
 
 
-;; Emacswiki editing only when we have are connected to the web
-(when (get-ip-address)
-  (require 'yaoddmuse)
-  (yaoddmuse-update-pagename t)
-  (setq yaoddmuse-username "EmanuelHeitlinger")
-  )
+;; ;; Emacswiki editing only when we have are connected to the web
+;; (when (get-ip-address)
+;;   (require 'yaoddmuse)
+;;   (yaoddmuse-update-pagename t)
+;;   (setq yaoddmuse-username "EmanuelHeitlinger")
+;;   )
 
-;;;; google mode ;;;;
+;; ;;;; google mode ;;;;
 
-(load-library "g")
-(setq g-user-email "emanuelheitlinger@gmail.com")
-(setq g-html-handler 'w3m-buffer)
+;; (load-library "g")
+;; (setq g-user-email "emanuelheitlinger@gmail.com")
+;; (setq g-html-handler 'w3m-buffer)
 
-;; Write to Diary any entry added to Google Calendar
-;; from http://bc.tech.coop/blog/070306.html
-(eval-after-load "gcal"
-  '(progn
-     (defun gcal-read-event (title content
-                   where
-                   start end
-                   who
-                   transparency status)
-       "Prompt user for event params and return an event structure."
-       (interactive
-    (list
-     (read-from-minibuffer "Title: ")
-     (read-from-minibuffer "Content: ")
-     (read-from-minibuffer "Where: ")
-     (gcal-read-calendar-time "Start Time: ")
-     (gcal-read-calendar-time "End Time: ")
-     (gcal-read-who "Participant: ")
-     (gcal-read-transparency)
-     (gcal-read-status)))
-       (save-excursion
-     (let ((pop-up-frames (window-dedicated-p (selected-window))))
-       (find-file-other-window (substitute-in-file-name diary-file)))
-     (when (eq major-mode default-major-mode) (diary-mode))
-     (widen)
-     (diary-unhide-everything)
-     (goto-char (point-max))
-     (when (let ((case-fold-search t))
-         (search-backward "Local  Variables:"
-                  (max (- (point-max) 3000) (point-min))
-                  t))
-       (beginning-of-line)
-       (insert "n")
-       (forward-line -1))
-     (let* ((dayname)
-        (day (substring start 8 10))
-        (month (substring start 5 7))
-        (year (substring start 0 4))
-        (starttime (substring start 11 16))
-        (endtime (substring end 11 16))
-        (monthname (calendar-month-name (parse-integer month) t))
-        (date-time-string (concat (mapconcat 'eval calendar-date-display-form "")
-                      " " starttime " - " endtime)))
-       (insert
-        (if (bolp) "" "n")
-        ""
-        date-time-string " " title))
-     (bury-buffer)
-     (declare (special gcal-auth-handle))
-     (let ((event (make-gcal-event
-               :author-email (g-auth-email gcal-auth-handle))))
-       (setf (gcal-event-title  event) title
-         (gcal-event-content event) content
-         (gcal-event-where event) where
-         (gcal-event-when-start event) start
-         (gcal-event-when-end event) end
-         (gcal-event-who event) who
-         (gcal-event-transparency  event) transparency
-         (gcal-event-status event) status)
-       event)))))
+;; ;; Write to Diary any entry added to Google Calendar
+;; ;; from http://bc.tech.coop/blog/070306.html
+;; (eval-after-load "gcal"
+;;   '(progn
+;;      (defun gcal-read-event (title content
+;;                    where
+;;                    start end
+;;                    who
+;;                    transparency status)
+;;        "Prompt user for event params and return an event structure."
+;;        (interactive
+;;     (list
+;;      (read-from-minibuffer "Title: ")
+;;      (read-from-minibuffer "Content: ")
+;;      (read-from-minibuffer "Where: ")
+;;      (gcal-read-calendar-time "Start Time: ")
+;;      (gcal-read-calendar-time "End Time: ")
+;;      (gcal-read-who "Participant: ")
+;;      (gcal-read-transparency)
+;;      (gcal-read-status)))
+;;        (save-excursion
+;;      (let ((pop-up-frames (window-dedicated-p (selected-window))))
+;;        (find-file-other-window (substitute-in-file-name diary-file)))
+;;      (when (eq major-mode default-major-mode) (diary-mode))
+;;      (widen)
+;;      (diary-unhide-everything)
+;;      (goto-char (point-max))
+;;      (when (let ((case-fold-search t))
+;;          (search-backward "Local  Variables:"
+;;                   (max (- (point-max) 3000) (point-min))
+;;                   t))
+;;        (beginning-of-line)
+;;        (insert "n")
+;;        (forward-line -1))
+;;      (let* ((dayname)
+;;         (day (substring start 8 10))
+;;         (month (substring start 5 7))
+;;         (year (substring start 0 4))
+;;         (starttime (substring start 11 16))
+;;         (endtime (substring end 11 16))
+;;         (monthname (calendar-month-name (parse-integer month) t))
+;;         (date-time-string (concat (mapconcat 'eval calendar-date-display-form "")
+;;                       " " starttime " - " endtime)))
+;;        (insert
+;;         (if (bolp) "" "n")
+;;         ""
+;;         date-time-string " " title))
+;;      (bury-buffer)
+;;      (declare (special gcal-auth-handle))
+;;      (let ((event (make-gcal-event
+;;                :author-email (g-auth-email gcal-auth-handle))))
+;;        (setf (gcal-event-title  event) title
+;;          (gcal-event-content event) content
+;;          (gcal-event-where event) where
+;;          (gcal-event-when-start event) start
+;;          (gcal-event-when-end event) end
+;;          (gcal-event-who event) who
+;;          (gcal-event-transparency  event) transparency
+;;          (gcal-event-status event) status)
+;;        event)))))
