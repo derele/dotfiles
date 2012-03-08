@@ -1,4 +1,4 @@
-personal_ws-1.1 en 477 
+personal_ws-1.1 en 482 
 subunits
 polygyrus
 ddNTP
@@ -80,6 +80,7 @@ oligonucleotide
 ddTTPs
 InterProScan
 parameterised
+endosymbionts
 Bruijn
 stressors
 tRNAs
@@ -103,6 +104,7 @@ peptide
 spliceosome
 Phaeophyceae
 Tigriopus
+oxidoreductase
 biotic
 serpins
 hexamer
@@ -121,7 +123,9 @@ outgroup
 Litomosoides
 haeomocoel
 codons
+endosymbiosis
 heterotrimers
+endosymbiotic
 mRNA
 granulae
 endopeptidase
@@ -471,6 +475,7 @@ downregulation
 hypervariable
 contig
 aculeatus
+unexperienced
 bitscore
 kilometers
 oligo
