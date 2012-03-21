@@ -49,4 +49,9 @@ else
     export PHRED_PARAMETER_FILE=/home/ele/tools/phred-dist-020425.c-acd/phredpar.dat
     export ESTSCANDIR=/home/ele/tools/estscan-3.0.2
     export ESTSCANLIB=/usr/local/lib64/perl5/site_perl/5.10.0/x86_64-linux-thread-multi
+
+    export CEGMA="/home/ele/tools/cegma_v2.4.010312"
+    export CEGMATMP="/home/ele/tools/cegma_v2.4.010312/tmp"
+    export PERL5LIB="$PERL5LIB:$CEGMA/lib"
+
 fi
