@@ -7,6 +7,10 @@ alias aus='shutdown -h now'
 alias unison='unison streamlined -ui text -auto'
 alias skype='LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype'
 
+alias openvpn 'sudo openvpn --config /home/ele/vpn/hu-berlin.conf --auth-user-pass /home/ele/vpn/passwd'
+
+
+
 # make sure we are up to date
 # but first check, that yum is not running already
 # if [ -z "$(ps -A | grep "yum")" -a $HOSTNAME != hoernchen-desk ]
