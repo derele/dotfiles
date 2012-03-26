@@ -10,3 +10,7 @@ keycode 48 = adiaeresis Adiaeresis adiaeresis Adiaeresis backslash
 keycode 30 = u U u U at
 keycode 31 = i I i I bar
 keycode 32 = o O o O asciitilde
+
+clear control
+keycode 118 = Control_R
+add control = Control_R Control_L
