@@ -53,5 +53,7 @@ else
     export CEGMA="/home/ele/tools/cegma_v2.4.010312"
     export CEGMATMP="/home/ele/tools/cegma_v2.4.010312/tmp"
     export PERL5LIB="$PERL5LIB:$CEGMA/lib"
-
+    
+    export BLASTDB=/media/drobo/db/blastdb/
+    export BLASTMAT=/home/ele/tools/blast-2.2.20/data/ 
 fi
