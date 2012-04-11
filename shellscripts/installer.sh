@@ -1,5 +1,7 @@
 !#/bin/bash
-yum install git most emacs emacs-ess w3m-el emacs-bbdb emacs-auctex unison keychain screen gnutls-utils rubber xpdf offlineimap sbcl aspell-de autoconf texinfo xulrunner
+yum install git svn most emacs emacs-ess w3m-el emacs-bbdb emacs-auctex unison keychain screen gnutls-utils rubber xpdf offlineimap sbcl aspell-de autoconf texinfo xulrunner gcc gcc-fortran gcc-c++ readline-devel
+
+yum groupinstall "Development Libraries" "Development Tools" "Perl Development" "PostgreSQL Database" "MySQL Database" "X Software Development"
 
 ln -s dotfiles/dotemacs/main.el .emacs
 ln -s dotfiles/conkeror_rc.js .conkerorrc
