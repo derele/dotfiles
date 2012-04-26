@@ -27,6 +27,29 @@ url_remoting_fn = load_url_in_new_buffer;
 
 user_pref("extensions.checkCompatibility", false);
 
+// block auto focus events 
+// one imperfect solution
+require("block-content-focus-change.js");
+
+// and a second method
+function focusblock (buffer) {
+    var s = Components.utils.Sandbox(buffer.top_frame);
+    s.document = buffer.document.wrappedJSObject;
+    Components.utils.evalInSandbox(
+        "(function () {\
+            function nothing () {}\
+            if (! document.forms)\
+                return;\
+            for (var i = 0, nforms = document.forms.length; i < nforms; i++) {\
+              for (var j = 0, nels = document.forms[i].elements.length; j < nels; j++)\
+                document.forms[i].elements[j].focus = nothing;\
+            }\
+})();",
+        s);
+}
+add_hook('content_buffer_progress_change_hook', focusblock);
+
+
 interactive("bibsonomy-post-publication",  
             "Post a publication to Bibsonomy. Either uses the URL and scrapes the page, or sends the selected bibtex.", 
             function (I) {
