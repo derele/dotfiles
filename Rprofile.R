@@ -7,6 +7,7 @@
   options("repos" = c(CRAN = "http://cran.r-project.org/"))
   options(show.signif.stars=FALSE)
   options(browser ="conkeror")
+  source("http://bioconductor.org/biocLite.R")
   ##  options(prompt=paste("R", basename(getwd()), "> "))
 }
 
@@ -29,7 +30,6 @@ tryCatch(
 s <- base::summary;
 h <- utils::head;
 n <- base::names;
-
 
 ll <- function(envir=globalenv(), ...) {
   obs <- ls(envir=envir, ...)
