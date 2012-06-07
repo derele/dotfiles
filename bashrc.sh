@@ -29,15 +29,15 @@ export VISUAL='emacsclient -t'
 # pager most
 export PAGER=most
 
-# browser conkeror
-export BROWSER=/usr/local/bin/conkeror
-
 # ignore some history
 export HISTIGNORE="ll:ls:exit:cd:e:rm"
 export HISTCONTROL=erasedupsexport 
 
 # give R a global history file in combi with some code in Rprofile
 export R_HISTFILE=/home/ele/.Rhistory
+
+# add /home/ele/bin to path  
+export PATH=$PATH:/home/ele/bin
 
 source /home/ele/dotfiles/shell_functions.sh
 
@@ -46,14 +46,18 @@ then
     source /home/ele/dotfiles/lap_bash.sh
 else
     # some things needed on beagle for some programs
+    export BROWSER=/usr/bin/w3m
     export PHRED_PARAMETER_FILE=/home/ele/tools/phred-dist-020425.c-acd/phredpar.dat
     export ESTSCANDIR=/home/ele/tools/estscan-3.0.2
     export ESTSCANLIB=/usr/local/lib64/perl5/site_perl/5.10.0/x86_64-linux-thread-multi
 
     export CEGMA="/home/ele/tools/cegma_v2.4.010312"
     export CEGMATMP="/home/ele/tools/cegma_v2.4.010312/tmp"
-    export PERL5LIB="$PERL5LIB:$CEGMA/lib"
+    export ORTHOMCL="/home/ele/tools/orthomclSoftware-v2.0.3"
+    export PERL5LIB="$PERL5LIB:$CEGMA/lib:$ORTHOMCL/lib/perl"
     
     export BLASTDB=/media/drobo/db/blastdb/
     export BLASTMAT=/home/ele/tools/blast-2.2.20/data/ 
+
+    export WISECONFIGDIR=/home/ele/tools/wise2.2.0/wisecfg/
 fi

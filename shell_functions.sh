@@ -41,6 +41,10 @@ pull_all_git_repos(){
     done
 }
 
+best_blast_hits(){
+    rev $1 | uniq -f 11 | rev
+}
+
 shell_functions(){
     cat /home/ele/dotfiles/shell_functions.sh
 }
