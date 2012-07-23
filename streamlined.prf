@@ -1,30 +1,25 @@
 # Unison preferences file
 root = /home/ele/
-root = ssh://ele@129.13.174.229//home/ele
+root = ssh://ele@141.20.60.126//home/ele
 
 # the unison directory
 ignore = Path {.unison}
 
+# Big Data
+ignore = Path {Data}
+
+# Path
+ignore = Path {bin}
+
 # directories  under version control
-ignore = Path {thesis/pilot_sanger}
-ignore = Path {thesis/scripts}
-ignore = Path {thesis/454}
+ignore = Path {thesis}
 ignore = Path {Documents/nina}
 ignore = Path {dotfiles}
-ignore = Path {Homepages}
 ignore = Path {bibtex}
-ignore = Path {Documents/talks/Chiemsee_VW}
-ignore = Path {Documents/talks/DESeq-journal-club}
 ignore = Path {genepool}
 ignore = Path {conkeror}
 ignore = Path {stumpwm}
-ignore = Path {Dropbox}
-ignore = Path {Documents/Interim_report2}
 ignore = Path {own_lisp}
-ignore = Path {own_lisp}
-ignore = Path {thesis/experimental_inf}
-ignore = Path {Documents/talks/limma-journal-club}
-ignore = Path {Documents/phylo-paper}
 ignore = Path {.emacs.d/emms}
 
 # the dropbox
@@ -35,7 +30,6 @@ ignore = Path {Maildir}
 ignore = Path {Mail}
 ignore = Path {.offlineimap}
 ignore = Path {.elmo}
-
 
 # and stuff thats special to the different Emacsens
 ignore = Path {.emacs.d/ac-comphist.dat}
@@ -64,6 +58,7 @@ ignore = Path {.bashrc}
 ignore = Path {.bashrc~}
 ignore = Path {.cache}
 ignore = Path {.ccache}
+ignore = Path {.cpan}
 ignore = Path {.comments}
 ignore = Path {.config}
 ignore = Path {.conkeror.mozdev.org}
@@ -72,7 +67,7 @@ ignore = Path {.dbus}
 ignore = Path {.dmrc}
 ignore = Path {.dropbox}
 ignore = Path {.dropbox-dist}
-ignore = Path {.emacs.d/auto-save-list}
+ignore = Path {.emacs.d}
 ignore = Path {.esd_auth}
 ignore = Path {.evolution}
 ignore = Path {.fontconfig}
@@ -112,6 +107,7 @@ ignore = Path {.netx}
 ignore = Path {.newsrc-dribble}
 ignore = Path {.newsrc-dribble~}
 ignore = Path {.nnmail-cache}
+ignore = Path {openvpn.log}
 ignore = Path {.openoffice.org}
 ignore = Path {.printer-groups.xml}
 ignore = Path {.pulse}
@@ -123,6 +119,7 @@ ignore = Path {.rsync}
 ignore = Path {.Rhistory}
 ignore = Path {.Rprofile}
 ignore = Path {.screenrc}
+ignore = Path {.sbcl}
 ignore = Path {.screenrc~}
 ignore = Path {.Skype}
 ignore = Path {.slime}
@@ -147,9 +144,15 @@ ignore = Path {.xsession-errors}
 ignore = Path {.xsession-errors.old}
 ignore = Path {.glade2}
 ignore = Path {.hplip}
+ignore = Path {.htoprc}
 ignore = Path {.inkscape}
 ignore = Path {.java}
 ignore = Path {.qt}
+ignore = Path {.install4j}
+ignore = Path {.libreoffice}
+ignore = Path {.pki}
+ignore = Path {.setroubleshoot}
+ignore = Path {.shotwell}
 
 # some others by purpose
 ignore = Path {tools}
@@ -174,7 +177,6 @@ ignore = Name {linux_signing_key.pub}
 ignore = Name {init.el}
 ignore = Name {unison.log}
 ignore = Name {unison.log}
-ignore = Path {tools/phrap2}
 
 # byte compiled elisp files
 ignore =  Name *.elc

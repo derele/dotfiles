@@ -7,7 +7,9 @@
   options("repos" = c(CRAN = "http://cran.r-project.org/"))
   options(show.signif.stars=FALSE)
   options(browser ="conkeror")
-  source("http://bioconductor.org/biocLite.R")
+  library(Biobase)
+  if(testBioCConnection()){source("http://bioconductor.org/biocLite.R")}
+  else{cat("\n\ncould not source biocLite, network not connected\n\n")}
   ##  options(prompt=paste("R", basename(getwd()), "> "))
 }
 
