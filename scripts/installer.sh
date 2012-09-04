@@ -18,5 +18,5 @@ ln -s  dotfiles/aspell.de.prepl .aspell.de.prepl
 rm .bashrc
 ln -s dotfiles/bashrc.sh .bashrc
 
-ln -s /home/ele/dotfiles/shellscripts/* /home/ele/bin/
+ln -s /home/ele/dotfiles/scripts/* /home/ele/bin/
 

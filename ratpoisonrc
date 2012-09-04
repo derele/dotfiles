@@ -30,12 +30,15 @@ exec nm-applet
 # annoying that a window opens when I
 # plug in a USB -- should solve this
 # rather using a simple automount script 
-exec Thunar --daemon
+# exec Thunar --daemon
 
 # start emacs daemon after makint sure, that there is no old
 # emacsdaemon running
 exec emacsclient --eval "(progn (save-some-buffers t t) (kill-emacs))"
 exec emacs --daemon
+
+# start screen with 256colors
+exec battery-monitor.pl
 
 # start screen with 256colors
 exec xterm -e 'screen_after_256.sh'

@@ -13,6 +13,7 @@ ignore = Path {bin}
 
 # directories  under version control
 ignore = Path {thesis}
+ignore = Path {CV}
 ignore = Path {Documents/nina}
 ignore = Path {dotfiles}
 ignore = Path {bibtex}
