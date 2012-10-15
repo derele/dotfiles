@@ -37,8 +37,11 @@ exec nm-applet
 exec emacsclient --eval "(progn (save-some-buffers t t) (kill-emacs))"
 exec emacs --daemon
 
-# start screen with 256colors
+# start monitoring battery usage
 exec battery-monitor.pl
+
+# start dropbox
+exec 'dropbox start'
 
 # start screen with 256colors
 exec xterm -e 'screen_after_256.sh'
