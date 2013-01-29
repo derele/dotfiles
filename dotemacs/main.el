@@ -18,7 +18,7 @@
 		    "~/.emacs.d/color-theme-6.6.0"
 		    "~/.emacs.d/emms/lisp"
                     "~/.emacs.d/magit-0.7"
-                    "~/.emacs.d/slime-2010-05-31"                    
+                    ;; lisp is not needed at the moment  "~/.emacs.d/slime-2010-05-31"                    
                     "~/.emacs.d/g-client"
                     "~/dotfiles/dotemacs/own_modes")
               load-path))
@@ -249,6 +249,9 @@ w) "d ")) line) 'face 'linum)))
 ;; (setq bioperl-module-path "/usr/lib/perl5/vendor_perl/5.10.0")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ESS stuff;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; needed in CentOS
+;; (require 'files)
+
 (require 'ess-site)
 
 (add-hook 'ess-mode-hook
@@ -346,10 +349,11 @@ w) "d ")) line) 'face 'linum)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; LISP;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq inferior-lisp-program "/usr/bin/sbcl") ;Lisp system
-(require 'slime)
-(slime-setup)
-(slime-setup '(slime-fancy))
+;; not needed at the moment
+;; (setq inferior-lisp-program "/usr/bin/sbcl") ;Lisp system
+;; (require 'slime)
+;; (slime-setup)
+;; (slime-setup '(slime-fancy))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; cc-mode stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'cc-mode)
@@ -438,26 +442,27 @@ w) "d ")) line) 'face 'linum)))
 (autoload 'read-sig-file "c-sig" "c-sig" t)
 
 ;;;;;;;;;;;;;;;;  everythin for the mail: the big brother database ;;;;;;;;;;;;;;;;
-(setq bbdb-file "~/.emacs.d/bbdb")           ;; keep ~/ clean; set before loading
-(require 'bbdb) 
-(bbdb-initialize)
-(setq 
-    bbdb-offer-save 1                        ;; 1 means save-without-asking
-    bbdb-use-pop-up nil                      ;; no popups for addresses
-    bbdb-electric-p nil                      ;; NO
-    bbdb-popup-target-lines  nil             ;; be inexistent
-    bbdb-dwim-net-address-allow-redundancy t ;; always use full name
-    bbdb-quiet-about-name-mismatches 0       ;; show name-mismatches 2 secs
-    bbdb-always-add-address t                ;; add new addresses to existing...
-                                             ;; ...contacts automatically
-    bbdb-canonicalize-redundant-nets-p t     ;; x@foo.bar.cx => x@bar.cx
-    bbdb-completion-type nil                 ;; complete on anything
-    bbdb-complete-name-allow-cycling t       ;; cycle through matches
-                                             ;; this only works partially
-    bbbd-message-caching-enabled t           ;; be fast
-    bbdb-use-alternate-names t               ;; use AKA
-    bbdb-elided-display t                    ;; single-line addresses
-)
+;;;; not used at the moment
+;; (setq bbdb-file "~/.emacs.d/bbdb")           ;; keep ~/ clean; set before loading
+;; (require 'bbdb) 
+;; (bbdb-initialize)
+;; (setq 
+;;     bbdb-offer-save 1                        ;; 1 means save-without-asking
+;;     bbdb-use-pop-up nil                      ;; no popups for addresses
+;;     bbdb-electric-p nil                      ;; NO
+;;     bbdb-popup-target-lines  nil             ;; be inexistent
+;;     bbdb-dwim-net-address-allow-redundancy t ;; always use full name
+;;     bbdb-quiet-about-name-mismatches 0       ;; show name-mismatches 2 secs
+;;     bbdb-always-add-address t                ;; add new addresses to existing...
+;;                                              ;; ...contacts automatically
+;;     bbdb-canonicalize-redundant-nets-p t     ;; x@foo.bar.cx => x@bar.cx
+;;     bbdb-completion-type nil                 ;; complete on anything
+;;     bbdb-complete-name-allow-cycling t       ;; cycle through matches
+;;                                              ;; this only works partially
+;;     bbbd-message-caching-enabled t           ;; be fast
+;;     bbdb-use-alternate-names t               ;; use AKA
+;;     bbdb-elided-display t                    ;; single-line addresses
+;; )
 
 ;;;;;;;;;;;;;;;;;; org-mode ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,
 (custom-set-variables
