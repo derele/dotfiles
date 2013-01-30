@@ -27,7 +27,18 @@ export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -t'
 
 # pager most
-export PAGER=most
+# export PAGER=most
+# pager less
+export PAGER=less
+
+man () { 
+    if [ "$TERM" == "eterm-color" ]; then
+        emacsclient -e "(man \"$1\")";
+    else
+        command man "$@";
+    fi
+}
+
 
 # ignore some history
 export HISTIGNORE="ll:ls:exit:cd:e:rm"
