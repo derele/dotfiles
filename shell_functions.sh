@@ -41,6 +41,14 @@ pull_all_git_repos(){
     done
 }
 
+
+blast_progress_fasta_asn(){
+    totalcount=$(grep -c "^>" $1); 
+    completed=$(blast_formatter -outfmt 1 -archive  $2 | grep -c "^Query=" ) ; 
+    percent=100*$completed/$totalcount ; 
+    echo $percent | bc -l
+}
+
 best_blast_hits(){
     rev $1 | uniq -f 11 | rev
 }
