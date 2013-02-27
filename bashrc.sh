@@ -26,20 +26,6 @@ export TERM=xterm-256color
 export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -t'
 
-# pager most
-# export PAGER=most
-# pager less
-export PAGER=less
-
-man () { 
-    if [ "$TERM" == "eterm-color" ]; then
-        emacsclient -e "(man \"$1\")";
-    else
-        command man "$@";
-    fi
-}
-
-
 # ignore some history
 export HISTIGNORE="ll:ls:exit:cd:e:rm"
 export HISTCONTROL=erasedupsexport 
@@ -69,7 +55,7 @@ else
     export CEGMATMP="/home/ele/tools/cegma_v2.4.010312/tmp"
     export ORTHOMCL="/home/ele/tools/orthomclSoftware-v2.0.5"
     export DART="/home/ele/tools/dart"
-    export PERL5LIB="$PERL5LIB:$CEGMA/lib:$ORTHOMCL/lib/perl:$DART/perl"
+    export PERL5LIB="$PERL5LIB:$CEGMA/lib:$ORTHOMCL/lib/perl:$DART/perl:/home/ele/tools/tRNAscan-SE-1.3.1/:/home/ele/bin"
     
     export BLASTDB=/media/drobo/db/blastdb/
     export BLASTMAT=/home/ele/tools/blast-2.2.20/data/ 
