@@ -44,6 +44,9 @@
  '(mode-line-buffer-id ((t (:bold t :foreground "color-118" :background "color-58"))))
  '(mode-line ((t (:bold t :foreground "color-58" :background "color-107" )))))
 
+;;;;;;;;;;;;;;;;;;;;;; swith off bell completely
+(setq ring-bell-function 'ignore)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; VCS stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'magit)
 (setq magit-commit-all-when-nothing-staged 1)

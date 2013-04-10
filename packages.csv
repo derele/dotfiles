@@ -1,349 +1,725 @@
 "","Package","LibPath","Version","Priority","Depends","Imports","LinkingTo","Suggests","Enhances","OS_type","License","Built"
-"abind","abind","/usr/local/lib64/R/library","1.4-0",NA,"R (>= 1.5.0)",NA,NA,NA,NA,NA,"LGPL (>= 2)","2.14.0"
-"AER","AER","/usr/local/lib64/R/library","1.1-8",NA,"R (>= 2.5.0), stats, car (>= 2.0-1), Formula (>= 0.2-0),
+"abind","abind","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.4-0",NA,"R (>= 1.5.0)",NA,NA,NA,NA,NA,"LGPL (>= 2)","3.0.0"
+"AER","AER","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.1-9",NA,"R (>= 2.10.0), stats, car (>= 2.0-1), Formula (>= 0.2-0),
 lmtest, sandwich, strucchange, survival, zoo","stats",NA,"boot, dynlm, effects, foreign, ineq, KernSmooth, lattice,
 MASS, mlogit, nlme, nnet, np, plm, pscl, quantreg, ROCR,
 sampleSelection, scatterplot3d, systemfit, rgl, truncreg,
-tseries, urca",NA,NA,"GPL-2","2.14.0"
-"affy","affy","/usr/local/lib64/R/library","1.32.0",NA,"R (>= 2.8.0), Biobase (>= 2.5.5)","affyio (>= 1.13.3), Biobase (>= 2.5.5), BiocInstaller,
+tseries, urca",NA,NA,"GPL-2","3.0.0"
+"affy","affy","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.37.4",NA,"R (>= 2.8.0), BiocGenerics (>= 0.1.12), Biobase (>= 2.5.5)","BiocGenerics, Biobase, affyio (>= 1.13.3), BiocInstaller,
 graphics, grDevices, methods, preprocessCore, stats, utils,
-zlibbioc","preprocessCore","tkWidgets (>= 1.19.0), affydata",NA,NA,"LGPL (>= 2.0)","2.14.0"
-"affydata","affydata","/usr/local/lib64/R/library","1.13.11",NA,"R (>= 2.4.0), affy (>= 1.23.4), methods",NA,NA,"hgu95av2cdf, hgu133acdf",NA,NA,"GPL (>= 2)","2.14.0"
-"affyio","affyio","/usr/local/lib64/R/library","1.22.0",NA,"R (>= 2.6.0), methods","zlibbioc",NA,NA,NA,NA,"LGPL (>= 2)","2.14.0"
-"affyPLM","affyPLM","/usr/local/lib64/R/library","1.30.0",NA,"R (>= 2.6.0), affy (>= 1.11.0), Biobase, gcrma, stats,
-preprocessCore (>= 1.5.1)","zlibbioc, methods","preprocessCore","affydata",NA,NA,"GPL (>= 2)","2.14.0"
-"affyQCReport","affyQCReport","/usr/local/lib64/R/library","1.32.0",NA,"Biobase (>= 1.13.16), affy, lattice","affy, affyPLM, Biobase, genefilter, graphics, grDevices,
-lattice, RColorBrewer, simpleaffy, stats, utils, xtable",NA,"tkWidgets (>= 1.5.23), affydata (>= 1.4.1)",NA,NA,"LGPL (>= 2)","2.14.0"
-"akima","akima","/usr/local/lib64/R/library","0.5-4",NA,NA,NA,NA,NA,NA,NA,"file LICENSE","2.14.0"
-"ALL","ALL","/usr/local/lib64/R/library","1.4.11",NA,"R (>= 2.10), Biobase (>= 2.5.5)",NA,NA,"rpart",NA,NA,"Artistic-2.0","2.14.0"
-"anchors","anchors","/usr/local/lib64/R/library","3.0-7",NA,"R (>= 2.4.0), rgenoud, MASS",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"annaffy","annaffy","/usr/local/lib64/R/library","1.26.0",NA,"R (>= 2.5.0), methods, Biobase, GO.db, KEGG.db","AnnotationDbi (>= 0.1.15)",NA,"hgu95av2.db, multtest, tcltk",NA,NA,"LGPL","2.14.0"
-"annotate","annotate","/usr/local/lib64/R/library","1.32.0",NA,"R (>= 2.4.0), AnnotationDbi (>= 0.1.15)","Biobase, AnnotationDbi, DBI, xtable, graphics, utils, stats,
-methods",NA,"Biobase, hgu95av2.db, genefilter, Biostrings (>= 2.4.4),
-rae230a.db, rae230aprobe, tkWidgets, XML (>= 0.92-2), GO.db,
-org.Hs.eg.db, org.Mm.eg.db, hom.Hs.inp.db",NA,NA,"Artistic-2.0","2.14.0"
-"AnnotationDbi","AnnotationDbi","/usr/local/lib64/R/library","1.16.10",NA,"R (>= 2.7.0), methods, utils, Biobase (>= 1.17.0)","methods, utils, Biobase, DBI, RSQLite, IRanges",NA,"DBI (>= 0.2-4), RSQLite (>= 0.6-4), hgu95av2.db, GO.db,
-human.db0, hgu95av2cdf, affy, KEGG.db, XML, RCurl, RUnit",NA,NA,"Artistic-2.0","2.14.0"
-"ape","ape","/usr/local/lib64/R/library","2.8",NA,"R (>= 2.6.0)","gee, nlme, lattice",NA,"gee",NA,NA,"GPL (>= 2)","2.14.0"
-"base","base","/usr/local/lib64/R/library","2.14.0","base",NA,NA,NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"baySeq","baySeq","/usr/local/lib64/R/library","1.8.0",NA,"R (>= 2.3.0), methods",NA,NA,"snow, edgeR",NA,NA,"GPL-3","2.14.0"
-"bdsmatrix","bdsmatrix","/usr/local/lib64/R/library","1.2",NA,"methods, R (>= 2.0.0)",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"BiasedUrn","BiasedUrn","/usr/local/lib64/R/library","1.04",NA,NA,NA,NA,NA,NA,NA,"GPL","2.14.0"
-"biglm","biglm","/usr/local/lib64/R/library","0.8",NA,"DBI, methods",NA,NA,"RSQLite, RODBC","leaps",NA,"GPL","2.14.0"
-"Biobase","Biobase","/usr/local/lib64/R/library","2.14.0",NA,"R (>= 2.10), utils","methods",NA,"tools, tkWidgets, ALL",NA,NA,"Artistic-2.0","2.14.0"
-"BiocInstaller","BiocInstaller","/usr/local/lib64/R/library","1.2.1",NA,"R (>= 2.14.0)",NA,NA,"RUnit",NA,NA,"Artistic-2.0","2.14.0"
-"BioIDMapper","BioIDMapper","/usr/local/lib64/R/library","3.0",NA,"R (>= 2.7.0), RCurl, XML",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"biomaRt","biomaRt","/usr/local/lib64/R/library","2.10.0",NA,"methods","XML, RCurl",NA,"annotate",NA,NA,"Artistic-2.0","2.14.0"
-"Biostrings","Biostrings","/usr/local/lib64/R/library","2.22.0",NA,"R (>= 2.8.0), methods, IRanges (>= 1.11.34)","graphics, methods, stats, utils, IRanges","IRanges","BSgenome (>= 1.13.14), BSgenome.Celegans.UCSC.ce2 (>=
+zlibbioc","preprocessCore","tkWidgets (>= 1.19.0), affydata, widgetTools",NA,NA,"LGPL (>= 2.0)","3.0.0"
+"affydata","affydata","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.11.17",NA,"R (>= 2.4.0), affy (>= 1.23.4)","methods",NA,"hgu95av2cdf, hgu133acdf",NA,NA,"GPL (>= 2)","3.0.0"
+"affyio","affyio","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.27.1",NA,"R (>= 2.6.0), methods","zlibbioc",NA,NA,NA,NA,"LGPL (>= 2)","3.0.0"
+"affyPLM","affyPLM","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.35.0",NA,"R (>= 2.6.0), BiocGenerics (>= 0.3.2), affy (>= 1.11.0),
+Biobase (>= 2.17.8), gcrma, stats, preprocessCore (>= 1.5.1)","BiocGenerics, zlibbioc, graphics, grDevices, methods","preprocessCore","affydata, MASS",NA,NA,"GPL (>= 2)","3.0.0"
+"akima","akima","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.5-10",NA,"R (>= 2.0.0)",NA,NA,NA,NA,NA,"file LICENSE","3.0.0"
+"ALL","ALL","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.4.13",NA,"R (>= 2.10), Biobase (>= 2.5.5)",NA,NA,"rpart",NA,NA,"Artistic-2.0","3.0.0"
+"annaffy","annaffy","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.31.1",NA,"R (>= 2.5.0), methods, Biobase, GO.db, KEGG.db","AnnotationDbi (>= 0.1.15)",NA,"hgu95av2.db, multtest, tcltk",NA,NA,"LGPL","3.0.0"
+"annotate","annotate","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.37.4",NA,"R (>= 2.10), AnnotationDbi (>= 0.1.15)","Biobase, AnnotationDbi, DBI, xtable, graphics, utils, stats,
+methods, XML (>= 0.92-2), BiocGenerics (>= 0.1.13)",NA,"Biobase, hgu95av2.db, genefilter, Biostrings (>= 2.25.10),
+rae230a.db, rae230aprobe, tkWidgets, GO.db, org.Hs.eg.db, XML
+(>= 0.92-2), org.Mm.eg.db, hom.Hs.inp.db, humanCHRLOC,
+Rgraphviz, RUnit,",NA,NA,"Artistic-2.0","3.0.0"
+"AnnotationDbi","AnnotationDbi","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.21.16",NA,"R (>= 2.7.0), methods, utils, BiocGenerics (>= 0.5.4), Biobase
+(>= 1.17.0)","methods, utils, DBI, RSQLite, BiocGenerics, Biobase, IRanges",NA,"DBI (>= 0.2-4), RSQLite (>= 0.6-4), hgu95av2.db, GO.db,
+org.Sc.sgd.db, org.At.tair.db, KEGG.db, RUnit,
+TxDb.Hsapiens.UCSC.hg19.knownGene, hom.Hs.inp.db, org.Hs.eg.db,
+seqnames.db, reactome.db, AnnotationForge, graph",NA,NA,"Artistic-2.0","3.0.0"
+"AnnotationForge","AnnotationForge","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.1.10",NA,"R (>= 2.7.0), methods, utils, BiocGenerics (>= 0.1.13),
+Biobase (>= 1.17.0), AnnotationDbi (>= 1.19.15), org.Hs.eg.db","methods, utils, DBI, RSQLite, BiocGenerics, Biobase",NA,"DBI (>= 0.2-4), RSQLite (>= 0.6-4), XML, RCurl, hgu95av2.db,
+human.db0, affy, Homo.sapiens, hom.Hs.inp.db, GO.db",NA,NA,"Artistic-2.0","3.0.0"
+"ape","ape","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.0-7",NA,"R (>= 2.6.0)","gee, nlme, lattice",NA,"gee",NA,NA,"GPL (>= 2)","3.0.0"
+"baySeq","baySeq","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.13.2",NA,"R (>= 2.3.0), methods",NA,NA,"snow, edgeR",NA,NA,"GPL-3","3.0.0"
+"bdsmatrix","bdsmatrix","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.3",NA,"methods, R (>= 2.0.0)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"BiasedUrn","BiasedUrn","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.05",NA,NA,NA,NA,NA,NA,NA,"GPL","3.0.0"
+"biglm","biglm","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.8",NA,"DBI, methods",NA,NA,"RSQLite, RODBC","leaps",NA,"GPL","3.0.0"
+"BiocInstaller","BiocInstaller","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.9.8",NA,"R (>= 2.16.0)",NA,NA,"RUnit, BiocGenerics",NA,NA,"Artistic-2.0","3.0.0"
+"biomaRt","biomaRt","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.15.1",NA,"methods","utils, XML, RCurl",NA,"annotate",NA,NA,"Artistic-2.0","3.0.0"
+"Biostrings","Biostrings","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.27.11",NA,"R (>= 2.8.0), methods, BiocGenerics (>= 0.5.4), IRanges (>=
+1.17.10)","graphics, methods, stats, utils, BiocGenerics, IRanges","IRanges","BSgenome (>= 1.13.14), BSgenome.Celegans.UCSC.ce2 (>=
 1.3.11), BSgenome.Dmelanogaster.UCSC.dm3 (>= 1.3.11),
-drosophila2probe, hgu95av2probe, hgu133aprobe, GenomicFeatures
-(>= 1.3.14), hgu95av2cdf, affy, affydata (>= 1.11.5), RUnit","Rmpi",NA,"Artistic-2.0","2.14.0"
-"bitops","bitops","/usr/local/lib64/R/library","1.0-4.1",NA,NA,NA,NA,NA,NA,NA,"GPL version 2 or later","2.14.0"
-"boot","boot","/usr/local/lib64/R/library","1.3-3","recommended","R (>= 2.14.0), graphics, stats",NA,NA,"survival",NA,NA,"Unlimited","2.14.0"
-"BSgenome","BSgenome","/usr/local/lib64/R/library","1.22.0",NA,"R (>= 2.8.0), methods, IRanges (>= 1.11.34), GenomicRanges (>=
-1.5.42), Biostrings (>= 2.21.4)",NA,NA,"RUnit, BSgenome.Celegans.UCSC.ce2 (>= 1.3.11),
+BSgenome.Hsapiens.UCSC.hg18, drosophila2probe, hgu95av2probe,
+hgu133aprobe, GenomicFeatures (>= 1.3.14), hgu95av2cdf, affy,
+affydata (>= 1.11.5), RUnit","Rmpi",NA,"Artistic-2.0","3.0.0"
+"biovizBase","biovizBase","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.7.6",NA,"R (>= 2.10), methods","methods, grDevices, stats, scales, Hmisc, RColorBrewer,
+dichromat, BiocGenerics, IRanges, GenomicRanges, Biostrings,
+Rsamtools, GenomicFeatures",NA,"BSgenome.Hsapiens.UCSC.hg19,
+TxDb.Hsapiens.UCSC.hg19.knownGene, BSgenome, rtracklayer",NA,NA,"Artistic-2.0","3.0.0"
+"bitops","bitops","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-5",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"boot","boot","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.3-7","recommended","R (>= 2.14.0), graphics, stats",NA,NA,"MASS, survival",NA,NA,"Unlimited","3.0.0"
+"BSgenome","BSgenome","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.27.1",NA,"R (>= 2.8.0), methods, BiocGenerics (>= 0.1.2), IRanges (>=
+1.13.6), GenomicRanges (>= 1.7.5), Biostrings (>= 2.23.3)",NA,NA,"RUnit, BSgenome.Celegans.UCSC.ce2 (>= 1.3.11),
 BSgenome.Hsapiens.UCSC.hg19 (>= 1.3.11),
-SNPlocs.Hsapiens.dbSNP.20100427, hgu95av2probe, Biobase",NA,NA,"Artistic-2.0","2.14.0"
-"car","car","/usr/local/lib64/R/library","2.0-11",NA,"R (>= 2.10), stats, graphics, MASS, nnet, survival",NA,NA,"alr3, leaps, lme4, lmtest, nlme, sandwich, mgcv, rgl",NA,NA,"GPL (>= 2)","2.14.0"
-"Category","Category","/usr/local/lib64/R/library","2.20.0",NA,"AnnotationDbi (>= 0.1.15), Biobase (>= 1.15.29)","graph, methods, Biobase (>= 1.15.29), AnnotationDbi (>=
-0.1.15), RBGL, GSEABase, genefilter, annotate (>= 1.15.6),
-stats, utils",NA,"EBarrays, ALL, Rgraphviz, RColorBrewer, xtable (>= 1.4-6),
-hgu95av2.db, Matrix, KEGG.db, GO.db, SNPchip, geneplotter,
-limma, lattice, graph, Biobase, genefilter, methods",NA,NA,"Artistic-2.0","2.14.0"
-"caTools","caTools","/usr/local/lib64/R/library","1.12",NA,"R (>= 2.2.0), bitops",NA,NA,"MASS, rpart",NA,NA,"GPL-3","2.14.0"
-"CHNOSZ","CHNOSZ","/usr/local/lib64/R/library","0.9-7",NA,"R (>= 2.10.0), utils",NA,NA,"xtable",NA,NA,"GPL (>= 2)","2.14.0"
-"chron","chron","/usr/local/lib64/R/library","2.3-42",NA,"R (>= 2.4.0)","graphics, stats",NA,NA,"zoo",NA,"GPL-2","2.14.0"
-"class","class","/usr/local/lib64/R/library","7.3-3","recommended","R (>= 2.5.0), stats, utils","MASS",NA,NA,NA,NA,"GPL-2 | GPL-3","2.14.0"
-"cluster","cluster","/usr/local/lib64/R/library","1.14.1","recommended","R (>= 2.10.0), stats, graphics, utils",NA,NA,NA,"MASS",NA,"GPL (>= 2)","2.14.0"
-"coda","coda","/usr/local/lib64/R/library","0.14-6",NA,"R (>= 2.5.0), lattice",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"codetools","codetools","/usr/local/lib64/R/library","0.2-8","recommended","R (>= 2.1)",NA,NA,NA,NA,NA,"GPL","2.14.0"
-"coin","coin","/usr/local/lib64/R/library","1.0-20",NA,"R (>= 2.2.0), methods, survival, mvtnorm (>= 0.8-0),
-modeltools (>= 0.2-9)",NA,NA,"multcomp, xtable, e1071, vcd","Biobase",NA,"GPL-2","2.14.0"
-"colorspace","colorspace","/usr/local/lib64/R/library","1.1-0",NA,"R (>= 2.0.0), methods",NA,NA,"KernSmooth, MASS, kernlab, mvtnorm, vcd",NA,NA,"BSD","2.14.0"
-"compiler","compiler","/usr/local/lib64/R/library","2.14.0","base",NA,NA,NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"convert","convert","/usr/local/lib64/R/library","1.30.0",NA,"R (>= 2.6.0), Biobase (>= 1.15.33), limma (>= 1.7.0), marray,
-utils, methods",NA,NA,NA,NA,NA,"LGPL","2.14.0"
-"corpcor","corpcor","/usr/local/lib64/R/library","1.6.0",NA,"R (>= 2.10.0)",NA,NA,"",NA,NA,"GPL (>= 3)","2.14.0"
-"cubature","cubature","/usr/local/lib64/R/library","1.1-1",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"DAAG","DAAG","/usr/local/lib64/R/library","1.08",NA,"R (>= 2.0.1), MASS, rpart, randomForest, boot, nlme, survival",NA,NA,"lattice, leaps, oz",NA,NA,"Unlimited","2.14.0"
-"datasets","datasets","/usr/local/lib64/R/library","2.14.0","base",NA,NA,NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"DBI","DBI","/usr/local/lib64/R/library","0.2-5",NA,"R (>= 2.3.0), methods","methods",NA,NA,NA,NA,"LGPL (>= 2)","2.14.0"
-"degreenet","degreenet","/usr/local/lib64/R/library","1.1",NA,NA,NA,NA,"network",NA,NA,"file LICENSE","2.14.0"
-"deldir","deldir","/usr/local/lib64/R/library","0.0-16",NA,"R (>= 0.99)",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"DESeq","DESeq","/usr/local/lib64/R/library","1.6.1",NA,"Biobase (>= 2.13.11), locfit","genefilter, geneplotter, methods, MASS",NA,"pasilla (>= 0.1.0)",NA,NA,"GPL (>= 3)","2.14.0"
-"digest","digest","/usr/local/lib64/R/library","0.5.1",NA,"R (>= 2.4.1)",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"DynDoc","DynDoc","/usr/local/lib64/R/library","1.32.0",NA,"methods, utils","methods",NA,NA,NA,NA,"Artistic-2.0","2.14.0"
-"dynlm","dynlm","/usr/local/lib64/R/library","0.3-1",NA,"R (>= 2.0.0), stats, zoo, lmtest, car (>= 2.0-0)","stats, strucchange",NA,"datasets, sandwich, strucchange, TSA",NA,NA,"GPL-2","2.14.0"
-"e1071","e1071","/usr/local/lib64/R/library","1.6",NA,"class","graphics, stats, grDevices, utils",NA,"cluster, mlbench, nnet, randomForest, rpart, SparseM, xtable,
-Matrix, MASS",NA,NA,"GPL-2","2.14.0"
-"Ecdat","Ecdat","/usr/local/lib64/R/library","0.1-6.1",NA,"R (>= 2.10)",NA,NA,"car, systemfit, sem, lmtest, sandwich",NA,NA,"GPL (>= 2)","2.14.0"
-"edgeR","edgeR","/usr/local/lib64/R/library","2.4.1",NA,"R (>= 2.3.0), methods","limma",NA,"MASS, statmod, splines",NA,NA,"LGPL (>= 2)","2.14.0"
-"ellipse","ellipse","/usr/local/lib64/R/library","0.3-5",NA,"R (>= 2.0.0),graphics,stats",NA,NA,NA,NA,NA,"GPL version 2 or newer","2.14.0"
-"ergm","ergm","/usr/local/lib64/R/library","2.4-3",NA,"network (>= 1.6), nlme, trust",NA,NA,"coda, KernSmooth, sna, Rglpk, robustbase, Matrix",NA,NA,"GPL-3 + file LICENSE","2.14.0"
-"fame","fame","/usr/local/lib64/R/library","2.17",NA,"R (>= 2.3), tis",NA,NA,NA,NA,NA,"Unlimited","2.14.0"
-"fdrtool","fdrtool","/usr/local/lib64/R/library","1.2.7",NA,"R (>= 2.7.0)",NA,NA,"",NA,NA,"GPL (>= 3)","2.14.0"
-"fEcofin","fEcofin","/usr/local/lib64/R/library","290.76",NA,"R (>= 2.6.0), utils",NA,NA,"RUnit",NA,NA,"GPL (>= 2)","2.14.0"
-"fields","fields","/usr/local/lib64/R/library","6.6.2",NA,"R (>= 2.13), methods, spam",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"flexmix","flexmix","/usr/local/lib64/R/library","2.3-5",NA,"lattice, modeltools (>= 0.2-16), multcomp","methods, stats, stats4",NA,"MASS, codetools, diptest, ellipse, gclus, grid, lme4, mgcv
-(>= 1.6-1), mlbench, mvtnorm, nnet",NA,NA,"GPL (>= 2)","2.14.0"
-"foreign","foreign","/usr/local/lib64/R/library","0.8-48","recommended","R (>= 2.13.0), stats","methods, utils",NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"Formula","Formula","/usr/local/lib64/R/library","1.0-1",NA,"R (>= 2.0.0), stats",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"fts","fts","/usr/local/lib64/R/library","0.7.6",NA,"utils, stats",NA,NA,NA,NA,NA,"GPL-3","2.14.0"
-"gam","gam","/usr/local/lib64/R/library","1.06.2",NA,"stats, splines",NA,NA,"akima",NA,NA,"GPL-2","2.14.0"
-"gcrma","gcrma","/usr/local/lib64/R/library","2.26.0",NA,"R (>= 2.6.0), affy (>= 1.23.2), graphics, methods, stats,
+SNPlocs.Hsapiens.dbSNP.20100427, hgu95av2probe, Biobase",NA,NA,"Artistic-2.0","3.0.0"
+"car","car","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.0-16",NA,"R (>= 2.14.0), stats, graphics, MASS, nnet",NA,NA,"alr3, boot, leaps, lme4, lmtest, nlme, quantreg, sandwich,
+mgcv, pbkrtest (>= 0.3-2), rgl, survival, survey",NA,NA,"GPL (>= 2)","3.0.0"
+"Category","Category","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.25.1",NA,"BiocGenerics (>= 0.3.2), AnnotationDbi (>= 0.1.15), Biobase
+(>= 2.17.8), methods","BiocGenerics, graph, methods, Biobase, AnnotationDbi, RBGL,
+GSEABase (>= 1.19.3), genefilter, annotate (>= 1.15.6), stats,
+utils",NA,"EBarrays, ALL, Rgraphviz, RColorBrewer, xtable (>= 1.4-6),
+hgu95av2.db, Matrix, KEGG.db, GO.db, SNPchip (>= 2.3.11),
+geneplotter, limma, lattice, graph, Biobase, genefilter,
+methods, RUnit, org.Sc.sgd.db, GOstats",NA,NA,"Artistic-2.0","3.0.0"
+"caTools","caTools","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.14",NA,"R (>= 2.2.0)","bitops",NA,"MASS, rpart",NA,NA,"GPL-3","3.0.0"
+"CHNOSZ","CHNOSZ","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.9-9",NA,"R (>= 2.12.0), utils",NA,NA,"testthat, parallel, limSolve",NA,NA,"GPL (>= 2)","3.0.0"
+"chron","chron","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.3-43",NA,"R (>= 2.12.0)","graphics, stats",NA,"scales, ggplot2","zoo",NA,"GPL-2","3.0.0"
+"class","class","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","7.3-5","recommended","R (>= 2.5.0), stats, utils","MASS",NA,NA,NA,NA,"GPL-2 | GPL-3","3.0.0"
+"cluster","cluster","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.14.3","recommended","R (>= 2.10.0), stats, graphics, utils",NA,NA,"MASS",NA,NA,"GPL (>= 2)","3.0.0"
+"coda","coda","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.16-1",NA,"R (>= 2.14.0), lattice",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"codetools","codetools","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.2-8","recommended","R (>= 2.1)",NA,NA,NA,NA,NA,"GPL","3.0.0"
+"coin","coin","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-21",NA,"R (>= 2.2.0), methods, survival, mvtnorm (>= 0.8-0),
+modeltools (>= 0.2-9)",NA,NA,"multcomp, xtable, e1071, vcd","Biobase",NA,"GPL-2","3.0.0"
+"colorspace","colorspace","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.2-1",NA,"R (>= 2.10.0), methods",NA,NA,"KernSmooth, MASS, kernlab, mvtnorm, vcd, tcltk, dichromat",NA,NA,"BSD","3.0.0"
+"convert","convert","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.35.0",NA,"R (>= 2.6.0), Biobase (>= 1.15.33), limma (>= 1.7.0), marray,
+utils, methods",NA,NA,NA,NA,NA,"LGPL","3.0.0"
+"corpcor","corpcor","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.6.4",NA,"R (>= 2.10.0)",NA,NA,"",NA,NA,"GPL (>= 3)","3.0.0"
+"cubature","cubature","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.1-2",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"cummeRbund","cummeRbund","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.1.0",NA,"R (>= 2.7.0), BiocGenerics (>= 0.3.2), RSQLite, ggplot2,
+reshape2, fastcluster, rtracklayer, Gviz","methods, plyr, BiocGenerics",NA,"cluster, plyr",NA,NA,"Artistic-2.0","3.0.0"
+"DAAG","DAAG","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.16",NA,"R (>= 2.10.0), MASS, lattice, latticeExtra, rpart,
+randomForest, boot, survival",NA,NA,"leaps, oz, lme4, quantreg",NA,NA,"Unlimited","3.0.0"
+"DBI","DBI","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.2-5",NA,"R (>= 2.3.0), methods","methods",NA,NA,NA,NA,"LGPL (>= 2)","3.0.0"
+"deldir","deldir","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.0-21",NA,"R (>= 0.99)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"dichromat","dichromat","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.0-0",NA,"R (>= 2.10), stats",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"digest","digest","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.6.3",NA,"R (>= 2.4.1)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"DynDoc","DynDoc","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.37.0",NA,"methods, utils","methods",NA,NA,NA,NA,"Artistic-2.0","3.0.0"
+"dynlm","dynlm","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.3-1",NA,"R (>= 2.0.0), stats, zoo, lmtest, car (>= 2.0-0)","stats, strucchange",NA,"datasets, sandwich, strucchange, TSA",NA,NA,"GPL-2","3.0.0"
+"e1071","e1071","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.6-1",NA,"class","graphics, stats, grDevices, utils",NA,"cluster, mlbench, nnet, randomForest, rpart, SparseM, xtable,
+Matrix, MASS",NA,NA,"GPL-2","3.0.0"
+"Ecdat","Ecdat","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.2-2",NA,"R (>= 2.10)",NA,NA,"car, systemfit, sem, lmtest, sandwich, gdata",NA,NA,"GPL (>= 2)","3.0.0"
+"edgeR","edgeR","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.1.9",NA,"R (>= 2.15.0), methods, limma",NA,NA,"MASS, statmod, splines, locfit, KernSmooth",NA,NA,"GPL (>=2)","3.0.0"
+"ellipse","ellipse","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.3-7",NA,"R (>= 2.0.0),graphics,stats",NA,NA,"MASS",NA,NA,"GPL (>= 2)","3.0.0"
+"ergm","ergm","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.0-3",NA,"network, robustbase, Matrix, trust, nlme, coda",NA,NA,"lattice, latticeExtra, sna, Rglpk, snow, networkDynamic,
+Rmpi, rlecuyer",NA,NA,"GPL-3 + file LICENSE","3.0.0"
+"fame","fame","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.18",NA,"R (>= 2.3), tis",NA,NA,NA,NA,NA,"Unlimited","3.0.0"
+"fastcluster","fastcluster","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.1.9",NA,NA,NA,NA,NA,"stats, flashClust",NA,"FreeBSD | file LICENSE","3.0.0"
+"fdrtool","fdrtool","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.2.10",NA,"R (>= 2.10.0)",NA,NA,"",NA,NA,"GPL (>= 3)","3.0.0"
+"fields","fields","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","6.7",NA,"R (>= 2.13), methods, spam",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"flexmix","flexmix","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.3-10",NA,"R (>= 2.15.0), lattice","grid, methods, modeltools (>= 0.2-16), stats, stats4",NA,"MASS, codetools, diptest, ellipse, gclus, lme4, mgcv (>=
+1.6-1), mlbench, mlogit, multcomp, mvtnorm, nnet, survival",NA,NA,"GPL (>= 2)","3.0.0"
+"foreign","foreign","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.8-53","recommended","R (>= 2.14.0), stats","methods, utils",NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"Formula","Formula","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.1-0",NA,"R (>= 2.0.0), stats",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"fts","fts","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.7.7",NA,"utils, stats",NA,NA,NA,NA,NA,"GPL-3","3.0.0"
+"gam","gam","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.06.2",NA,"stats, splines",NA,NA,"akima",NA,NA,"GPL-2","3.0.0"
+"gcrma","gcrma","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.31.2",NA,"R (>= 2.6.0), affy (>= 1.23.2), graphics, methods, stats,
 utils","Biobase, affy (>= 1.23.2), affyio (>= 1.13.3), IRanges,
-Biostrings (>= 2.11.32), splines",NA,"affydata, tools, splines, hgu95av2cdf, hgu95av2probe",NA,NA,"LGPL","2.14.0"
-"gdata","gdata","/usr/local/lib64/R/library","2.8.2",NA,"R (>= 2.6.0)","gtools",NA,NA,NA,NA,"GPL-2","2.14.0"
-"gee","gee","/usr/local/lib64/R/library","4.13-17",NA,"stats",NA,NA,"MASS",NA,NA,"GPL-2","2.14.0"
-"gene2pathway","gene2pathway","/usr/local/lib64/R/library","2.6.0",NA,"R (>= 2.10.0), kernlab (>= 0.9), biomaRt (>= 1.12.1), KEGGSOAP
-(>= 1.12.0), RBGL, AnnotationDbi,org.Dm.eg.db, keggorthology
-(>= 2.0)","SSOAP, RCurl",NA,NA,"doMC",NA,"GPL (>= 2)","2.14.0"
-"GeneAnswers","GeneAnswers","/usr/local/lib64/R/library","1.10.0",NA,"R (>= 2.10.0), igraph, RCurl, annotate, Biobase (>= 1.12.0),
-methods, XML, RSQLite, MASS, rgl, Heatplus, RColorBrewer","graph, Rgraphviz, RBGL, annotate",NA,"GO.db, KEGG.db, biomaRt, AnnotationDbi, org.Hs.eg.db,
-org.Rn.eg.db, org.Mm.eg.db, org.Dm.eg.db",NA,NA,"LGPL (>= 2)","2.14.0"
-"GeneCycle","GeneCycle","/usr/local/lib64/R/library","1.1.1",NA,"R (>= 2.7.0), MASS, longitudinal (>= 1.1.3), fdrtool (>=
-1.2.5)",NA,NA,"",NA,NA,"GPL (>= 3)","2.14.0"
-"GeneF","GeneF","/usr/local/lib64/R/library","1.0",NA,NA,NA,NA,NA,NA,NA,"GPL version 2 or newer","2.14.0"
-"genefilter","genefilter","/usr/local/lib64/R/library","1.36.0",NA,NA,"AnnotationDbi, annotate (>= 1.13.7), Biobase (>= 1.99.10),
+Biostrings (>= 2.11.32), splines, BiocInstaller",NA,"affydata, tools, splines, hgu95av2cdf, hgu95av2probe",NA,NA,"LGPL","3.0.0"
+"gdata","gdata","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.12.0",NA,"R (>= 2.13.0)","gtools",NA,NA,NA,NA,"GPL-2","3.0.0"
+"gee","gee","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","4.13-18",NA,"stats",NA,NA,"MASS",NA,NA,"GPL-2","3.0.0"
+"GeneCycle","GeneCycle","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.1.2",NA,"R (>= 2.7.0), MASS, longitudinal (>= 1.1.3), fdrtool (>=
+1.2.5)",NA,NA,"",NA,NA,"GPL (>= 3)","3.0.0"
+"GeneF","GeneF","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"genefilter","genefilter","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.41.3",NA,NA,"AnnotationDbi, annotate (>= 1.13.7), Biobase (>= 1.99.10),
 graphics, methods, stats, survival",NA,"Biobase (>= 1.99.10), class, hgu95av2.db, methods, tkWidgets,
-ALL",NA,NA,"Artistic-2.0","2.14.0"
-"geneLenDataBase","geneLenDataBase","/usr/local/lib64/R/library","0.99.8",NA,"R (>= 2.11.0)","utils, rtracklayer, GenomicFeatures (>= 1.3.15)",NA,NA,NA,NA,"LGPL (>= 2)","2.14.0"
-"GeneNet","GeneNet","/usr/local/lib64/R/library","1.2.4",NA,"R (>= 2.7.0), corpcor (>= 1.5.3), longitudinal (>= 1.1.5),
-fdrtool (>= 1.2.5)",NA,NA,"graph (>= 1.4.0), Rgraphviz (>= 1.4.0)",NA,NA,"GPL (>= 3)","2.14.0"
-"geneplotter","geneplotter","/usr/local/lib64/R/library","1.32.1",NA,"R (>= 2.10),Biobase (>= 2.5.5), annotate, lattice","annotate, AnnotationDbi, Biobase (>= 2.5.5), graphics,
-grDevices, grid, methods, RColorBrewer, stats, utils",NA,"Biobase (>= 2.5.5), Rgraphviz, annotate, fibroEset,
-hgu95av2.db, hu6800.db, hgu133a.db",NA,NA,"Artistic-2.0","2.14.0"
-"GenomicFeatures","GenomicFeatures","/usr/local/lib64/R/library","1.6.5",NA,"IRanges (>= 1.11.34), GenomicRanges (>= 1.5.42), AnnotationDbi
-(>= 1.15.39)","methods, DBI (>= 0.2-5), RSQLite (>= 0.8-1), IRanges,
-GenomicRanges, Biostrings (>= 2.17.6), rtracklayer (>=
-1.13.14), biomaRt, RCurl, utils, Biobase",NA,"rtracklayer, biomaRt, org.Mm.eg.db, Biostrings, BSgenome,
+ALL, ROC",NA,NA,"Artistic-2.0","3.0.0"
+"GeneNet","GeneNet","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.2.6",NA,"R (>= 2.15.0), corpcor (>= 1.6.4), longitudinal (>= 1.1.7),
+fdrtool (>= 1.2.10)",NA,NA,"graph (>= 1.4.0), Rgraphviz (>= 1.4.0)",NA,NA,"GPL (>= 3)","3.0.0"
+"GenomeGraphs","GenomeGraphs","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.19.0",NA,"R (>= 2.10), methods, biomaRt, grid",NA,NA,NA,NA,NA,"Artistic-2.0","3.0.0"
+"GenomicFeatures","GenomicFeatures","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.11.16",NA,"BiocGenerics (>= 0.1.0), IRanges (>= 1.17.13), GenomicRanges
+(>= 1.11.11), AnnotationDbi (>= 1.19.36)","methods, DBI (>= 0.2-5), RSQLite (>= 0.8-1), BiocGenerics,
+IRanges, GenomicRanges, Biostrings (>= 2.23.2), rtracklayer (>=
+1.15.1), biomaRt, RCurl, utils, Biobase (>= 2.15.1)",NA,"rtracklayer, biomaRt, org.Mm.eg.db, Biostrings, BSgenome,
 BSgenome.Hsapiens.UCSC.hg18 (>= 1.3.14),
-BSgenome.Celegans.UCSC.ce2, RUnit",NA,NA,"Artistic-2.0","2.14.0"
-"GenomicRanges","GenomicRanges","/usr/local/lib64/R/library","1.6.4",NA,"R (>= 2.8.0), methods, IRanges (>= 1.11.26)","methods, IRanges","IRanges","RUnit, BSgenome, GenomicFeatures, Rsamtools (>= 1.5.66),
-EatonEtAlChIPseq (>= 0.0.3), leeBamViews, edgeR, DESeq,
-rtracklayer, org.Sc.sgd.db, BSgenome.Scerevisiae.UCSC.sacCer2,
-DEXSeq, pasilla",NA,NA,"Artistic-2.0","2.14.0"
-"geoR","geoR","/usr/local/lib64/R/library","1.7-1",NA,"R (>= 2.10), stats, sp, methods, MASS","splancs, RandomFields",NA,"scatterplot3d, tcltk, geoRglm, lattice, graphics",NA,NA,"GPL (>= 2)","2.14.0"
-"ggplot2","ggplot2","/usr/local/lib64/R/library","0.8.9",NA,"reshape (>= 0.8.0), grid, proto","plyr (>= 1.0), splines, MASS, RColorBrewer, digest, colorspace",NA,"quantreg, Hmisc, mapproj, maps, hexbin, gpclib, maptools",NA,NA,"GPL-2","2.14.0"
-"glmnet","glmnet","/usr/local/lib64/R/library","1.7.1",NA,"Matrix, utils",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"GO.db","GO.db","/usr/local/lib64/R/library","2.6.1",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.15.28)","methods, AnnotationDbi",NA,NA,NA,NA,"Artistic-2.0","2.14.0"
-"goseq","goseq","/usr/local/lib64/R/library","1.6.0",NA,"R (>= 2.11.0), BiasedUrn, geneLenDataBase","mgcv, graphics, stats, utils, AnnotationDbi",NA,"GO.db, edgeR, org.Hs.eg.db",NA,NA,"LGPL (>= 2)","2.14.0"
-"GOstats","GOstats","/usr/local/lib64/R/library","2.20.0",NA,"Biobase (>= 1.15.29), Category (>= 2.3.26), graph","AnnotationDbi (>= 0.0.89), Biobase (>= 1.15.29), Category (>=
+BSgenome.Hsapiens.UCSC.hg19 (>= 1.3.17),
+BSgenome.Celegans.UCSC.ce2, BSgenome.Dmelanogaster.UCSC.dm3 (>=
+1.3.17), mirbase.db, FDb.UCSC.tRNAs,
+TxDb.Hsapiens.UCSC.hg18.knownGene,
+TxDb.Hsapiens.UCSC.hg19.knownGene,
+TxDb.Dmelanogaster.UCSC.dm3.ensGene (>= 2.7.1), Rsamtools,
+pasillaBamSubset (>= 0.0.5), RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"GenomicRanges","GenomicRanges","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.11.38",NA,"R (>= 2.10), methods, BiocGenerics (>= 0.5.4), IRanges (>=
+1.17.33)","methods, utils, BiocGenerics, IRanges","IRanges","AnnotationDbi (>= 1.21.1), Biostrings (>= 2.25.3), Rsamtools
+(>= 1.11.24), BSgenome, rtracklayer, GenomicFeatures,
+VariantAnnotation, edgeR, DESeq, DEXSeq, EatonEtAlChIPseq (>=
+0.0.3), leeBamViews, pasilla, pasillaBamSubset, org.Sc.sgd.db,
+TxDb.Dmelanogaster.UCSC.dm3.ensGene, seqnames.db,
+BSgenome.Scerevisiae.UCSC.sacCer2,
+BSgenome.Dmelanogaster.UCSC.dm3, RUnit, digest",NA,NA,"Artistic-2.0","3.0.0"
+"geoR","geoR","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.7-4",NA,"R (>= 2.10), stats, sp, methods, MASS","splancs, RandomFields",NA,"scatterplot3d, geoRglm, lattice, graphics, tcltk",NA,NA,"GPL (>= 2)","3.0.0"
+"ggplot2","ggplot2","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.9.3.1",NA,"R (>= 2.14), stats, methods","plyr (>= 1.7.1), digest, grid, gtable (>= 0.1.1), reshape2,
+scales (>= 0.2.3), proto, MASS",NA,"quantreg, Hmisc, mapproj, maps, hexbin, maptools, multcomp,
+nlme, testthat","sp",NA,"GPL-2","3.0.0"
+"glmnet","glmnet","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.9-3",NA,"Matrix (>= 1.0-6), utils",NA,NA,"survival",NA,NA,"GPL-2","3.0.0"
+"GO.db","GO.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.21.13)","methods, AnnotationDbi",NA,NA,NA,NA,"Artistic-2.0","3.0.0"
+"GOstats","GOstats","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.25.1",NA,"R (>= 2.10), Biobase (>= 1.15.29), Category (>= 2.3.26), graph","AnnotationDbi (>= 0.0.89), Biobase (>= 1.15.29), Category (>=
 2.3.26), GO.db (>= 1.13.0), RBGL, annotate (>= 1.13.2), graph
-(>= 1.15.15), methods, stats",NA,"hgu95av2.db (>= 1.13.0), ALL, GO.db (>= 1.13.0), annotate,
-multtest, genefilter, RColorBrewer, Rgraphviz, xtable, SparseM",NA,NA,"Artistic-2.0","2.14.0"
-"goTools","goTools","/usr/local/lib64/R/library","1.28.0",NA,"GO.db","AnnotationDbi, GO.db, graphics, grDevices",NA,"hgu133a.db",NA,NA,"GPL-2","2.14.0"
-"gpclib","gpclib","/usr/local/lib64/R/library","1.5-1",NA,"R (>= 2.9.0), methods","graphics",NA,NA,NA,NA,"file LICENSE","2.14.0"
-"gplots","gplots","/usr/local/lib64/R/library","2.10.1",NA,"R (>= 2.10), gtools, gdata, stats, caTools, grid, KernSmooth",NA,NA,"gtools",NA,NA,"GPL-2","2.14.0"
-"graph","graph","/usr/local/lib64/R/library","1.32.0",NA,"R (>= 2.10), methods","methods, stats, tools, utils",NA,"SparseM (>= 0.36), XML, RBGL, RUnit, cluster","Rgraphviz",NA,"Artistic-2.0","2.14.0"
-"graphics","graphics","/usr/local/lib64/R/library","2.14.0","base",NA,"grDevices",NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"grDevices","grDevices","/usr/local/lib64/R/library","2.14.0","base",NA,NA,NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"grid","grid","/usr/local/lib64/R/library","2.14.0","base",NA,"grDevices",NA,"lattice",NA,NA,"Part of R 2.14.0","2.14.0"
-"GSA","GSA","/usr/local/lib64/R/library","1.03",NA,NA,NA,NA,"impute",NA,NA,"LGPL","2.14.0"
-"GSEABase","GSEABase","/usr/local/lib64/R/library","1.16.0",NA,"R (>= 2.6.0), Biobase, annotate, methods, graph","annotate, AnnotationDbi, Biobase, graph, methods, XML",NA,"hgu95av2.db, GO.db, org.Hs.eg.db",NA,NA,"Artistic-2.0","2.14.0"
-"gsubfn","gsubfn","/usr/local/lib64/R/library","0.5-7",NA,"R (>= 2.5.0), proto",NA,NA,"boot, chron, doBy, grid, lattice, quantreg, reshape2, tcltk,
-zoo",NA,NA,"GPL (>= 2)","2.14.0"
-"gtools","gtools","/usr/local/lib64/R/library","2.6.2",NA,NA,NA,NA,NA,NA,NA,"LGPL-2.1","2.14.0"
-"Heatplus","Heatplus","/usr/local/lib64/R/library","2.0.0",NA,NA,"graphics, grDevices, stats",NA,"Biobase, hgu95av2.db, limma",NA,NA,"GPL (>= 2)","2.14.0"
-"hexbin","hexbin","/usr/local/lib64/R/library","1.26.0",NA,"R (>= 2.0.1), methods, grid, lattice","methods, grid, lattice, graphics, grDevices, stats, utils",NA,"marray, affy, Biobase",NA,NA,"GPL-2","2.14.0"
-"hgu95av2.db","hgu95av2.db","/usr/local/lib64/R/library","2.6.3",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.15.34),
-org.Hs.eg.db (>= 2.6.2)","methods, AnnotationDbi",NA,"annotate",NA,NA,"Artistic-2.0","2.14.0"
-"Hmisc","Hmisc","/usr/local/lib64/R/library","3.9-0",NA,"R (>= 2.4.0), methods, survival","lattice, cluster, survival",NA,"lattice, grid, nnet, foreign, chron, acepack, TeachingDemos,
-rms, cluster, mice, subselect",NA,NA,"GPL (>= 2)","2.14.0"
-"HSAUR","HSAUR","/usr/local/lib64/R/library","1.2-4",NA,"R (>= 2.2.0), lattice, MASS, scatterplot3d (>= 0.3-23)",NA,NA,"ape (>= 1.6), coin (>= 0.3-3), flexmix (>= 1.1-0), gee (>=
+(>= 1.15.15), methods, stats , AnnotationForge",NA,"hgu95av2.db (>= 1.13.0), ALL, GO.db (>= 1.13.0), annotate,
+multtest, genefilter, RColorBrewer, Rgraphviz, xtable, SparseM,
+GSEABase, geneplotter, org.Hs.eg.db, RUnit, BiocGenerics",NA,NA,"Artistic-2.0","3.0.0"
+"goTools","goTools","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.33.0",NA,"GO.db","AnnotationDbi, GO.db, graphics, grDevices",NA,"hgu133a.db",NA,NA,"GPL-2","3.0.0"
+"gpclib","gpclib","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.5-3",NA,"R (>= 2.14.0), methods","graphics",NA,NA,NA,NA,"file LICENSE","3.0.0"
+"gplots","gplots","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.11.0",NA,"R (>= 2.10), gtools, gdata, stats, caTools, grid, KernSmooth,
+MASS, datasets",NA,NA,"gtools",NA,NA,"GPL-2","3.0.0"
+"graph","graph","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.37.7",NA,"R (>= 2.10), methods","methods, stats, stats4, tools, utils, BiocGenerics (>= 0.1.11)",NA,"SparseM (>= 0.36), XML, RBGL, RUnit, cluster","Rgraphviz",NA,"Artistic-2.0","3.0.0"
+"GSA","GSA","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.03",NA,NA,NA,NA,"impute",NA,NA,"LGPL","3.0.0"
+"GSEABase","GSEABase","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.21.6",NA,"R (>= 2.6.0), BiocGenerics (>= 0.3.2), Biobase (>= 2.17.8),
+annotate, methods, graph (>= 1.37.2)","BiocGenerics, annotate, AnnotationDbi, Biobase, graph,
+methods, XML",NA,"hgu95av2.db, GO.db, org.Hs.eg.db, Rgraphviz, ReportingTools",NA,NA,"Artistic-2.0","3.0.0"
+"gsubfn","gsubfn","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.6-5",NA,"R (>= 2.15.0), proto",NA,NA,"boot, chron, doBy, grid, lattice, quantreg, reshape, svUnit,
+tcltk, zoo",NA,NA,"GPL (>= 2)","3.0.0"
+"gtable","gtable","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.1.2",NA,"R (>= 2.14), grid",NA,NA,"testthat, plyr",NA,NA,"GPL-2","3.0.0"
+"gtools","gtools","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.7.0",NA,NA,NA,NA,NA,NA,NA,"LGPL-2.1","3.0.0"
+"Gviz","Gviz","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.3.14",NA,"R (>= 2.10.0), methods, grid","IRanges (>= 1.13.19), rtracklayer (>= 1.15.5), lattice,
+RColorBrewer, biomaRt (>= 2.11.0), GenomicRanges (>= 1.7.14),
+AnnotationDbi (>= 1.17.11), Biobase (>= 2.15.3), BiocGenerics
+(>= 0.1.4), GenomicFeatures (>= 1.9.7), BSgenome (>= 1.25.1),
+Biostrings (>= 2.25.1), biovizBase (>= 1.5.7), Rsamtools(>=
+1.11.1)",NA,"xtable, GenomicFeatures, BSgenome.Hsapiens.UCSC.hg19,
+biomaRt, rtracklayer",NA,NA,"Artistic-2.0","3.0.0"
+"Heatplus","Heatplus","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.5.0",NA,NA,"graphics, grDevices, stats",NA,"Biobase, hgu95av2.db, limma",NA,NA,"GPL (>= 2)","3.0.0"
+"hexbin","hexbin","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.26.1",NA,"R (>= 2.0.1), methods, grid, lattice","methods, grid, lattice, graphics, grDevices, stats, utils",NA,"marray, affy, Biobase",NA,NA,"GPL-2","3.0.0"
+"hgu95av2.db","hgu95av2.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.21.13),
+org.Hs.eg.db (>= 2.9.0)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"Hmisc","Hmisc","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.10-1",NA,"R (>= 2.4.0), methods, survival","lattice, cluster, survival",NA,"lattice, grid, nnet, foreign, chron, acepack, TeachingDemos,
+rms, cluster, mice, subselect, tree",NA,NA,"GPL (>= 2)","3.0.0"
+"HSAUR","HSAUR","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.3-0",NA,"R (>= 2.2.0), lattice, MASS, scatterplot3d (>= 0.3-23)",NA,NA,"ape (>= 1.6), coin (>= 0.3-3), flexmix (>= 1.1-0), gee (>=
 4.13-10), ipred (>= 0.8-3), lme4 (>= 0.98-1), mclust (>=
 3.0-0), party (>= 0.2-8), randomForest (>= 4.5-12), rmeta (>=
 2.12), vcd (>= 0.9-3), survival, KernSmooth, rpart, mvtnorm,
-Matrix, boot",NA,NA,"GPL","2.14.0"
-"hwriter","hwriter","/usr/local/lib64/R/library","1.3",NA,"R (>= 2.6.0)",NA,NA,NA,NA,NA,"LGPL-2.1","2.14.0"
-"igraph","igraph","/usr/local/lib64/R/library","0.5.5-3",NA,"stats",NA,NA,"stats4, rgl, tcltk, RSQLite, digest, graph, Matrix",NA,NA,"GPL (>= 2)","2.14.0"
-"ineq","ineq","/usr/local/lib64/R/library","0.2-9",NA,"R (>= 2.1.0), stats, graphics, grDevices",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"ipred","ipred","/usr/local/lib64/R/library","0.8-11",NA,"R (>= 2.10), rpart (>= 3.1-8), MASS, mlbench, survival, nnet,
-class",NA,NA,"mvtnorm",NA,NA,"GPL","2.14.0"
-"IRanges","IRanges","/usr/local/lib64/R/library","1.12.5",NA,"R (>= 2.8.0), methods, utils, stats","methods, utils, stats",NA,"RUnit",NA,NA,"Artistic-2.0","2.14.0"
-"iterators","iterators","/usr/local/lib64/R/library","1.0.5",NA,"R (>= 2.5.0), utils",NA,NA,"foreach, RUnit",NA,NA,"Apache License (== 2.0)","2.14.0"
-"itertools","itertools","/usr/local/lib64/R/library","0.1-1",NA,"R (>= 2.5.0), iterators(>= 1.0.0)",NA,NA,"foreach","foreach, iterators",NA,"GPL-2","2.14.0"
-"its","its","/usr/local/lib64/R/library","1.1.8",NA,"R (>= 2.0.0), methods, stats, Hmisc",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"KEGG.db","KEGG.db","/usr/local/lib64/R/library","2.6.1",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.15.28)","methods, AnnotationDbi",NA,NA,NA,NA,"file LICENSE","2.14.0"
-"keggorthology","keggorthology","/usr/local/lib64/R/library","2.6.0",NA,"R (>= 2.5.0),stats,graph,hgu95av2.db","AnnotationDbi,graph,DBI, graph, grDevices, methods, stats,
-tools, utils",NA,"RBGL,ALL",NA,NA,"Artistic-2.0","2.14.0"
-"KEGGSOAP","KEGGSOAP","/usr/local/lib64/R/library","1.28.0",NA,"methods","XML, RCurl, SSOAP (>= 0.2-2), XMLSchema",NA,NA,NA,NA,"BSD","2.14.0"
-"kernlab","kernlab","/usr/local/lib64/R/library","0.9-14",NA,"R (>= 2.10), methods",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"KernSmooth","KernSmooth","/usr/local/lib64/R/library","2.23-7","recommended","R (>= 2.5.0), stats",NA,NA,"MASS",NA,NA,"Unlimited","2.14.0"
-"kinship","kinship","/usr/local/lib64/R/library","1.1.2",NA,"methods, survival, nlme, lattice, R (>= 2.8.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"latentnet","latentnet","/usr/local/lib64/R/library","2.4-1",NA,"network, shapes, abind, tools, mvtnorm, coda",NA,NA,"KernSmooth, snowFT, ergm, rgl",NA,NA,"file LICENSE","2.14.0"
-"lattice","lattice","/usr/local/lib64/R/library","0.20-0","recommended","R (>= 2.14.0)","grid, grDevices, graphics, stats, utils, methods",NA,"grid, KernSmooth, MASS","chron",NA,"GPL (>= 2)","2.14.0"
-"latticeExtra","latticeExtra","/usr/local/lib64/R/library","0.6-19",NA,"R (>= 2.10.0), RColorBrewer, lattice","lattice (>= 0.18-1), grid",NA,"maps, mapproj, deldir, tripack, quantreg, zoo, MASS, mgcv",NA,NA,"GPL (>= 2)","2.14.0"
-"leaps","leaps","/usr/local/lib64/R/library","2.9",NA,"",NA,NA,"biglm",NA,NA,"GPL (>= 2)","2.14.0"
-"limma","limma","/usr/local/lib64/R/library","3.10.0",NA,"R (>= 2.3.0), methods",NA,NA,"affy, MASS, org.Hs.eg.db, splines, statmod (>= 1.2.2), vsn",NA,NA,"LGPL","2.14.0"
-"lme4","lme4","/usr/local/lib64/R/library","0.999375-42",NA,"methods, R(>= 2.11.1), Matrix(>= 0.9996875-1), lattice","graphics, nlme, stats4, stats","Matrix, stats","mlmRev, MEMSS, coda, MASS, sfsmisc, MatrixModels",NA,NA,"GPL (>= 2)","2.14.0"
-"lmtest","lmtest","/usr/local/lib64/R/library","0.9-29",NA,"R (>= 2.10.0), stats, zoo","stats, graphics",NA,"car, strucchange, sandwich, dynlm, survival, AER",NA,NA,"GPL-2","2.14.0"
-"locfit","locfit","/usr/local/lib64/R/library","1.5-6",NA,"R (>= 2.0.1), akima, lattice",NA,NA,"gam",NA,NA,"GPL (>= 2)","2.14.0"
-"logspline","logspline","/usr/local/lib64/R/library","2.1.3",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"longitudinal","longitudinal","/usr/local/lib64/R/library","1.1.6",NA,"R (>= 2.10.0), corpcor (>= 1.5.7)",NA,NA,"",NA,NA,"GPL (>= 3)","2.14.0"
-"mapproj","mapproj","/usr/local/lib64/R/library","1.1-8.3",NA,"maps",NA,NA,NA,NA,NA,"file LICENSE","2.14.0"
-"maps","maps","/usr/local/lib64/R/library","2.2-2",NA,"R (>= 2.10.0)",NA,NA,"mapproj",NA,NA,"GPL-2","2.14.0"
-"maptools","maptools","/usr/local/lib64/R/library","0.8-10",NA,"R (>= 2.10), foreign (>= 0.8), sp (>= 0.9-47), methods,
-lattice",NA,NA,"spatstat (>= 1.18), PBSmapping, maps, rgeos (>= 0.1-8),
-gpclib, RArcInfo",NA,NA,"GPL (>= 2)","2.14.0"
-"marray","marray","/usr/local/lib64/R/library","1.32.0",NA,"R (>= 2.10.0), limma, methods",NA,NA,"tkWidgets",NA,NA,"LGPL","2.14.0"
-"MASS","MASS","/usr/local/lib64/R/library","7.3-16","recommended","R (>= 2.14.0), grDevices, graphics, stats, utils",NA,NA,"lattice, nlme, nnet, survival",NA,NA,"GPL-2 | GPL-3","2.14.0"
-"Matrix","Matrix","/usr/local/lib64/R/library","1.0-2","recommended","R (>= 2.12.0), stats, methods, utils, lattice","graphics, grid",NA,"expm","MatrixModels, graph, SparseM (>= 0.87), sfsmisc",NA,"GPL (>= 2)","2.14.0"
-"matrixcalc","matrixcalc","/usr/local/lib64/R/library","1.0-1",NA,"R (>= 2.0.1)",NA,NA,NA,NA,NA,"GPL (>=2)","2.14.0"
-"maxLik","maxLik","/usr/local/lib64/R/library","1.0-2",NA,"R (>= 2.4.0), miscTools (>= 0.6-8)","sandwich",NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"mboost","mboost","/usr/local/lib64/R/library","2.1-1",NA,"R (>= 2.10.0), methods, stats","Matrix, survival, splines, lattice",NA,"multicore, party (>= 0.9-9993), ipred, MASS, fields, BayesX,
-gbm",NA,NA,"GPL-2","2.14.0"
-"mclust","mclust","/usr/local/lib64/R/library","3.4.10",NA,"R (>= 2.2.0), stats, utils",NA,NA,"mix",NA,NA,"file LICENSE","2.14.0"
-"MCMCpack","MCMCpack","/usr/local/lib64/R/library","1.2-1",NA,"R (>= 2.10.0), coda (>= 0.11-3), MASS, stats",NA,NA,NA,NA,NA,"GPL-3","2.14.0"
-"MEMSS","MEMSS","/usr/local/lib64/R/library","0.9-0",NA,"R(>= 2.12.0), lme4 (>= 0.999375-36)",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"methods","methods","/usr/local/lib64/R/library","2.14.0","base",NA,"utils",NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"mgcv","mgcv","/usr/local/lib64/R/library","1.7-11","recommended","R (>= 2.3.0)","graphics, stats, nlme, Matrix",NA,"nlme (>= 3.1-64), splines, Matrix",NA,NA,"GPL (>= 2)","2.14.0"
-"mice","mice","/usr/local/lib64/R/library","2.11",NA,"R (>= 2.4.0), MASS, nnet, methods, lattice",NA,NA,"VIM, lattice, mitools, nlme, Zelig, lme4",NA,NA,"GPL-2 | GPL-3","2.14.0"
-"misc3d","misc3d","/usr/local/lib64/R/library","0.8-1",NA,NA,NA,NA,"rgl, tkrplot, MASS",NA,NA,"GPL","2.14.0"
-"miscTools","miscTools","/usr/local/lib64/R/library","0.6-12",NA,NA,NA,NA,"Ecdat (>= 0.1-5)",NA,NA,"GPL (>= 2)","2.14.0"
-"mitools","mitools","/usr/local/lib64/R/library","2.0.1",NA,NA,NA,NA,"RODBC, DBI",NA,NA,"GPL-2","2.14.0"
-"mlbench","mlbench","/usr/local/lib64/R/library","2.1-0",NA,"R (>= 2.10.0)",NA,NA,"lattice",NA,NA,"GPL-2","2.14.0"
-"mlmRev","mlmRev","/usr/local/lib64/R/library","1.0-1",NA,"lme4, R (>= 2.10)",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"mlogit","mlogit","/usr/local/lib64/R/library","0.2-2",NA,"R (>= 2.10), Formula, statmod, lmtest, maxLik, zoo, MASS",NA,NA,"car, nnet, AER, lattice",NA,NA,"GPL (>= 2)","2.14.0"
-"modeltools","modeltools","/usr/local/lib64/R/library","0.2-18",NA,"stats, stats4","methods",NA,NA,NA,NA,"GPL-2","2.14.0"
-"moe430a.db","moe430a.db","/usr/local/lib64/R/library","2.6.3",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.15.34),
-org.Mm.eg.db (>= 2.6.2)","methods, AnnotationDbi",NA,"annotate",NA,NA,"Artistic-2.0","2.14.0"
-"multcomp","multcomp","/usr/local/lib64/R/library","1.2-8",NA,"stats, graphics, mvtnorm (>= 0.8-0), survival (>= 2.35-7)",NA,NA,"lme4 (>= 0.999375-16), nlme, robustbase, mboost, coin, MASS,
-car, foreign, xtable, sandwich, lmtest, coxme",NA,NA,"GPL-2","2.14.0"
-"multicore","multicore","/usr/local/lib64/R/library","0.1-7",NA,"R (>= 2.0.0)",NA,NA,NA,NA,"unix","GPL-2","2.14.0"
-"multtest","multtest","/usr/local/lib64/R/library","2.10.0",NA,"R (>= 2.9.0), methods, Biobase","survival, MASS",NA,"snow",NA,NA,"LGPL","2.14.0"
-"mvtnorm","mvtnorm","/usr/local/lib64/R/library","0.9-9991",NA,"R(>= 1.9.0)","stats",NA,NA,NA,NA,"GPL-2","2.14.0"
-"network","network","/usr/local/lib64/R/library","1.7",NA,"R (>= 2.10), utils",NA,NA,"sna, statnet",NA,NA,"GPL (>= 2)","2.14.0"
-"networksis","networksis","/usr/local/lib64/R/library","1.4",NA,"ergm, network",NA,NA,"snow",NA,NA,"GPL-3 + file LICENSE","2.14.0"
-"nlme","nlme","/usr/local/lib64/R/library","3.1-102","recommended","graphics, stats, R (>= 2.13)","lattice",NA,"Hmisc",NA,NA,"GPL (>= 2)","2.14.0"
-"nnet","nnet","/usr/local/lib64/R/library","7.3-1","recommended","R (>= 2.5.0), stats, utils",NA,NA,"MASS",NA,NA,"GPL-2 | GPL-3","2.14.0"
-"np","np","/usr/local/lib64/R/library","0.40-12",NA,"boot, cubature",NA,NA,"quantreg, MASS",NA,NA,"GPL","2.14.0"
-"numDeriv","numDeriv","/usr/local/lib64/R/library","2010.11-1",NA,"R (>= 1.8.1)",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"nws","nws","/usr/local/lib64/R/library","1.7.0.1",NA,"R (>= 2.1), methods",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"org.Ce.eg.db","org.Ce.eg.db","/usr/local/lib64/R/library","2.6.4",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.15.39)","methods, AnnotationDbi",NA,"annotate",NA,NA,"Artistic-2.0","2.14.0"
-"org.Dm.eg.db","org.Dm.eg.db","/usr/local/lib64/R/library","2.6.4",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.15.39)","methods, AnnotationDbi",NA,"annotate",NA,NA,"Artistic-2.0","2.14.0"
-"org.Hs.eg.db","org.Hs.eg.db","/usr/local/lib64/R/library","2.6.4",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.15.39)","methods, AnnotationDbi",NA,"annotate",NA,NA,"Artistic-2.0","2.14.0"
-"org.Mm.eg.db","org.Mm.eg.db","/usr/local/lib64/R/library","2.6.4",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.15.39)","methods, AnnotationDbi",NA,"annotate",NA,NA,"Artistic-2.0","2.14.0"
-"outliers","outliers","/usr/local/lib64/R/library","0.14",NA,"R (>= 2.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"oz","oz","/usr/local/lib64/R/library","1.0-19",NA,NA,"graphics",NA,NA,NA,NA,"GPL-2","2.14.0"
-"parallel","parallel","/usr/local/lib64/R/library","2.14.0","base",NA,NA,NA,NA,"snow",NA,"Part of R 2.14.0","2.14.0"
-"party","party","/usr/local/lib64/R/library","0.9-99995",NA,"R (>= 2.0.1), methods, survival, grid, modeltools (>= 0.2-6),
-coin (>= 0.6-4), zoo, sandwich (>= 1.1-1), strucchange, vcd,
-stats",NA,NA,"ipred, mlbench, colorspace, MASS, mvtnorm",NA,NA,"GPL-2","2.14.0"
-"PBSmapping","PBSmapping","/usr/local/lib64/R/library","2.61.9",NA,"R (>= 2.6.0)",NA,NA,"foreign, maptools, deldir",NA,NA,"GPL (>= 2)","2.14.0"
-"permute","permute","/usr/local/lib64/R/library","0.6-3",NA,NA,NA,NA,"vegan (>= 2.0-0), testthat (>= 0.5)",NA,NA,"GPL-2","2.14.0"
-"phybase","phybase","/usr/local/lib64/R/library","1.1",NA,"Matrix, ape",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"plm","plm","/usr/local/lib64/R/library","1.2-7",NA,"R (>= 2.10), stats, bdsmatrix, nlme, Formula (>= 0.2-0), MASS,
-sandwich",NA,NA,"lmtest, car",NA,NA,"GPL (>= 2)","2.14.0"
-"plotrix","plotrix","/usr/local/lib64/R/library","3.3-1",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"plyr","plyr","/usr/local/lib64/R/library","1.6",NA,"R (>= 2.11.0)","itertools, iterators",NA,"abind, testthat (>= 0.2), tcltk, foreach",NA,NA,"MIT","2.14.0"
-"popbio","popbio","/usr/local/lib64/R/library","2.3.1",NA,NA,NA,NA,"quadprog",NA,NA,"GPL","2.14.0"
-"preprocessCore","preprocessCore","/usr/local/lib64/R/library","1.16.0",NA,"methods","stats",NA,NA,NA,NA,"LGPL (>= 2)","2.14.0"
-"proto","proto","/usr/local/lib64/R/library","0.3-9.2",NA,NA,NA,NA,"graph, Rgraphviz",NA,NA,"GPL-2","2.14.0"
-"pscl","pscl","/usr/local/lib64/R/library","1.04.1",NA,"R (>= 2.10.0), MASS, stats, mvtnorm, coda, gam, vcd","lattice",NA,"MCMCpack, car, lmtest, sandwich, zoo","stats, MASS",NA,"GPL-2","2.14.0"
-"quadprog","quadprog","/usr/local/lib64/R/library","1.5-4",NA,"R (>= 2.12.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"quantreg","quantreg","/usr/local/lib64/R/library","4.76",NA,"R (>= 2.6), stats, SparseM",NA,NA,"tripack, akima, MASS, survival, rgl, logspline, nor1mix,
-MatrixModels, Matrix, Formula, zoo",NA,NA,"file LICENSE","2.14.0"
-"RandomFields","RandomFields","/usr/local/lib64/R/library","2.0.53",NA,"R (>= 2.10)",NA,NA,NA,NA,NA,"GPL","2.14.0"
-"randomForest","randomForest","/usr/local/lib64/R/library","4.6-2",NA,"R (>= 2.5.0), stats",NA,NA,"RColorBrewer",NA,NA,"GPL (>= 2)","2.14.0"
-"RArcInfo","RArcInfo","/usr/local/lib64/R/library","0.4-12",NA,"R (>= 2.3.0), RColorBrewer",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"RBGL","RBGL","/usr/local/lib64/R/library","1.30.1",NA,"graph, methods","methods",NA,"Rgraphviz",NA,NA,"Artistic-2.0","2.14.0"
-"RColorBrewer","RColorBrewer","/usr/local/lib64/R/library","1.0-5",NA,"R (>= 2.0.0)",NA,NA,NA,NA,NA,"Apache License 2.0","2.14.0"
-"RCurl","RCurl","/usr/local/lib64/R/library","1.8-0",NA,"R (>= 2.7.0), methods, bitops",NA,NA,"Rcompression, XML",NA,NA,"BSD","2.14.0"
-"reshape","reshape","/usr/local/lib64/R/library","0.8.4",NA,"R (>= 2.6.1), plyr",NA,NA,NA,NA,NA,"MIT","2.14.0"
-"rgenoud","rgenoud","/usr/local/lib64/R/library","5.7-3",NA,"R (>= 2.0.0), utils",NA,NA,"snow (>= 0.2-1)",NA,NA,"GPL-3","2.14.0"
-"rgl","rgl","/usr/local/lib64/R/library","0.92.798",NA,"R (>= 2.7.0),stats,grDevices",NA,NA,"MASS",NA,NA,"GPL","2.14.0"
-"Rgraphviz","Rgraphviz","/usr/local/lib64/R/library","1.32.0",NA,"R (>= 2.6.0), methods, utils, graph, grid","graph, graphics, grDevices, grid, methods, utils",NA,NA,NA,NA,"Artistic-2.0","2.14.0"
-"Rhh","Rhh","/usr/local/lib64/R/library","1.0.1",NA,NA,NA,NA,NA,NA,NA,"GPL-3","2.14.0"
-"rlecuyer","rlecuyer","/usr/local/lib64/R/library","0.3-1",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"rmeta","rmeta","/usr/local/lib64/R/library","2.16",NA,"grid",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"robustbase","robustbase","/usr/local/lib64/R/library","0.8-0",NA,"R (>= 2.11.0), stats, graphics, methods",NA,NA,"MASS, lattice, boot, MPV, xtable, ggplot2, RColorBrewer",NA,NA,"GPL (>= 2)","2.14.0"
-"ROCR","ROCR","/usr/local/lib64/R/library","1.0-4",NA,"gplots, methods",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"rpanel","rpanel","/usr/local/lib64/R/library","1.0-6",NA,"R (>= 2.10), tcltk",NA,NA,"tkrplot, rgl, sp, geoR, RandomFields, sm",NA,NA,"GPL-2","2.14.0"
-"rpart","rpart","/usr/local/lib64/R/library","3.1-50","recommended","R (>= 2.13.0), graphics, stats, grDevices",NA,NA,"survival",NA,NA,"GPL-2 | GPL-3","2.14.0"
-"Rsamtools","Rsamtools","/usr/local/lib64/R/library","1.6.2",NA,"methods, IRanges (>= 1.11.34), GenomicRanges (>= 1.5.49),
-Biostrings (>= 2.21.12)","methods, utils, IRanges, GenomicRanges, Biostrings, zlibbioc,
-rtracklayer, bitops","Biostrings, IRanges","ShortRead (>= 1.11.30), GenomicFeatures, RUnit, KEGG.db",NA,NA,"Artistic-2.0 + file LICENSE","2.14.0"
-"RSQLite","RSQLite","/usr/local/lib64/R/library","0.11.1",NA,"R (>= 2.10.0), methods, DBI (>= 0.2-5)","methods, DBI (>= 0.2-3)",NA,"RUnit (>= 0.4.22)",NA,NA,"LGPL (>= 2)","2.14.0"
-"RSQLite.extfuns","RSQLite.extfuns","/usr/local/lib64/R/library","0.0.1",NA,"RSQLite (>= 0.9-1)",NA,"RSQLite",NA,NA,NA,"Artistic-2.0","2.14.0"
-"rtracklayer","rtracklayer","/usr/local/lib64/R/library","1.14.4",NA,"R (>= 2.7.0), methods, RCurl (>= 1.4-2)","XML (>= 1.98-0), IRanges (>= 1.11.34), GenomicRanges (>=
-1.5.42), Biostrings (>= 2.21.12), BSgenome (>= 1.15.17),
-zlibbioc","IRanges","humanStemCell, microRNA (>= 1.1.1), genefilter, limma,
+Matrix, boot",NA,NA,"GPL","3.0.0"
+"hwriter","hwriter","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.3",NA,"R (>= 2.6.0)",NA,NA,NA,NA,NA,"LGPL-2.1","3.0.0"
+"igraph","igraph","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.6.5-1",NA,"stats","Matrix",NA,"igraphdata, stats4, rgl, tcltk, graph, Matrix, ape, XML,
+jpeg, png",NA,NA,"GPL (>= 2)","3.0.0"
+"igraph0","igraph0","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.5.6-2",NA,"stats",NA,NA,"stats4, rgl, tcltk, RSQLite, digest, graph, Matrix",NA,NA,"GPL (>= 2)","3.0.0"
+"ineq","ineq","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.2-10",NA,"R (>= 2.10.0), stats, graphics, grDevices","stats, graphics, grDevices",NA,NA,NA,NA,"GPL-2","3.0.0"
+"ipred","ipred","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.9-1",NA,"R (>= 2.10), rpart (>= 3.1-8), MASS, survival, nnet, class,
+prodlim",NA,NA,"mvtnorm, mlbench",NA,NA,"GPL (>= 2)","3.0.0"
+"IRanges","IRanges","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.17.38",NA,"R (>= 2.8.0), methods, utils, stats, BiocGenerics (>= 0.5.6)","methods, utils, stats, BiocGenerics, stats4",NA,"GenomicRanges, RUnit, BSgenome.Celegans.UCSC.ce2",NA,NA,"Artistic-2.0","3.0.0"
+"iterators","iterators","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0.6",NA,"R (>= 2.5.0), utils",NA,NA,"foreach, RUnit",NA,NA,"Apache License (== 2.0)","3.0.0"
+"itertools","itertools","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.1-1",NA,"R (>= 2.5.0), iterators(>= 1.0.0)",NA,NA,"foreach","foreach, iterators",NA,"GPL-2","3.0.0"
+"its","its","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.1.8",NA,"R (>= 2.0.0), methods, stats, Hmisc",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"KEGG.db","KEGG.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.21.13)","methods, AnnotationDbi",NA,NA,NA,NA,"file LICENSE","3.0.0"
+"keggorthology","keggorthology","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.11.0",NA,"R (>= 2.5.0),stats,graph,hgu95av2.db","AnnotationDbi,graph,DBI, graph, grDevices, methods, stats,
+tools, utils",NA,"RBGL,ALL",NA,NA,"Artistic-2.0","3.0.0"
+"KEGGSOAP","KEGGSOAP","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.33.1",NA,"methods, BiocGenerics","XML, RCurl, SSOAP (>= 0.2-2), XMLSchema",NA,"RUnit",NA,NA,"BSD","3.0.0"
+"kernlab","kernlab","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.9-17",NA,"R (>= 2.10), methods",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"KernSmooth","KernSmooth","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.23-10","recommended","R (>= 2.5.0), stats",NA,NA,"MASS",NA,NA,"Unlimited","3.0.0"
+"labeling","labeling","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.1",NA,NA,NA,NA,NA,NA,NA,"Unlimited","3.0.0"
+"lattice","lattice","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.20-14","recommended","R (>= 2.15.1)","grid, grDevices, graphics, stats, utils",NA,"grid, KernSmooth, MASS","chron",NA,"GPL (>= 2)","3.0.0"
+"latticeExtra","latticeExtra","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.6-24",NA,"R (>= 2.10.0), RColorBrewer, lattice","lattice (>= 0.18-1), grid",NA,"maps, mapproj, deldir, tripack, quantreg, zoo, MASS, mgcv",NA,NA,"GPL (>= 2)","3.0.0"
+"leaps","leaps","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9",NA,"",NA,NA,"biglm",NA,NA,"GPL (>= 2)","3.0.0"
+"limma","limma","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.15.18",NA,"R (>= 2.3.0), methods",NA,NA,"affy, MASS, org.Hs.eg.db, splines, statmod (>= 1.2.2), vsn,
+ellipse",NA,NA,"GPL (>=2)","3.0.0"
+"lme4","lme4","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.999999-0",NA,"methods, R(>= 2.11.1), Matrix(>= 1.0-1), lattice","graphics, nlme, stats4, stats","Matrix, stats","mlmRev, MEMSS, coda, MASS, sfsmisc, MatrixModels",NA,NA,"GPL (>= 2)","3.0.0"
+"lmtest","lmtest","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.9-30",NA,"R (>= 2.10.0), stats, zoo","stats, graphics",NA,"car, strucchange, sandwich, dynlm, stats4, survival, AER",NA,NA,"GPL-2","3.0.0"
+"locfit","locfit","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.5-8",NA,"R (>= 2.0.1)","akima, lattice",NA,"gam",NA,NA,"GPL (>= 2)","3.0.0"
+"logspline","logspline","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.1.4",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"longitudinal","longitudinal","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.1.7",NA,"R (>= 2.10.0), corpcor (>= 1.6.2)",NA,NA,"",NA,NA,"GPL (>= 3)","3.0.0"
+"mapproj","mapproj","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.2-0",NA,"maps (>= 2.3-0)",NA,NA,NA,NA,NA,"file LICENSE","3.0.0"
+"maps","maps","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.3-2",NA,"R (>= 2.10.0)",NA,NA,"mapproj (>= 1.2-0)",NA,NA,"GPL-2","3.0.0"
+"maptools","maptools","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.8-23",NA,"R (>= 2.10), foreign (>= 0.8), sp (>= 0.9-47), methods, grid,
+lattice, stats",NA,NA,"rgeos (>= 0.1-8), spatstat (>= 1.18), PBSmapping,
+RColorBrewer","maps, gpclib, RArcInfo",NA,"GPL (>= 2)","3.0.0"
+"marray","marray","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.37.0",NA,"R (>= 2.10.0), limma, methods",NA,NA,"tkWidgets",NA,NA,"LGPL","3.0.0"
+"MASS","MASS","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","7.3-23","recommended","R (>= 2.14.0), grDevices, graphics, stats, utils",NA,NA,"lattice, nlme, nnet, survival",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"Matrix","Matrix","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-11","recommended","R (>= 2.15.0), stats, methods, utils, lattice","graphics, grid",NA,"expm, MASS","MatrixModels, graph, SparseM, sfsmisc",NA,"GPL (>= 2)","3.0.0"
+"matrixcalc","matrixcalc","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-3",NA,"R (>= 2.0.1)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"maxLik","maxLik","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.1-2",NA,"R (>= 2.4.0), miscTools (>= 0.6-8)","sandwich",NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"mboost","mboost","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.2-2",NA,"R (>= 2.14.0), methods, stats, parallel","Matrix, survival, splines, lattice",NA,"party (>= 1.0-3), ipred, MASS, fields, BayesX, gbm, mlbench,
+RColorBrewer, rpart (>= 4.0-3)",NA,NA,"GPL-2","3.0.0"
+"mclust","mclust","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","4.0",NA,"R (>= 2.13), stats, utils",NA,NA,"mix",NA,NA,"GPL (>= 2)","3.0.0"
+"MCMCpack","MCMCpack","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.2-4",NA,"R (>= 2.10.0), coda (>= 0.11-3), MASS, stats",NA,NA,NA,NA,NA,"GPL-3","3.0.0"
+"MEMSS","MEMSS","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.9-0",NA,"R(>= 2.12.0), lme4 (>= 0.999375-36)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"mgcv","mgcv","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.7-22","recommended","R (>= 2.14.0), stats, graphics","nlme, methods, Matrix",NA,"nlme (>= 3.1-64), splines, Matrix, parallel",NA,NA,"GPL (>= 2)","3.0.0"
+"mice","mice","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.14",NA,"R (>= 2.10), MASS, nnet, lattice, methods",NA,NA,"AGD, mitools, nlme, Zelig, lme4, survival, gamlss, pan, VIM",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"misc3d","misc3d","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.8-4",NA,NA,NA,NA,"rgl, tkrplot, MASS",NA,NA,"GPL","3.0.0"
+"miscTools","miscTools","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.6-16",NA,"R (>= 2.14.0)",NA,NA,"Ecdat (>= 0.1-5)",NA,NA,"GPL (>= 2)","3.0.0"
+"mitools","mitools","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.2",NA,"foreign",NA,NA,"RODBC, DBI",NA,NA,"GPL-2","3.0.0"
+"mlbench","mlbench","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.1-1",NA,"R (>= 2.10)",NA,NA,"lattice",NA,NA,"GPL-2","3.0.0"
+"mlmRev","mlmRev","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-1",NA,"lme4, R (>= 2.10)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"mlogit","mlogit","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.2-3",NA,"R (>= 2.10), Formula, statmod, lmtest, maxLik, zoo, MASS",NA,NA,"car, nnet, lattice, AER",NA,NA,"GPL (>= 2)","3.0.0"
+"modeltools","modeltools","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.2-19",NA,"stats, stats4","methods",NA,NA,NA,NA,"GPL-2","3.0.0"
+"moe430a.db","moe430a.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.21.13),
+org.Mm.eg.db (>= 2.9.0)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"multcomp","multcomp","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.2-17",NA,"stats, graphics, mvtnorm (>= 0.8-0), survival (>= 2.35-7)",NA,NA,"lme4 (>= 0.999375-16), nlme, robustbase, mboost, coin, MASS,
+car, foreign, xtable, sandwich, lmtest, coxme (>= 2.2-1)",NA,NA,"GPL-2","3.0.0"
+"multicore","multicore","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.1-7",NA,"R (>= 2.0.0)",NA,NA,NA,NA,"unix","GPL-2","3.0.0"
+"multtest","multtest","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.15.0",NA,"R (>= 2.10), methods, Biobase","survival, MASS, stats4",NA,"snow",NA,NA,"LGPL","3.0.0"
+"munsell","munsell","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.4",NA,NA,"colorspace",NA,"ggplot2",NA,NA,"MIT","3.0.0"
+"mvtnorm","mvtnorm","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.9-9994",NA,"R(>= 1.9.0)","stats",NA,NA,NA,NA,"GPL-2","3.0.0"
+"network","network","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.7-1.1",NA,"R (>= 2.10), utils",NA,NA,"sna, statnet",NA,NA,"GPL (>= 2)","3.0.0"
+"networkDynamic","networkDynamic","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.3.1",NA,"network",NA,NA,NA,"network",NA,"GPL-3","3.0.0"
+"networksis","networksis","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.1-1",NA,"ergm, network",NA,NA,"Hmisc",NA,NA,"GPL-3 + file LICENSE","3.0.0"
+"nnet","nnet","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","7.3-6","recommended","R (>= 2.14.0), stats, utils",NA,NA,"MASS",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"np","np","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.50-1",NA,"boot, cubature",NA,NA,"quantreg, MASS",NA,NA,"GPL","3.0.0"
+"numDeriv","numDeriv","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2012.9-1",NA,"R (>= 1.8.1)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"nws","nws","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.7.0.1",NA,"R (>= 2.1), methods",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"org.Ce.eg.db","org.Ce.eg.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.21.13)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"org.Dm.eg.db","org.Dm.eg.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.21.13)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"org.Hs.eg.db","org.Hs.eg.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.21.13)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"org.Mm.eg.db","org.Mm.eg.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.21.13)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"org.Pf.plasmo.db","org.Pf.plasmo.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.21.13)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"org.Tgondii.eg.db","org.Tgondii.eg.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.16.11)","methods, AnnotationDbi",NA,"annotate",NA,NA,"Artistic-2.0","3.0.0"
+"outliers","outliers","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.14",NA,"R (>= 2.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"oz","oz","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-19",NA,NA,"graphics",NA,NA,NA,NA,"GPL-2","3.0.0"
+"party","party","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-6",NA,"R (>= 2.14.0), methods, survival, grid, modeltools (>=
+0.2-19), coin (>= 1.0-0), zoo, sandwich (>= 1.1-1),
+strucchange, vcd, stats",NA,NA,"ipred, mlbench, colorspace, MASS, mvtnorm",NA,NA,"GPL-2","3.0.0"
+"PBSmapping","PBSmapping","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.65.40",NA,"R (>= 2.15.0)",NA,NA,"foreign, maptools, deldir","gpclib",NA,"file LICENSE","3.0.0"
+"permute","permute","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.7-0",NA,NA,NA,NA,"vegan (>= 2.0-0), testthat (>= 0.5)",NA,NA,"GPL-2","3.0.0"
+"PFAM.db","PFAM.db","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.21.13)","methods, AnnotationDbi",NA,NA,NA,NA,"Artistic-2.0","3.0.0"
+"phangorn","phangorn","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.7-1",NA,"R (>= 2.14.0), ape (>= 3.0-6), igraph (>= 0.6), Matrix","quadprog","ape","parallel, seqLogo, rgl, seqinr, xtable, flashClust",NA,NA,"GPL (>= 2)","3.0.0"
+"pheatmap","pheatmap","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.7.4",NA,"R (>= 2.0)","grid",NA,NA,NA,NA,"GPL-2","3.0.0"
+"plm","plm","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.3-1",NA,"R (>= 2.10), stats, bdsmatrix, nlme, Formula (>= 0.2-0), MASS,
+sandwich, zoo",NA,NA,"lattice, lmtest, car, AER",NA,NA,"GPL (>= 2)","3.0.0"
+"plotrix","plotrix","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.4-6",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"plyr","plyr","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.8",NA,"R (>= 2.11.0)",NA,NA,"abind, testthat (>= 0.2), tcltk, foreach, doMC, itertools,
+iterators",NA,NA,"MIT","3.0.0"
+"popbio","popbio","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.4",NA,"quadprog",NA,NA,NA,NA,NA,"GPL","3.0.0"
+"preprocessCore","preprocessCore","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.21.1",NA,"methods","stats",NA,NA,NA,NA,"LGPL (>= 2)","3.0.0"
+"prodlim","prodlim","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.3.3",NA,"R (>= 1.9.1)","KernSmooth, survival",NA,"lava",NA,NA,"GPL (>= 2)","3.0.0"
+"proto","proto","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.3-10",NA,NA,NA,NA,"graph, Rgraphviz",NA,NA,"GPL-2","3.0.0"
+"pscl","pscl","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.04.4",NA,"R (>= 2.10.0), MASS, stats, mvtnorm, coda, gam, vcd","lattice",NA,"MCMCpack, car, lmtest, sandwich, zoo","stats, MASS",NA,"GPL-2","3.0.0"
+"quadprog","quadprog","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.5-4",NA,"R (>= 2.12.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"quantreg","quantreg","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","4.96",NA,"R (>= 2.6), stats, SparseM",NA,NA,"tripack, akima, MASS, survival, rgl, logspline, nor1mix,
+MatrixModels, Matrix, Formula, zoo",NA,NA,"GPL (>= 2)","3.0.0"
+"RandomFields","RandomFields","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.0.66",NA,"R (>= 2.10)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"randomForest","randomForest","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","4.6-7",NA,"R (>= 2.5.0), stats",NA,NA,"RColorBrewer, MASS",NA,NA,"GPL (>= 2)","3.0.0"
+"RArcInfo","RArcInfo","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.4-12",NA,"R (>= 2.3.0), RColorBrewer",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"RBGL","RBGL","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.35.0",NA,"graph, methods","methods",NA,"Rgraphviz, XML",NA,NA,"Artistic-2.0","3.0.0"
+"RColorBrewer","RColorBrewer","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-5",NA,"R (>= 2.0.0)",NA,NA,NA,NA,NA,"Apache License 2.0","3.0.0"
+"RCurl","RCurl","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.95-4.1",NA,"R (>= 2.7.0), methods, bitops","methods",NA,"Rcompression, XML",NA,NA,"BSD","3.0.0"
+"reshape","reshape","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.8.4",NA,"R (>= 2.6.1), plyr",NA,NA,NA,NA,NA,"MIT","3.0.0"
+"reshape2","reshape2","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.2.2",NA,NA,"plyr (>= 1.5), stringr, lattice",NA,"testthat",NA,NA,"MIT","3.0.0"
+"rgenoud","rgenoud","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","5.7-8.1",NA,"R (>= 2.15), utils",NA,NA,"snow (>= 0.2-1)",NA,NA,"GPL-3","3.0.0"
+"Rgraphviz","Rgraphviz","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.3.8",NA,"R (>= 2.6.0), methods, utils, graph, grid","stats4, graph, graphics, grDevices, grid, methods, utils",NA,"RUnit, BiocGenerics, XML",NA,NA,"file LICENSE","3.0.0"
+"Rhh","Rhh","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0.2",NA,NA,NA,NA,NA,NA,NA,"GPL-3","3.0.0"
+"rlecuyer","rlecuyer","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.3-3",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"rmeta","rmeta","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.16",NA,"grid",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"robustbase","robustbase","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.9-7",NA,"R (>= 2.15.1), stats, graphics, methods","stats, graphics, utils",NA,"grid, MASS, lattice, boot, cluster, Matrix, MPV, xtable,
+ggplot2, RColorBrewer, reshape2, sfsmisc",NA,NA,"GPL (>= 2)","3.0.0"
+"ROCR","ROCR","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-4",NA,"gplots, methods",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"rpart","rpart","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","4.1-1","recommended","R (>= 2.14.0), graphics, stats, grDevices",NA,NA,"survival",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"Rsamtools","Rsamtools","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.11.26",NA,"methods, IRanges (>= 1.15.35), GenomicRanges (>= 1.11.38),
+Biostrings (>= 2.25.6)","methods, utils, IRanges, GenomicRanges, Biostrings, zlibbioc,
+bitops, BiocGenerics (>= 0.1.3)","Biostrings, IRanges","ShortRead (>= 1.13.19), GenomicFeatures,
+TxDb.Dmelanogaster.UCSC.dm3.ensGene, KEGG.db, pasillaBamSubset,
+RUnit",NA,NA,"Artistic-2.0 + file LICENSE","3.0.0"
+"RSQLite","RSQLite","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.11.2",NA,"R (>= 2.10.0), methods, DBI (>= 0.2-5)","methods, DBI (>= 0.2-3)",NA,"RUnit (>= 0.4.22)",NA,NA,"LGPL (>= 2)","3.0.0"
+"RSQLite.extfuns","RSQLite.extfuns","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.0.1",NA,"RSQLite (>= 0.9-1)",NA,"RSQLite",NA,NA,NA,"Artistic-2.0","3.0.0"
+"rtracklayer","rtracklayer","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.19.11",NA,"R (>= 2.10), methods, GenomicRanges (>= 1.11.12)","XML (>= 1.98-0), BiocGenerics (>= 0.1.0), IRanges (>=
+1.15.37), GenomicRanges, Biostrings (>= 2.25.6), BSgenome (>=
+1.23.1), zlibbioc, RCurl (>= 1.4-2), Rsamtools (>= 1.7.3)","IRanges","humanStemCell, microRNA (>= 1.1.1), genefilter, limma,
 org.Hs.eg.db, BSgenome.Hsapiens.UCSC.hg19,
-TxDb.Hsapiens.UCSC.hg19.knownGene, hgu133plus2.db, Rsamtools",NA,NA,"Artistic-2.0","2.14.0"
-"RUnit","RUnit","/usr/local/lib64/R/library","0.4.26",NA,"R (>= 2.5.0), utils (>= 2.5.0), methods (>= 2.5.0)",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"sampleSelection","sampleSelection","/usr/local/lib64/R/library","0.6-12",NA,"R (>= 2.10), maxLik (>= 0.7-3), systemfit (>= 1.0-0)","miscTools (>= 0.6-3)",NA,"VGAM, MASS, mvtnorm, plm",NA,NA,"GPL (>= 2)","2.14.0"
-"sandwich","sandwich","/usr/local/lib64/R/library","2.2-8",NA,"R (>= 2.0.0), stats, zoo","stats",NA,"car, lmtest, strucchange, AER, survival, MASS, scatterplot3d",NA,NA,"GPL-2","2.14.0"
-"scatterplot3d","scatterplot3d","/usr/local/lib64/R/library","0.3-33",NA,"R (>= 2.7.0)",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"sem","sem","/usr/local/lib64/R/library","2.1-1",NA,"R (>= 2.14.0), stats, MASS, matrixcalc",NA,NA,"boot, tcltk, polycor",NA,NA,"GPL (>= 2)","2.14.0"
-"sgeostat","sgeostat","/usr/local/lib64/R/library","1.0-23",NA,"stats, grDevices, graphics",NA,NA,NA,NA,NA,"file LICENSE","2.14.0"
-"shapes","shapes","/usr/local/lib64/R/library","1.1-3",NA,"scatterplot3d, rgl",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"ShortRead","ShortRead","/usr/local/lib64/R/library","1.12.3",NA,"methods, IRanges (>= 1.11.2), GenomicRanges, Biostrings (>=
-2.19.0), lattice, Rsamtools (>= 1.5.75), latticeExtra","IRanges, GenomicRanges, Biostrings, Biobase, hwriter,
-Rsamtools, zlibbioc, lattice","IRanges, Biostrings","biomaRt, RUnit, GenomicFeatures, yeastNagalakshmi","Rmpi, parallel",NA,"Artistic-2.0","2.14.0"
-"simpleaffy","simpleaffy","/usr/local/lib64/R/library","2.30.0",NA,"R (>= 2.0.0), affy, genefilter, Biobase, methods, utils, gcrma","affy, Biobase, gcrma, genefilter, graphics, grDevices,
-methods, stats, utils",NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"sm","sm","/usr/local/lib64/R/library","2.2-4.1",NA,"R (>= 2.7.0)",NA,NA,"rpanel, tkrplot, rgl, misc3d, akima, gam",NA,NA,"GPL-2","2.14.0"
-"sna","sna","/usr/local/lib64/R/library","2.2-0",NA,"R (>= 2.0.0), utils",NA,NA,"network, rgl, numDeriv, SparseM, statnet",NA,NA,"GPL (>= 2)","2.14.0"
-"snow","snow","/usr/local/lib64/R/library","0.3-8",NA,"R (>= 2.12.1), utils",NA,NA,"Rmpi,rpvm,rlecuyer,rsprng,nws",NA,NA,"GPL","2.14.0"
-"som","som","/usr/local/lib64/R/library","0.3-5",NA,"R (>= 1.9.0)",NA,NA,NA,NA,NA,"GPL (>= 3)","2.14.0"
-"sp","sp","/usr/local/lib64/R/library","0.9-91",NA,"R (>= 2.10.0), methods","utils, lattice, grid",NA,"lattice, RColorBrewer, rgdal, rgeos (>= 0.1-8)",NA,NA,"GPL (>= 2)","2.14.0"
-"spam","spam","/usr/local/lib64/R/library","0.27-0",NA,"R (>= 2.10), methods",NA,NA,"fields, SparseM (>= 0.72), Matrix",NA,NA,"GPL | file LICENSE","2.14.0"
-"SparseM","SparseM","/usr/local/lib64/R/library","0.91",NA,"R (>= 2.4.1), methods, stats, utils",NA,NA,NA,NA,NA,"file LICENSE","2.14.0"
-"spatial","spatial","/usr/local/lib64/R/library","7.3-3","recommended","R (>= 2.5.0), graphics, stats, utils",NA,NA,"MASS",NA,NA,"GPL-2 | GPL-3","2.14.0"
-"spatstat","spatstat","/usr/local/lib64/R/library","1.25-0",NA,"R (>= 2.14.0), stats, graphics, utils, mgcv, deldir (>=
-0.0-10)",NA,NA,"gpclib, sm, maptools, spatial, rpanel, tkrplot,
-scatterplot3d, RandomFields (>= 2.0)",NA,NA,"GPL (>= 2)","2.14.0"
-"splancs","splancs","/usr/local/lib64/R/library","2.01-29",NA,"R (>= 2.10.0), sp (>= 0.9)",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"splines","splines","/usr/local/lib64/R/library","2.14.0","base",NA,"graphics, stats",NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"sqldf","sqldf","/usr/local/lib64/R/library","0.4-5",NA,"R (>= 2.10.0), DBI (>= 0.2-5), RSQLite (>= 0.8-0),
-RSQLite.extfuns, gsubfn, proto, chron",NA,NA,"RH2, RMySQL, RpgSQL, svUnit, tcltk",NA,NA,"GPL-2","2.14.0"
-"SSOAP","SSOAP","/usr/local/lib64/R/library","0.8-0",NA,"R (>= 1.5.0), methods","XML, RCurl,  XMLSchema",NA,NA,NA,NA,"GPL2","2.14.0"
-"statmod","statmod","/usr/local/lib64/R/library","1.4.14",NA,"R (>= 1.6.1)",NA,NA,"MASS, tweedie",NA,NA,"LGPL (>= 2)","2.14.0"
-"statnet","statnet","/usr/local/lib64/R/library","2.6",NA,"R (>= 2.11), network (>= 1.6), ergm (>= 2.3), latentnet (>=
-2.4), degreenet (>= 1.1), sna (>= 2.2), abind, shapes, tools,
-utils",NA,NA,"relevent, networksis, hergm",NA,NA,"GPL-3 + file LICENSE","2.14.0"
-"stats","stats","/usr/local/lib64/R/library","2.14.0","base",NA,NA,NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"stats4","stats4","/usr/local/lib64/R/library","2.14.0","base","methods, graphics, stats",NA,NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"stringr","stringr","/usr/local/lib64/R/library","0.6",NA,"R (>= 2.14)","plyr",NA,"testthat (>= 0.3)",NA,NA,"GPL-2","2.14.0"
-"strucchange","strucchange","/usr/local/lib64/R/library","1.4-6",NA,"R (>= 2.10.0), graphics, stats, zoo, sandwich","graphics, stats",NA,"lmtest, car, dynlm, e1071, tseries, foreach",NA,NA,"GPL-2","2.14.0"
-"survey","survey","/usr/local/lib64/R/library","3.26-1",NA,"R (>= 2.10.0)",NA,NA,"survival, MASS, splines, KernSmooth, hexbin, mitools,
-lattice, RSQLite, RODBC, quantreg, Matrix, multicore,
-CompQuadForm","odfWeave.survey",NA,"GPL-2 | GPL-3","2.14.0"
-"survival","survival","/usr/local/lib64/R/library","2.36-10","recommended","stats, utils, graphics, splines, R (>= 2.13.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"systemfit","systemfit","/usr/local/lib64/R/library","1.1-10",NA,"R (>= 1.8.0), Matrix, car (>= 2.0-0), lmtest",NA,NA,"plm (>= 1.0-1), MASS, sem (>= 2.0-0)",NA,NA,"GPL (>= 2)","2.14.0"
-"tcltk","tcltk","/usr/local/lib64/R/library","2.14.0","base",NA,NA,NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"tcltk2","tcltk2","/usr/local/lib64/R/library","1.1-5",NA,"R (>= 2.8.0), tcltk",NA,NA,"utils",NA,NA,"file LICENSE","2.14.0"
-"TeachingDemos","TeachingDemos","/usr/local/lib64/R/library","2.7",NA,NA,NA,NA,"tkrplot, lattice, MASS, rgl, sgeostat, mapproj, tcltk,
-tcltk2, R2wd, EBImage, png","maptools, qcc",NA,"Artistic-2.0","2.14.0"
-"timeDate","timeDate","/usr/local/lib64/R/library","2131.00",NA,"R (>= 2.10.0), graphics, utils, stats, methods",NA,NA,"RUnit",NA,NA,"GPL (>= 2)","2.14.0"
-"timeSeries","timeSeries","/usr/local/lib64/R/library","2130.92",NA,"R (>= 2.6.0), graphics, grDevices, methods, stats, utils,
-timeDate (>= 2100.86)",NA,NA,"robustbase, RUnit",NA,NA,"GPL (>= 2)","2.14.0"
-"tis","tis","/usr/local/lib64/R/library","1.17",NA,"R (>= 2.3)",NA,NA,NA,"zoo, ggplot2",NA,"Unlimited","2.14.0"
-"tkrplot","tkrplot","/usr/local/lib64/R/library","0.0-23",NA,"R (>= 2.13), grDevices, tcltk",NA,NA,NA,NA,NA,"GPL","2.14.0"
-"tools","tools","/usr/local/lib64/R/library","2.14.0","base",NA,NA,NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"topGO","topGO","/usr/local/lib64/R/library","2.6.0",NA,"R (>= 2.10.0), methods, graph (>= 1.14.0), Biobase (>= 2.0.0),
+TxDb.Hsapiens.UCSC.hg19.knownGene, hgu133plus2.db",NA,NA,"Artistic-2.0","3.0.0"
+"RUnit","RUnit","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.4.26",NA,"R (>= 2.5.0), utils (>= 2.5.0), methods (>= 2.5.0)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"sampleSelection","sampleSelection","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.7-2",NA,"R (>= 2.10), maxLik (>= 0.7-3), systemfit (>= 1.0-0)","miscTools (>= 0.6-3)",NA,"VGAM, MASS, mvtnorm, plm",NA,NA,"GPL (>= 2)","3.0.0"
+"sandwich","sandwich","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.2-9",NA,"R (>= 2.0.0), stats, zoo","stats",NA,"car, lmtest, strucchange, AER, survival, MASS, scatterplot3d",NA,NA,"GPL-2","3.0.0"
+"scales","scales","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.2.3",NA,"R (>= 2.12), methods","RColorBrewer, stringr, dichromat, munsell (>= 0.2), plyr (>=
+1.2), labeling",NA,"testthat",NA,NA,"MIT","3.0.0"
+"scatterplot3d","scatterplot3d","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.3-33",NA,"R (>= 2.7.0)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"sem","sem","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.1-1",NA,"R (>= 2.14.0), stats, MASS, matrixcalc",NA,NA,"boot, tcltk, polycor, MBESS, mi",NA,NA,"GPL (>= 2)","3.0.0"
+"sgeostat","sgeostat","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-25",NA,"stats, grDevices, graphics, R (>= 2.0.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"ShortRead","ShortRead","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.17.10",NA,"methods, BiocGenerics (>= 0.1.0), IRanges (>= 1.17.18),
+GenomicRanges (>= 1.11.18), Biostrings (>= 2.25.6), lattice,
+Rsamtools (>= 1.7.42), latticeExtra","BiocGenerics, IRanges, GenomicRanges, Biostrings, Biobase,
+hwriter, Rsamtools, zlibbioc, lattice","IRanges, Biostrings","biomaRt, RUnit, GenomicFeatures, yeastNagalakshmi","Rmpi, parallel",NA,"Artistic-2.0","3.0.0"
+"sm","sm","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.2-4.1",NA,"R (>= 2.7.0)",NA,NA,"rpanel, tkrplot, rgl, misc3d, akima, gam",NA,NA,"GPL-2","3.0.0"
+"sna","sna","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.3-1",NA,"R (>= 2.0.0), utils",NA,NA,"network, rgl, numDeriv, SparseM",NA,NA,"GPL (>= 2)","3.0.0"
+"snow","snow","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.3-10",NA,"R (>= 2.12.1), utils",NA,NA,"Rmpi,rpvm,rlecuyer,rsprng,nws",NA,NA,"GPL","3.0.0"
+"som","som","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.3-5",NA,"R (>= 1.9.0)",NA,NA,NA,NA,NA,"GPL (>= 3)","3.0.0"
+"sp","sp","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-6",NA,"R (>= 2.14.0)","methods, graphics, utils, lattice, grid",NA,"lattice, RColorBrewer, rgdal (>= 0.7-21), rgeos (>= 0.1-8)",NA,NA,"GPL (>= 2)","3.0.0"
+"spam","spam","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.29-2",NA,"R (>= 2.11), methods",NA,NA,"fields, SparseM (>= 0.72), Matrix",NA,NA,"GPL | file LICENSE","3.0.0"
+"SparseM","SparseM","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.96",NA,"R (>= 2.4.1), methods, stats, utils",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"spatial","spatial","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","7.3-5","recommended","R (>= 2.5.0), graphics, stats, utils",NA,NA,"MASS",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"spatstat","spatstat","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.31-1",NA,"R (>= 2.14.0), stats, graphics, grDevices, utils, mgcv, deldir
+(>= 0.0-21)",NA,NA,"gpclib, sm, maptools, gsl, locfit, spatial, rpanel, tkrplot,
+scatterplot3d, RandomFields (>= 2.0)",NA,NA,"GPL (>= 2)","3.0.0"
+"splancs","splancs","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.01-32",NA,"R (>= 2.10.0), sp (>= 0.9)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"sqldf","sqldf","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.4-6.4",NA,"R (>= 2.14.0), DBI (>= 0.2-5), gsubfn (>= 0.6), proto, chron,
+RSQLite (>= 0.8-0), RSQLite.extfuns","RSQLite (>= 0.8-0), RSQLite.extfuns",NA,"RH2, RMySQL, RpgSQL, RPostgreSQL, svUnit, tcltk, MASS",NA,NA,"GPL-2","3.0.0"
+"SSOAP","SSOAP","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.8-0",NA,"R (>= 1.5.0), methods","XML, RCurl,  XMLSchema",NA,NA,NA,NA,"GPL2","3.0.0"
+"statmod","statmod","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.4.17",NA,"R (>= 1.6.1)",NA,NA,"MASS, tweedie",NA,NA,"GPL (>= 2)","3.0.0"
+"statnet","statnet","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.0-1",NA,"R (>= 2.13), network (>= 1.7-1), ergm (>= 3.0), sna (>= 2.2),
+networkDynamic (>= 0.2-2)",NA,NA,"relevent (>= 1.0), latentnet (>= 2.4-2), ergm.userterms (>=
+3.0-1)",NA,NA,"GPL-3 + file LICENSE","3.0.0"
+"stringr","stringr","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.6.2",NA,"R (>= 2.14)",NA,NA,"testthat (>= 0.3)",NA,NA,"GPL-2","3.0.0"
+"strucchange","strucchange","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.4-7",NA,"R (>= 2.10.0), graphics, stats, zoo, sandwich","graphics, stats",NA,"lmtest, car, dynlm, e1071, tseries, foreach",NA,NA,"GPL-2","3.0.0"
+"survey","survey","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.29-4",NA,"R (>= 2.10.0)",NA,NA,"foreign, survival, MASS, splines, KernSmooth, hexbin,
+mitools, lattice, RSQLite, RODBC, quantreg, Matrix, multicore,
+CompQuadForm","odfWeave.survey",NA,"GPL-2 | GPL-3","3.0.0"
+"survival","survival","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.37-4","recommended","stats, utils, graphics, splines, R (>= 2.13.0)",NA,NA,NA,NA,NA,"LGPL (>= 2)","3.0.0"
+"systemfit","systemfit","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.1-14",NA,"R (>= 1.8.0), Matrix, car (>= 2.0-0), lmtest","stats (>= 2.14.0), sandwich (>= 2.2-9)",NA,"plm (>= 1.0-1), MASS, sem (>= 2.0-0)",NA,NA,"GPL (>= 2)","3.0.0"
+"tcltk2","tcltk2","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.2-5",NA,"R (>= 2.8.0), tcltk",NA,NA,"utils",NA,NA,"LGPL-3 + file LICENSE","3.0.0"
+"TeachingDemos","TeachingDemos","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.9",NA,"R (>= 2.10)",NA,NA,"tkrplot, lattice, MASS, rgl, tcltk, tcltk2, R2wd, EBImage,
+png, ggplot2, logspline, maptools",NA,NA,"Artistic-2.0","3.0.0"
+"timeDate","timeDate","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2160.97",NA,"R (>= 2.10.0), graphics, utils, stats, methods",NA,NA,"date, RUnit",NA,NA,"GPL (>= 2)","3.0.0"
+"timeSeries","timeSeries","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3000.96",NA,"R (>= 2.10), graphics, grDevices, methods, stats, utils,
+timeDate (>= 2150.95)",NA,NA,"robustbase, RUnit",NA,NA,"GPL (>= 2)","3.0.0"
+"tis","tis","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.23",NA,"R (>= 2.3)",NA,NA,"reshape, scales","zoo, ggplot2, graphics",NA,"Unlimited","3.0.0"
+"tkrplot","tkrplot","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.0-23",NA,"R (>= 2.13), grDevices, tcltk",NA,NA,NA,NA,NA,"GPL","3.0.0"
+"topGO","topGO","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.11.0",NA,"R (>= 2.10.0), methods, graph (>= 1.14.0), Biobase (>= 2.0.0),
 GO.db (>= 2.3.0), AnnotationDbi (>= 1.7.19), SparseM (>= 0.73)","methods, graph, Biobase, SparseM, AnnotationDbi, lattice",NA,"ALL, hgu95av2.db, hgu133a.db, genefilter, xtable, multtest,
-Rgraphviz, globaltest",NA,NA,"LGPL","2.14.0"
-"tree","tree","/usr/local/lib64/R/library","1.0-29",NA,"R (>= 2.7.0), grDevices, graphics, stats",NA,NA,NA,NA,NA,"GPL-2 | GPL-3","2.14.0"
-"tripack","tripack","/usr/local/lib64/R/library","1.3-4",NA,NA,NA,NA,NA,NA,NA,"file LICENSE","2.14.0"
-"trust","trust","/usr/local/lib64/R/library","0.1-2",NA,"R (>= 2.4.1)",NA,NA,NA,NA,NA,"X11","2.14.0"
-"tseries","tseries","/usr/local/lib64/R/library","0.10-27",NA,"R (>= 2.10.0), quadprog, stats, zoo","graphics, stats, utils",NA,"its",NA,NA,"GPL-2","2.14.0"
-"urca","urca","/usr/local/lib64/R/library","1.2-6",NA,"R (>= 2.0.0), methods","nlme, graphics, stats",NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"utils","utils","/usr/local/lib64/R/library","2.14.0","base",NA,NA,NA,NA,NA,NA,"Part of R 2.14.0","2.14.0"
-"vcd","vcd","/usr/local/lib64/R/library","1.2-12",NA,"R (>= 2.4.0), MASS, grid, colorspace","stats, utils, MASS, grDevices",NA,"KernSmooth, mvtnorm, kernlab, HSAUR",NA,NA,"GPL-2","2.14.0"
-"vegan","vegan","/usr/local/lib64/R/library","2.0-2",NA,"permute","lattice",NA,"MASS, mgcv, lattice, cluster, scatterplot3d, rgl, tcltk",NA,NA,"GPL-2","2.14.0"
-"VennDiagram","VennDiagram","/usr/local/lib64/R/library","1.1.1",NA,"R (>= 2.13.1), grid (>= 2.13.1)",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"VGAM","VGAM","/usr/local/lib64/R/library","0.8-4",NA,"R (>= 2.11.1), splines, methods, stats, stats4",NA,NA,NA,NA,NA,"GPL-2","2.14.0"
-"vsn","vsn","/usr/local/lib64/R/library","3.22.0",NA,"Biobase (>= 2.5.5)","methods, affy (>= 1.23.4), limma, lattice",NA,"affydata, hgu95av2cdf",NA,NA,"Artistic-2.0","2.14.0"
-"weaver","weaver","/usr/local/lib64/R/library","1.20.0",NA,"R (>= 2.5.0), digest, tools, utils, codetools",NA,NA,"codetools",NA,NA,"GPL-2","2.14.0"
-"XML","XML","/usr/local/lib64/R/library","3.6-2",NA,"R (>= 1.2.0), methods, utils",NA,NA,"bitops",NA,NA,"BSD","2.14.0"
-"XMLSchema","XMLSchema","/usr/local/lib64/R/library","0.1-6",NA,"R (>= 1.5.0), methods, XML",NA,NA,"RCurl",NA,NA,"GPL2","2.14.0"
-"xtable","xtable","/usr/local/lib64/R/library","1.6-0",NA,"R (>= 2.10.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","2.14.0"
-"xts","xts","/usr/local/lib64/R/library","0.8-2",NA,"zoo (>= 1.7-2)",NA,"zoo (>= 1.7.2)","timeSeries,timeDate,tseries,its,chron,fts,tis",NA,NA,"GPL-2","2.14.0"
-"Zelig","Zelig","/usr/local/lib64/R/library","3.5.3",NA,"R (>= 2.10), MASS, boot, stats",NA,NA,"VGAM (>= 0.8-4), MCMCpack (>= 0.8-2), mvtnorm, survival,
-sandwich (>= 2.1-0), zoo (>= 1.5-0), coda, nnet, sna, gee,
-systemfit, mgcv, lme4, anchors (>= 2.0), survey, quantreg",NA,NA,"GPL (>= 2)","2.14.0"
-"zlibbioc","zlibbioc","/usr/local/lib64/R/library","1.0.0",NA,NA,NA,NA,NA,NA,NA,"Artistic-2.0 + file LICENSE","2.14.0"
-"zoo","zoo","/usr/local/lib64/R/library","1.7-6",NA,"R (>= 2.10.0), stats","stats, utils, graphics, grDevices, lattice (>= 0.18-1)",NA,"coda, chron, DAAG, fts, its, lattice, mondate, strucchange,
-timeDate, timeSeries, tis, tseries, xts",NA,NA,"GPL-2","2.14.0"
+Rgraphviz, globaltest",NA,NA,"LGPL","3.0.0"
+"tree","tree","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.0-33",NA,"R (>= 2.15.0), grDevices, graphics, stats",NA,NA,"MASS",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"tripack","tripack","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.3-5",NA,NA,NA,NA,NA,NA,NA,"file LICENSE","3.0.0"
+"trust","trust","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.1-2",NA,"R (>= 2.4.1)",NA,NA,NA,NA,NA,"X11","3.0.0"
+"tseries","tseries","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.10-30",NA,"R (>= 2.10.0)","graphics, stats, utils, quadprog, zoo",NA,"its",NA,NA,"GPL-2","3.0.0"
+"urca","urca","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.2-7",NA,"R (>= 2.0.0), methods","nlme, graphics, stats",NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"vcd","vcd","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.2-13",NA,"R (>= 2.4.0), MASS, grid, colorspace","stats, utils, MASS, grDevices",NA,"KernSmooth, mvtnorm, kernlab, HSAUR, coin",NA,NA,"GPL-2","3.0.0"
+"vegan","vegan","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","2.0-7",NA,"permute","lattice",NA,"MASS, mgcv, lattice, cluster, scatterplot3d, rgl, tcltk",NA,NA,"GPL-2","3.0.0"
+"VennDiagram","VennDiagram","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.5.1",NA,"R (>= 2.14.1), grid (>= 2.14.1)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"VGAM","VGAM","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.9-0",NA,"R (>= 2.14.0), splines, methods, stats, stats4","methods, stats, stats4",NA,"MASS",NA,NA,"GPL-2","3.0.0"
+"vsn","vsn","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.27.2",NA,"R (>= 2.10), Biobase (>= 2.5.5)","methods, affy (>= 1.23.4), limma, lattice",NA,"affydata, hgu95av2cdf",NA,NA,"Artistic-2.0","3.0.0"
+"weaver","weaver","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.25.0",NA,"R (>= 2.5.0), digest, tools, utils, codetools",NA,NA,"codetools",NA,NA,"GPL-2","3.0.0"
+"XML","XML","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","3.96-0.2",NA,"R (>= 1.2.0), methods, utils","methods",NA,"bitops, RCurl",NA,NA,"BSD","3.0.0"
+"XMLSchema","XMLSchema","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.7-2",NA,"R (>= 1.5.0), methods, XML","RCurl, codetools",NA,"RCurl",NA,NA,"GPL2","3.0.0"
+"xtable","xtable","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.7-1",NA,"R (>= 2.10.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"xts","xts","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","0.9-3",NA,"zoo (>= 1.7-2)",NA,"zoo (>= 1.7.2)","timeSeries,timeDate,tseries,its,chron,fts,tis",NA,NA,"GPL-2","3.0.0"
+"Zelig","Zelig","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","4.1-3",NA,"R (>= 2.14), boot, MASS, methods, sandwich",NA,NA,"Amelia, mvtnorm, Formula, gee, survey, survival, systemfit,
+MatchIt, MCMCpack, coda",NA,NA,"GPL (>= 2)","3.0.0"
+"zlibbioc","zlibbioc","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.5.0",NA,NA,NA,NA,NA,NA,NA,"Artistic-2.0 + file LICENSE","3.0.0"
+"zoo","zoo","/home/ele/R/x86_64-unknown-linux-gnu-library/3.0","1.7-9",NA,"R (>= 2.10.0), stats","stats, utils, graphics, grDevices, lattice (>= 0.18-1)",NA,"coda, chron, DAAG, fts, its, lattice, ggplot2, mondate,
+strucchange, timeDate, timeSeries, tis, tseries, xts",NA,NA,"GPL-2","3.0.0"
+"abind","abind","/usr/local/lib64/R/library","1.4-0",NA,"R (>= 1.5.0)",NA,NA,NA,NA,NA,"LGPL (>= 2)","3.0.0"
+"AER","AER","/usr/local/lib64/R/library","1.1-9",NA,"R (>= 2.10.0), stats, car (>= 2.0-1), Formula (>= 0.2-0),
+lmtest, sandwich, strucchange, survival, zoo","stats",NA,"boot, dynlm, effects, foreign, ineq, KernSmooth, lattice,
+MASS, mlogit, nlme, nnet, np, plm, pscl, quantreg, ROCR,
+sampleSelection, scatterplot3d, systemfit, rgl, truncreg,
+tseries, urca",NA,NA,"GPL-2","3.0.0"
+"affy","affy","/usr/local/lib64/R/library","1.37.3",NA,"R (>= 2.8.0), BiocGenerics (>= 0.1.12), Biobase (>= 2.5.5)","BiocGenerics, Biobase, affyio (>= 1.13.3), BiocInstaller,
+graphics, grDevices, methods, preprocessCore, stats, utils,
+zlibbioc","preprocessCore","tkWidgets (>= 1.19.0), affydata, widgetTools",NA,NA,"LGPL (>= 2.0)","3.0.0"
+"affydata","affydata","/usr/local/lib64/R/library","1.11.17",NA,"R (>= 2.4.0), affy (>= 1.23.4)","methods",NA,"hgu95av2cdf, hgu133acdf",NA,NA,"GPL (>= 2)","3.0.0"
+"affyio","affyio","/usr/local/lib64/R/library","1.27.1",NA,"R (>= 2.6.0), methods","zlibbioc",NA,NA,NA,NA,"LGPL (>= 2)","3.0.0"
+"affyPLM","affyPLM","/usr/local/lib64/R/library","1.35.0",NA,"R (>= 2.6.0), BiocGenerics (>= 0.3.2), affy (>= 1.11.0),
+Biobase (>= 2.17.8), gcrma, stats, preprocessCore (>= 1.5.1)","BiocGenerics, zlibbioc, graphics, grDevices, methods","preprocessCore","affydata, MASS",NA,NA,"GPL (>= 2)","3.0.0"
+"akima","akima","/usr/local/lib64/R/library","0.5-9",NA,"R (>= 2.0.0)",NA,NA,NA,NA,NA,"file LICENSE","3.0.0"
+"ALL","ALL","/usr/local/lib64/R/library","1.4.13",NA,"R (>= 2.10), Biobase (>= 2.5.5)",NA,NA,"rpart",NA,NA,"Artistic-2.0","3.0.0"
+"anchors","anchors","/usr/local/lib64/R/library","3.0-7",NA,"R (>= 2.4.0), rgenoud, MASS",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"annaffy","annaffy","/usr/local/lib64/R/library","1.31.0",NA,"R (>= 2.5.0), methods, Biobase, GO.db, KEGG.db","AnnotationDbi (>= 0.1.15)",NA,"hgu95av2.db, multtest, tcltk",NA,NA,"LGPL","3.0.0"
+"annotate","annotate","/usr/local/lib64/R/library","1.37.3",NA,"R (>= 2.10), AnnotationDbi (>= 0.1.15)","Biobase, AnnotationDbi, DBI, xtable, graphics, utils, stats,
+methods, XML (>= 0.92-2), BiocGenerics (>= 0.1.13)",NA,"Biobase, hgu95av2.db, genefilter, Biostrings (>= 2.25.10),
+rae230a.db, rae230aprobe, tkWidgets, GO.db, org.Hs.eg.db, XML
+(>= 0.92-2), org.Mm.eg.db, hom.Hs.inp.db, humanCHRLOC,
+Rgraphviz, RUnit,",NA,NA,"Artistic-2.0","3.0.0"
+"AnnotationDbi","AnnotationDbi","/usr/local/lib64/R/library","1.21.10",NA,"R (>= 2.7.0), methods, utils, BiocGenerics (>= 0.5.4), Biobase
+(>= 1.17.0)","methods, utils, DBI, RSQLite, BiocGenerics, Biobase, IRanges",NA,"DBI (>= 0.2-4), RSQLite (>= 0.6-4), hgu95av2.db, GO.db,
+org.Sc.sgd.db, org.At.tair.db, KEGG.db, RUnit,
+TxDb.Hsapiens.UCSC.hg19.knownGene, hom.Hs.inp.db, org.Hs.eg.db,
+seqnames.db, reactome.db, AnnotationForge, graph",NA,NA,"Artistic-2.0","3.0.0"
+"AnnotationForge","AnnotationForge","/usr/local/lib64/R/library","1.1.9",NA,"R (>= 2.7.0), methods, utils, BiocGenerics (>= 0.1.13),
+Biobase (>= 1.17.0), AnnotationDbi (>= 1.19.15), org.Hs.eg.db","methods, utils, DBI, RSQLite, BiocGenerics, Biobase",NA,"DBI (>= 0.2-4), RSQLite (>= 0.6-4), XML, RCurl, hgu95av2.db,
+human.db0, affy, Homo.sapiens, hom.Hs.inp.db, GO.db",NA,NA,"Artistic-2.0","3.0.0"
+"ape","ape","/usr/local/lib64/R/library","3.0-7",NA,"R (>= 2.6.0)","gee, nlme, lattice",NA,"gee",NA,NA,"GPL (>= 2)","3.0.0"
+"base","base","/usr/local/lib64/R/library","3.0.0","base",NA,NA,NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"baySeq","baySeq","/usr/local/lib64/R/library","1.13.2",NA,"R (>= 2.3.0), methods",NA,NA,"snow, edgeR",NA,NA,"GPL-3","3.0.0"
+"bdsmatrix","bdsmatrix","/usr/local/lib64/R/library","1.3",NA,"methods, R (>= 2.0.0)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"BiasedUrn","BiasedUrn","/usr/local/lib64/R/library","1.05",NA,NA,NA,NA,NA,NA,NA,"GPL","3.0.0"
+"biglm","biglm","/usr/local/lib64/R/library","0.8",NA,"DBI, methods",NA,NA,"RSQLite, RODBC","leaps",NA,"GPL","3.0.0"
+"Biobase","Biobase","/usr/local/lib64/R/library","2.19.2",NA,"R (>= 2.10), BiocGenerics (>= 0.3.2), utils","methods, BiocGenerics",NA,"tools, tkWidgets, ALL",NA,NA,"Artistic-2.0","3.0.0"
+"BiocGenerics","BiocGenerics","/usr/local/lib64/R/library","0.5.6",NA,"methods, graphics, stats, parallel","methods, graphics, stats, parallel",NA,"Biobase, IRanges, GenomicRanges, AnnotationDbi, oligoClasses,
+oligo, affyPLM, flowClust, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"BiocInstaller","BiocInstaller","/usr/local/lib64/R/library","1.9.6",NA,"R (>= 2.16.0)",NA,NA,"RUnit, BiocGenerics",NA,NA,"Artistic-2.0","3.0.0"
+"biomaRt","biomaRt","/usr/local/lib64/R/library","2.15.0",NA,"methods","utils, XML, RCurl",NA,"annotate",NA,NA,"Artistic-2.0","3.0.0"
+"Biostrings","Biostrings","/usr/local/lib64/R/library","2.27.11",NA,"R (>= 2.8.0), methods, BiocGenerics (>= 0.5.4), IRanges (>=
+1.17.10)","graphics, methods, stats, utils, BiocGenerics, IRanges","IRanges","BSgenome (>= 1.13.14), BSgenome.Celegans.UCSC.ce2 (>=
+1.3.11), BSgenome.Dmelanogaster.UCSC.dm3 (>= 1.3.11),
+BSgenome.Hsapiens.UCSC.hg18, drosophila2probe, hgu95av2probe,
+hgu133aprobe, GenomicFeatures (>= 1.3.14), hgu95av2cdf, affy,
+affydata (>= 1.11.5), RUnit","Rmpi",NA,"Artistic-2.0","3.0.0"
+"bitops","bitops","/usr/local/lib64/R/library","1.0-5",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"boot","boot","/usr/local/lib64/R/library","1.3-7","recommended","R (>= 2.14.0), graphics, stats",NA,NA,"MASS, survival",NA,NA,"Unlimited","3.0.0"
+"BSgenome","BSgenome","/usr/local/lib64/R/library","1.27.1",NA,"R (>= 2.8.0), methods, BiocGenerics (>= 0.1.2), IRanges (>=
+1.13.6), GenomicRanges (>= 1.7.5), Biostrings (>= 2.23.3)",NA,NA,"RUnit, BSgenome.Celegans.UCSC.ce2 (>= 1.3.11),
+BSgenome.Hsapiens.UCSC.hg19 (>= 1.3.11),
+SNPlocs.Hsapiens.dbSNP.20100427, hgu95av2probe, Biobase",NA,NA,"Artistic-2.0","3.0.0"
+"car","car","/usr/local/lib64/R/library","2.0-16",NA,"R (>= 2.14.0), stats, graphics, MASS, nnet",NA,NA,"alr3, boot, leaps, lme4, lmtest, nlme, quantreg, sandwich,
+mgcv, pbkrtest (>= 0.3-2), rgl, survival, survey",NA,NA,"GPL (>= 2)","3.0.0"
+"caTools","caTools","/usr/local/lib64/R/library","1.14",NA,"R (>= 2.2.0)","bitops",NA,"MASS, rpart",NA,NA,"GPL-3","3.0.0"
+"CHNOSZ","CHNOSZ","/usr/local/lib64/R/library","0.9-9",NA,"R (>= 2.12.0), utils",NA,NA,"testthat, parallel, limSolve",NA,NA,"GPL (>= 2)","3.0.0"
+"chron","chron","/usr/local/lib64/R/library","2.3-43",NA,"R (>= 2.12.0)","graphics, stats",NA,"scales, ggplot2","zoo",NA,"GPL-2","3.0.0"
+"class","class","/usr/local/lib64/R/library","7.3-5","recommended","R (>= 2.5.0), stats, utils","MASS",NA,NA,NA,NA,"GPL-2 | GPL-3","3.0.0"
+"cluster","cluster","/usr/local/lib64/R/library","1.14.3","recommended","R (>= 2.10.0), stats, graphics, utils",NA,NA,"MASS",NA,NA,"GPL (>= 2)","3.0.0"
+"coda","coda","/usr/local/lib64/R/library","0.16-1",NA,"R (>= 2.14.0), lattice",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"codetools","codetools","/usr/local/lib64/R/library","0.2-8","recommended","R (>= 2.1)",NA,NA,NA,NA,NA,"GPL","3.0.0"
+"coin","coin","/usr/local/lib64/R/library","1.0-21",NA,"R (>= 2.2.0), methods, survival, mvtnorm (>= 0.8-0),
+modeltools (>= 0.2-9)",NA,NA,"multcomp, xtable, e1071, vcd","Biobase",NA,"GPL-2","3.0.0"
+"colorspace","colorspace","/usr/local/lib64/R/library","1.2-1",NA,"R (>= 2.10.0), methods",NA,NA,"KernSmooth, MASS, kernlab, mvtnorm, vcd, tcltk, dichromat",NA,NA,"BSD","3.0.0"
+"compiler","compiler","/usr/local/lib64/R/library","3.0.0","base",NA,NA,NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"convert","convert","/usr/local/lib64/R/library","1.35.0",NA,"R (>= 2.6.0), Biobase (>= 1.15.33), limma (>= 1.7.0), marray,
+utils, methods",NA,NA,NA,NA,NA,"LGPL","3.0.0"
+"corpcor","corpcor","/usr/local/lib64/R/library","1.6.4",NA,"R (>= 2.10.0)",NA,NA,"",NA,NA,"GPL (>= 3)","3.0.0"
+"cubature","cubature","/usr/local/lib64/R/library","1.1-2",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"DAAG","DAAG","/usr/local/lib64/R/library","1.15",NA,"R (>= 2.10.0), MASS, lattice, latticeExtra, rpart,
+randomForest, boot, survival",NA,NA,"leaps, oz, lme4, quantreg",NA,NA,"Unlimited","3.0.0"
+"datasets","datasets","/usr/local/lib64/R/library","3.0.0","base",NA,NA,NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"DBI","DBI","/usr/local/lib64/R/library","0.2-5",NA,"R (>= 2.3.0), methods","methods",NA,NA,NA,NA,"LGPL (>= 2)","3.0.0"
+"deldir","deldir","/usr/local/lib64/R/library","0.0-21",NA,"R (>= 0.99)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"dichromat","dichromat","/usr/local/lib64/R/library","2.0-0",NA,"R (>= 2.10), stats",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"digest","digest","/usr/local/lib64/R/library","0.6.3",NA,"R (>= 2.4.1)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"DynDoc","DynDoc","/usr/local/lib64/R/library","1.37.0",NA,"methods, utils","methods",NA,NA,NA,NA,"Artistic-2.0","3.0.0"
+"dynlm","dynlm","/usr/local/lib64/R/library","0.3-1",NA,"R (>= 2.0.0), stats, zoo, lmtest, car (>= 2.0-0)","stats, strucchange",NA,"datasets, sandwich, strucchange, TSA",NA,NA,"GPL-2","3.0.0"
+"e1071","e1071","/usr/local/lib64/R/library","1.6-1",NA,"class","graphics, stats, grDevices, utils",NA,"cluster, mlbench, nnet, randomForest, rpart, SparseM, xtable,
+Matrix, MASS",NA,NA,"GPL-2","3.0.0"
+"Ecdat","Ecdat","/usr/local/lib64/R/library","0.2-1",NA,"R (>= 2.10)",NA,NA,"car, systemfit, sem, lmtest, sandwich, gdata",NA,NA,"GPL (>= 2)","3.0.0"
+"edgeR","edgeR","/usr/local/lib64/R/library","3.1.4",NA,"R (>= 2.15.0), methods, limma",NA,NA,"MASS, statmod, splines, locfit, KernSmooth",NA,NA,"GPL (>=2)","3.0.0"
+"ellipse","ellipse","/usr/local/lib64/R/library","0.3-7",NA,"R (>= 2.0.0),graphics,stats",NA,NA,"MASS",NA,NA,"GPL (>= 2)","3.0.0"
+"ergm","ergm","/usr/local/lib64/R/library","3.0-3",NA,"network, robustbase, Matrix, trust, nlme, coda",NA,NA,"lattice, latticeExtra, sna, Rglpk, snow, networkDynamic,
+Rmpi, rlecuyer",NA,NA,"GPL-3 + file LICENSE","3.0.0"
+"fame","fame","/usr/local/lib64/R/library","2.18",NA,"R (>= 2.3), tis",NA,NA,NA,NA,NA,"Unlimited","3.0.0"
+"fdrtool","fdrtool","/usr/local/lib64/R/library","1.2.10",NA,"R (>= 2.10.0)",NA,NA,"",NA,NA,"GPL (>= 3)","3.0.0"
+"fields","fields","/usr/local/lib64/R/library","6.7",NA,"R (>= 2.13), methods, spam",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"flexmix","flexmix","/usr/local/lib64/R/library","2.3-10",NA,"R (>= 2.15.0), lattice","grid, methods, modeltools (>= 0.2-16), stats, stats4",NA,"MASS, codetools, diptest, ellipse, gclus, lme4, mgcv (>=
+1.6-1), mlbench, mlogit, multcomp, mvtnorm, nnet, survival",NA,NA,"GPL (>= 2)","3.0.0"
+"foreign","foreign","/usr/local/lib64/R/library","0.8-52","recommended","R (>= 2.14.0), stats","methods, utils",NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"Formula","Formula","/usr/local/lib64/R/library","1.1-0",NA,"R (>= 2.0.0), stats",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"fts","fts","/usr/local/lib64/R/library","0.7.7",NA,"utils, stats",NA,NA,NA,NA,NA,"GPL-3","3.0.0"
+"gam","gam","/usr/local/lib64/R/library","1.06.2",NA,"stats, splines",NA,NA,"akima",NA,NA,"GPL-2","3.0.0"
+"gcrma","gcrma","/usr/local/lib64/R/library","2.31.2",NA,"R (>= 2.6.0), affy (>= 1.23.2), graphics, methods, stats,
+utils","Biobase, affy (>= 1.23.2), affyio (>= 1.13.3), IRanges,
+Biostrings (>= 2.11.32), splines, BiocInstaller",NA,"affydata, tools, splines, hgu95av2cdf, hgu95av2probe",NA,NA,"LGPL","3.0.0"
+"gdata","gdata","/usr/local/lib64/R/library","2.12.0",NA,"R (>= 2.13.0)","gtools",NA,NA,NA,NA,"GPL-2","3.0.0"
+"gee","gee","/usr/local/lib64/R/library","4.13-18",NA,"stats",NA,NA,"MASS",NA,NA,"GPL-2","3.0.0"
+"gene2pathway","gene2pathway","/usr/local/lib64/R/library","2.13.0",NA,"R (>= 2.10.0), kernlab (>= 0.9), biomaRt (>= 1.12.1), KEGGSOAP
+(>= 1.12.0), RBGL, AnnotationDbi,org.Dm.eg.db, keggorthology
+(>= 2.0)","SSOAP, RCurl",NA,NA,"doMC",NA,"GPL (>= 2)","3.0.0"
+"GeneCycle","GeneCycle","/usr/local/lib64/R/library","1.1.2",NA,"R (>= 2.7.0), MASS, longitudinal (>= 1.1.3), fdrtool (>=
+1.2.5)",NA,NA,"",NA,NA,"GPL (>= 3)","3.0.0"
+"GeneF","GeneF","/usr/local/lib64/R/library","1.0",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"GeneNet","GeneNet","/usr/local/lib64/R/library","1.2.5",NA,"R (>= 2.10.0), corpcor (>= 1.6.2), longitudinal (>= 1.1.7),
+fdrtool (>= 1.2.8)",NA,NA,"graph (>= 1.4.0), Rgraphviz (>= 1.4.0)",NA,NA,"GPL (>= 3)","3.0.0"
+"GenomeGraphs","GenomeGraphs","/usr/local/lib64/R/library","1.19.0",NA,"R (>= 2.10), methods, biomaRt, grid",NA,NA,NA,NA,NA,"Artistic-2.0","3.0.0"
+"GenomicRanges","GenomicRanges","/usr/local/lib64/R/library","1.11.30",NA,"R (>= 2.10), methods, BiocGenerics (>= 0.5.4), IRanges (>=
+1.17.33)","methods, utils, BiocGenerics, IRanges","IRanges","AnnotationDbi (>= 1.21.1), Biostrings (>= 2.25.3), Rsamtools
+(>= 1.9.21), BSgenome, rtracklayer, GenomicFeatures,
+VariantAnnotation, edgeR, DESeq, DEXSeq, EatonEtAlChIPseq (>=
+0.0.3), leeBamViews, pasilla, pasillaBamSubset, org.Sc.sgd.db,
+TxDb.Dmelanogaster.UCSC.dm3.ensGene, seqnames.db,
+BSgenome.Scerevisiae.UCSC.sacCer2,
+BSgenome.Dmelanogaster.UCSC.dm3, RUnit, digest",NA,NA,"Artistic-2.0","3.0.0"
+"geoR","geoR","/usr/local/lib64/R/library","1.7-4",NA,"R (>= 2.10), stats, sp, methods, MASS","splancs, RandomFields",NA,"scatterplot3d, geoRglm, lattice, graphics, tcltk",NA,NA,"GPL (>= 2)","3.0.0"
+"ggplot2","ggplot2","/usr/local/lib64/R/library","0.9.3",NA,"R (>= 2.14), stats, methods","plyr (>= 1.7.1), digest, grid, gtable (>= 0.1.1), reshape2,
+scales (>= 0.2.3), proto, MASS",NA,"quantreg, Hmisc, mapproj, maps, hexbin, maptools, multcomp,
+nlme, testthat","sp",NA,"GPL-2","3.0.0"
+"glmnet","glmnet","/usr/local/lib64/R/library","1.9-1",NA,"Matrix (>= 1.0-6), utils",NA,NA,"survival",NA,NA,"GPL-2","3.0.0"
+"GO.db","GO.db","/usr/local/lib64/R/library","2.8.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.19.35)","methods, AnnotationDbi",NA,NA,NA,NA,"Artistic-2.0","3.0.0"
+"goTools","goTools","/usr/local/lib64/R/library","1.33.0",NA,"GO.db","AnnotationDbi, GO.db, graphics, grDevices",NA,"hgu133a.db",NA,NA,"GPL-2","3.0.0"
+"gpclib","gpclib","/usr/local/lib64/R/library","1.5-3",NA,"R (>= 2.14.0), methods","graphics",NA,NA,NA,NA,"file LICENSE","3.0.0"
+"gplots","gplots","/usr/local/lib64/R/library","2.11.0",NA,"R (>= 2.10), gtools, gdata, stats, caTools, grid, KernSmooth,
+MASS, datasets",NA,NA,"gtools",NA,NA,"GPL-2","3.0.0"
+"graph","graph","/usr/local/lib64/R/library","1.37.6",NA,"R (>= 2.10), methods","methods, stats, stats4, tools, utils, BiocGenerics (>= 0.1.11)",NA,"SparseM (>= 0.36), XML, RBGL, RUnit, cluster","Rgraphviz",NA,"Artistic-2.0","3.0.0"
+"graphics","graphics","/usr/local/lib64/R/library","3.0.0","base",NA,"grDevices",NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"grDevices","grDevices","/usr/local/lib64/R/library","3.0.0","base",NA,NA,NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"grid","grid","/usr/local/lib64/R/library","3.0.0","base",NA,"grDevices",NA,"lattice",NA,NA,"Part of R 3.0.0","3.0.0"
+"GSA","GSA","/usr/local/lib64/R/library","1.03",NA,NA,NA,NA,"impute",NA,NA,"LGPL","3.0.0"
+"GSEABase","GSEABase","/usr/local/lib64/R/library","1.21.4",NA,"R (>= 2.6.0), BiocGenerics (>= 0.3.2), Biobase (>= 2.17.8),
+annotate, methods, graph (>= 1.37.2)","BiocGenerics, annotate, AnnotationDbi, Biobase, graph,
+methods, XML",NA,"hgu95av2.db, GO.db, org.Hs.eg.db, Rgraphviz",NA,NA,"Artistic-2.0","3.0.0"
+"gsubfn","gsubfn","/usr/local/lib64/R/library","0.6-5",NA,"R (>= 2.15.0), proto",NA,NA,"boot, chron, doBy, grid, lattice, quantreg, reshape, svUnit,
+tcltk, zoo",NA,NA,"GPL (>= 2)","3.0.0"
+"gtable","gtable","/usr/local/lib64/R/library","0.1.2",NA,"R (>= 2.14), grid",NA,NA,"testthat, plyr",NA,NA,"GPL-2","3.0.0"
+"gtools","gtools","/usr/local/lib64/R/library","2.7.0",NA,NA,NA,NA,NA,NA,NA,"LGPL-2.1","3.0.0"
+"Heatplus","Heatplus","/usr/local/lib64/R/library","2.5.0",NA,NA,"graphics, grDevices, stats",NA,"Biobase, hgu95av2.db, limma",NA,NA,"GPL (>= 2)","3.0.0"
+"hexbin","hexbin","/usr/local/lib64/R/library","1.26.1",NA,"R (>= 2.0.1), methods, grid, lattice","methods, grid, lattice, graphics, grDevices, stats, utils",NA,"marray, affy, Biobase",NA,NA,"GPL-2","3.0.0"
+"hgu95av2.db","hgu95av2.db","/usr/local/lib64/R/library","2.8.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.19.35),
+org.Hs.eg.db (>= 2.8.0)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"Hmisc","Hmisc","/usr/local/lib64/R/library","3.10-1",NA,"R (>= 2.4.0), methods, survival","lattice, cluster, survival",NA,"lattice, grid, nnet, foreign, chron, acepack, TeachingDemos,
+rms, cluster, mice, subselect, tree",NA,NA,"GPL (>= 2)","3.0.0"
+"HSAUR","HSAUR","/usr/local/lib64/R/library","1.3-0",NA,"R (>= 2.2.0), lattice, MASS, scatterplot3d (>= 0.3-23)",NA,NA,"ape (>= 1.6), coin (>= 0.3-3), flexmix (>= 1.1-0), gee (>=
+4.13-10), ipred (>= 0.8-3), lme4 (>= 0.98-1), mclust (>=
+3.0-0), party (>= 0.2-8), randomForest (>= 4.5-12), rmeta (>=
+2.12), vcd (>= 0.9-3), survival, KernSmooth, rpart, mvtnorm,
+Matrix, boot",NA,NA,"GPL","3.0.0"
+"hwriter","hwriter","/usr/local/lib64/R/library","1.3",NA,"R (>= 2.6.0)",NA,NA,NA,NA,NA,"LGPL-2.1","3.0.0"
+"igraph","igraph","/usr/local/lib64/R/library","0.6.5",NA,"stats","Matrix",NA,"igraphdata, stats4, rgl, tcltk, graph, Matrix, ape, XML,
+jpeg, png",NA,NA,"GPL (>= 2)","3.0.0"
+"igraph0","igraph0","/usr/local/lib64/R/library","0.5.6-2",NA,"stats",NA,NA,"stats4, rgl, tcltk, RSQLite, digest, graph, Matrix",NA,NA,"GPL (>= 2)","3.0.0"
+"ineq","ineq","/usr/local/lib64/R/library","0.2-10",NA,"R (>= 2.10.0), stats, graphics, grDevices","stats, graphics, grDevices",NA,NA,NA,NA,"GPL-2","3.0.0"
+"ipred","ipred","/usr/local/lib64/R/library","0.9-1",NA,"R (>= 2.10), rpart (>= 3.1-8), MASS, survival, nnet, class,
+prodlim",NA,NA,"mvtnorm, mlbench",NA,NA,"GPL (>= 2)","3.0.0"
+"IRanges","IRanges","/usr/local/lib64/R/library","1.17.35",NA,"R (>= 2.8.0), methods, utils, stats, BiocGenerics (>= 0.5.6)","methods, utils, stats, BiocGenerics, stats4",NA,"GenomicRanges, RUnit, BSgenome.Celegans.UCSC.ce2",NA,NA,"Artistic-2.0","3.0.0"
+"iterators","iterators","/usr/local/lib64/R/library","1.0.6",NA,"R (>= 2.5.0), utils",NA,NA,"foreach, RUnit",NA,NA,"Apache License (== 2.0)","3.0.0"
+"itertools","itertools","/usr/local/lib64/R/library","0.1-1",NA,"R (>= 2.5.0), iterators(>= 1.0.0)",NA,NA,"foreach","foreach, iterators",NA,"GPL-2","3.0.0"
+"its","its","/usr/local/lib64/R/library","1.1.8",NA,"R (>= 2.0.0), methods, stats, Hmisc",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"KEGG.db","KEGG.db","/usr/local/lib64/R/library","2.8.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.19.35)","methods, AnnotationDbi",NA,NA,NA,NA,"file LICENSE","3.0.0"
+"keggorthology","keggorthology","/usr/local/lib64/R/library","2.11.0",NA,"R (>= 2.5.0),stats,graph,hgu95av2.db","AnnotationDbi,graph,DBI, graph, grDevices, methods, stats,
+tools, utils",NA,"RBGL,ALL",NA,NA,"Artistic-2.0","3.0.0"
+"KEGGSOAP","KEGGSOAP","/usr/local/lib64/R/library","1.33.1",NA,"methods, BiocGenerics","XML, RCurl, SSOAP (>= 0.2-2), XMLSchema",NA,"RUnit",NA,NA,"BSD","3.0.0"
+"kernlab","kernlab","/usr/local/lib64/R/library","0.9-16",NA,"R (>= 2.10), methods",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"KernSmooth","KernSmooth","/usr/local/lib64/R/library","2.23-8","recommended","R (>= 2.5.0), stats",NA,NA,"MASS",NA,NA,"Unlimited","3.0.0"
+"labeling","labeling","/usr/local/lib64/R/library","0.1",NA,NA,NA,NA,NA,NA,NA,"Unlimited","3.0.0"
+"lattice","lattice","/usr/local/lib64/R/library","0.20-13","recommended","R (>= 2.15.1)","grid, grDevices, graphics, stats, utils",NA,"grid, KernSmooth, MASS","chron",NA,"GPL (>= 2)","3.0.0"
+"latticeExtra","latticeExtra","/usr/local/lib64/R/library","0.6-24",NA,"R (>= 2.10.0), RColorBrewer, lattice","lattice (>= 0.18-1), grid",NA,"maps, mapproj, deldir, tripack, quantreg, zoo, MASS, mgcv",NA,NA,"GPL (>= 2)","3.0.0"
+"leaps","leaps","/usr/local/lib64/R/library","2.9",NA,"",NA,NA,"biglm",NA,NA,"GPL (>= 2)","3.0.0"
+"limma","limma","/usr/local/lib64/R/library","3.15.14",NA,"R (>= 2.3.0), methods",NA,NA,"affy, MASS, org.Hs.eg.db, splines, statmod (>= 1.2.2), vsn,
+ellipse",NA,NA,"GPL (>=2)","3.0.0"
+"lme4","lme4","/usr/local/lib64/R/library","0.999999-0",NA,"methods, R(>= 2.11.1), Matrix(>= 1.0-1), lattice","graphics, nlme, stats4, stats","Matrix, stats","mlmRev, MEMSS, coda, MASS, sfsmisc, MatrixModels",NA,NA,"GPL (>= 2)","3.0.0"
+"lmtest","lmtest","/usr/local/lib64/R/library","0.9-30",NA,"R (>= 2.10.0), stats, zoo","stats, graphics",NA,"car, strucchange, sandwich, dynlm, stats4, survival, AER",NA,NA,"GPL-2","3.0.0"
+"locfit","locfit","/usr/local/lib64/R/library","1.5-8",NA,"R (>= 2.0.1)","akima, lattice",NA,"gam",NA,NA,"GPL (>= 2)","3.0.0"
+"logspline","logspline","/usr/local/lib64/R/library","2.1.4",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"longitudinal","longitudinal","/usr/local/lib64/R/library","1.1.7",NA,"R (>= 2.10.0), corpcor (>= 1.6.2)",NA,NA,"",NA,NA,"GPL (>= 3)","3.0.0"
+"mapproj","mapproj","/usr/local/lib64/R/library","1.2-0",NA,"maps (>= 2.3-0)",NA,NA,NA,NA,NA,"file LICENSE","3.0.0"
+"maps","maps","/usr/local/lib64/R/library","2.3-0",NA,"R (>= 2.10.0)",NA,NA,"mapproj (>= 1.2-0)",NA,NA,"GPL-2","3.0.0"
+"maptools","maptools","/usr/local/lib64/R/library","0.8-23",NA,"R (>= 2.10), foreign (>= 0.8), sp (>= 0.9-47), methods, grid,
+lattice, stats",NA,NA,"rgeos (>= 0.1-8), spatstat (>= 1.18), PBSmapping,
+RColorBrewer","maps, gpclib, RArcInfo",NA,"GPL (>= 2)","3.0.0"
+"marray","marray","/usr/local/lib64/R/library","1.37.0",NA,"R (>= 2.10.0), limma, methods",NA,NA,"tkWidgets",NA,NA,"LGPL","3.0.0"
+"MASS","MASS","/usr/local/lib64/R/library","7.3-23","recommended","R (>= 2.14.0), grDevices, graphics, stats, utils",NA,NA,"lattice, nlme, nnet, survival",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"Matrix","Matrix","/usr/local/lib64/R/library","1.0-11","recommended","R (>= 2.15.0), stats, methods, utils, lattice","graphics, grid",NA,"expm, MASS","MatrixModels, graph, SparseM, sfsmisc",NA,"GPL (>= 2)","3.0.0"
+"matrixcalc","matrixcalc","/usr/local/lib64/R/library","1.0-3",NA,"R (>= 2.0.1)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"maxLik","maxLik","/usr/local/lib64/R/library","1.1-2",NA,"R (>= 2.4.0), miscTools (>= 0.6-8)","sandwich",NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"mboost","mboost","/usr/local/lib64/R/library","2.2-2",NA,"R (>= 2.14.0), methods, stats, parallel","Matrix, survival, splines, lattice",NA,"party (>= 1.0-3), ipred, MASS, fields, BayesX, gbm, mlbench,
+RColorBrewer, rpart (>= 4.0-3)",NA,NA,"GPL-2","3.0.0"
+"mclust","mclust","/usr/local/lib64/R/library","4.0",NA,"R (>= 2.13), stats, utils",NA,NA,"mix",NA,NA,"GPL (>= 2)","3.0.0"
+"MCMCpack","MCMCpack","/usr/local/lib64/R/library","1.2-4",NA,"R (>= 2.10.0), coda (>= 0.11-3), MASS, stats",NA,NA,NA,NA,NA,"GPL-3","3.0.0"
+"MEMSS","MEMSS","/usr/local/lib64/R/library","0.9-0",NA,"R(>= 2.12.0), lme4 (>= 0.999375-36)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"methods","methods","/usr/local/lib64/R/library","3.0.0","base",NA,"utils",NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"mgcv","mgcv","/usr/local/lib64/R/library","1.7-22","recommended","R (>= 2.14.0), stats, graphics","nlme, methods, Matrix",NA,"nlme (>= 3.1-64), splines, Matrix, parallel",NA,NA,"GPL (>= 2)","3.0.0"
+"mice","mice","/usr/local/lib64/R/library","2.13",NA,"R (>= 2.10), MASS, nnet, lattice, methods",NA,NA,"AGD, mitools, nlme, Zelig, lme4, survival, gamlss, pan, VIM",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"misc3d","misc3d","/usr/local/lib64/R/library","0.8-4",NA,NA,NA,NA,"rgl, tkrplot, MASS",NA,NA,"GPL","3.0.0"
+"miscTools","miscTools","/usr/local/lib64/R/library","0.6-14",NA,"R (>= 2.14.0)",NA,NA,"Ecdat (>= 0.1-5)",NA,NA,"GPL (>= 2)","3.0.0"
+"mitools","mitools","/usr/local/lib64/R/library","2.2",NA,"foreign",NA,NA,"RODBC, DBI",NA,NA,"GPL-2","3.0.0"
+"mlbench","mlbench","/usr/local/lib64/R/library","2.1-1",NA,"R (>= 2.10)",NA,NA,"lattice",NA,NA,"GPL-2","3.0.0"
+"mlmRev","mlmRev","/usr/local/lib64/R/library","1.0-1",NA,"lme4, R (>= 2.10)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"mlogit","mlogit","/usr/local/lib64/R/library","0.2-3",NA,"R (>= 2.10), Formula, statmod, lmtest, maxLik, zoo, MASS",NA,NA,"car, nnet, lattice, AER",NA,NA,"GPL (>= 2)","3.0.0"
+"modeltools","modeltools","/usr/local/lib64/R/library","0.2-19",NA,"stats, stats4","methods",NA,NA,NA,NA,"GPL-2","3.0.0"
+"moe430a.db","moe430a.db","/usr/local/lib64/R/library","2.8.1",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.20.2), org.Mm.eg.db
+(>= 2.8.0)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"multcomp","multcomp","/usr/local/lib64/R/library","1.2-15",NA,"stats, graphics, mvtnorm (>= 0.8-0), survival (>= 2.35-7)",NA,NA,"lme4 (>= 0.999375-16), nlme, robustbase, mboost, coin, MASS,
+car, foreign, xtable, sandwich, lmtest, coxme (>= 2.2-1)",NA,NA,"GPL-2","3.0.0"
+"multicore","multicore","/usr/local/lib64/R/library","0.1-7",NA,"R (>= 2.0.0)",NA,NA,NA,NA,"unix","GPL-2","3.0.0"
+"multtest","multtest","/usr/local/lib64/R/library","2.15.0",NA,"R (>= 2.10), methods, Biobase","survival, MASS, stats4",NA,"snow",NA,NA,"LGPL","3.0.0"
+"munsell","munsell","/usr/local/lib64/R/library","0.4",NA,NA,"colorspace",NA,"ggplot2",NA,NA,"MIT","3.0.0"
+"mvtnorm","mvtnorm","/usr/local/lib64/R/library","0.9-9994",NA,"R(>= 1.9.0)","stats",NA,NA,NA,NA,"GPL-2","3.0.0"
+"network","network","/usr/local/lib64/R/library","1.7-1.1",NA,"R (>= 2.10), utils",NA,NA,"sna, statnet",NA,NA,"GPL (>= 2)","3.0.0"
+"networkDynamic","networkDynamic","/usr/local/lib64/R/library","0.3.1",NA,"network",NA,NA,NA,"network",NA,"GPL-3","3.0.0"
+"networksis","networksis","/usr/local/lib64/R/library","2.1-1",NA,"ergm, network",NA,NA,"Hmisc",NA,NA,"GPL-3 + file LICENSE","3.0.0"
+"nlme","nlme","/usr/local/lib64/R/library","3.1-109","recommended","graphics, stats, R (>= 3.0.0)","lattice",NA,"Hmisc, MASS",NA,NA,"GPL (>= 2)","3.0.0"
+"nnet","nnet","/usr/local/lib64/R/library","7.3-5","recommended","R (>= 2.5.0), stats, utils",NA,NA,"MASS",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"np","np","/usr/local/lib64/R/library","0.40-13",NA,"boot, cubature",NA,NA,"quantreg, MASS",NA,NA,"GPL","3.0.0"
+"numDeriv","numDeriv","/usr/local/lib64/R/library","2012.9-1",NA,"R (>= 1.8.1)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"nws","nws","/usr/local/lib64/R/library","1.7.0.1",NA,"R (>= 2.1), methods",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"org.Ce.eg.db","org.Ce.eg.db","/usr/local/lib64/R/library","2.8.1",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.19.35)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"org.Dm.eg.db","org.Dm.eg.db","/usr/local/lib64/R/library","2.8.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.19.35)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"org.Hs.eg.db","org.Hs.eg.db","/usr/local/lib64/R/library","2.8.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.19.35)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"org.Mm.eg.db","org.Mm.eg.db","/usr/local/lib64/R/library","2.8.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.19.35)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"org.Pf.plasmo.db","org.Pf.plasmo.db","/usr/local/lib64/R/library","2.8.1",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.19.37)","methods, AnnotationDbi",NA,"annotate, RUnit",NA,NA,"Artistic-2.0","3.0.0"
+"org.Tgondii.eg.db","org.Tgondii.eg.db","/usr/local/lib64/R/library","1.0",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.16.11)","methods, AnnotationDbi",NA,"annotate",NA,NA,"Artistic-2.0","3.0.0"
+"outliers","outliers","/usr/local/lib64/R/library","0.14",NA,"R (>= 2.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"oz","oz","/usr/local/lib64/R/library","1.0-19",NA,NA,"graphics",NA,NA,NA,NA,"GPL-2","3.0.0"
+"parallel","parallel","/usr/local/lib64/R/library","3.0.0","base",NA,"tools",NA,NA,"snow",NA,"Part of R 3.0.0","3.0.0"
+"party","party","/usr/local/lib64/R/library","1.0-6",NA,"R (>= 2.14.0), methods, survival, grid, modeltools (>=
+0.2-19), coin (>= 1.0-0), zoo, sandwich (>= 1.1-1),
+strucchange, vcd, stats",NA,NA,"ipred, mlbench, colorspace, MASS, mvtnorm",NA,NA,"GPL-2","3.0.0"
+"PBSmapping","PBSmapping","/usr/local/lib64/R/library","2.65.40",NA,"R (>= 2.15.0)",NA,NA,"foreign, maptools, deldir","gpclib",NA,"file LICENSE","3.0.0"
+"permute","permute","/usr/local/lib64/R/library","0.7-0",NA,NA,NA,NA,"vegan (>= 2.0-0), testthat (>= 0.5)",NA,NA,"GPL-2","3.0.0"
+"phangorn","phangorn","/usr/local/lib64/R/library","1.7-1",NA,"R (>= 2.14.0), ape (>= 3.0-6), igraph (>= 0.6), Matrix","quadprog","ape","parallel, seqLogo, rgl, seqinr, xtable, flashClust",NA,NA,"GPL (>= 2)","3.0.0"
+"plm","plm","/usr/local/lib64/R/library","1.3-1",NA,"R (>= 2.10), stats, bdsmatrix, nlme, Formula (>= 0.2-0), MASS,
+sandwich, zoo",NA,NA,"lattice, lmtest, car, AER",NA,NA,"GPL (>= 2)","3.0.0"
+"plotrix","plotrix","/usr/local/lib64/R/library","3.4-6",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"plyr","plyr","/usr/local/lib64/R/library","1.8",NA,"R (>= 2.11.0)",NA,NA,"abind, testthat (>= 0.2), tcltk, foreach, doMC, itertools,
+iterators",NA,NA,"MIT","3.0.0"
+"popbio","popbio","/usr/local/lib64/R/library","2.4",NA,"quadprog",NA,NA,NA,NA,NA,"GPL","3.0.0"
+"preprocessCore","preprocessCore","/usr/local/lib64/R/library","1.21.1",NA,"methods","stats",NA,NA,NA,NA,"LGPL (>= 2)","3.0.0"
+"prodlim","prodlim","/usr/local/lib64/R/library","1.3.3",NA,"R (>= 1.9.1)","KernSmooth, survival",NA,"lava",NA,NA,"GPL (>= 2)","3.0.0"
+"proto","proto","/usr/local/lib64/R/library","0.3-10",NA,NA,NA,NA,"graph, Rgraphviz",NA,NA,"GPL-2","3.0.0"
+"pscl","pscl","/usr/local/lib64/R/library","1.04.4",NA,"R (>= 2.10.0), MASS, stats, mvtnorm, coda, gam, vcd","lattice",NA,"MCMCpack, car, lmtest, sandwich, zoo","stats, MASS",NA,"GPL-2","3.0.0"
+"quadprog","quadprog","/usr/local/lib64/R/library","1.5-4",NA,"R (>= 2.12.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"quantreg","quantreg","/usr/local/lib64/R/library","4.94",NA,"R (>= 2.6), stats, SparseM",NA,NA,"tripack, akima, MASS, survival, rgl, logspline, nor1mix,
+MatrixModels, Matrix, Formula, zoo",NA,NA,"GPL (>= 2)","3.0.0"
+"RandomFields","RandomFields","/usr/local/lib64/R/library","2.0.66",NA,"R (>= 2.10)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"randomForest","randomForest","/usr/local/lib64/R/library","4.6-7",NA,"R (>= 2.5.0), stats",NA,NA,"RColorBrewer, MASS",NA,NA,"GPL (>= 2)","3.0.0"
+"RArcInfo","RArcInfo","/usr/local/lib64/R/library","0.4-12",NA,"R (>= 2.3.0), RColorBrewer",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"RBGL","RBGL","/usr/local/lib64/R/library","1.35.0",NA,"graph, methods","methods",NA,"Rgraphviz, XML",NA,NA,"Artistic-2.0","3.0.0"
+"RColorBrewer","RColorBrewer","/usr/local/lib64/R/library","1.0-5",NA,"R (>= 2.0.0)",NA,NA,NA,NA,NA,"Apache License 2.0","3.0.0"
+"RCurl","RCurl","/usr/local/lib64/R/library","1.95-3",NA,"R (>= 2.7.0), methods, bitops","methods",NA,"Rcompression, XML",NA,NA,"BSD","3.0.0"
+"reshape","reshape","/usr/local/lib64/R/library","0.8.4",NA,"R (>= 2.6.1), plyr",NA,NA,NA,NA,NA,"MIT","3.0.0"
+"reshape2","reshape2","/usr/local/lib64/R/library","1.2.2",NA,NA,"plyr (>= 1.5), stringr, lattice",NA,"testthat",NA,NA,"MIT","3.0.0"
+"rgenoud","rgenoud","/usr/local/lib64/R/library","5.7-8.1",NA,"R (>= 2.15), utils",NA,NA,"snow (>= 0.2-1)",NA,NA,"GPL-3","3.0.0"
+"Rgraphviz","Rgraphviz","/usr/local/lib64/R/library","2.3.7",NA,"R (>= 2.6.0), methods, utils, graph, grid","stats4, graph, graphics, grDevices, grid, methods, utils",NA,"RUnit, BiocGenerics, XML",NA,NA,"file LICENSE","3.0.0"
+"Rhh","Rhh","/usr/local/lib64/R/library","1.0.2",NA,NA,NA,NA,NA,NA,NA,"GPL-3","3.0.0"
+"rlecuyer","rlecuyer","/usr/local/lib64/R/library","0.3-3",NA,NA,NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"rmeta","rmeta","/usr/local/lib64/R/library","2.16",NA,"grid",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"robustbase","robustbase","/usr/local/lib64/R/library","0.9-4",NA,"R (>= 2.13.0), stats, graphics, methods",NA,NA,"grid, MASS, lattice, boot, cluster, Matrix, MPV, xtable,
+ggplot2, RColorBrewer, reshape2",NA,NA,"GPL (>= 2)","3.0.0"
+"ROCR","ROCR","/usr/local/lib64/R/library","1.0-4",NA,"gplots, methods",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"rpanel","rpanel","/usr/local/lib64/R/library","1.0-6",NA,"R (>= 2.10), tcltk",NA,NA,"tkrplot, rgl, sp, geoR, RandomFields, sm",NA,NA,"GPL-2","3.0.0"
+"rpart","rpart","/usr/local/lib64/R/library","4.1-0","recommended","R (>= 2.14.0), graphics, stats, grDevices",NA,NA,"survival",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"Rsamtools","Rsamtools","/usr/local/lib64/R/library","1.11.18",NA,"methods, IRanges (>= 1.15.35), GenomicRanges (>= 1.9.48),
+Biostrings (>= 2.25.6)","methods, utils, IRanges, GenomicRanges, Biostrings, zlibbioc,
+bitops, BiocGenerics (>= 0.1.3)","Biostrings, IRanges","ShortRead (>= 1.13.19), GenomicFeatures,
+TxDb.Dmelanogaster.UCSC.dm3.ensGene, KEGG.db, pasillaBamSubset,
+RUnit",NA,NA,"Artistic-2.0 + file LICENSE","3.0.0"
+"RSQLite","RSQLite","/usr/local/lib64/R/library","0.11.2",NA,"R (>= 2.10.0), methods, DBI (>= 0.2-5)","methods, DBI (>= 0.2-3)",NA,"RUnit (>= 0.4.22)",NA,NA,"LGPL (>= 2)","3.0.0"
+"RSQLite.extfuns","RSQLite.extfuns","/usr/local/lib64/R/library","0.0.1",NA,"RSQLite (>= 0.9-1)",NA,"RSQLite",NA,NA,NA,"Artistic-2.0","3.0.0"
+"rtracklayer","rtracklayer","/usr/local/lib64/R/library","1.19.9",NA,"R (>= 2.10), methods, GenomicRanges (>= 1.11.12)","XML (>= 1.98-0), BiocGenerics (>= 0.1.0), IRanges (>=
+1.15.37), GenomicRanges, Biostrings (>= 2.25.6), BSgenome (>=
+1.23.1), zlibbioc, RCurl (>= 1.4-2), Rsamtools (>= 1.7.3)","IRanges","humanStemCell, microRNA (>= 1.1.1), genefilter, limma,
+org.Hs.eg.db, BSgenome.Hsapiens.UCSC.hg19,
+TxDb.Hsapiens.UCSC.hg19.knownGene, hgu133plus2.db",NA,NA,"Artistic-2.0","3.0.0"
+"RUnit","RUnit","/usr/local/lib64/R/library","0.4.26",NA,"R (>= 2.5.0), utils (>= 2.5.0), methods (>= 2.5.0)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"sampleSelection","sampleSelection","/usr/local/lib64/R/library","0.7-2",NA,"R (>= 2.10), maxLik (>= 0.7-3), systemfit (>= 1.0-0)","miscTools (>= 0.6-3)",NA,"VGAM, MASS, mvtnorm, plm",NA,NA,"GPL (>= 2)","3.0.0"
+"sandwich","sandwich","/usr/local/lib64/R/library","2.2-9",NA,"R (>= 2.0.0), stats, zoo","stats",NA,"car, lmtest, strucchange, AER, survival, MASS, scatterplot3d",NA,NA,"GPL-2","3.0.0"
+"scales","scales","/usr/local/lib64/R/library","0.2.3",NA,"R (>= 2.12), methods","RColorBrewer, stringr, dichromat, munsell (>= 0.2), plyr (>=
+1.2), labeling",NA,"testthat",NA,NA,"MIT","3.0.0"
+"scatterplot3d","scatterplot3d","/usr/local/lib64/R/library","0.3-33",NA,"R (>= 2.7.0)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"sem","sem","/usr/local/lib64/R/library","3.1-1",NA,"R (>= 2.14.0), stats, MASS, matrixcalc",NA,NA,"boot, tcltk, polycor, MBESS, mi",NA,NA,"GPL (>= 2)","3.0.0"
+"sgeostat","sgeostat","/usr/local/lib64/R/library","1.0-24",NA,"stats, grDevices, graphics, R (>= 2.0.0)",NA,NA,NA,NA,NA,"file LICENSE","3.0.0"
+"ShortRead","ShortRead","/usr/local/lib64/R/library","1.17.10",NA,"methods, BiocGenerics (>= 0.1.0), IRanges (>= 1.17.18),
+GenomicRanges (>= 1.11.18), Biostrings (>= 2.25.6), lattice,
+Rsamtools (>= 1.7.42), latticeExtra","BiocGenerics, IRanges, GenomicRanges, Biostrings, Biobase,
+hwriter, Rsamtools, zlibbioc, lattice","IRanges, Biostrings","biomaRt, RUnit, GenomicFeatures, yeastNagalakshmi","Rmpi, parallel",NA,"Artistic-2.0","3.0.0"
+"sm","sm","/usr/local/lib64/R/library","2.2-4.1",NA,"R (>= 2.7.0)",NA,NA,"rpanel, tkrplot, rgl, misc3d, akima, gam",NA,NA,"GPL-2","3.0.0"
+"sna","sna","/usr/local/lib64/R/library","2.2-2",NA,"R (>= 2.0.0)","utils",NA,"network, rgl, numDeriv, SparseM, statnet",NA,NA,"GPL (>= 2)","3.0.0"
+"snow","snow","/usr/local/lib64/R/library","0.3-10",NA,"R (>= 2.12.1), utils",NA,NA,"Rmpi,rpvm,rlecuyer,rsprng,nws",NA,NA,"GPL","3.0.0"
+"som","som","/usr/local/lib64/R/library","0.3-5",NA,"R (>= 1.9.0)",NA,NA,NA,NA,NA,"GPL (>= 3)","3.0.0"
+"sp","sp","/usr/local/lib64/R/library","1.0-5",NA,"R (>= 2.14.0)","methods, graphics, utils, lattice, grid",NA,"lattice, RColorBrewer, rgdal (>= 0.7-21), rgeos (>= 0.1-8)",NA,NA,"GPL (>= 2)","3.0.0"
+"spam","spam","/usr/local/lib64/R/library","0.29-2",NA,"R (>= 2.11), methods",NA,NA,"fields, SparseM (>= 0.72), Matrix",NA,NA,"GPL | file LICENSE","3.0.0"
+"SparseM","SparseM","/usr/local/lib64/R/library","0.96",NA,"R (>= 2.4.1), methods, stats, utils",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"spatial","spatial","/usr/local/lib64/R/library","7.3-5","recommended","R (>= 2.5.0), graphics, stats, utils",NA,NA,"MASS",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"spatstat","spatstat","/usr/local/lib64/R/library","1.31-0",NA,"R (>= 2.14.0), stats, graphics, grDevices, utils, mgcv, deldir
+(>= 0.0-21)",NA,NA,"gpclib, sm, maptools, gsl, locfit, spatial, rpanel, tkrplot,
+scatterplot3d, RandomFields (>= 2.0)",NA,NA,"GPL (>= 2)","3.0.0"
+"splancs","splancs","/usr/local/lib64/R/library","2.01-32",NA,"R (>= 2.10.0), sp (>= 0.9)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"splines","splines","/usr/local/lib64/R/library","3.0.0","base",NA,"graphics, stats",NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"sqldf","sqldf","/usr/local/lib64/R/library","0.4-6.4",NA,"R (>= 2.14.0), DBI (>= 0.2-5), gsubfn (>= 0.6), proto, chron,
+RSQLite (>= 0.8-0), RSQLite.extfuns","RSQLite (>= 0.8-0), RSQLite.extfuns",NA,"RH2, RMySQL, RpgSQL, RPostgreSQL, svUnit, tcltk, MASS",NA,NA,"GPL-2","3.0.0"
+"SSOAP","SSOAP","/usr/local/lib64/R/library","0.8-0",NA,"R (>= 1.5.0), methods","XML, RCurl,  XMLSchema",NA,NA,NA,NA,"GPL2","3.0.0"
+"statmod","statmod","/usr/local/lib64/R/library","1.4.17",NA,"R (>= 1.6.1)",NA,NA,"MASS, tweedie",NA,NA,"GPL (>= 2)","3.0.0"
+"statnet","statnet","/usr/local/lib64/R/library","3.0-1",NA,"R (>= 2.13), network (>= 1.7-1), ergm (>= 3.0), sna (>= 2.2),
+networkDynamic (>= 0.2-2)",NA,NA,"relevent (>= 1.0), latentnet (>= 2.4-2), ergm.userterms (>=
+3.0-1)",NA,NA,"GPL-3 + file LICENSE","3.0.0"
+"stats","stats","/usr/local/lib64/R/library","3.0.0","base",NA,NA,NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"stats4","stats4","/usr/local/lib64/R/library","3.0.0","base","methods, graphics, stats",NA,NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"stringr","stringr","/usr/local/lib64/R/library","0.6.2",NA,"R (>= 2.14)",NA,NA,"testthat (>= 0.3)",NA,NA,"GPL-2","3.0.0"
+"strucchange","strucchange","/usr/local/lib64/R/library","1.4-7",NA,"R (>= 2.10.0), graphics, stats, zoo, sandwich","graphics, stats",NA,"lmtest, car, dynlm, e1071, tseries, foreach",NA,NA,"GPL-2","3.0.0"
+"survey","survey","/usr/local/lib64/R/library","3.29",NA,"R (>= 2.10.0)",NA,NA,"foreign, survival, MASS, splines, KernSmooth, hexbin,
+mitools, lattice, RSQLite, RODBC, quantreg, Matrix, multicore,
+CompQuadForm","odfWeave.survey",NA,"GPL-2 | GPL-3","3.0.0"
+"survival","survival","/usr/local/lib64/R/library","2.37-2","recommended","stats, utils, graphics, splines, R (>= 2.13.0)",NA,NA,NA,NA,NA,"LGPL (>= 2)","3.0.0"
+"systemfit","systemfit","/usr/local/lib64/R/library","1.1-14",NA,"R (>= 1.8.0), Matrix, car (>= 2.0-0), lmtest","stats (>= 2.14.0), sandwich (>= 2.2-9)",NA,"plm (>= 1.0-1), MASS, sem (>= 2.0-0)",NA,NA,"GPL (>= 2)","3.0.0"
+"tcltk","tcltk","/usr/local/lib64/R/library","3.0.0","base",NA,"utils",NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"tcltk2","tcltk2","/usr/local/lib64/R/library","1.2-4",NA,"R (>= 2.8.0), tcltk",NA,NA,"utils",NA,NA,"file LICENSE","3.0.0"
+"TeachingDemos","TeachingDemos","/usr/local/lib64/R/library","2.9",NA,"R (>= 2.10)",NA,NA,"tkrplot, lattice, MASS, rgl, tcltk, tcltk2, R2wd, EBImage,
+png, ggplot2, logspline, maptools",NA,NA,"Artistic-2.0","3.0.0"
+"timeDate","timeDate","/usr/local/lib64/R/library","2160.97",NA,"R (>= 2.10.0), graphics, utils, stats, methods",NA,NA,"date, RUnit",NA,NA,"GPL (>= 2)","3.0.0"
+"timeSeries","timeSeries","/usr/local/lib64/R/library","2160.95",NA,"R (>= 2.10), graphics, grDevices, methods, stats, utils,
+timeDate (>= 2150.95)",NA,NA,"robustbase, RUnit",NA,NA,"GPL (>= 2)","3.0.0"
+"tis","tis","/usr/local/lib64/R/library","1.23",NA,"R (>= 2.3)",NA,NA,"reshape, scales","zoo, ggplot2, graphics",NA,"Unlimited","3.0.0"
+"tkrplot","tkrplot","/usr/local/lib64/R/library","0.0-23",NA,"R (>= 2.13), grDevices, tcltk",NA,NA,NA,NA,NA,"GPL","3.0.0"
+"tools","tools","/usr/local/lib64/R/library","3.0.0","base",NA,NA,NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"topGO","topGO","/usr/local/lib64/R/library","2.11.0",NA,"R (>= 2.10.0), methods, graph (>= 1.14.0), Biobase (>= 2.0.0),
+GO.db (>= 2.3.0), AnnotationDbi (>= 1.7.19), SparseM (>= 0.73)","methods, graph, Biobase, SparseM, AnnotationDbi, lattice",NA,"ALL, hgu95av2.db, hgu133a.db, genefilter, xtable, multtest,
+Rgraphviz, globaltest",NA,NA,"LGPL","3.0.0"
+"tree","tree","/usr/local/lib64/R/library","1.0-33",NA,"R (>= 2.15.0), grDevices, graphics, stats",NA,NA,"MASS",NA,NA,"GPL-2 | GPL-3","3.0.0"
+"tripack","tripack","/usr/local/lib64/R/library","1.3-5",NA,NA,NA,NA,NA,NA,NA,"file LICENSE","3.0.0"
+"trust","trust","/usr/local/lib64/R/library","0.1-2",NA,"R (>= 2.4.1)",NA,NA,NA,NA,NA,"X11","3.0.0"
+"tseries","tseries","/usr/local/lib64/R/library","0.10-30",NA,"R (>= 2.10.0)","graphics, stats, utils, quadprog, zoo",NA,"its",NA,NA,"GPL-2","3.0.0"
+"urca","urca","/usr/local/lib64/R/library","1.2-7",NA,"R (>= 2.0.0), methods","nlme, graphics, stats",NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"utils","utils","/usr/local/lib64/R/library","3.0.0","base",NA,NA,NA,NA,NA,NA,"Part of R 3.0.0","3.0.0"
+"vcd","vcd","/usr/local/lib64/R/library","1.2-13",NA,"R (>= 2.4.0), MASS, grid, colorspace","stats, utils, MASS, grDevices",NA,"KernSmooth, mvtnorm, kernlab, HSAUR, coin",NA,NA,"GPL-2","3.0.0"
+"vegan","vegan","/usr/local/lib64/R/library","2.0-6",NA,"permute","lattice",NA,"MASS, mgcv, lattice, cluster, scatterplot3d, rgl, tcltk",NA,NA,"GPL-2","3.0.0"
+"VennDiagram","VennDiagram","/usr/local/lib64/R/library","1.5.1",NA,"R (>= 2.14.1), grid (>= 2.14.1)",NA,NA,NA,NA,NA,"GPL-2","3.0.0"
+"VGAM","VGAM","/usr/local/lib64/R/library","0.9-0",NA,"R (>= 2.14.0), splines, methods, stats, stats4","methods, stats, stats4",NA,"MASS",NA,NA,"GPL-2","3.0.0"
+"vsn","vsn","/usr/local/lib64/R/library","3.27.2",NA,"R (>= 2.10), Biobase (>= 2.5.5)","methods, affy (>= 1.23.4), limma, lattice",NA,"affydata, hgu95av2cdf",NA,NA,"Artistic-2.0","3.0.0"
+"weaver","weaver","/usr/local/lib64/R/library","1.25.0",NA,"R (>= 2.5.0), digest, tools, utils, codetools",NA,NA,"codetools",NA,NA,"GPL-2","3.0.0"
+"XML","XML","/usr/local/lib64/R/library","3.95-0.1",NA,"R (>= 1.2.0), methods, utils","methods",NA,"bitops, RCurl",NA,NA,"BSD","3.0.0"
+"XMLSchema","XMLSchema","/usr/local/lib64/R/library","0.7-2",NA,"R (>= 1.5.0), methods, XML","RCurl, codetools",NA,"RCurl",NA,NA,"GPL2","3.0.0"
+"xtable","xtable","/usr/local/lib64/R/library","1.7-1",NA,"R (>= 2.10.0)",NA,NA,NA,NA,NA,"GPL (>= 2)","3.0.0"
+"xts","xts","/usr/local/lib64/R/library","0.9-3",NA,"zoo (>= 1.7-2)",NA,"zoo (>= 1.7.2)","timeSeries,timeDate,tseries,its,chron,fts,tis",NA,NA,"GPL-2","3.0.0"
+"Zelig","Zelig","/usr/local/lib64/R/library","4.1-3",NA,"R (>= 2.14), boot, MASS, methods, sandwich",NA,NA,"Amelia, mvtnorm, Formula, gee, survey, survival, systemfit,
+MatchIt, MCMCpack, coda",NA,NA,"GPL (>= 2)","3.0.0"
+"zlibbioc","zlibbioc","/usr/local/lib64/R/library","1.5.0",NA,NA,NA,NA,NA,NA,NA,"Artistic-2.0 + file LICENSE","3.0.0"
+"zoo","zoo","/usr/local/lib64/R/library","1.7-9",NA,"R (>= 2.10.0), stats","stats, utils, graphics, grDevices, lattice (>= 0.18-1)",NA,"coda, chron, DAAG, fts, its, lattice, ggplot2, mondate,
+strucchange, timeDate, timeSeries, tis, tseries, xts",NA,NA,"GPL-2","3.0.0"

@@ -12,6 +12,7 @@ alias ll='ls -lh'
 alias yum='sudo yum -y'
 alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
 alias feh='feh -FZ'
+alias Rs="Rscript --vanilla"
 
 # enable keychain ssh passphrase memory
 eval `keychain --eval --nogui -Q -q id_rsa`
@@ -44,21 +45,21 @@ then
 else
     # some things needed on beagle for some programs
     export BROWSER=/usr/bin/w3m
-    export PHRED_PARAMETER_FILE=/home/ele/tools/phred-dist-020425.c-acd/phredpar.dat
-    export ESTSCANDIR=/home/ele/tools/estscan-3.0.2
+    export PHRED_PARAMETER_FILE=/tools/phred-dist-020425.c-acd/phredpar.dat
+    export ESTSCANDIR=/tools/estscan-3.0.2
     export ESTSCANLIB=/usr/local/lib64/perl5/site_perl/5.10.0/x86_64-linux-thread-multi
     
     ## because ssh X-forwarding sometimes fails
     export DISPLAY=localhost:10.0
 
-    export CEGMA="/home/ele/tools/cegma_v2.4.010312"
-    export CEGMATMP="/home/ele/tools/cegma_v2.4.010312/tmp"
-    export ORTHOMCL="/home/ele/tools/orthomclSoftware-v2.0.5"
-    export DART="/home/ele/tools/dart"
+    export CEGMA="/tools/cegma_v2.4.010312"
+    export CEGMATMP="/tools/cegma_v2.4.010312/tmp"
+    export ORTHOMCL="/tools/orthomclSoftware-v2.0.5"
+    export DART="/tools/dart"
     export PERL5LIB="$PERL5LIB:$CEGMA/lib:$ORTHOMCL/lib/perl:$DART/perl:/home/ele/tools/tRNAscan-SE-1.3.1/:/home/ele/bin"
     
-    export BLASTDB=/media/drobo/db/blastdb/
-    export BLASTMAT=/home/ele/tools/blast-2.2.20/data/ 
+    export BLASTDB=/db/blastdb/
+    export BLASTMAT=/tools/blast-2.2.20/data/ 
 
-    export WISECONFIGDIR=/home/ele/tools/wise2.2.0/wisecfg/
+    export WISECONFIGDIR=/tools/wise2.2.0/wisecfg/
 fi
