@@ -1,16 +1,18 @@
-.First <- function(){
-  cat("\n\n   RAM is cheap and thinking hurts.
+if (interactive()) { 
+  .First <- function(){
+    cat("\n\n   RAM is cheap and thinking hurts.
    -- Uwe Ligges (about memory requirements in R)
       R-help (June 2007)\n\n")
   
-  #use main repo
-  options("repos" = c(CRAN = "http://cran.r-project.org/"))
-  options(show.signif.stars=FALSE)
-  options(browser ="conkeror")
-  library(Biobase)
-  if(testBioCConnection()){source("http://bioconductor.org/biocLite.R")}
-  else{cat("\n\ncould not source biocLite, network not connected\n\n")}
-  ##  options(prompt=paste("R", basename(getwd()), "> "))
+                                        #use main repo
+    options("repos" = c(CRAN = "http://cran.r-project.org/"))
+    options(show.signif.stars=FALSE)
+    options(browser ="conkeror")
+    library(Biobase)
+    if(testBioCConnection()){source("http://bioconductor.org/biocLite.R")}
+    else{cat("\n\ncould not source biocLite, network not connected\n\n")}
+    ##  options(prompt=paste("R", basename(getwd()), "> "))
+  }
 }
 
 # If no R_HISTFILE environment variable, set default

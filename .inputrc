@@ -1,4 +1,4 @@
-
+set bell-style none
 "\C-g": abort
 "\C-x\C-g": abort
 "\e\C-g": abort
