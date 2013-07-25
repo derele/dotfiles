@@ -56,7 +56,7 @@ else
     export CEGMATMP="/tools/cegma_v2.4.010312/tmp"
     export ORTHOMCL="/tools/orthomclSoftware-v2.0.5"
     export DART="/tools/dart"
-    export PERL5LIB="$PERL5LIB:$CEGMA/lib:$ORTHOMCL/lib/perl:$DART/perl:/home/ele/tools/tRNAscan-SE-1.3.1/:/home/ele/bin"
+    export PERL5LIB="$PERL5LIB:$CEGMA/lib:$ORTHOMCL/lib/perl:$DART/perl:/home/ele/tools/tRNAscan-SE-1.3.1/:/home/ele/bin:/tools/FunDi-master"
     
     export BLASTDB=/db/blastdb/
     export BLASTMAT=/tools/blast-2.2.20/data/ 
