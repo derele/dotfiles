@@ -77,6 +77,7 @@ ignore = Path {.gconfd}
 ignore = Path {.gegl-0.0}
 ignore = Path {.gimp-2.6}
 ignore = Path {git_repo}
+ignore = Path {gitconfig}
 ignore = Path {.gnash}
 ignore = Path {.gnome2}
 ignore = Path {.gnome2_private}

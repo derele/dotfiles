@@ -9,6 +9,7 @@ alias skype='LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype'
 
 alias openvpn='sudo openvpn --config /home/ele/vpn/hu-berlin.conf --auth-user-pass /home/ele/vpn/passwd'
 
+export PATH=$PATH:/home/ele/tools/Zotero_linux-x86_64/
 
 
 # make sure we are up to date
