@@ -11,6 +11,11 @@ define_key(content_buffer_normal_keymap, "d", "follow-new-buffer");
 define_key(content_buffer_normal_keymap, "M-\u00FC", "buffer-previous");
 define_key(content_buffer_normal_keymap, "M-\u00F6", "buffer-next");
 
+
+interactive("zotero-bookmark", "load into Zotero", "follow",
+            $browser_object = "javascript:var%20d=document,s=d.createElement('script');s.src='https://www.zotero.org/bookmarklet/loader.js';(d.body?d.body:d.documentElement).appendChild(s);void(0);");
+define_key(content_buffer_normal_keymap, "z", "zotero-bookmark");
+
 //have tabs, a session and google in the minibuffer
 require("new-tabs.js");
 

@@ -11,6 +11,8 @@ alias openvpn='sudo openvpn --config /home/ele/vpn/hu-berlin.conf --auth-user-pa
 
 export PATH=$PATH:/home/ele/tools/Zotero_linux-x86_64/
 
+## fool java into thinking we have another wm needed because of  java but 
+wmname LG3D
 
 # make sure we are up to date
 # but first check, that yum is not running already
