@@ -30,10 +30,13 @@ tryCatch(
            options(width=120)}
          )
 
-# aliases
-s <- base::summary;
-h <- utils::head;
-n <- base::names;
+## some options
+options(menu.graphics=FALSE) ## no tclk dialogs
+options(max.print=999) ## no excessive output
+
+## get rid of X11 crashes
+Sys.unsetenv("DISPLAY")
+
 
 ll <- function(envir=globalenv(), ...) {
   obs <- ls(envir=envir, ...)
@@ -46,8 +49,8 @@ ll <- function(envir=globalenv(), ...) {
 # Override q() to not save by default.
 # Same as saying q("no")
 q <- function (save="no", ...) {
-    quit(save=save, ...)
-  }
+  quit(save=save, ...)
+}
 
 .Last <- function() {
   if (!any(commandArgs()=='--no-readline') && interactive()){
