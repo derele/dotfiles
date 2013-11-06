@@ -32,7 +32,7 @@ tryCatch(
 
 ## some options
 options(menu.graphics=FALSE) ## no tclk dialogs
-options(max.print=99) ## no excessive output
+options(max.print=999) ## no excessive output
 
 ## get rid of X11 crashes
 Sys.unsetenv("DISPLAY")
