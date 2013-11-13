@@ -53,6 +53,7 @@ bind F3 exec conkeror
 bind F4 exec firefox
 bind F5 exec google-chrome
 bind F6 exec xterm -e 'cluster-ssh.sh'
+bind F7 exec xterm -e 'harriet-ssh.sh'
 
 bind y ratclick 2       # great for pasting
 
