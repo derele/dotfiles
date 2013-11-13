@@ -39,7 +39,7 @@ export PATH=$PATH:/home/ele/bin:/home/ele/tools/R-devel/bin:/home/ele/bin/x86_64
 
 source /home/ele/dotfiles/shell_functions.sh
 
-if [ $HOSTNAME != beagle ]
+if [ $HOSTNAME == thinkpad ] || [ $HOSTNAME == ele-laptop ]
 then
     source /home/ele/dotfiles/lap_bash.sh
 else
