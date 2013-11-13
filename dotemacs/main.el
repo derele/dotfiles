@@ -18,9 +18,11 @@
 		    "~/.emacs.d/color-theme-6.6.0"
 		    "~/.emacs.d/emms/lisp"
                     "~/.emacs.d/magit-0.7"
-                    ;; lisp is not needed at the moment  "~/.emacs.d/slime-2010-05-31"                    
+                    ;; lisp is not needed at the moment  "~/.emacs.d/slime-2010-05-31"
+                    "/usr/share/emacs/24.3/lisp/progmodes"
+                    "/usr/share/emacs/24.3/lisp/vc"
                     "~/.emacs.d/g-client"
-                    "~/dotfiles/dotemacs/own_modes")
+                    "~/dotfiles/dotemacs/own_modes")              
               load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; color stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -99,10 +101,10 @@
 (require 'session)
 (add-hook 'after-init-hook 'session-initialize)
 
-;; auto-complete 
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(ac-config-default)
+;; auto-complete ## turned off because of R crashes
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+;; (ac-config-default)
 
 ;; word-count 
 (require 'word-count)
