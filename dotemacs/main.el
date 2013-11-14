@@ -22,6 +22,7 @@
                     "/usr/share/emacs/24.3/lisp/progmodes"
                     "/usr/share/emacs/24.3/lisp/vc"
                     "~/.emacs.d/g-client"
+                    "~/.emacs.d/ess-12.09/lisp/"
                     "~/dotfiles/dotemacs/own_modes")              
               load-path))
 
@@ -153,35 +154,35 @@ w) "d ")) line) 'face 'linum)))
 ;; (global-set-key (kbd "C-c C-#") 'comment-or-uncomment-region)
 
 ;;;;;;;;;;;;;;;;;;;;; Org-mode settings;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-font-lock-mode 1)
+;; (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+;; (global-set-key "\C-cl" 'org-store-link)
+;; (global-set-key "\C-ca" 'org-agenda)
+;; (global-font-lock-mode 1)
 
-;; org remember
-(org-remember-insinuate)
-(setq org-directory "~/org/")
-(setq org-default-notes-file (concat org-directory "/notes.org"))
-(define-key global-map "\C-cr" 'org-remember)
+;; ;; org remember
+;; (org-remember-insinuate)
+;; (setq org-directory "~/org/")
+;; (setq org-default-notes-file (concat org-directory "/notes.org"))
+;; (define-key global-map "\C-cr" 'org-remember)
 
-(setq org-remember-templates
-      '(("Todo" ?t "* TODO %?\n  %i\n  %a" "~/org/TODO.org" "Tasks")
-        ("Journal" ?j "* %U %?\n\n  %i\n  %a" "~/org/JOURNAL.org")
-        ("Idea" ?i "* %^{Title}\n  %i\n  %a" "~/org/JOURNAL.org" "New Ideas")))
+;; (setq org-remember-templates
+;;       '(("Todo" ?t "* TODO %?\n  %i\n  %a" "~/org/TODO.org" "Tasks")
+;;         ("Journal" ?j "* %U %?\n\n  %i\n  %a" "~/org/JOURNAL.org")
+;;         ("Idea" ?i "* %^{Title}\n  %i\n  %a" "~/org/JOURNAL.org" "New Ideas")))
 
-(define-key org-mode-map "\C-ct" 'org-todo)
-(add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . org-mode))
+;; (define-key org-mode-map "\C-ct" 'org-todo)
+;; (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . org-mode))
 
-;; open-csv files as org-table files
-(defun ele-open-csv-as-org-table ()
-  "When a .csv file is opened convert it to an org table."
-  (if (string-match "csv" (file-name-extension (buffer-name)))
-      (progn
-        (org-table-convert-region (point-min) (point-max))
-        (rename-buffer(concat(file-name-sans-extension (buffer-name)) ".org"))
-        (write-file (buffer-name))
-        )))
-(add-hook 'org-mode-hook 'ele-open-csv-as-org-table)
+;; ;; open-csv files as org-table files
+;; (defun ele-open-csv-as-org-table ()
+;;   "When a .csv file is opened convert it to an org table."
+;;   (if (string-match "csv" (file-name-extension (buffer-name)))
+;;       (progn
+;;         (org-table-convert-region (point-min) (point-max))
+;;         (rename-buffer(concat(file-name-sans-extension (buffer-name)) ".org"))
+;;         (write-file (buffer-name))
+;;         )))
+;; (add-hook 'org-mode-hook 'ele-open-csv-as-org-table)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;terminal  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; multi-terminal-mode
@@ -254,9 +255,6 @@ w) "d ")) line) 'face 'linum)))
 ;; (setq bioperl-module-path "/usr/lib/perl5/vendor_perl/5.10.0")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ESS stuff;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; needed in CentOS
-;; (require 'files)
-
 (require 'ess-site)
 
 (add-hook 'ess-mode-hook
@@ -470,13 +468,13 @@ w) "d ")) line) 'face 'linum)))
 ;; )
 
 ;;;;;;;;;;;;;;;;;; org-mode ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/org/TODO.org" "~/org/main.org")))
-)
+;; (custom-set-variables
+;;   ;; custom-set-variables was added by Custom.
+;;   ;; If you edit it by hand, you could mess it up, so be careful.
+;;   ;; Your init file should contain only one such instance.
+;;   ;; If there is more than one, they won't work right.
+;;  '(org-agenda-files (quote ("~/org/TODO.org" "~/org/main.org")))
+;; )
 
 ;; load additional files
 (load-file "/home/ele/dotfiles/dotemacs/w3m-init.el")
