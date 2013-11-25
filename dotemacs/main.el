@@ -254,80 +254,18 @@ w) "d ")) line) 'face 'linum)))
 ;; (require 'bioperl-mode)
 ;; (setq bioperl-module-path "/usr/lib/perl5/vendor_perl/5.10.0")
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ESS stuff;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'ess-site)
 
-(add-hook 'ess-mode-hook
-	  (lambda()
-	    (define-key ess-mode-map "(" 'ess-r-args-auto-show)
-	    )
-	  )
-;; set the help right to open text
-(setq inferior-ess-r-help-command "help(\"%s\", help_type=\"text\")\n")
-
-;; always scroll to output and input 
-(setq comint-scroll-to-bottom-on-input t)
-(setq comint-scroll-to-bottom-on-output t)
-
-;; Sweave .Rnw mode stuff.
-(require 'ess-noweb)
-(setq TeX-file-extensions
-      '("Snw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
-(add-to-list 'auto-mode-alist '("\\.Rnw\\'" . Rnw-mode))
-(add-to-list 'auto-mode-alist '("\\.Snw\\'" . Snw-mode))
-(add-hook 'Rnw-mode-hook
-          (lambda ()
-            (add-to-list 'TeX-command-list '("Sweave" "R CMD
-                         Sweave %s" TeX-run-command
-                         nil (latex-mode) :help "Run Sweave") t)
-            (add-to-list 'TeX-command-list '("weaver" "weaver.sh
-                         %s" TeX-run-command
-                         nil (latex-mode) :help "Run Weaver") t)
-            (add-to-list 'TeX-command-list '("LatexSweave" "%l
-                         %(mode) %s" TeX-run-TeX
-                         nil (latex-mode) :help "Run Latex
-                         on (s)weave file") t)
-            (add-to-list 'TeX-command-list '("dvi" "weaver.sh %s
-                         && %l %(mode) %s" TeX-run-command
-                         nil (latex-mode) :help "Run weaver then
-                         LatexSweave to see the dvi") t)
-            (add-to-list 'TeX-command-list '("pdf" "weaver.sh %s && rubber -d %s" TeX-run-TeX
-                         nil (latex-mode) :help "xpdf from source
-                         use old xpdf") t)
-            (setq TeX-command-default "pdf") ) )
-;; try something like '("allIn1" "weaver.sh %s && rubber -d %s && xpdf -remote ess_xpdf -raise -reload '%s.pdf'")
-
-;; more functions syntax higlighted based on syntax_highlighting.R and the file it writes from S. McKay Curtis on ess-help
-(defun read-lines (file)
-  "Return a list of lines in FILE."
-  (with-temp-buffer
-    (insert-file-contents file)
-    (split-string
-     (buffer-string) "\n" t)
-    )
-  )
-
-(add-hook 'ess-mode-hook '(lambda()
-	     (setq ess-my-extra-R-function-keywords
-		   (read-lines "~/.emacs.d/R-function-names.txt"))
- 	     (setq ess-R-mode-font-lock-keywords
-		   (append ess-R-mode-font-lock-keywords
-			   (list (cons (concat "\\<" (regexp-opt
-                                                      ess-my-extra-R-function-keywords
-                                                      'enc-paren) "\\>")
-                                                      'font-lock-function-name-face))))))
-
-;; LaTeX stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; LaTeX stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; AucTeX with rubber
 ;; http://www.nabble.com/sweave-and-auctex-td23492805.html
 
 ;; make reftex lookup master document
 (setq-default TeX-master nil)
 
-(eval-after-load "tex"
-  '(add-to-list 'TeX-command-list
-                '("Rubber" "rubber -d %t" TeX-run-command nil t) t)
-  )
+;; (eval-after-load "tex"
+;;   '(add-to-list 'TeX-command-list
+;;                 '("Rubber" "rubber -d %t" TeX-run-command nil t) t)
+;;   )
 
 ;; ebib 
 (autoload 'ebib "ebib" "Ebib, a BibTeX database manager." t)
@@ -349,6 +287,45 @@ w) "d ")) line) 'face 'linum)))
 
 (setq reftex-default-bibliography
       '("/home/ele/bibtex/master.bib"))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ESS stuff;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'ess-site)
+
+;; ;; set the help right to open text
+(setq inferior-ess-r-help-command "help(\"%s\", help_type=\"text\")\n")
+
+;; ;; always scroll to output and input 
+(setq comint-scroll-to-bottom-on-input t)
+(setq comint-scroll-to-bottom-on-output t)
+
+;; Sweave .Rnw mode stuff.
+(require 'ess-noweb)
+(setq TeX-file-extensions
+      '("Snw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
+(add-to-list 'auto-mode-alist '("\\.Rnw\\'" . Rnw-mode))
+(add-to-list 'auto-mode-alist '("\\.Snw\\'" . Snw-mode))
+
+;; Set up knitr functions
+(defun ess-swv-knit ()
+  "Run knit on the current .Rnw file."
+  (interactive)
+  (ess-swv-run-in-R "require(knitr) ; knit"))
+
+(defun ess-swv-purl ()
+  "Run purl on the current .Rnw file."
+  (interactive)
+  (ess-swv-run-in-R "require(knitr) ; purl"))
+
+
+;; this does not work atm
+;; (add-hook 'Rnw-mode-hook
+;;           (lambda ()
+;;             (add-to-list 'TeX-command-list
+;;                          '("knitr" "/usr/lib64/R/library/knitr/bin/knit %s.Rnw &&
+;; pdflatex %s.tex"
+;;                            TeX-run-command nil the:help "Run Knitr") t)
+;;             (setq TeX-command-default "knitr")))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; LISP;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
