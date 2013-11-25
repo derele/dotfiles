@@ -35,7 +35,7 @@ export HISTCONTROL=erasedupsexport
 export R_HISTFILE=/home/ele/.Rhistory
 
 # add /home/ele/bin to path  
-export PATH=$PATH:/home/ele/bin:/home/ele/tools/R-devel/bin:/home/ele/bin/x86_64
+export PATH=$PATH:/home/ele/bin:/home/ele/tools/R-devel/bin:/home/ele/bin/x86_64/:/home/ele/bin/x86_64-redhat-linux-gnu/
 
 source /home/ele/dotfiles/shell_functions.sh
 
@@ -62,4 +62,7 @@ else
     export BLASTMAT=/tools/blast-2.2.20/data/ 
 
     export WISECONFIGDIR=/tools/wise2.2.0/wisecfg/
+
+    export OMP_THREAD_LIMIT=20
+    export OMP_NUM_THREADS=19
 fi
