@@ -35,7 +35,7 @@ export HISTCONTROL=erasedupsexport
 export R_HISTFILE=/home/ele/.Rhistory
 
 # add /home/ele/bin to path  
-export PATH=$PATH:/home/ele/bin:/home/ele/tools/R-devel/bin:/home/ele/bin/x86_64
+export PATH=$PATH:/home/ele/bin:/home/ele/tools/R-devel/bin:/home/ele/bin/x86_64/:/home/ele/bin/x86_64-redhat-linux-gnu/
 
 source /home/ele/dotfiles/shell_functions.sh
 
@@ -58,8 +58,17 @@ else
     export DART="/tools/dart"
     export PERL5LIB="$PERL5LIB:$CEGMA/lib:$ORTHOMCL/lib/perl:$DART/perl:/home/ele/tools/tRNAscan-SE-1.3.1/:/home/ele/bin:/tools/FunDi-master"
     
-    export BLASTDB=/db/blastdb/
     export BLASTMAT=/tools/blast-2.2.20/data/ 
-
-    export WISECONFIGDIR=/tools/wise2.2.0/wisecfg/
+    
+    if [ $HOSTNAME == beagle ]
+    then
+        export WISECONFIGDIR=/tools/wise2.2.0/wisecfg/
+        export BLASTDB=/db/blastdb/
+        
+    else
+        export BLASTDB=/data/db/blastdb/
+        export WISECONFIGDIR=/tools/wise2.2.3-rc7/wisecfg/
+        export OMP_THREAD_LIMIT=20
+        export OMP_NUM_THREADS=19
+    fi
 fi
