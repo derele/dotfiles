@@ -66,7 +66,7 @@
 (global-set-key (kbd "M-j")  'redo)
 
 ;; I hate rodents
-(scroll-bar-mode -1)
+;; (scroll-bar-mode -1) ;; this is not needed in emacs nox
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
@@ -317,16 +317,13 @@ w) "d ")) line) 'face 'linum)))
   (interactive)
   (ess-swv-run-in-R "require(knitr) ; purl"))
 
-
 ;; this does not work atm
-;; (add-hook 'Rnw-mode-hook
-;;           (lambda ()
-;;             (add-to-list 'TeX-command-list
-;;                          '("knitr" "/usr/lib64/R/library/knitr/bin/knit %s.Rnw &&
-;; pdflatex %s.tex"
-;;                            TeX-run-command nil the:help "Run Knitr") t)
-;;             (setq TeX-command-default "knitr")))
-
+(add-hook 'Rnw-mode-hook
+          (lambda ()
+            (add-to-list 'TeX-command-list
+                         '("knitr" "/home/ele/dotfiles/scripts/knitr.sh %s.Rnw && pdflatex %s.tex"
+                           TeX-run-command nil the:help "Run Knitr") t)
+            (setq TeX-command-default "knitr")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; LISP;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; not needed at the moment
