@@ -409,6 +409,8 @@ w) "d ")) line) 'face 'linum)))
 (setq  TeXMed-include-abstract t)
 (setq  TeXMed-include-article-id t)
 
+(require 'blast_plus)
+
 ;; have funky signatures
 (autoload 'add-signature "c-sig" "c-sig" t)
 (autoload 'delete-signature "c-sig" "c-sig" t)

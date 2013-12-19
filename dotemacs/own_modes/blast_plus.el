@@ -43,3 +43,6 @@
   (message cmd)
   (shell-command cmd))
 (global-set-key  "\C-cp" 'run-blastp)
+
+
+(provide 'blast_plus)
