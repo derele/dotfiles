@@ -13,6 +13,7 @@ alias yum='sudo yum -y'
 alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
 alias feh='feh -FZ'
 alias Rs="Rscript --vanilla"
+alias parallel="parallel --gnu"
 
 # enable keychain ssh passphrase memory
 eval `keychain --eval --nogui -Q -q id_rsa`
@@ -70,5 +71,8 @@ else
         export WISECONFIGDIR=/tools/wise2.2.3-rc7/wisecfg/
         export OMP_THREAD_LIMIT=20
         export OMP_NUM_THREADS=19
+        export AUGUSTUS_CONFIG_PATH=/tools/augustus.2.5.5/config/
+        export ZOE=/tools/snap/Zoe
+        export LD_PRELOAD=/usr/lib64/openmpi/lib/libmpi.so
     fi
 fi

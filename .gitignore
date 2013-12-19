@@ -16,3 +16,5 @@
 /#bashrc.sh#
 /scripts/harriet-ssh.sh~
 /scripts/knitr.sh~
+/dotemacs/blast_plus.el~
+/dotemacs/own_modes/blast_plus.el
