@@ -7,7 +7,7 @@ alias aus='shutdown -h now'
 alias unison='unison streamlined -ui text -auto'
 alias skype='LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype'
 
-alias openvpn='sudo openvpn --config /home/ele/vpn/hu-berlin.conf --auth-user-pass /home/ele/vpn/passwd'
+alias openvpn='sudo openvpn --config /home/ele/Dropbox/vpn/hu-berlin.conf --auth-user-pass /home/ele/Dropbox/vpn/passwd'
 
 export PATH=$PATH:/home/ele/tools/Zotero_linux-x86_64/
 

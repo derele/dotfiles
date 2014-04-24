@@ -40,7 +40,7 @@ export PATH=$PATH:/home/ele/bin:/home/ele/tools/R-devel/bin:/home/ele/bin/x86_64
 
 source /home/ele/dotfiles/shell_functions.sh
 
-if [ $HOSTNAME == thinkpad ] || [ $HOSTNAME == ele-laptop ]
+if [ $HOSTNAME == thinkpad ] || [ $HOSTNAME == ele-laptop ] || [ $HOSTNAME == localhost.localdomain ]
 then
     source /home/ele/dotfiles/lap_bash.sh
 else
@@ -51,7 +51,7 @@ else
     export ESTSCANLIB=/usr/local/lib64/perl5/site_perl/5.10.0/x86_64-linux-thread-multi
     
     ## because ssh X-forwarding sometimes fails
-    export DISPLAY=localhost:10.0
+##    export DISPLAY=localhost:10.0
 
     export CEGMA="/tools/cegma_v2.4.010312"
     export CEGMATMP="/tools/cegma_v2.4.010312/tmp"
