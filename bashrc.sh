@@ -46,7 +46,7 @@ then
 else
     # some things needed on beagle for some programs
     export BROWSER=/usr/bin/w3m
-    export PHRED_PARAMETER_FILE=/tools/phred-dist-020425.c-acd/phredpar.dat
+    export PHRED_PARAMETER_FILE=/tools/phred/phredpar.dat
     export ESTSCANDIR=/tools/estscan-3.0.2
     export ESTSCANLIB=/usr/local/lib64/perl5/site_perl/5.10.0/x86_64-linux-thread-multi
     
@@ -76,6 +76,10 @@ else
         export LD_PRELOAD=/usr/lib64/openmpi/lib/libmpi.so
     fi
 fi
+<<<<<<< HEAD
 
 PERL_MB_OPT="--install_base \"/home/ele/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/ele/perl5"; export PERL_MM_OPT;
+=======
+#source /tools/qiime_software/activate.sh
+>>>>>>> cd18b6c166f2e16664410681a027a1a8c6ac9e5f
