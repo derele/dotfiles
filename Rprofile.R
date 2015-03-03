@@ -35,7 +35,14 @@ options(menu.graphics=FALSE) ## no tclk dialogs
 options(max.print=999) ## no excessive output
 
 ## get rid of X11 crashes
-Sys.unsetenv("DISPLAY")
+## Sys.unsetenv("DISPLAY")
+
+setHook(packageEvent("grDevices", "onLoad"),
+        function(...) grDevices::X11.options(width=12, height=12,
+                                        #type="nbcairo"))  # Cairo device
+                                             type="cairo"))    # other Cairo dev
+                                        #type="xlib"))      # old default
+
 
 
 ll <- function(envir=globalenv(), ...) {
