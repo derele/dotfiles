@@ -50,9 +50,6 @@ else
     export ESTSCANDIR=/tools/estscan-3.0.2
     export ESTSCANLIB=/usr/local/lib64/perl5/site_perl/5.10.0/x86_64-linux-thread-multi
     
-    ## because ssh X-forwarding sometimes fails
-##    export DISPLAY=localhost:10.0
-
     export CEGMA="/tools/cegma_v2.4.010312"
     export CEGMATMP="/tools/cegma_v2.4.010312/tmp"
     export ORTHOMCL="/tools/orthomclSoftware-v2.0.5"
@@ -76,10 +73,9 @@ else
         export LD_PRELOAD=/usr/lib64/openmpi/lib/libmpi.so
     fi
 fi
-<<<<<<< HEAD
 
 PERL_MB_OPT="--install_base \"/home/ele/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/ele/perl5"; export PERL_MM_OPT;
-=======
+
+
 #source /tools/qiime_software/activate.sh
->>>>>>> cd18b6c166f2e16664410681a027a1a8c6ac9e5f
