@@ -4,5 +4,4 @@ root = ssh://ele@141.20.60.126//data
 
 # the unison directory
 ignore = Path {.unison}
-ignore = Path {/data/A_crassus/}
 

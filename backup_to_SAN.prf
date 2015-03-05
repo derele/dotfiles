@@ -4,6 +4,11 @@
 root = /data/
 root = /SAN/
 
+## Dinge die nur auf dem SAN abgelegt werden
+ignore = Path {A_crassus}
+ignore = Path {lost+found}
+
+
 # Sicherungsdateien werden auch nicht mehr gesichert
 ignore = Name *_
 ignore = Name temp.*
