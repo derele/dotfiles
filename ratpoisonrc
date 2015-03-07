@@ -34,8 +34,8 @@ exec nm-applet
 
 # start emacs daemon after makint sure, that there is no old
 # emacsdaemon running
-exec emacsclient --eval "(progn (save-some-buffers t t) (kill-emacs))"
-exec emacs --daemon
+## exec emacsclient --eval "(progn (save-some-buffers t t) (kill-emacs))"
+## exec emacs --daemon
 
 # start a basic screensaver
 exec xscreensaver 
