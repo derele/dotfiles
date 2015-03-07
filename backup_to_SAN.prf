@@ -1,0 +1,28 @@
+# Unison preferences file
+
+# Roots of the synchronization
+root = /data/
+root = /SAN/
+
+## Dinge die nur auf dem SAN abgelegt werden
+ignore = Path {A_crassus}
+ignore = Path {lost+found}
+
+
+# Sicherungsdateien werden auch nicht mehr gesichert
+ignore = Name *_
+ignore = Name temp.*
+ignore = Name *.o
+ignore = Name *.tmp
+
+# ignoriert Sicherungen 
+ignore = Path {backup}
+ignore = Name *~
+ignore = Name .*~
+
+# macht bis zu 3 Sicherungen im jeweiligen Unterordner alt
+backuplocation = local
+backup = Name *
+backupprefix = backup/
+maxbackups = 3
+backupsuffix = .$VERSION
