@@ -18,5 +18,10 @@
 /scripts/knitr.sh~
 /dotemacs/blast_plus.el~
 /dotemacs/own_modes/blast_plus.el~
+<<<<<<< HEAD
+/META-INF/manifest.xml
+/mimetype
+=======
 /beagle_harriet.prf~
 /tmux.conf~
+>>>>>>> d4ec93eb004620de6ab3cf9fa13621ded5de6974

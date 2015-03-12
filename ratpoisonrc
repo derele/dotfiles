@@ -34,14 +34,22 @@ exec nm-applet
 
 # start emacs daemon after makint sure, that there is no old
 # emacsdaemon running
-exec emacsclient --eval "(progn (save-some-buffers t t) (kill-emacs))"
-exec emacs --daemon
+## exec emacsclient --eval "(progn (save-some-buffers t t) (kill-emacs))"
+## exec emacs --daemon
+
+# start a basic screensaver
+exec xscreensaver 
+
 
 # start monitoring battery usage
 exec battery-monitor.pl
 
+##  stalonetray
+unmanage stalonetray
+exec stalonetray
+
 # start dropbox
-exec 'dropbox start'
+exec "dropbox start"
 
 # start screen with 256colors
 exec xterm -e 'screen_after_256.sh'
@@ -58,3 +66,5 @@ bind F7 exec xterm -e 'harriet-ssh.sh'
 bind y ratclick 2       # great for pasting
 
 definekey top M-Tab next
+
+

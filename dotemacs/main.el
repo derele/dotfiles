@@ -185,12 +185,12 @@ w) "d ")) line) 'face 'linum)))
 ;; (add-hook 'org-mode-hook 'ele-open-csv-as-org-table)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;terminal  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; multi-terminal-mode
-(require 'multi-term)
-(setq multi-term-program "/bin/bash")
+;; ;; multi-terminal-mode
+;; (require 'multi-term)
+;; (setq multi-term-program "/bin/bash")
 
-;; web browser binding  
-(global-set-key "\C-cc" 'browse-url-or-follow-link)
+;; ;; web browser binding  
+;; (global-set-key "\C-cc" 'browse-url-or-follow-link)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; window and buffer general;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Easy between windows

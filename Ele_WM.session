@@ -1,0 +1,11 @@
+[Desktop Entry]
+
+Name=Ele_WM
+
+Comment=Ele's Desktop Environment
+
+Type=XSession
+
+Exec=/home/ele/dotfiles/scripts/Ele_WM.sh
+
+TryExec=Ele_WM.sh
