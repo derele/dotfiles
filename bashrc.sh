@@ -18,6 +18,9 @@ alias parallel="parallel --gnu"
 # enable keychain ssh passphrase memory
 eval `keychain --eval --nogui -Q -q id_rsa`
 
+## disable XON/XOFF so that C-s can search history forward
+stty -ixon
+
 ### do some readline remapping
 bind -f /home/ele/dotfiles/.inputrc
 
