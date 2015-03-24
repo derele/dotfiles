@@ -1,5 +1,4 @@
 XTerm*faceName: DejaVu Sans Mono
-XTerm*faceSize: 6
 
 XTerm*background: black
 XTerm*foreground: white
@@ -10,10 +9,4 @@ XTerm*scrollKey: true
 XTerm*saveLines: 1000
 XTerm*metaSendsEscape: true
 
-Xft.dpi: 180
-Xft.autohint: 0
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintfull
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
+
