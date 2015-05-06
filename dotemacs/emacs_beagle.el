@@ -19,14 +19,14 @@ to avoid quoting)."
   (message cmd)
   )
 
-;; control emms on the laptop 
-(global-set-key "\C-cm" nil)
-(global-set-key  "\C-cmh" (lambda () (interactive) (remote-emacs "emms-pause")))
-(global-set-key "\C-cm-" (lambda () (interactive) (remote-emacs "emms-volume-lower")))
-(global-set-key  "\C-cm+" (lambda () (interactive) (remote-emacs "emms-volume-raise")))
-(global-set-key  "\C-cmn" (lambda () (interactive) (remote-emacs "emms-next")))
-(global-set-key  "\C-cmp" (lambda () (interactive) (remote-emacs "emms-previous")))
-(global-set-key  "\C-cmr" (lambda () (interactive) (remote-emacs "emms-random")))
+;; ;; control emms on the laptop 
+;; (global-set-key "\C-cm" nil)
+;; (global-set-key  "\C-cmh" (lambda () (interactive) (remote-emacs "emms-pause")))
+;; (global-set-key "\C-cm-" (lambda () (interactive) (remote-emacs "emms-volume-lower")))
+;; (global-set-key  "\C-cm+" (lambda () (interactive) (remote-emacs "emms-volume-raise")))
+;; (global-set-key  "\C-cmn" (lambda () (interactive) (remote-emacs "emms-next")))
+;; (global-set-key  "\C-cmp" (lambda () (interactive) (remote-emacs "emms-previous")))
+;; (global-set-key  "\C-cmr" (lambda () (interactive) (remote-emacs "emms-random")))
 
 ;; have to decide wether to control the remote conkeror web-browser directly or 
 
