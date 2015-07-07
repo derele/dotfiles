@@ -299,6 +299,8 @@ w) "d ")) line) 'face 'linum)))
 (setq comint-scroll-to-bottom-on-input t)
 (setq comint-scroll-to-bottom-on-output t)
 
+(setq ess-tab-complete-in-script t)
+
 ;; Sweave .Rnw mode stuff.
 (require 'ess-noweb)
 (setq TeX-file-extensions
