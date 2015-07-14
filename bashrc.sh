@@ -79,6 +79,6 @@ fi
 
 PERL_MB_OPT="--install_base \"/home/ele/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/ele/perl5"; export PERL_MM_OPT;
-
+PERL5LIB=/tools/vcftools_0.1.12b/lib/perl5/site_perl/:$PERL5LIB; export PERL5LIB; 
 
 #source /tools/qiime_software/activate.sh
