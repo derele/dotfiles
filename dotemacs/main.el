@@ -14,7 +14,8 @@
 (setq inhibit-startup-message t)
 (setq load-path
       (append (list nil 
-		    "~/.emacs.d"
+		    ;;		    "~/.emacs.d"
+		    "~/.emacs.d/load-path"
 		    "~/.emacs.d/color-theme-6.6.0"
 ;;		    "~/.emacs.d/emms/lisp"
                     "~/.emacs.d/magit-0.7"
