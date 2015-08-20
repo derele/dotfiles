@@ -27,3 +27,6 @@
 >>>>>>> d4ec93eb004620de6ab3cf9fa13621ded5de6974
 /Xdefaults-thinkpad~
 /scripts/#Ele_WM.sh#
+/scripts/IZWserver001_external.sh~
+/scripts/IZWserver001_internal-ssh.sh~
+/scripts/execute_tmux_on_all.sh~
