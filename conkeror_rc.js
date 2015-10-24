@@ -167,3 +167,10 @@ define_key(content_buffer_normal_keymap, "C-c m -", "emms-volume-lower");
 shell_own("emms-random", "play random track", "emacsclient-eval.sh", "emms-random");
 define_key(content_buffer_normal_keymap, "C-c m r", "emms-random");
 
+require("user-agent-policy");
+// Tell Google Calendar that we are Firefox not Conkeror:
+user_agent_policy.define_policy(
+    "GCal",
+    user_agent_firefox(),
+    build_url_regexp($domain = /(.*\.)?google/, $path = /calendar/)
+);
