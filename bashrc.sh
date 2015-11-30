@@ -55,7 +55,7 @@ else
     
     export CEGMA="/tools/cegma_v2.4.010312"
     export CEGMATMP="/tools/cegma_v2.4.010312/tmp"
-    export ORTHOMCL="/tools/orthomclSoftware-v2.0.5"
+    export ORTHOMCL="/tools/orthomclSoftware-v2.0.9"
     export DART="/tools/dart"
     export PERL5LIB="$PERL5LIB:$CEGMA/lib:$ORTHOMCL/lib/perl:$DART/perl:/home/ele/tools/tRNAscan-SE-1.3.1/:/home/ele/bin:/tools/FunDi-master"
     
