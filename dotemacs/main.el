@@ -14,9 +14,10 @@
 (setq inhibit-startup-message t)
 (setq load-path
       (append (list nil 
-		    "~/.emacs.d"
+		    ;;		    "~/.emacs.d"
+		    "~/.emacs.d/load-path"
 		    "~/.emacs.d/color-theme-6.6.0"
-		    "~/.emacs.d/emms/lisp"
+;;		    "~/.emacs.d/emms/lisp"
                     "~/.emacs.d/magit-0.7"
                     ;; lisp is not needed at the moment  "~/.emacs.d/slime-2010-05-31"
                     "/usr/share/emacs/24.3/lisp/progmodes"
@@ -298,6 +299,8 @@ w) "d ")) line) 'face 'linum)))
 ;; ;; always scroll to output and input 
 (setq comint-scroll-to-bottom-on-input t)
 (setq comint-scroll-to-bottom-on-output t)
+
+(setq ess-tab-complete-in-script t)
 
 ;; Sweave .Rnw mode stuff.
 (require 'ess-noweb)

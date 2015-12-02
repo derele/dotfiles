@@ -6,6 +6,7 @@ root = /SAN/
 
 ## Dinge die nur auf dem SAN abgelegt werden
 ignore = Path {A_crassus}
+ignore = Path {owncloud}
 ignore = Path {lost+found}
 
 

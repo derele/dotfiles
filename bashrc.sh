@@ -55,7 +55,7 @@ else
     
     export CEGMA="/tools/cegma_v2.4.010312"
     export CEGMATMP="/tools/cegma_v2.4.010312/tmp"
-    export ORTHOMCL="/tools/orthomclSoftware-v2.0.5"
+    export ORTHOMCL="/tools/orthomclSoftware-v2.0.9"
     export DART="/tools/dart"
     export PERL5LIB="$PERL5LIB:$CEGMA/lib:$ORTHOMCL/lib/perl:$DART/perl:/home/ele/tools/tRNAscan-SE-1.3.1/:/home/ele/bin:/tools/FunDi-master"
     
@@ -79,6 +79,6 @@ fi
 
 PERL_MB_OPT="--install_base \"/home/ele/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/ele/perl5"; export PERL_MM_OPT;
-
+PERL5LIB=/tools/vcftools_0.1.12b/lib/perl5/site_perl/:$PERL5LIB; export PERL5LIB; 
 
 #source /tools/qiime_software/activate.sh
