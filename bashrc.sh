@@ -43,7 +43,7 @@ export PATH=$PATH:/home/ele/bin:/home/ele/tools/R-devel/bin:/home/ele/bin/x86_64
 
 source /home/ele/dotfiles/shell_functions.sh
 
-if [ $HOSTNAME == thinkpad ] || [ $HOSTNAME == ele-laptop ]  || [ $HOSTNAME == Heitlingernb-1 ]
+if [ $HOSTNAME == thinkpad ] || [ $HOSTNAME == ele-laptop ]  || [ $HOSTNAME == Heitlingernb-1 ] || [ $HOSTNAME == heitlinger-1 ] 
 then
     source /home/ele/dotfiles/lap_bash.sh
 else
@@ -73,7 +73,7 @@ else
         export OMP_NUM_THREADS=19
         export AUGUSTUS_CONFIG_PATH=/tools/augustus.2.5.5/config/
         export ZOE=/tools/snap/Zoe
-        export LD_PRELOAD=/usr/lib64/openmpi/lib/libmpi.so
+        ## export LD_PRELOAD=/usr/lib64/openmpi/lib/libmpi.so
     fi
 fi
 
