@@ -16,3 +16,5 @@ keycode 32 = o O o O asciitilde
 clear control
 keycode 118 = Control_R
 add control = Control_R Control_L
+
+keycode   9 = Escape asciitilde Escape
