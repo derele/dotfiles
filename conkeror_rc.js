@@ -18,8 +18,8 @@ define_key(content_buffer_normal_keymap, "z", "zotero-bookmark");
 
 //have tabs
 require("favicon.js");
-//require("new-tabs.js");
-require("tab-bar.js");
+require("new-tabs.js");
+//require("tab-bar.js");
 
 tab_bar_show_icon = true;
 tab_bar_show_index = true;
