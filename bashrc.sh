@@ -16,7 +16,7 @@ alias Rs="Rscript --vanilla"
 alias parallel="parallel --gnu"
 
 # enable keychain ssh passphrase memory
-eval `keychain --eval --nogui -Q -q id_rsa`
+##eval `keychain --eval --nogui -Q -q id_rsa`
 
 ## disable XON/XOFF so that C-s can search history forward
 stty -ixon
@@ -73,7 +73,7 @@ else
         export OMP_NUM_THREADS=19
         export AUGUSTUS_CONFIG_PATH=/tools/augustus.2.5.5/config/
         export ZOE=/tools/snap/Zoe
-        export LD_PRELOAD=/usr/lib64/openmpi/lib/libmpi.so
+##        export LD_PRELOAD=/usr/lib64/openmpi/lib/libmpi.so
     fi
 fi
 
