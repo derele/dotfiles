@@ -35,11 +35,13 @@ exec nm-applet
 # start emacs daemon after makint sure, that there is no old
 # emacsdaemon running
 ## exec emacsclient --eval "(progn (save-some-buffers t t) (kill-emacs))"
-## exec emacs --daemon
+exec emacs --daemon
 
 # start a basic screensaver
 exec xscreensaver 
 
+# test whether I want to use flux
+exec xflux -l 12
 
 # start monitoring battery usage
 exec battery-monitor.pl
@@ -49,7 +51,7 @@ unmanage stalonetray
 exec stalonetray
 
 # start dropbox
-exec "dropbox start"
+exec dropbox.py start
 
 # start screen with 256colors
 exec xterm -e 'screen_after_256.sh'
