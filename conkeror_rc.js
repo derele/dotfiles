@@ -39,6 +39,15 @@ url_remoting_fn = load_url_in_new_buffer;
 
 user_pref("extensions.checkCompatibility", false);
 
+require("user-agent-policy");
+// Tell Google Calendar that we are Firefox not Conkeror:
+user_agent_policy.define_policy(
+    "GCal",
+    user_agent_firefox(),
+    build_url_regexp($domain = /(.*\.)?google/, $path = /calendar/)
+);
+
+
 // block auto focus events 
 // one imperfect solution
 // require("block-content-focus-change.js");
@@ -173,11 +182,3 @@ user_pref("extensions.checkCompatibility", false);
 
 // shell_own("emms-random", "play random track", "emacsclient-eval.sh", "emms-random");
 // define_key(content_buffer_normal_keymap, "C-c m r", "emms-random");
-
-// require("user-agent-policy");
-// // Tell Google Calendar that we are Firefox not Conkeror:
-// user_agent_policy.define_policy(
-//     "GCal",
-//     user_agent_firefox(),
-//     build_url_regexp($domain = /(.*\.)?google/, $path = /calendar/)
-// );
