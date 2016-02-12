@@ -345,40 +345,6 @@ w) "d ")) line) 'face 'linum)))
             )
 	  )
 
-;;;;;;;;; Internet Relay Chat with erc ;;;;;;;;;;;;;;;;;;
-;; (require 'erc)
-;; ;; joining && autojoing
-;; ;; wildcards for freenode as the actual server as
-;; ;; name can be be a bit different
-;; (erc-autojoin-mode t)
-;; (setq erc-autojoin-channels-alist
-;;       '((".*\\.freenode.net" "#emacs" "#R" "#ratpoison" "#conkeror" "#bioinformatics"))
-;;       )
-
-;; ;; check channels
-;; (erc-track-mode t)
-;; (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
-;;                                  "324" "329" "332" "333" "353" "477"))
-;; ;; don't show any of this
-;; (setq erc-hide-list '("JOIN" "PART" "QUIT" "NICK"))
-
-;; ;; load my password file to allow sharing my password-clean .emacs
-;; (load "~/.ercpass")
-;; (require 'erc-services)
-;; (erc-services-mode 1)
-;; (setq erc-prompt-for-nickserv-password nil)
-;; (setq erc-nickserv-passwords
-;;       '((freenode     (("nick-one" . ,freenode-nickone-pass)))))
-
-;; (defun djcb-erc-start-or-switch ()
-;;   "Connect to ERC, or switch to last active buffer"
-;;   (interactive)
-;;   (if (get-buffer "irc.freenode.net:6667") ;; ERC already active?
-;;     (erc-track-switch-buffer 1) ;; yes: switch to last active
-;;     (when (y-or-n-p "Start ERC? ") ;; no: maybe start ERC
-;;       (erc :server "irc.freenode.net" :port 6667 :nick "derele" :full-name "Emanuel Heitlinger")
-;;       )))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;,,,;; get the actual ip;;;;;;;;;;;;;;;;;;;;;;
 (defun get-ip-address (&optional dev)
   "get the IP-address for device DEV (default: eth0)"
@@ -423,6 +389,44 @@ w) "d ")) line) 'face 'linum)))
 (autoload 'write-sig-file "c-sig" "c-sig" t)
 (autoload 'read-sig-file "c-sig" "c-sig" t)
 
+;; load additional files
+(load-file "/home/ele/dotfiles/dotemacs/w3m-init.el")
+
+;;;;;;;;; Internet Relay Chat with erc ;;;;;;;;;;;;;;;;;;
+;; (require 'erc)
+;; ;; joining && autojoing
+;; ;; wildcards for freenode as the actual server as
+;; ;; name can be be a bit different
+;; (erc-autojoin-mode t)
+;; (setq erc-autojoin-channels-alist
+;;       '((".*\\.freenode.net" "#emacs" "#R" "#ratpoison" "#conkeror" "#bioinformatics"))
+;;       )
+
+;; ;; check channels
+;; (erc-track-mode t)
+;; (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
+;;                                  "324" "329" "332" "333" "353" "477"))
+;; ;; don't show any of this
+;; (setq erc-hide-list '("JOIN" "PART" "QUIT" "NICK"))
+
+;; ;; load my password file to allow sharing my password-clean .emacs
+;; (load "~/.ercpass")
+;; (require 'erc-services)
+;; (erc-services-mode 1)
+;; (setq erc-prompt-for-nickserv-password nil)
+;; (setq erc-nickserv-passwords
+;;       '((freenode     (("nick-one" . ,freenode-nickone-pass)))))
+
+;; (defun djcb-erc-start-or-switch ()
+;;   "Connect to ERC, or switch to last active buffer"
+;;   (interactive)
+;;   (if (get-buffer "irc.freenode.net:6667") ;; ERC already active?
+;;     (erc-track-switch-buffer 1) ;; yes: switch to last active
+;;     (when (y-or-n-p "Start ERC? ") ;; no: maybe start ERC
+;;       (erc :server "irc.freenode.net" :port 6667 :nick "derele" :full-name "Emanuel Heitlinger")
+;;       )))
+
+
 ;;;;;;;;;;;;;;;;  everythin for the mail: the big brother database ;;;;;;;;;;;;;;;;
 ;;;; not used at the moment
 ;; (setq bbdb-file "~/.emacs.d/bbdb")           ;; keep ~/ clean; set before loading
@@ -455,18 +459,15 @@ w) "d ")) line) 'face 'linum)))
 ;;  '(org-agenda-files (quote ("~/org/TODO.org" "~/org/main.org")))
 ;; )
 
-;; load additional files
-(load-file "/home/ele/dotfiles/dotemacs/w3m-init.el")
+;; ;; load the appropriate file for each machine
+;; (if (string-match "ele-laptop" (getenv "HOSTNAME")) ;; laptop
+;;     (load-file "/home/ele/dotfiles/dotemacs/emacs_laptop.el"))
 
-;; load the appropriate file for each machine
-(if (string-match "ele-laptop" (getenv "HOSTNAME")) ;; laptop
-    (load-file "/home/ele/dotfiles/dotemacs/emacs_laptop.el"))
+;; (if (string-match "thinkpad" (getenv "HOSTNAME"))
+;;     (load-file "/home/ele/dotfiles/dotemacs/emacs_thinkpad.el"))
 
-(if (string-match "thinkpad" (getenv "HOSTNAME"))
-    (load-file "/home/ele/dotfiles/dotemacs/emacs_thinkpad.el"))
-
-(if (string-match "beagle" (getenv "HOSTNAME")) ;; beagle
-    (load-file "/home/ele/dotfiles/dotemacs/emacs_beagle.el"))
+;; (if (string-match "beagle" (getenv "HOSTNAME")) ;; beagle
+;;     (load-file "/home/ele/dotfiles/dotemacs/emacs_beagle.el"))
 
 
 ;; ;; Emacswiki editing only when we have are connected to the web
