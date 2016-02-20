@@ -11,6 +11,8 @@ define_key(content_buffer_normal_keymap, "d", "follow-new-buffer");
 define_key(content_buffer_normal_keymap, "M-\u00FC", "buffer-previous");
 define_key(content_buffer_normal_keymap, "M-\u00F6", "buffer-next");
 
+// prevent pdf crashes
+user_pref('plugin.state.libevbrowserplugin', 0); 
 
 interactive("zotero-bookmark", "load into Zotero", "follow",
             $browser_object = "javascript:var%20d=document,s=d.createElement('script');s.src='https://www.zotero.org/bookmarklet/loader.js';(d.body?d.body:d.documentElement).appendChild(s);void(0);");
@@ -30,6 +32,12 @@ session_auto_save_auto_load = true;
 
 // and google in the minibuffer
 //require("search-engine.js");
+
+//define_mime_type_external_handler("application/pdf", "xpdf");
+//define_mime_type_external_handler("pdf", "xpdf");
+
+//define_mime_type_handler("application/pdf", "xpdf");
+//define_mime_type_handler("pdf", "xpdf");
 
 //open from command line in same window new tab
 //form: http://lifealgorithms.wordpress.com/tag/emacs/
