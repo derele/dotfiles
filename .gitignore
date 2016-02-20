@@ -32,3 +32,4 @@
 /scripts/execute_tmux_on_all.sh~
 /.xbindkeysrc~
 /scripts/create_taxdb.pl~
+/scripts/slack-zotero-send.sh~
