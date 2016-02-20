@@ -263,12 +263,12 @@ w) "d ")) line) 'face 'linum)))
 ;; make reftex lookup master document
 (setq-default TeX-master nil)
 
-;; (eval-after-load "tex"
-;;   '(add-to-list 'TeX-command-list
-;;                 '("Rubber" "rubber -d %t" TeX-run-command nil t) t)
-;;   )
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
+(add-hook 'LaTeX-mode-hook 'flyspell-buffer)
 
-;; ebib 
+;; use pdflatex
+(setq TeX-PDF-mode t)
+
 (autoload 'ebib "ebib" "Ebib, a BibTeX database manager." t)
 
 ;; reftex
