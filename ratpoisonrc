@@ -69,4 +69,4 @@ bind y ratclick 2       # great for pasting
 
 definekey top M-Tab next
 
-
+exec ssh-add ~/.ssh/id_rsa

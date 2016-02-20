@@ -11,6 +11,8 @@ define_key(content_buffer_normal_keymap, "d", "follow-new-buffer");
 define_key(content_buffer_normal_keymap, "M-\u00FC", "buffer-previous");
 define_key(content_buffer_normal_keymap, "M-\u00F6", "buffer-next");
 
+// prevent pdf crashes
+user_pref('plugin.state.libevbrowserplugin', 0); 
 
 interactive("zotero-bookmark", "load into Zotero", "follow",
             $browser_object = "javascript:var%20d=document,s=d.createElement('script');s.src='https://www.zotero.org/bookmarklet/loader.js';(d.body?d.body:d.documentElement).appendChild(s);void(0);");
@@ -31,6 +33,12 @@ session_auto_save_auto_load = true;
 // and google in the minibuffer
 //require("search-engine.js");
 
+//define_mime_type_external_handler("application/pdf", "xpdf");
+//define_mime_type_external_handler("pdf", "xpdf");
+
+//define_mime_type_handler("application/pdf", "xpdf");
+//define_mime_type_handler("pdf", "xpdf");
+
 //open from command line in same window new tab
 //form: http://lifealgorithms.wordpress.com/tag/emacs/
 url_remoting_fn = load_url_in_new_buffer;
@@ -38,6 +46,15 @@ url_remoting_fn = load_url_in_new_buffer;
 //define_webjump("shortMemo", "url-with-%s-for-substitutes");
 
 user_pref("extensions.checkCompatibility", false);
+
+require("user-agent-policy");
+// Tell Google Calendar that we are Firefox not Conkeror:
+user_agent_policy.define_policy(
+    "GCal",
+    user_agent_firefox(),
+    build_url_regexp($domain = /(.*\.)?google/, $path = /calendar/)
+);
+
 
 // block auto focus events 
 // one imperfect solution
@@ -173,11 +190,3 @@ user_pref("extensions.checkCompatibility", false);
 
 // shell_own("emms-random", "play random track", "emacsclient-eval.sh", "emms-random");
 // define_key(content_buffer_normal_keymap, "C-c m r", "emms-random");
-
-// require("user-agent-policy");
-// // Tell Google Calendar that we are Firefox not Conkeror:
-// user_agent_policy.define_policy(
-//     "GCal",
-//     user_agent_firefox(),
-//     build_url_regexp($domain = /(.*\.)?google/, $path = /calendar/)
-// );
