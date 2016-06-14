@@ -83,8 +83,6 @@ PERL5LIB=/tools/vcftools_0.1.12b/lib/perl5/site_perl/:$PERL5LIB; export PERL5LIB
 
 #source /tools/qiime_software/activate.sh
 
-<<<<<<< HEAD
-
 # -- Improved X11 forwarding through GNU Screen (or tmux).
 # If not in screen or tmux, update the DISPLAY cache.
 # If we are, update the value of DISPLAY to be that in the cache.
