@@ -109,7 +109,7 @@ preexec() {
     #echo DISPLAY = $DISPLAY, display.txt = `cat ~/.display.txt`, STY = $STY, TMUX = $TMUX
 }
 trap 'preexec' DEBUG
-=======
+
 ## debian defaults from here
 # If not running interactively, don't do anything
 case $- in
@@ -218,4 +218,3 @@ fi
 
 
 
->>>>>>> 5ddd6de920856e31bb470bab98bb159854e6e90e
