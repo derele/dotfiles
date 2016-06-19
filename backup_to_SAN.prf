@@ -8,7 +8,8 @@ root = /SAN/
 ignore = Path {A_crassus}
 ignore = Path {owncloud}
 ignore = Path {lost+found}
-
+ignore = Path {BegenDiv_raw}
+ignore = Path {BegenDiv_raw_first_analysis}
 
 # Sicherungsdateien werden auch nicht mehr gesichert
 ignore = Name *_
