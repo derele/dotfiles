@@ -7,7 +7,7 @@ alias aus='shutdown -h now'
 alias unison='unison streamlined -ui text -auto'
 alias skype='LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype'
 
-alias openvpn='sudo openvpn --config Dropbox/vpn/hu-berlin.ovpn'
+alias HUopenvpn='sudo openvpn --config Dropbox/vpn/hu-berlin.ovpn'
 
 proxy_NO () {
     gsettings set org.gnome.system.proxy mode 'none'
