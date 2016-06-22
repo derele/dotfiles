@@ -17,11 +17,6 @@
 		    ;;		    "~/.emacs.d"
 		    "~/.emacs.d/load-path"
 		    "~/.emacs.d/color-theme-6.6.0"
-;;		    "~/.emacs.d/emms/lisp"
-                    "~/.emacs.d/magit-0.7"
-                    ;; lisp is not needed at the moment  "~/.emacs.d/slime-2010-05-31"
-                    "/usr/share/emacs/24.3/lisp/progmodes"
-                    "/usr/share/emacs/24.3/lisp/vc"
                     "~/.emacs.d/g-client"
                     "~/.emacs.d/ess-12.09/lisp/"
                     "~/dotfiles/dotemacs/own_modes")              
@@ -51,8 +46,7 @@
 ;;;;;;;;;;;;;;;;;;;;;; swith off bell completely
 (setq ring-bell-function 'ignore)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;; VCS stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'magit)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Git VCS stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq magit-commit-all-when-nothing-staged 1)
 (global-set-key "\C-ci" 'magit-status)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; general functionality ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -118,8 +112,10 @@
 ;; ssh 
 (require 'ssh)
 (require 'tramp)
-(setq tramp-default-method "scp"
-      tramp-default-user "dc134")
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
 ;; parentheses highlighting
 (require 'highlight-parentheses)
