@@ -18,7 +18,6 @@
 		    "~/.emacs.d/load-path"
 		    "~/.emacs.d/color-theme-6.6.0"
                     "~/.emacs.d/g-client"
-                    "~/.emacs.d/ess-12.09/lisp/"
                     "~/dotfiles/dotemacs/own_modes")              
               load-path))
 
