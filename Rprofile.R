@@ -3,8 +3,8 @@ if (interactive()) {
     cat("\n\n   RAM is cheap and thinking hurts.
    -- Uwe Ligges (about memory requirements in R)
       R-help (June 2007)\n\n")
-  
-                                        #use main repo
+    Sys.setenv("DISPLAY"=readLines("~/.display.txt"))
+                                            #use main repo
     options("repos" = c(CRAN = "http://cran.r-project.org/"))
     options(show.signif.stars=FALSE)
     options(browser ="conkeror")
@@ -35,8 +35,6 @@ options(menu.graphics=FALSE) ## no tclk dialogs
 options(max.print=999) ## no excessive output
 
 ## get rid of X11 crashes
-## Sys.unsetenv("DISPLAY")
-
 setHook(packageEvent("grDevices", "onLoad"),
         function(...) grDevices::X11.options(width=12, height=12,
                                         #type="nbcairo"))  # Cairo device
@@ -51,6 +49,10 @@ ll <- function(envir=globalenv(), ...) {
   modes <- sapply(obs, function (x) mode(get(x)))  
   classes <- sapply(obs, function (x) class(get(x)))
   as.data.frame(cbind(sizes, modes, classes))
+}
+
+fix.X11 <- function() {
+  Sys.setenv("DISPLAY"=readLines("~/.display.txt"))
 }
 
 # Override q() to not save by default.
