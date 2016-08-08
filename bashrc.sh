@@ -64,10 +64,8 @@ else
     if [ $HOSTNAME == beagle ]
     then
         export WISECONFIGDIR=/tools/wise2.2.0/wisecfg/
-        export BLASTDB=/db/blastdb/
         
     else
-        export BLASTDB=/data/db/blastdb/
         export WISECONFIGDIR=/tools/wise2.2.3-rc7/wisecfg/
         export OMP_THREAD_LIMIT=20
         export OMP_NUM_THREADS=19
