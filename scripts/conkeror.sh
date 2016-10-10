@@ -1,2 +1,2 @@
 #!/bin/bash
-exec xulrunner /home/ele/conkeror/application.ini "$@"
+exec firefox -app /home/ele/conkeror/application.ini "$@"
