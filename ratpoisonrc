@@ -65,8 +65,9 @@ bind F5 exec google-chrome
 bind F6 exec xterm -e 'cluster-ssh.sh'
 bind F7 exec xterm -e 'harriet-ssh.sh'
 
-bind y ratclick 2       # great for pasting
+bind y exec ratpoison -c "ratclick 2"      # great for pasting
 
 definekey top M-Tab next
 
 exec ssh-add ~/.ssh/id_rsa
+
