@@ -36,6 +36,10 @@ xterm*color15: rgb:fc/fc/fc
 ! stop output to terminal from jumping down to bottom of scroll again
 xterm*scrollTtyOutput: false
 
+! Needed to to the cool jumps
+XTerm*metaSendsEscape: true
+
+
 
 
 

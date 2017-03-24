@@ -1,0 +1,11 @@
+XTerm*faceName: DejaVu Sans Mono
+
+XTerm*background: black
+XTerm*foreground: white
+XTerm*internalBorder: 3
+XTerm*loginShell: true
+XTerm*scrollBar: false
+XTerm*scrollKey: true
+XTerm*saveLines: 1000
+XTerm*metaSendsEscape: true
+
