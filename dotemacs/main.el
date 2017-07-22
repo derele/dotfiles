@@ -18,8 +18,14 @@
 		    "~/.emacs.d/load-path"
 		    "~/.emacs.d/color-theme-6.6.0"
                     "~/.emacs.d/g-client"
+                    "~/.emacs.d/polymode"
+                    "~/.emacs.d/polymode/modes"
                     "~/dotfiles/dotemacs/own_modes")              
               load-path))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;; additonal packages ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; color stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; no boldness in fonts removes also underlines
@@ -257,29 +263,74 @@ w) "d ")) line) 'face 'linum)))
 
 ;; Sweave .Rnw mode stuff.
 (require 'ess-noweb)
-(setq TeX-file-extensions
-      '("Snw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
-(add-to-list 'auto-mode-alist '("\\.Rnw\\'" . Rnw-mode))
-(add-to-list 'auto-mode-alist '("\\.Snw\\'" . Snw-mode))
+;; (setq TeX-file-extensions
+;;      '("Snw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
+;;(add-to-list 'auto-mode-alist '("\\.Rnw\\'" . Rnw-mode))
+;;(add-to-list 'auto-mode-alist '("\\.Snw\\'" . Snw-mode))
 
-;; Set up knitr functions
-(defun ess-swv-knit ()
-  "Run knit on the current .Rnw file."
-  (interactive)
-  (ess-swv-run-in-R "require(knitr) ; knit"))
+;; ;; Set up knitr functions
+;; (defun ess-swv-knit ()
+;;   "Run knit on the current .Rnw file."
+;;   (interactive)
+;;   (ess-swv-run-in-R "require(knitr) ; knit"))
 
-(defun ess-swv-purl ()
-  "Run purl on the current .Rnw file."
-  (interactive)
-  (ess-swv-run-in-R "require(knitr) ; purl"))
+;; (defun ess-swv-purl ()
+;;   "Run purl on the current .Rnw file."
+;;   (interactive)
+;;   (ess-swv-run-in-R "require(knitr) ; purl"))
 
 ;; this does not work atm
-(add-hook 'Rnw-mode-hook
-          (lambda ()
-            (add-to-list 'TeX-command-list
-                         '("knitr" "/home/ele/dotfiles/scripts/knitr.sh %s.Rnw && pdflatex %s.tex"
-                           TeX-run-command nil the:help "Run Knitr") t)
-            (setq TeX-command-default "knitr")))
+;; (add-hook 'Rnw-mode-hook
+;;           (lambda ()
+;;             (add-to-list 'TeX-command-list
+;;                          '("knitr" "/home/ele/dotfiles/scripts/knitr.sh %s.Rnw && pdflatex %s.tex"
+;;                            TeX-run-command nil the:help "Run Knitr") t)
+;;             (setq TeX-command-default "knitr")))
+
+
+(require 'polymode)
+(require 'poly-R)
+(require 'poly-markdown)
+(require 'color)
+
+;;; MARKDOWN
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+
+;;; R modes
+(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+
+(defun rmarkdown-new-chunk (name)
+  "Insert a new R chunk."
+  (interactive "sChunk name: ")
+  (insert "\n```{r " name "}\n")
+  (save-excursion
+    (newline)
+    (insert "```\n")
+    (previous-line)))
+
+(defun rmarkdown-weave-file ()
+  "Run knitr on the current file and weave it as MD and HTML."
+  (interactive)
+  (shell-command
+   (format "knit.sh -c %s"
+           (shell-quote-argument (buffer-file-name)))))
+
+(defun rmarkdown-tangle-file ()
+  "Run knitr on the current file and tangle its R code."
+  (interactive)
+  (shell-command
+   (format "knit.sh -t %s"
+           (shell-quote-argument (buffer-file-name)))))
+
+(defun rmarkdown-preview-file ()
+  "Run knitr on the current file and display output in a browvser."
+  (interactive)
+  (shell-command
+   (format "knit.sh -b %s"
+                  (shell-quote-argument (buffer-file-name)))))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; cc-mode stuff ;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'cc-mode)
