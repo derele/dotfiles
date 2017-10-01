@@ -58,7 +58,7 @@ exec xterm -e 'screen_after_256.sh'
 
 ## Mapping some keys ##################################################
 bind F1 exec xterm -e 'screen_after_256.sh'
-bind F2 exec xterm -e 'beagle-ssh.sh'
+bind F2 exec slack
 bind F3 exec conkeror 
 bind F4 exec firefox
 bind F5 exec chromium
