@@ -62,7 +62,7 @@ bind F2 exec xterm -e 'svalbard-ssh.sh'
 bind F3 exec /home/ele/conkeror/conkeror
 bind F4 exec firefox
 bind F5 exec chromium
-### bind F6 exec xterm -e 'cluster-ssh.sh'
+bind F6 exec windows.sh
 bind F7 exec xterm -e 'harriet-ssh.sh'
 
 bind y exec ratpoison -c "ratclick 2"      # great for pasting
