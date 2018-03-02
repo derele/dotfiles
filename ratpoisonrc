@@ -18,7 +18,10 @@ set winname class
 ## What programs do we run on startup?  ############################
 ### Do some key re-mapping
 exec xmodmap -quiet ~/dotfiles/.xmodmap
-   
+
+### Make sure special keys work on laptops
+exec xbindkeys -f dotfiles/.xbindkeysrc
+
 ### Apparently modifies some low-level GUI bits of X.
 exec xrdb -load ~/.Xresources
 
