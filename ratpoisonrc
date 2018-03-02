@@ -20,10 +20,10 @@ set winname class
 exec xmodmap -quiet ~/dotfiles/.xmodmap
 
 ### Make sure special keys work on laptops
-exec xbindkeys -f dotfiles/.xbindkeysrc
+exec xbindkeys -f ~/dotfiles/.xbindkeysrc
 
 ### Apparently modifies some low-level GUI bits of X.
-exec xrdb -load ~/.Xresources
+exec xrdb -load ~/dotfiles/Xresources
 
 # start networking
 exec nm-applet
@@ -47,30 +47,27 @@ exec xscreensaver
 exec xflux -l 12
 
 # start monitoring battery usage
-exec battery-monitor.pl
+exec ~/dotfiles/scripts/battery-monitor.pl
 
 ##  stalonetray
-unmanage stalonetray
-exec stalonetray
+## unmanage stalonetray
+## exec stalonetray
 
-# start dropbox
-exec dropbox.py start
+# start seafile
+exec seaf-cli start -c /etc/seafile/ele/conf_dir
 
 # start screen with 256colors
-exec xterm -e 'screen_after_256.sh'
+exec xterm -e '~/dotfiles/scripts/screen_after_256.sh'
 
 ## Mapping some keys ##################################################
-bind F1 exec xterm -e 'screen_after_256.sh'
-bind F2 exec xterm -e 'svalbard-ssh.sh'
+bind F1 exec xterm -e '~/dotfiles/scripts/screen_after_256.sh'
+bind F2 exec xterm -e '~/dotfiles/scripts/svalbard-ssh.sh'
 bind F3 exec /home/ele/conkeror/conkeror
 bind F4 exec firefox
 bind F5 exec chromium
-bind F6 exec windows.sh
-bind F7 exec xterm -e 'harriet-ssh.sh'
+bind F6 exec ~/dotfiles/scripts/windows.sh
+bind F7 exec xterm -e '~/dotfiles/scripts/harriet-ssh.sh'
 
 bind y exec ratpoison -c "ratclick 2"      # great for pasting
 
 definekey top M-Tab next
-
-exec ssh-add ~/.ssh/id_rsa
-
