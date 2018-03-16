@@ -14,6 +14,7 @@ alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
 alias feh='feh -FZ'
 alias Rs="Rscript --vanilla"
 alias parallel="parallel --gnu"
+alias libreoffice="libreoffice6.0"
 
 # enable keychain ssh passphrase memory
 ##eval `keychain --eval --nogui -Q -q id_rsa`
