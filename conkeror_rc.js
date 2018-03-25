@@ -55,6 +55,8 @@ user_agent_policy.define_policy(
     build_url_regexp($domain = /(.*\.)?google/, $path = /calendar/)
 );
 
+set_protocol_handler("mailto", "https://mail.google.com/mail/?extsrc=mailto&url=%s");
+
 
 // block auto focus events 
 // one imperfect solution
