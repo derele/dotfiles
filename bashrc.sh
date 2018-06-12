@@ -31,6 +31,7 @@ export TERM=xterm-256color
 # emacsclient
 export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -t'
+export PAGER='most'
 
 # ignore some history
 export HISTIGNORE="ll:ls:exit:cd:e:rm"
