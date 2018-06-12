@@ -61,6 +61,15 @@ q <- function (save="no", ...) {
   quit(save=save, ...)
 }
 
+
+runAllChunks <- function(rmd, envir=globalenv()){
+    tempR <- tempfile(tmpdir = ".", fileext = ".R")
+    on.exit(unlink(tempR))
+    knitr::purl(rmd, output=tempR)
+    sys.source(tempR, envir=envir)
+}
+
+
 .Last <- function() {
   if (!any(commandArgs()=='--no-readline') && interactive()){
     require(utils)
