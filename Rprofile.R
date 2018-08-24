@@ -74,7 +74,7 @@ runAllChunks <- function(rmd, envir=globalenv()){
   if (!any(commandArgs()=='--no-readline') && interactive()){
     require(utils)
     try(savehistory(Sys.getenv("R_HISTFILE")))
+    cat("\n\nMay these stats lead to conclusions...\n\n")
   }
-  cat("\n\nMay these stats lead to conclusions...\n\n")
 }
 
