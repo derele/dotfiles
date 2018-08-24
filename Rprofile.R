@@ -5,7 +5,7 @@ if (interactive()) {
       R-help (June 2007)\n\n")
     Sys.setenv("DISPLAY"=readLines("~/.display.txt"))
                                             #use main repo
-    options("repos" = c(CRAN = "http://cran.r-project.org/"))
+    options("repos" = c(CRAN = "https://cran.r-project.org/"))
     options(show.signif.stars=FALSE)
     options(browser ="conkeror")
     library(Biobase)
