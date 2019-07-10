@@ -10,7 +10,7 @@ fi
 alias e='emacsclient -t'
 alias ll='ls -lh'
 alias yum='sudo yum -y'
-alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
+## alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
 alias feh='feh -FZ'
 alias Rs="Rscript --vanilla"
 alias parallel="parallel --gnu"
