@@ -8,9 +8,10 @@ if (interactive()) {
     options("repos" = c(CRAN = "http://cran.r-project.org/"))
     options(show.signif.stars=FALSE)
     options(browser ="conkeror")
-    library(Biobase)
-    if(testBioCConnection()){source("http://bioconductor.org/biocLite.R")}
-    else{cat("\n\ncould not source biocLite, network not connected\n\n")}
+    ## This is dead, thank god!
+    ##     library(Biobase)
+    ##     if(testBioCConnection()){source("http://bioconductor.org/biocLite.R")}
+    ##    else{cat("\n\ncould not source biocLite, network not connected\n\n")}
     ##  options(prompt=paste("R", basename(getwd()), "> "))
   }
 }

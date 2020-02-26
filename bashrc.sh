@@ -10,11 +10,11 @@ fi
 alias e='emacsclient -t'
 alias ll='ls -lh'
 alias yum='sudo yum -y'
-alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
+### alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
 alias feh='feh -FZ'
 alias Rs="Rscript --vanilla"
 alias parallel="parallel --gnu"
-alias libreoffice="libreoffice6.0"
+## alias libreoffice="libreoffice6.0"
 alias sf="seaf-cli status -c /etc/seafile/ele/conf_dir/"
 
 # enable keychain ssh passphrase memory
@@ -238,3 +238,6 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+
+# added by Anaconda3 installer
+export PATH="/home/ele/anaconda3/bin:$PATH"
