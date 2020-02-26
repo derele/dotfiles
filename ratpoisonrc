@@ -62,7 +62,7 @@ exec xterm -e '~/dotfiles/scripts/screen_after_256.sh'
 ## Mapping some keys ##################################################
 bind F1 exec xterm -e '~/dotfiles/scripts/screen_after_256.sh'
 bind F2 exec xterm -e '~/dotfiles/scripts/svalbard-ssh.sh'
-bind F3 exec /home/ele/conkeror/conkeror
+bind F3 exec conkeror
 bind F4 exec firefox
 bind F5 exec chromium
 bind F6 exec ~/dotfiles/scripts/windows.sh

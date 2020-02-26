@@ -10,7 +10,11 @@ fi
 alias e='emacsclient -t'
 alias ll='ls -lh'
 alias yum='sudo yum -y'
+<<<<<<< HEAD
 ### alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
+=======
+## alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
+>>>>>>> 977307f769478eb92df3fb34504d4eafb2b420f3
 alias feh='feh -FZ'
 alias Rs="Rscript --vanilla"
 alias parallel="parallel --gnu"
@@ -32,6 +36,7 @@ export TERM=xterm-256color
 # emacsclient
 export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -t'
+export PAGER='most'
 
 # ignore some history
 export HISTIGNORE="ll:ls:exit:cd:e:rm"

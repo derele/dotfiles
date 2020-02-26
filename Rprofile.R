@@ -5,7 +5,7 @@ if (interactive()) {
       R-help (June 2007)\n\n")
     Sys.setenv("DISPLAY"=readLines("~/.display.txt"))
                                             #use main repo
-    options("repos" = c(CRAN = "http://cran.r-project.org/"))
+    options("repos" = c(CRAN = "https://cran.r-project.org/"))
     options(show.signif.stars=FALSE)
     options(browser ="conkeror")
     ## This is dead, thank god!
@@ -62,11 +62,20 @@ q <- function (save="no", ...) {
   quit(save=save, ...)
 }
 
+
+runAllChunks <- function(rmd, envir=globalenv()){
+    tempR <- tempfile(tmpdir = ".", fileext = ".R")
+    on.exit(unlink(tempR))
+    knitr::purl(rmd, output=tempR)
+    sys.source(tempR, envir=envir)
+}
+
+
 .Last <- function() {
   if (!any(commandArgs()=='--no-readline') && interactive()){
     require(utils)
     try(savehistory(Sys.getenv("R_HISTFILE")))
+    cat("\n\nMay these stats lead to conclusions...\n\n")
   }
-  cat("\n\nMay these stats lead to conclusions...\n\n")
 }
 
