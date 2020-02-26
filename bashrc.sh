@@ -10,15 +10,9 @@ fi
 alias e='emacsclient -t'
 alias ll='ls -lh'
 alias yum='sudo yum -y'
-<<<<<<< HEAD
-### alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
-=======
-## alias ssh='ssh -Y -c arcfour,blowfish-cbc -C'
->>>>>>> 977307f769478eb92df3fb34504d4eafb2b420f3
 alias feh='feh -FZ'
 alias Rs="Rscript --vanilla"
 alias parallel="parallel --gnu"
-## alias libreoffice="libreoffice6.0"
 alias sf="seaf-cli status -c /etc/seafile/ele/conf_dir/"
 
 # enable keychain ssh passphrase memory
