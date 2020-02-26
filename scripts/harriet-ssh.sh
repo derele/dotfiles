@@ -25,10 +25,6 @@ else
 fi
 
 
-<<<<<<< HEAD
-## ssh -Y  -c arcfour,blowfish-cbc -C 141.20.60.128 -t 'screen -x';
-=======
->>>>>>> 977307f769478eb92df3fb34504d4eafb2b420f3
 ssh -Y -C 141.20.60.128 -t 'screen -x';
 if [ $? -ne 0 ] ;
 then
