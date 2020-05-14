@@ -29,6 +29,7 @@ tab_bar_show_index = true;
 // a session to remember
 require("session.js");
 session_auto_save_auto_load = true;
+//session_auto_save_auto_load = false;
 
 // and google in the minibuffer
 //require("search-engine.js");
