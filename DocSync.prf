@@ -1,0 +1,184 @@
+# Unison preferences file
+root = /home/ele/Documents/
+root = ssh://ele@141.20.60.128//home/ele/Documents/
+
+# the unison directory
+ignore = Path {.unison}
+
+# Big Data
+ignore = Path {Data}
+
+# Path
+ignore = Path {bin}
+
+# directories  under version control
+ignore = Path {thesis}
+ignore = Path {CV}
+ignore = Path {Documents/nina}
+ignore = Path {dotfiles}
+ignore = Path {bibtex}
+ignore = Path {genepool}
+ignore = Path {conkeror}
+ignore = Path {stumpwm}
+ignore = Path {own_lisp}
+ignore = Path {.emacs.d/emms}
+
+# the dropbox
+ignore = Path {Dropbox}
+
+# and the maildir under offlineimap
+ignore = Path {Maildir}
+ignore = Path {Mail}
+ignore = Path {.offlineimap}
+ignore = Path {.elmo}
+
+# and stuff thats special to the different Emacsens
+ignore = Path {.emacs.d/ac-comphist.dat}
+ignore = Path {.emacs.d/bbdb}
+ignore = Path {.emacs.d/bbdb~}
+ignore = Path {.ido.last}
+ignore = Path {.ido.last~}
+ignore = Path {.session}
+ignore = Path {.session~}
+ignore = Path {.emacs.d/tramp}
+
+# all the dotfiles and dotdirs I want to exclude
+ignore = Path {.bashrc}
+ignore = Path {.AbiSuite}
+ignore = Path {.adobe}
+ignore = Path {AdobeReader.desktop}
+ignore = Path {.aspell.en.prepl}
+ignore = Path {.aspell.en.pws}
+ignore = Path {.authinfo}
+ignore = Path {.authinfo~}
+ignore = Path {.bash_history}
+ignore = Path {.bash_logout}
+ignore = Path {.bash_profile}
+ignore = Path {.bash_profile~}
+ignore = Path {.bashrc}
+ignore = Path {.bashrc~}
+ignore = Path {.cache}
+ignore = Path {.ccache}
+ignore = Path {.cpan}
+ignore = Path {.comments}
+ignore = Path {.config}
+ignore = Path {.conkeror.mozdev.org}
+ignore = Path {.conkeror.rc}
+ignore = Path {.dbus}
+ignore = Path {.dmrc}
+ignore = Path {.dropbox}
+ignore = Path {.dropbox-dist}
+ignore = Path {.emacs.d}
+ignore = Path {.esd_auth}
+ignore = Path {.evolution}
+ignore = Path {.fontconfig}
+ignore = Path {.gconf}
+ignore = Path {.gconfd}
+ignore = Path {.gegl-0.0}
+ignore = Path {.gimp-2.6}
+ignore = Path {git_repo}
+ignore = Path {gitconfig}
+ignore = Path {.gnash}
+ignore = Path {.gnome2}
+ignore = Path {.gnome2_private}
+ignore = Path {.gnupg}
+ignore = Path {.gnus}
+ignore = Path {.gnus~}
+ignore = Path {.google}
+ignore = Path {.gpg-agent-info}
+ignore = Path {.gphoto}
+ignore = Path {.gstreamer-0.10}
+ignore = Path {.gtk-bookmarks}
+ignore = Path {.gtkrc-2.0}
+ignore = Path {.gvfs}
+ignore = Path {.ICEauthority}
+ignore = Path {.icedteaplugin}
+ignore = Path {.icons}
+ignore = Path {.imsettings.log}
+ignore = Path {.IP_STUFF.txt}
+ignore = Path {.kazehakase}
+ignore = Path {.kde}
+ignore = Path {.keychain}
+ignore = Path {.kerneloops}
+ignore = Path {.lispy}
+ignore = Path {.local}
+ignore = Path {.macromedia}
+ignore = Path {.mozilla}
+ignore = Path {.nautilus}
+ignore = Path {.netx}
+ignore = Path {.newsrc-dribble}
+ignore = Path {.newsrc-dribble~}
+ignore = Path {.nnmail-cache}
+ignore = Path {openvpn.log}
+ignore = Path {.openoffice.org}
+ignore = Path {.printer-groups.xml}
+ignore = Path {.pulse}
+ignore = Path {.pulse-cookie}
+ignore = Path {.RData}
+ignore = Path {.recently-used}
+ignore = Path {.recently-used.xbel}
+ignore = Path {.rsync}
+ignore = Path {.Rhistory}
+ignore = Path {.Rprofile}
+ignore = Path {.screenrc}
+ignore = Path {.sbcl}
+ignore = Path {.screenrc~}
+ignore = Path {.Skype}
+ignore = Path {.slime}
+ignore = Path {.slime-history.eld}
+ignore = Path {.sqlite_history}
+ignore = Path {.ssh}
+ignore = Path {.subversion}
+ignore = Path {.texlive2007}
+ignore = Path {.themes}
+ignore = Path {.thumbnails}
+ignore = Path {.tomboy}
+ignore = Path {.tomboy.log}
+ignore = Path {.unison}
+ignore = Path {.viminfo}
+ignore = Path {.w3m}
+ignore = Path {.wapi}
+ignore = Path {.Xauthority}
+ignore = Path {.xdvirc}
+ignore = Path {.xine}
+ignore = Path {.xsession}
+ignore = Path {.xsession-errors}
+ignore = Path {.xsession-errors.old}
+ignore = Path {.glade2}
+ignore = Path {.hplip}
+ignore = Path {.htoprc}
+ignore = Path {.inkscape}
+ignore = Path {.java}
+ignore = Path {.qt}
+ignore = Path {.install4j}
+ignore = Path {.libreoffice}
+ignore = Path {.pki}
+ignore = Path {.setroubleshoot}
+ignore = Path {.shotwell}
+
+# some others by purpose
+ignore = Path {tools}
+ignore = Path {musik}
+ignore = Path {Images}
+ignore = Path {Silvia}
+ignore = Name {known_hosts}
+ignore = Path {.ssh}
+ignore = Name {bbdb}
+ignore = Name {bbdb~}
+ignore = Name {.partigene.conf~}
+ignore = Name {.partigene.conf}
+ignore = Name {.psql_history}
+ignore = Name {129.13.174.229}
+ignore = Name {129.13.174.243}
+ignore = Name {.trace2dbest.conf}
+ignore = Name {.trace2dbest.conf~}
+ignore = Name {.Rhistory}
+ignore = Name {r_env_cache}
+ignore = Path {mpich2-install}
+ignore = Name {linux_signing_key.pub}
+ignore = Name {init.el}
+ignore = Name {unison.log}
+ignore = Name {unison.log}
+
+# byte compiled elisp files
+ignore =  Name *.elc
