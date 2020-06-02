@@ -14,6 +14,7 @@ alias feh='feh -FZ'
 alias Rs="Rscript --vanilla"
 alias parallel="parallel --gnu"
 alias sf="seaf-cli status -c /etc/seafile/ele/conf_dir/"
+alias vpn="sudo openfortivpn -c /etc/openfortivpn/hu-berlin"
 
 # enable keychain ssh passphrase memory
 ##eval `keychain --eval --nogui -Q -q id_rsa`
