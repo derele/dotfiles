@@ -1,0 +1,5 @@
+## above
+xrandr --output HDMI1 --auto --above eDP1
+
+## or on the left
+xrandr --output HDMI1 --auto --left-of eDP1
