@@ -49,6 +49,10 @@ ll <- function(envir=globalenv(), ...) {
   sizes <- sapply(obs, function (x) object.size(get(x)))
   modes <- sapply(obs, function (x) mode(get(x)))  
   classes <- sapply(obs, function (x) class(get(x)))
+  message("\nUsing a total of ",
+          format(sum(sizes), big.mark=","), " bytes",
+          " (", round(sum(sizes)/10^9, 2), " GIG)",
+          " of memory\n\n")
   as.data.frame(cbind(sizes, modes, classes))
 }
 

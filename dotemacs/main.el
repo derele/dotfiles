@@ -20,6 +20,7 @@
                     "~/.emacs.d/g-client"
                     "~/.emacs.d/polymode"
                     "~/.emacs.d/polymode/modes"
+                    "/localstorage/tools/ess-18.10.2"
                     "~/dotfiles/dotemacs/own_modes")              
               load-path))
 
