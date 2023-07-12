@@ -7,6 +7,8 @@ ignore = Path {.unison}
 
 # Big Data
 ignore = Path {Data}
+ignore = Path {MinKnow}
+ignore = Path {Lehre/ÖkoGrundAb2020}
 
 # Path
 ignore = Path {bin}
