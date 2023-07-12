@@ -41,7 +41,7 @@ export HISTCONTROL=erasedupsexport
 export R_HISTFILE=/home/ele/.Rhistory
 
 # add /home/ele/bin to path  
-export PATH=$PATH:/home/ele/bin:/home/ele/tools/R-devel/bin:/home/ele/bin/x86_64/:/home/ele/bin/x86_64-redhat-linux-gnu/:/snap/bin/
+export PATH=$PATH:/home/ele/bin:/home/ele/tools/R-devel/bin:/home/ele/bin/x86_64/:/home/ele/bin/x86_64-redhat-linux-gnu/:/snap/bin/:/usr/local/go/bin:/home/ele/go/bin
 
 source /home/ele/dotfiles/shell_functions.sh
 
