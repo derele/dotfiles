@@ -241,3 +241,6 @@ fi
 
 # added by Anaconda3 installer
 export PATH="/home/ele/anaconda3/bin:$PATH"
+
+## for NCBI toolkit
+source /etc/profile.d/sra-tools.sh
